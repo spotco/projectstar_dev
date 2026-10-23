@@ -1,0 +1,5275 @@
+// Runtime diagnostics defaults. Prefer URL overrides (?debug=1&slide=2) so agents
+// and humans can debug without editing source. See docs/DEBUGGING.md.
+const RUNTIME_CONFIG = Object.freeze({
+  loggingEnabled: false,
+  debugCssEnabled: false,
+  hudEnabled: false,
+});
+
+function parseRuntimeQuery() {
+  const params = new URLSearchParams(window.location.search);
+  const flag = (name) => {
+    const value = params.get(name);
+    return value === "1" || value === "true" || value === "yes";
+  };
+  const debug = flag("debug");
+  const slideRaw = params.get("slide");
+  let startSlide = null;
+  if (slideRaw !== null && slideRaw !== "") {
+    const parsed = Number(slideRaw);
+    if (Number.isFinite(parsed) && parsed > 0) {
+      startSlide = Math.floor(parsed);
+    }
+  }
+  return {
+    debug,
+    loggingEnabled: debug || flag("log") || RUNTIME_CONFIG.loggingEnabled,
+    debugCssEnabled: debug || flag("hotspots") || RUNTIME_CONFIG.debugCssEnabled,
+    hudEnabled: debug || flag("hud") || RUNTIME_CONFIG.hudEnabled,
+    startSlide,
+  };
+}
+
+const RUNTIME_QUERY = parseRuntimeQuery();
+const ASSET_CACHE_BUSTER = String(Date.now());
+
+function assetUrl(path) {
+  if (!path || /^(data:|blob:|https?:)/i.test(path)) {
+    return path;
+  }
+  const separator = path.includes("?") ? "&" : "?";
+  return `${path}${separator}no-cache=${ASSET_CACHE_BUSTER}`;
+}
+
+const state = {
+  manifest: null,
+  screens: new Map(),
+  current: null,
+  muted: false,
+  audioUnlocked: false,
+  audioElements: new Map(),
+  mediaBindings: new Map(),
+  pendingAudioCommands: [],
+  animations: null,
+  animationSlides: new Map(),
+  animationQueue: [],
+  pendingAfterEffectHides: [],
+  animationTimers: [],
+  transitionTimers: [],
+  animationTriggerWaiters: new Map(),
+  animationStartedNodes: new Set(),
+  animationCompletedNodes: new Set(),
+  currentLayerElements: new Map(),
+  debug: RUNTIME_QUERY.debugCssEnabled,
+  logging: RUNTIME_QUERY.loggingEnabled,
+  hudEnabled: RUNTIME_QUERY.hudEnabled,
+  startSlideOverride: RUNTIME_QUERY.startSlide,
+  lastRenderDecision: null,
+  lastInteraction: null,
+  playthroughHistory: [],
+  selectedDebugLayerId: null,
+  logSequence: 0,
+  loggerStartedAt: typeof performance !== "undefined" ? performance.now() : Date.now(),
+  animationTimerSequence: 0,
+  autoAdvanceTimer: null,
+  autoAdvanceSequence: 0,
+};
+
+const stage = document.getElementById("stage");
+const screenImage = document.getElementById("screen");
+const layersLayer = document.getElementById("layers");
+const missingRender = document.getElementById("missing-render");
+const hotspotsLayer = document.getElementById("hotspots");
+const statusOutput = document.getElementById("status");
+const restartButton = document.getElementById("restart");
+const muteButton = document.getElementById("mute");
+
+function runtimeLog(event, details = {}, level = "info") {
+  if (!state.logging || typeof console === "undefined") {
+    return;
+  }
+  const now = typeof performance !== "undefined" ? performance.now() : Date.now();
+  const currentScreen = state.current
+    ? { id: state.current.id, slide: state.current.slide }
+    : null;
+  const payload = {
+    sequence: ++state.logSequence,
+    elapsedMs: Math.round((now - state.loggerStartedAt) * 10) / 10,
+    event,
+    currentScreen,
+    ...details,
+  };
+  const method = typeof console[level] === "function" ? console[level].bind(console) : console.log.bind(console);
+  method(`[ProjectStar] ${event}`, payload);
+}
+
+function animationNodeInfo(node) {
+  if (!node) {
+    return null;
+  }
+  return {
+    id: node.id,
+    localId: nodeLocalId(node),
+    delayMs: nodeDelay(node),
+    durationMs: nodeDuration(node),
+    behaviorCount: (node.behaviors || []).length,
+    subEffectCount: (node.subEffects || []).length,
+    childCount: (node.children || []).length,
+    waitsForClick: nodeWaitsForClick(node),
+    afterEffect: isAfterEffectNode(node),
+    hideOnNextClick: isHideOnNextClickAfterEffect(node),
+    triggerConditions: nodeTriggerConditions(node).map((condition) => ({
+      triggerEvent: condition.triggerEvent,
+      targetId: condition.targetId,
+      delayMs: condition.delayMs,
+    })),
+  };
+}
+
+const PLAYTHROUGH_HISTORY_KEY = "projectStar.debugHistory";
+const PLAYTHROUGH_HISTORY_LIMIT = 100;
+
+function loadPlaythroughHistory() {
+  try {
+    const raw = sessionStorage.getItem(PLAYTHROUGH_HISTORY_KEY);
+    if (!raw) {
+      return [];
+    }
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed.slice(-PLAYTHROUGH_HISTORY_LIMIT) : [];
+  } catch (_error) {
+    return [];
+  }
+}
+
+function persistPlaythroughHistory() {
+  if (!state.hudEnabled && !state.logging) {
+    return;
+  }
+  try {
+    sessionStorage.setItem(PLAYTHROUGH_HISTORY_KEY, JSON.stringify(state.playthroughHistory.slice(-PLAYTHROUGH_HISTORY_LIMIT)));
+  } catch (_error) {
+    // Ignore quota / private-mode failures.
+  }
+}
+
+function pushPlaythroughEvent(details) {
+  const entry = {
+    at: new Date().toISOString(),
+    elapsedMs: Math.round(((typeof performance !== "undefined" ? performance.now() : Date.now()) - state.loggerStartedAt) * 10) / 10,
+    slide: state.current ? state.current.slide : null,
+    screenId: state.current ? state.current.id : null,
+    queueLen: state.animationQueue.length,
+    ...details,
+  };
+  state.playthroughHistory.push(entry);
+  if (state.playthroughHistory.length > PLAYTHROUGH_HISTORY_LIMIT) {
+    state.playthroughHistory.splice(0, state.playthroughHistory.length - PLAYTHROUGH_HISTORY_LIMIT);
+  }
+  persistPlaythroughHistory();
+  return entry;
+}
+
+function clearPlaythroughHistory() {
+  state.playthroughHistory = [];
+  try {
+    sessionStorage.removeItem(PLAYTHROUGH_HISTORY_KEY);
+  } catch (_error) {
+    // ignore
+  }
+  updateDebugHud();
+  return [];
+}
+
+function getPlaythroughHistory(limit = PLAYTHROUGH_HISTORY_LIMIT) {
+  const n = Number(limit);
+  const max = Number.isFinite(n) && n > 0 ? Math.floor(n) : PLAYTHROUGH_HISTORY_LIMIT;
+  return state.playthroughHistory.slice(-max);
+}
+
+function formatHistoryLine(entry) {
+  if (!entry) {
+    return "";
+  }
+  const slide = entry.slide != null ? `s${String(entry.slide).padStart(3, "0")}` : "s???";
+  const kind = entry.kind || entry.type || "?";
+  const detail = entry.detail || entry.result || entry.action || "";
+  const extra = entry.targetSlide != null
+    ? `→s${String(entry.targetSlide).padStart(3, "0")}`
+    : (entry.to && entry.to.slide != null ? `→s${String(entry.to.slide).padStart(3, "0")}` : "");
+  const ms = entry.elapsedMs != null ? `${Math.round(entry.elapsedMs)}ms` : "";
+  return [ms, slide, kind, detail, extra].filter(Boolean).join(" ");
+}
+
+function recordInteraction(details) {
+  state.lastInteraction = {
+    at: new Date().toISOString(),
+    elapsedMs: Math.round(((typeof performance !== "undefined" ? performance.now() : Date.now()) - state.loggerStartedAt) * 10) / 10,
+    ...details,
+  };
+  runtimeLog("debug:interaction", state.lastInteraction);
+  pushPlaythroughEvent({
+    kind: details.type || "interaction",
+    detail: details.result || details.action || null,
+    action: details.action || null,
+    result: details.result || null,
+    hotspotId: details.hotspotId || null,
+    shapeId: details.shapeId || null,
+    targetSlide: details.targetSlide || (details.to && details.to.slide) || null,
+    to: details.to || null,
+    from: details.from || null,
+    queueLengthAfter: details.queueLengthAfter,
+  });
+  updateDebugHud();
+}
+
+function layerTypeCounts(layers) {
+  const counts = {};
+  for (const layer of layers || []) {
+    const type = layer.type || "unknown";
+    counts[type] = (counts[type] || 0) + 1;
+  }
+  return counts;
+}
+
+function collectRuntimeProblems(screen = state.current) {
+  const problems = [];
+  if (!screen) {
+    return [{ code: "no_current_screen", severity: "high", message: "No current screen" }];
+  }
+  const layers = screen.layers || [];
+  for (const layer of layers) {
+    if (layer.wordArt && !String(layer.text || "").trim()) {
+      problems.push({
+        code: "empty_wordart_layer",
+        severity: "high",
+        message: `WordArt layer ${layer.id} has empty text`,
+        shapeId: layer.shapeId,
+      });
+    }
+    if (layer.type === "image" && layer.instancePath) {
+      // Existence is verified offline; runtime only notes the path for dumpScreen.
+    }
+    if (layer.type === "text") {
+      const run = (layer.textRuns || [])[0] || {};
+      const bg = screen.backgroundColor || "";
+      if (
+        String(layer.text || "").trim() &&
+        typeof run.fontColor === "string" &&
+        run.fontColor.toLowerCase().startsWith("#ffff") &&
+        typeof bg === "string" &&
+        bg.toLowerCase().startsWith("#fff")
+      ) {
+        problems.push({
+          code: "low_contrast_text",
+          severity: "low",
+          message: `Light text on light background for ${layer.id}`,
+          shapeId: layer.shapeId,
+        });
+      }
+    }
+  }
+  for (const hotspot of screen.hotspots || []) {
+    if (hotspot.action === "hyperlink" && hotspot.targetSlide === screen.slide) {
+      const residual = hotspot.residualStatus === "accepted_source_self" ||
+        String(hotspot.behaviorStatus || "").startsWith("documented_residual_self");
+      problems.push({
+        code: residual ? "residual_self_hyperlink" : "self_hyperlink",
+        severity: residual ? "low" : (hotspot.resolveMethod === "confirmed_self_combat" ? "medium" : "high"),
+        message: residual
+          ? `Documented residual self ${hotspot.id}` +
+            (hotspot.clickable ? " (still clickable)" : " (non-clickable)") +
+            (hotspot.residualKind ? ` [${hotspot.residualKind}]` : "")
+          : `Hotspot ${hotspot.id} targets the same slide` +
+            (hotspot.resolveMethod ? ` (${hotspot.resolveMethod})` : ""),
+        hotspotId: hotspot.id,
+        shapeId: hotspot.shapeId,
+        resolveMethod: hotspot.resolveMethod || null,
+        residualStatus: hotspot.residualStatus || null,
+      });
+    }
+    if (hotspot.clickable && hotspot.bounds && !(hotspot.bounds.width > 0 && hotspot.bounds.height > 0)) {
+      problems.push({
+        code: "zero_area_hotspot",
+        severity: "high",
+        message: `Hotspot ${hotspot.id} is clickable but zero-area`,
+        hotspotId: hotspot.id,
+      });
+    }
+    if (
+      hotspot.behaviorStatus === "unresolved_media" ||
+      hotspot.behaviorStatus === "missing_media_binding" ||
+      hotspot.behaviorStatus === "documented_unresolved_media" ||
+      hotspot.residualStatus === "accepted_unresolved_media"
+    ) {
+      problems.push({
+        code: "unresolved_media",
+        severity: hotspot.residualStatus === "accepted_unresolved_media" ? "low" : "high",
+        message: `Hotspot ${hotspot.id} media unresolved (${hotspot.behaviorStatus})` +
+          (hotspot.clickable ? "" : " [non-clickable residual]"),
+        hotspotId: hotspot.id,
+      });
+    }
+    if (
+      hotspot.behaviorStatus === "documented_zero_area_media" ||
+      hotspot.residualStatus === "accepted_zero_area_media"
+    ) {
+      problems.push({
+        code: "zero_area_media",
+        severity: "low",
+        message: `Hotspot ${hotspot.id} mapped media has zero-area hit target (auto play may still run)`,
+        hotspotId: hotspot.id,
+      });
+    }
+  }
+  if (layers.length > 0 && screenImage.hidden) {
+    const maxArea = layers.reduce((max, layer) => {
+      const bounds = layer.bounds || {};
+      return Math.max(max, (bounds.width || 0) * (bounds.height || 0));
+    }, 0);
+    if (maxArea < 0.2) {
+      problems.push({
+        code: "layers_mode_sparse",
+        severity: "medium",
+        message: "PNG hidden because layers exist, but layer coverage is sparse",
+        layerCount: layers.length,
+        maxArea,
+      });
+    }
+  }
+  return problems;
+}
+
+function dumpScreen(slideOrId) {
+  let screen = state.current;
+  if (slideOrId !== undefined && slideOrId !== null) {
+    if (typeof slideOrId === "number") {
+      screen = state.screens.get(screenId(slideOrId)) || null;
+    } else {
+      screen = state.screens.get(String(slideOrId)) || state.screens.get(screenId(Number(slideOrId))) || null;
+    }
+  }
+  if (!screen) {
+    return { error: "screen not found", requested: slideOrId };
+  }
+  const layers = screen.layers || [];
+  return {
+    screen: {
+      id: screen.id,
+      slide: screen.slide,
+      image: screen.image,
+      backgroundColor: screen.backgroundColor || null,
+      transition: screen.transition || null,
+      advancement: screen.advancement || null,
+      hotspotCount: (screen.hotspots || []).length,
+      layerCount: layers.length,
+      layerTypeCounts: layerTypeCounts(layers),
+    },
+    renderDecision: state.current && state.current.id === screen.id ? state.lastRenderDecision : null,
+    lastInteraction: state.lastInteraction,
+    runtime: {
+      imageHidden: state.current && state.current.id === screen.id ? screenImage.hidden : null,
+      imageSrc: state.current && state.current.id === screen.id ? screenImage.currentSrc || screenImage.src : null,
+      imageNatural: state.current && state.current.id === screen.id
+        ? { width: screenImage.naturalWidth, height: screenImage.naturalHeight }
+        : null,
+      stageBackground: stage.style.backgroundColor || null,
+      missingRenderHidden: missingRender.hidden,
+      missingRenderDisplay: getComputedStyle(missingRender).display,
+    },
+    layers: layers.map((layer) => ({
+      id: layer.id,
+      shapeId: layer.shapeId,
+      type: layer.type,
+      kind: layer.kind,
+      shapeType: layer.shapeType,
+      text: layer.text || "",
+      wordArt: Boolean(layer.wordArt),
+      geoText: layer.geoText || null,
+      animated: Boolean(layer.animated),
+      instancePath: layer.instancePath || null,
+      bounds: layer.bounds || null,
+      style: layer.style || null,
+    })),
+    hotspots: (screen.hotspots || []).map((hotspot) => ({
+      id: hotspot.id,
+      shapeId: hotspot.shapeId,
+      action: hotspot.action,
+      targetSlide: hotspot.targetSlide,
+      clickable: hotspot.clickable,
+      behaviorStatus: hotspot.behaviorStatus,
+      mediaBindingId: hotspot.mediaBindingId || null,
+      bounds: hotspot.bounds || null,
+      label: hotspot.label || null,
+      shapeText: hotspot.shapeText || null,
+      targetLabel: hotspot.targetLabel || null,
+    })),
+    combatAnnot: buildCombatSlideAnnotation(screen),
+    animation: animationTimelineForScreen(screen),
+    problems: collectRuntimeProblems(screen),
+    snapshot: window.projectStarDebug.snapshot(),
+  };
+}
+
+
+
+/** Collect Attack/Flee labels of hyperlinks that target a slide (debug roles). */
+function inboundOptionLabels(slideNumber) {
+  const labels = new Set();
+  if (!state.screens || slideNumber == null) {
+    return labels;
+  }
+  for (const other of state.screens.values()) {
+    for (const hotspot of other.hotspots || []) {
+      if (hotspot.action !== "hyperlink" || Number(hotspot.targetSlide) !== Number(slideNumber)) {
+        continue;
+      }
+      const text = String(hotspot.shapeText || hotspot.label || "").trim().toLowerCase();
+      if (/^-?\s*attack$/.test(text)) {
+        labels.add("attack");
+      } else if (/^-?\s*flee$/.test(text)) {
+        labels.add("flee");
+      }
+    }
+  }
+  return labels;
+}
+
+
+/** Infer a coarse slide role for battle / progression QA annotations. */
+function inferSlideRole(screen) {
+  if (!screen) {
+    return "unknown";
+  }
+  const texts = (screen.layers || [])
+    .map((layer) => String(layer.text || "").replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+  const joined = texts.join(" | ").toLowerCase();
+  const modes = (screen.advancement && screen.advancement.modes) || [];
+  if (modes.includes("terminal_death") || /game over/.test(joined)) {
+    return "death";
+  }
+  if (/sound test/.test(joined)) {
+    return "sound-test";
+  }
+  if (/spotco weekly|weekly magazine/.test(joined)) {
+    return "magazine";
+  }
+  if (/hull|shield/.test(joined) && /\d/.test(joined)) {
+    return "battle-status";
+  }
+  const hasShot = texts.some((text) => /^-?\s*shot$/i.test(text));
+  if (hasShot) {
+    return "battle-menu";
+  }
+  if (texts.some((text) => /click here|click to go/i.test(text))) {
+    return "continue";
+  }
+  return "other";
+}
+
+function extractSlideHpHints(screen) {
+  const texts = (screen.layers || [])
+    .map((layer) => String(layer.text || "").replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+  const hints = [];
+  for (const text of texts) {
+    const hull = text.match(/hull\D*(\d+)/i);
+    if (hull) {
+      hints.push(`hull ${hull[1]}`);
+    }
+    const shield = text.match(/shield\D*(\d+)/i);
+    if (shield) {
+      hints.push(`shield ${shield[1]}`);
+    }
+    if (/^\d{1,3}$/.test(text)) {
+      hints.push(`num? ${text}`);
+    }
+  }
+  return [...new Set(hints)];
+}
+
+function hotspotOptionSummary(screen) {
+  return (screen.hotspots || []).map((hotspot) => {
+    const label = String(hotspot.shapeText || hotspot.label || hotspot.action || "?").replace(/\s+/g, " ").trim();
+    let target = "—";
+    if (hotspot.action === "media") {
+      target = "media";
+    } else if (hotspot.targetSlide) {
+      target = String(hotspot.targetSlide);
+    } else if (hotspot.action) {
+      target = hotspot.action;
+    }
+    const mark = hotspot.clickable === false ? "*" : "";
+    return `${label}→${target}${mark}`;
+  });
+}
+
+function walkAnimationBehaviorKinds(node, counts) {
+  if (!node) {
+    return counts;
+  }
+  for (const behavior of node.behaviors || []) {
+    const kind = String(behavior.kind || "unknown");
+    counts[kind] = (counts[kind] || 0) + 1;
+    const strings = parsedStrings(behavior.variants).map((value) => String(value).toLowerCase());
+    if (strings.some((value) => value === "fade" || value === "dissolve")) {
+      counts.dissolve = (counts.dissolve || 0) + 1;
+    }
+    if (strings.some((value) => String(value).startsWith("blinds"))) {
+      counts.blinds = (counts.blinds || 0) + 1;
+    }
+    if (strings.some((value) => String(value).startsWith("box"))) {
+      counts.box = (counts.box || 0) + 1;
+    }
+    if (strings.some((value) => /^m\s/i.test(value))) {
+      counts.motionPath = (counts.motionPath || 0) + 1;
+    }
+    if (strings.some((value) => value.includes("visibility") || value === "hidden" || value === "visible")) {
+      counts.visibility = (counts.visibility || 0) + 1;
+    }
+  }
+  for (const child of node.children || []) {
+    walkAnimationBehaviorKinds(child, counts);
+  }
+  for (const sub of node.subEffects || []) {
+    walkAnimationBehaviorKinds(sub, counts);
+  }
+  return counts;
+}
+
+function animationBehaviorSummary(screen) {
+  if (!screen || !state.animationSlides) {
+    return { available: false, total: 0, kinds: {}, summary: "anim: (manifest not loaded)" };
+  }
+  const slideAnimations = state.animationSlides.get(screen.slide);
+  if (!slideAnimations) {
+    return { available: false, total: 0, kinds: {}, summary: "anim: none" };
+  }
+  const counts = {};
+  for (const root of slideAnimations.rootTimeNodes || []) {
+    walkAnimationBehaviorKinds(root, counts);
+  }
+  const total = Object.entries(counts).reduce((sum, [key, value]) => {
+    if (key === "dissolve" || key === "motionPath" || key === "visibility" || key === "blinds" || key === "box") {
+      return sum;
+    }
+    return sum + value;
+  }, 0);
+  const parts = [];
+  if (counts.motion) {
+    parts.push(`motion ${counts.motion}`);
+  }
+  if (counts.motionPath) {
+    parts.push(`paths ${counts.motionPath}`);
+  }
+  if (counts.effect || counts.dissolve || counts.blinds || counts.box) {
+    const effectBits = [];
+    if (counts.dissolve) effectBits.push(`dissolve/fade ${counts.dissolve}`);
+    if (counts.blinds) effectBits.push(`blinds ${counts.blinds}`);
+    if (counts.box) effectBits.push(`box ${counts.box}`);
+    if (!effectBits.length && counts.effect) effectBits.push(`effect ${counts.effect}`);
+    parts.push(effectBits.join("+"));
+  }
+  if (counts.set) {
+    parts.push(`set ${counts.set}`);
+  }
+  if (counts.animate) {
+    parts.push(`animate ${counts.animate}`);
+  }
+  if (counts.command) {
+    parts.push(`cmd ${counts.command}`);
+  }
+  if (counts.visibility) {
+    parts.push(`vis ${counts.visibility}`);
+  }
+  return {
+    available: true,
+    total,
+    kinds: counts,
+    summary: parts.length ? `anim: ${parts.join(", ")} (n=${total})` : `anim: none (n=0)`,
+  };
+}
+
+function buildCombatSlideAnnotation(screen) {
+  if (!screen) {
+    return null;
+  }
+  const role = inferSlideRole(screen);
+  const hpHints = extractSlideHpHints(screen);
+  const hotspots = hotspotOptionSummary(screen);
+  const anim = animationBehaviorSummary(screen);
+  const texts = (screen.layers || [])
+    .map((layer) => String(layer.text || "").replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .slice(0, 6);
+  const adv = screen.advancement || {};
+  return {
+    slide: screen.slide,
+    id: screen.id,
+    role,
+    hpHints,
+    texts,
+    advancementModes: adv.modes || [],
+    autoAdvance: Boolean(adv.autoAdvance),
+    stageClickAdvancesSlide: Boolean(adv.stageClickAdvancesSlide),
+    leavePaths: adv.leavePaths || [],
+    nextSequentialId: adv.nextSequentialId || null,
+    hotspots,
+    anim,
+  };
+}
+
+function formatCombatAnnotationLines(annot) {
+  if (!annot) {
+    return [];
+  }
+  const lines = [
+    `role: ${annot.role}`,
+    `hp/text: ${(annot.hpHints || []).join(", ") || "(none)"} | ${(annot.texts || []).slice(0, 3).join(" · ") || ""}`,
+    `hotspots: ${(annot.hotspots || []).join(" | ") || "(none)"}`,
+    annot.anim && annot.anim.summary ? annot.anim.summary : "anim: ?",
+  ];
+  return lines;
+}
+
+function ensureCombatDebugOverlay() {
+  let overlay = document.getElementById("combat-debug-overlay");
+  if (overlay) {
+    return overlay;
+  }
+  overlay = document.createElement("div");
+  overlay.id = "combat-debug-overlay";
+  overlay.className = "combat-debug-overlay";
+  overlay.setAttribute("aria-hidden", "true");
+  overlay.innerHTML = '<pre class="combat-debug-overlay-body"></pre>';
+  stage.append(overlay);
+  return overlay;
+}
+
+function updateCombatDebugOverlay(annot) {
+  if (!state.hudEnabled) {
+    const existing = document.getElementById("combat-debug-overlay");
+    if (existing) {
+      existing.hidden = true;
+    }
+    return;
+  }
+  const overlay = ensureCombatDebugOverlay();
+  const body = overlay.querySelector(".combat-debug-overlay-body");
+  if (!annot) {
+    overlay.hidden = true;
+    return;
+  }
+  overlay.hidden = false;
+  const queueLen = (state.animationQueue || []).length;
+  const compact = [
+    `#${annot.slide} ${annot.role}` + (queueLen ? ` · OnNext×${queueLen}` : ""),
+    (annot.hpHints || []).join(" ") || "",
+    (annot.hotspots || []).slice(0, 4).join(" · "),
+    annot.anim && annot.anim.summary ? annot.anim.summary.replace(/^anim:\s*/, "") : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+  body.textContent = compact;
+}
+
+
+const DEBUG_HUD_COLLAPSED_KEY = "projectStar.debugHudCollapsed";
+
+function readHudCollapsedPreference() {
+  try {
+    return sessionStorage.getItem(DEBUG_HUD_COLLAPSED_KEY) === "1";
+  } catch (_error) {
+    return false;
+  }
+}
+
+function writeHudCollapsedPreference(collapsed) {
+  try {
+    sessionStorage.setItem(DEBUG_HUD_COLLAPSED_KEY, collapsed ? "1" : "0");
+  } catch (_error) {
+    /* private mode / blocked storage — ignore */
+  }
+}
+
+function applyHudCollapsedState(hud, collapsed) {
+  if (!hud) {
+    return;
+  }
+  hud.classList.toggle("is-collapsed", collapsed);
+  hud.setAttribute("data-collapsed", collapsed ? "1" : "0");
+  const toggle = hud.querySelector("#debug-hud-toggle");
+  if (toggle) {
+    toggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
+    toggle.setAttribute(
+      "aria-label",
+      collapsed ? "Expand Debug HUD" : "Collapse Debug HUD",
+    );
+    toggle.title = collapsed ? "Expand Debug HUD" : "Collapse Debug HUD";
+    const glyph = toggle.querySelector(".debug-hud-toggle-glyph");
+    const label = toggle.querySelector(".debug-hud-toggle-label");
+    if (glyph) {
+      glyph.textContent = collapsed ? "▸" : "✕";
+    }
+    if (label) {
+      label.textContent = collapsed ? "Debug" : "Hide";
+    }
+  }
+  writeHudCollapsedPreference(collapsed);
+}
+
+function setHudCollapsed(collapsed) {
+  const hud = document.getElementById("debug-hud") || (state.hudEnabled ? ensureDebugHud() : null);
+  if (!hud) {
+    return false;
+  }
+  applyHudCollapsedState(hud, Boolean(collapsed));
+  runtimeLog("debug:hud-collapsed", { collapsed: Boolean(collapsed) });
+  return Boolean(collapsed);
+}
+
+function toggleHudCollapsed() {
+  const hud = document.getElementById("debug-hud") || (state.hudEnabled ? ensureDebugHud() : null);
+  if (!hud) {
+    return false;
+  }
+  const next = !hud.classList.contains("is-collapsed");
+  return setHudCollapsed(next);
+}
+
+function ensureDebugHud() {
+  let hud = document.getElementById("debug-hud");
+  if (hud) {
+    return hud;
+  }
+  hud = document.createElement("aside");
+  hud.id = "debug-hud";
+  hud.className = "debug-hud";
+  hud.hidden = !state.hudEnabled;
+  hud.innerHTML = `
+    <header class="debug-hud-header" id="debug-hud-header">
+      <button type="button" id="debug-hud-toggle" class="debug-hud-toggle" aria-controls="debug-hud-panel" aria-expanded="true">
+        <span class="debug-hud-toggle-glyph" aria-hidden="true">✕</span>
+        <span class="debug-hud-toggle-label">Hide</span>
+      </button>
+      <div class="debug-hud-title">
+        <strong>Debug HUD</strong>
+        <span class="debug-hud-meta">?debug=1</span>
+      </div>
+    </header>
+    <div id="debug-hud-panel" class="debug-hud-panel">
+      <pre id="debug-hud-body" class="debug-hud-body">Loading…</pre>
+      <div class="debug-hud-chapters">
+        <label class="debug-hud-chapters-label" for="debug-chapter-select">Chapters</label>
+        <select id="debug-chapter-select" class="debug-chapter-select" aria-label="Jump to chapter entry">
+          <option value="">Loading chapters…</option>
+        </select>
+        <button type="button" id="debug-chapter-go">Go</button>
+      </div>
+      <footer class="debug-hud-footer">
+        <button type="button" id="debug-hud-dump">dumpScreen()</button>
+        <button type="button" id="debug-hud-problems">listProblems()</button>
+      </footer>
+    </div>
+  `;
+  const shell = document.querySelector(".game-shell") || document.body;
+  shell.append(hud);
+  const toggle = hud.querySelector("#debug-hud-toggle");
+  const header = hud.querySelector("#debug-hud-header");
+  const onToggle = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleHudCollapsed();
+  };
+  toggle?.addEventListener("click", onToggle);
+  // Whole sticky header is a large phone-friendly hit target when collapsed.
+  header?.addEventListener("click", (event) => {
+    if (event.target.closest("#debug-hud-toggle")) {
+      return;
+    }
+    if (hud.classList.contains("is-collapsed")) {
+      onToggle(event);
+    }
+  });
+  hud.querySelector("#debug-hud-dump")?.addEventListener("click", () => {
+    const dump = dumpScreen();
+    console.log("[ProjectStar] dumpScreen", dump);
+    updateDebugHud(dump);
+  });
+  hud.querySelector("#debug-hud-problems")?.addEventListener("click", () => {
+    const problems = collectRuntimeProblems();
+    console.log("[ProjectStar] listProblems", problems);
+    updateDebugHud();
+  });
+  const chapterSelect = hud.querySelector("#debug-chapter-select");
+  const chapterGo = hud.querySelector("#debug-chapter-go");
+  const jumpChapter = () => {
+    const raw = chapterSelect?.value;
+    if (!raw) {
+      return;
+    }
+    const slide = Number(raw);
+    if (!Number.isFinite(slide)) {
+      return;
+    }
+    runtimeLog("input:debug-chapter-jump", { slide });
+    if (window.projectStarDebug?.goto) {
+      window.projectStarDebug.goto(slide);
+    } else {
+      navigateTo(screenId(slide), { type: "debug-chapter", targetSlide: slide });
+    }
+    updateDebugHud();
+  };
+  chapterGo?.addEventListener("click", jumpChapter);
+  chapterSelect?.addEventListener("change", () => {
+    /* selection only; Go applies */
+  });
+  loadChapterEntriesIntoSelect(chapterSelect);
+  applyHudCollapsedState(hud, readHudCollapsedPreference());
+  return hud;
+}
+
+async function loadChapterEntriesIntoSelect(selectEl) {
+  if (!selectEl) {
+    return;
+  }
+  try {
+    const response = await fetch(`chapter-entries.json?no-cache=${Date.now()}`);
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    const entries = data.entries || [];
+    selectEl.innerHTML = "";
+    const placeholder = document.createElement("option");
+    placeholder.value = "";
+    placeholder.textContent = entries.length ? "Jump to chapter…" : "No chapters";
+    selectEl.append(placeholder);
+    for (const entry of entries) {
+      const opt = document.createElement("option");
+      opt.value = String(entry.slide);
+      opt.textContent = entry.label || `slide ${entry.slide}`;
+      if (entry.ok === false) {
+        opt.textContent += " (!)";
+      }
+      selectEl.append(opt);
+    }
+    state.chapterEntries = entries;
+    runtimeLog("debug:chapters-loaded", { count: entries.length });
+  } catch (error) {
+    selectEl.innerHTML = "";
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "Chapters unavailable";
+    selectEl.append(opt);
+    runtimeLog("debug:chapters-load-failed", { error: String(error) }, "warn");
+  }
+}
+
+function updateDebugHud(dumpOverride = null) {
+  const hud = document.getElementById("debug-hud") || (state.hudEnabled ? ensureDebugHud() : null);
+  if (!hud) {
+    return;
+  }
+  hud.hidden = !state.hudEnabled;
+  if (!state.hudEnabled) {
+    return;
+  }
+  const body = hud.querySelector("#debug-hud-body");
+  if (!body) {
+    return;
+  }
+  const dump = dumpOverride || dumpScreen();
+  if (dump.error) {
+    body.textContent = dump.error;
+    return;
+  }
+  const problems = dump.problems || [];
+  const decision = dump.renderDecision || {};
+  const adv = dump.screen.advancement || {};
+  const annot = dump.combatAnnot || buildCombatSlideAnnotation(state.current && state.current.id === dump.screen.id ? state.current : (state.screens.get(dump.screen.id) || null));
+  const lines = [
+    `screen: ${dump.screen.id} (slide ${dump.screen.slide})`,
+    `bg: ${dump.screen.backgroundColor || "(stage default)"}`,
+    ...formatCombatAnnotationLines(annot),
+    `advancement: modes=${JSON.stringify(adv.modes || [])} stageClickSlide=${Boolean(adv.stageClickAdvancesSlide)} auto=${Boolean(adv.autoAdvance)}`,
+    `leave: ${(adv.leavePaths || []).join(",") || "(none)"} next=${adv.nextSequentialId || "—"}`,
+    `layers: ${dump.screen.layerCount} ${JSON.stringify(dump.screen.layerTypeCounts)}`,
+    `hotspots: ${dump.screen.hotspotCount}`,
+    `png: hidden=${dump.runtime.imageHidden} natural=${dump.runtime.imageNatural?.width || 0}x${dump.runtime.imageNatural?.height || 0}`,
+    `decision: ${decision.summary || "(none yet)"}`,
+    `anim queue: ${(dump.snapshot && dump.snapshot.queuedAnimationNodes && dump.snapshot.queuedAnimationNodes.length) || 0}`,
+    `afterEffect pending: ${(dump.snapshot && dump.snapshot.pendingAfterEffectHides && dump.snapshot.pendingAfterEffectHides.length) || 0}`,
+    `autoTimer: ${
+      state.autoAdvanceTimer
+        ? `${state.autoAdvanceTimer.delayMs}ms → ${state.autoAdvanceTimer.toScreen.id}`
+        : "none"
+    }`,
+    `problems: ${problems.length}`,
+    ...problems.slice(0, 8).map((problem) => `  [${problem.severity}] ${problem.code}: ${problem.message}`),
+  ];
+  updateCombatDebugOverlay(annot);
+  if (state.lastInteraction) {
+    lines.push(
+      `lastInteraction: ${state.lastInteraction.type || "?"} → ${state.lastInteraction.result || state.lastInteraction.action || "?"}`,
+    );
+  }
+  const history = getPlaythroughHistory(8);
+  if (history.length) {
+    lines.push(`history (last ${history.length}):`);
+    for (const entry of history) {
+      lines.push(`  ${formatHistoryLine(entry)}`);
+    }
+  }
+  if (state.selectedDebugLayerId) {
+    const layer = (dump.layers || []).find((item) => item.id === state.selectedDebugLayerId);
+    if (layer) {
+      lines.push(`selected layer: ${layer.id}`);
+      lines.push(`  type=${layer.type} shapeType=${layer.shapeType || "?"} text=${JSON.stringify(layer.text || "")}`);
+    }
+  }
+  body.textContent = lines.join("\n");
+}
+
+function setDebugMode({ logging, css, hud } = {}) {
+  if (logging !== undefined) {
+    state.logging = Boolean(logging);
+  }
+  if (css !== undefined) {
+    state.debug = Boolean(css);
+    stage.classList.toggle("debug", state.debug);
+  }
+  if (hud !== undefined) {
+    state.hudEnabled = Boolean(hud);
+    if (state.hudEnabled) {
+      ensureDebugHud();
+    }
+    updateDebugHud();
+  }
+  return {
+    loggingEnabled: state.logging,
+    debugCssEnabled: state.debug,
+    hudEnabled: state.hudEnabled,
+  };
+}
+
+window.projectStarDebug = {
+  get enabled() {
+    return state.logging;
+  },
+  setEnabled(enabled) {
+    const nextEnabled = Boolean(enabled);
+    const previousEnabled = state.logging;
+    if (previousEnabled && !nextEnabled) {
+      runtimeLog("logging:toggled", { enabled: false });
+    }
+    state.logging = nextEnabled;
+    if (!previousEnabled && nextEnabled) {
+      runtimeLog("logging:toggled", { enabled: true });
+    }
+    return nextEnabled;
+  },
+  toggle() {
+    return window.projectStarDebug.setEnabled(!state.logging);
+  },
+  setDebugMode,
+  setHudCollapsed,
+  toggleHudCollapsed,
+  goto(slideOrId) {
+    const id = typeof slideOrId === "number" ? screenId(slideOrId) : String(slideOrId);
+    recordInteraction({ type: "debug-goto", requested: slideOrId, targetId: id });
+    navigateTo(id);
+    return dumpScreen();
+  },
+  dumpScreen,
+  combatAnnot(slideOrId) {
+    if (slideOrId === undefined) {
+      return buildCombatSlideAnnotation(state.current);
+    }
+    const id = typeof slideOrId === "number" ? screenId(slideOrId) : String(slideOrId);
+    const screen = state.screens.get(id) || state.screens.get(screenId(Number(slideOrId))) || null;
+    return buildCombatSlideAnnotation(screen);
+  },
+  history(limit) {
+    return getPlaythroughHistory(limit);
+  },
+  clearHistory() {
+    return clearPlaythroughHistory();
+  },
+  listProblems(slideOrId) {
+    if (slideOrId === undefined) {
+      return collectRuntimeProblems();
+    }
+    return dumpScreen(slideOrId).problems || [];
+  },
+  snapshot() {
+    return {
+      loggingEnabled: state.logging,
+      debugCssEnabled: state.debug,
+      hudEnabled: state.hudEnabled,
+      startSlideOverride: state.startSlideOverride,
+      currentScreen: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+      lastRenderDecision: state.lastRenderDecision,
+      lastInteraction: state.lastInteraction,
+      playthroughHistory: getPlaythroughHistory(),
+      queuedAnimationNodes: state.animationQueue.map((node) => animationNodeInfo(node)),
+      pendingAfterEffectHides: state.pendingAfterEffectHides.map((node) => animationNodeInfo(node)),
+      trackedAnimationTimerHandles: state.animationTimers.length,
+      startedAnimationNodes: state.animationStartedNodes.size,
+      completedAnimationNodes: state.animationCompletedNodes.size,
+      animationTriggerWaiters: Array.from(state.animationTriggerWaiters.entries()).map(([key, waiters]) => ({
+        key,
+        count: waiters.length,
+        nodes: waiters.map((waiter) => animationNodeInfo(waiter.node)),
+      })),
+    };
+  },
+};
+
+runtimeLog("runtime:initialized", {
+  url: window.location.href,
+  debugCssEnabled: state.debug,
+  loggingEnabled: state.logging,
+  hudEnabled: state.hudEnabled,
+  startSlideOverride: state.startSlideOverride,
+  loggingControls: "window.projectStarDebug.toggle() / dumpScreen() / goto(n) / history() / listProblems()",
+});
+
+if (state.debug) {
+  stage.classList.add("debug");
+}
+if (state.hudEnabled || state.logging) {
+  state.playthroughHistory = loadPlaythroughHistory();
+}
+if (state.hudEnabled) {
+  ensureDebugHud();
+}
+
+function screenId(slide) {
+  return `slide-${String(slide).padStart(3, "0")}`;
+}
+
+function setStatus(text) {
+  statusOutput.value = text;
+  statusOutput.textContent = text;
+  runtimeLog("ui:status", { text });
+}
+
+function unlockAudio() {
+  const wasLocked = !state.audioUnlocked;
+  state.audioUnlocked = true;
+  runtimeLog("audio:unlock", { wasLocked, pendingCommands: state.pendingAudioCommands.length });
+  if (wasLocked) {
+    flushPendingAudioCommands();
+  }
+}
+
+function prepareAudio() {
+  const audioEntries = state.manifest.audio || [];
+  let preparedCount = 0;
+  for (const entry of audioEntries) {
+    if (!entry.outputs || entry.outputs.length === 0) {
+      runtimeLog("audio:skip-entry", { source: entry.source, reason: "no outputs" }, "warn");
+      continue;
+    }
+    // Prefer mp3 for Safari/iOS and GitHub Pages; opus remains as fallback.
+    const preferred =
+      entry.outputs.find((output) => output.type === "mp3") ||
+      entry.outputs.find((output) => output.type === "opus") ||
+      entry.outputs[0];
+    const element = new Audio(assetUrl(preferred.path));
+    element.preload = "auto";
+    state.audioElements.set(entry.source, element);
+    preparedCount += 1;
+  }
+  runtimeLog("audio:prepared", { manifestEntries: audioEntries.length, preparedCount });
+}
+
+function stopAudio() {
+  runtimeLog("audio:stop-all", { count: state.audioElements.size });
+  for (const element of state.audioElements.values()) {
+    element.pause();
+    element.currentTime = 0;
+  }
+}
+
+function stopAudioExcept(sourceToKeep = null) {
+  runtimeLog("audio:stop-except", { sourceToKeep, count: state.audioElements.size });
+  for (const [source, element] of state.audioElements.entries()) {
+    if (source === sourceToKeep) {
+      continue;
+    }
+    element.pause();
+    element.currentTime = 0;
+  }
+}
+
+function playAudioSource(source, startSeconds = 0, behavior = {}) {
+  const element = state.audioElements.get(source);
+  if (!element) {
+    runtimeLog("audio:missing-source", { source, startSeconds, behavior }, "warn");
+    return;
+  }
+  if (!state.audioUnlocked) {
+    state.pendingAudioCommands.push({ source, startSeconds, behavior });
+    runtimeLog("audio:queued-before-unlock", {
+      source,
+      startSeconds,
+      behavior,
+      pendingCommands: state.pendingAudioCommands.length,
+    });
+    return;
+  }
+  if (behavior.stop) {
+    runtimeLog("audio:command-stop", { source, startSeconds, behavior });
+    stopAudioExcept(null);
+    return;
+  }
+  if (behavior.replaceExisting !== false) {
+    stopAudioExcept(source);
+  }
+  element.loop = Boolean(behavior.loop);
+  element.pause();
+  element.currentTime = Math.max(startSeconds, 0);
+  runtimeLog("audio:play", {
+    source,
+    startSeconds: Math.max(startSeconds, 0),
+    loop: element.loop,
+    behavior,
+  });
+  element.play().catch(() => {
+    runtimeLog("audio:play-rejected", { source, startSeconds, behavior }, "warn");
+    // Browser autoplay policy can still reject in edge cases. Keep gameplay
+    // running; the user can click again to unlock/resume audio.
+  });
+}
+
+function flushPendingAudioCommands() {
+  const pending = state.pendingAudioCommands.splice(0);
+  runtimeLog("audio:flush-pending", { count: pending.length });
+  for (const command of pending) {
+    playAudioSource(command.source, command.startSeconds, command.behavior || {});
+  }
+}
+
+function clearAutoAdvanceTimer(reason = "unspecified") {
+  if (state.autoAdvanceTimer === null) {
+    return;
+  }
+  window.clearTimeout(state.autoAdvanceTimer.handle);
+  runtimeLog("navigation:auto-advance-cleared", {
+    timerId: state.autoAdvanceTimer.id,
+    reason,
+    fromScreen: state.autoAdvanceTimer.fromScreen,
+    toScreen: state.autoAdvanceTimer.toScreen,
+    scheduledDelayMs: state.autoAdvanceTimer.delayMs,
+  });
+  state.autoAdvanceTimer = null;
+}
+
+function clearAnimationTimers() {
+  runtimeLog("animation:timers-cleared", {
+    count: state.animationTimers.length,
+    queuedNodes: state.animationQueue.map((node) => animationNodeInfo(node)),
+    triggerWaiterCount: Array.from(state.animationTriggerWaiters.values()).reduce((total, waiters) => total + waiters.length, 0),
+  });
+  for (const timer of state.animationTimers) {
+    window.clearTimeout(timer);
+  }
+  state.animationTimers = [];
+  state.animationQueue = [];
+  state.pendingAfterEffectHides = [];
+  state.animationTriggerWaiters = new Map();
+  state.animationStartedNodes = new Set();
+  state.animationCompletedNodes = new Set();
+}
+
+/** Slide-transition cleanup must survive setupAnimations() clears (boot race). */
+function clearTransitionTimers() {
+  for (const timer of state.transitionTimers) {
+    window.clearTimeout(timer);
+  }
+  state.transitionTimers = [];
+}
+
+function scheduleTransitionTimer(callback, delayMs = 0, label = "slide-transition", details = {}) {
+  const timerId = ++state.animationTimerSequence;
+  const normalizedDelayMs = Math.max(delayMs, 0);
+  runtimeLog("transition:timer-scheduled", {
+    timerId,
+    label,
+    delayMs: normalizedDelayMs,
+    ...details,
+  });
+  const timer = window.setTimeout(() => {
+    runtimeLog("transition:timer-fired", {
+      timerId,
+      label,
+      scheduledDelayMs: normalizedDelayMs,
+      ...details,
+    });
+    state.transitionTimers = state.transitionTimers.filter((handle) => handle !== timer);
+    callback();
+  }, normalizedDelayMs);
+  state.transitionTimers.push(timer);
+  return timer;
+}
+
+function finishSlideTransition(reason = "completed") {
+  clearTransitionTimers();
+  stage.classList.remove("is-transitioning");
+  clearSlideTransitionClasses();
+  // Drop fill-mode residue (reversed push/fade can end at opacity 0 / translateX).
+  layersLayer.style.opacity = "";
+  layersLayer.style.transform = "";
+  screenImage.style.opacity = "";
+  screenImage.style.transform = "";
+  runtimeLog("transition:finished", {
+    reason,
+    screen: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+  });
+}
+
+function scheduleAnimation(callback, delayMs = 0, label = "anonymous", details = {}) {
+  const timerId = ++state.animationTimerSequence;
+  const normalizedDelayMs = Math.max(delayMs, 0);
+  runtimeLog("animation:timer-scheduled", {
+    timerId,
+    label,
+    delayMs: normalizedDelayMs,
+    pendingTimersBeforeAdd: state.animationTimers.length,
+    ...details,
+  });
+  const timer = window.setTimeout(() => {
+    runtimeLog("animation:timer-fired", {
+      timerId,
+      label,
+      scheduledDelayMs: normalizedDelayMs,
+      ...details,
+    });
+    callback();
+  }, normalizedDelayMs);
+  state.animationTimers.push(timer);
+  return timer;
+}
+
+function updateAudioMute() {
+  for (const element of state.audioElements.values()) {
+    element.muted = state.muted;
+  }
+  muteButton.setAttribute("aria-pressed", String(state.muted));
+  muteButton.textContent = state.muted ? "Unmute" : "Mute";
+  runtimeLog("audio:mute-changed", { muted: state.muted });
+}
+
+function navigateTo(id, interaction = null) {
+  const next = state.screens.get(id);
+  if (!next) {
+    runtimeLog("navigation:missing-target", {
+      requestedId: id,
+      knownScreenCount: state.screens.size,
+    }, "warn");
+    if (interaction) {
+      recordInteraction({ ...interaction, result: "missing-target", requestedId: id });
+    }
+    return false;
+  }
+  clearAutoAdvanceTimer("navigation");
+  runtimeLog("navigation:requested", {
+    from: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+    to: { id: next.id, slide: next.slide },
+    targetHotspotCount: (next.hotspots || []).length,
+  });
+  if (interaction) {
+    const same = state.current && state.current.id === next.id;
+    recordInteraction({
+      ...interaction,
+      result: same ? "navigate-to-same-screen" : "navigated",
+      from: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+      to: { id: next.id, slide: next.slide },
+    });
+  }
+  state.current = next;
+  renderScreen(next);
+  return true;
+}
+
+async function loadAnimations(manifest) {
+  const animationStatus = manifest.animationStatus;
+  if (!animationStatus || animationStatus.status !== "available" || !animationStatus.path) {
+    runtimeLog("animation:manifest-unavailable", { animationStatus });
+    return null;
+  }
+  runtimeLog("animation:manifest-request", { path: animationStatus.path });
+  const response = await fetch(assetUrl(animationStatus.path), { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`Animation manifest load failed: ${response.status}`);
+  }
+  const animations = await response.json();
+  runtimeLog("animation:manifest-loaded", {
+    path: animationStatus.path,
+    slideCount: (animations.slides || []).length,
+    summary: animations.summary || null,
+  });
+  return animations;
+}
+
+function mediaBindingForHotspot(hotspot) {
+  if (hotspot.mediaBindingId) {
+    return (state.manifest.mediaBindings || []).find((binding) => binding.id === hotspot.mediaBindingId) || null;
+  }
+  if (hotspot.shapeId === undefined || !state.current) {
+    return null;
+  }
+  return state.mediaBindings.get(`${state.current.slide}:${hotspot.shapeId}`) || null;
+}
+
+function handleHotspotAction(hotspot) {
+  runtimeLog("input:hotspot-action", {
+    hotspotId: hotspot.id,
+    action: hotspot.action,
+    shapeId: hotspot.shapeId,
+    targetSlide: hotspot.targetSlide,
+    targetId: hotspot.targetSlide ? screenId(hotspot.targetSlide) : null,
+    mediaBindingId: hotspot.mediaBindingId || null,
+    label: hotspot.label || null,
+  });
+  unlockAudio();
+  if (hotspot.behaviorStatus === "external_url" && hotspot.externalUrl) {
+    // The deck's one external hyperlink (slide 91): PowerPoint opened the
+    // URL in a browser; never navigate the game itself away.
+    window.open(hotspot.externalUrl, "_blank", "noopener");
+    recordInteraction({
+      type: "hotspot-click",
+      action: "external_url",
+      hotspotId: hotspot.id,
+      shapeId: hotspot.shapeId,
+      result: "external-opened",
+      url: hotspot.externalUrl,
+    });
+    return;
+  }
+  if (hotspot.action === "hyperlink" && hotspot.targetSlide) {
+    navigateTo(screenId(hotspot.targetSlide), {
+      type: "hotspot-click",
+      action: "hyperlink",
+      hotspotId: hotspot.id,
+      shapeId: hotspot.shapeId,
+      targetSlide: hotspot.targetSlide,
+    });
+    return;
+  }
+  if (hotspot.action === "media") {
+    const binding = mediaBindingForHotspot(hotspot);
+    runtimeLog("audio:media-hotspot-binding", { hotspotId: hotspot.id, binding });
+    if (binding && binding.status === "mapped" && binding.audioSource) {
+      playAudioSource(binding.audioSource, binding.startSeconds || 0, binding.cueBehavior || {});
+      recordInteraction({
+        type: "hotspot-click",
+        action: "media",
+        hotspotId: hotspot.id,
+        shapeId: hotspot.shapeId,
+        result: "media-played",
+        audioSource: binding.audioSource,
+      });
+    } else {
+      runtimeLog("audio:media-hotspot-unhandled", { hotspotId: hotspot.id, binding }, "warn");
+      recordInteraction({
+        type: "hotspot-click",
+        action: "media",
+        hotspotId: hotspot.id,
+        shapeId: hotspot.shapeId,
+        result: "media-unhandled",
+        binding: binding || null,
+      });
+    }
+    return;
+  }
+  recordInteraction({
+    type: "hotspot-click",
+    action: hotspot.action,
+    hotspotId: hotspot.id,
+    shapeId: hotspot.shapeId,
+    result: "no-handler",
+  });
+}
+
+function renderHotspots(screen) {
+  hotspotsLayer.replaceChildren();
+  let renderedCount = 0;
+  const skipped = [];
+  for (const hotspot of screen.hotspots || []) {
+    if (!hotspot.bounds || !hotspot.clickable) {
+      skipped.push({ id: hotspot.id, reason: !hotspot.bounds ? "missing-bounds" : "not-clickable" });
+      continue;
+    }
+    const button = document.createElement("button");
+    const bounds = hotspot.bounds;
+    button.type = "button";
+    button.className = "hotspot";
+    button.style.left = `${bounds.x * 100}%`;
+    button.style.top = `${bounds.y * 100}%`;
+    button.style.width = `${bounds.width * 100}%`;
+    button.style.height = `${bounds.height * 100}%`;
+    button.dataset.action = hotspot.action;
+    if (hotspot.shapeId !== undefined && hotspot.shapeId !== null) {
+      button.dataset.shapeId = String(hotspot.shapeId);
+    }
+    if (hotspot.targetSlide) {
+      button.dataset.target = screenId(hotspot.targetSlide);
+    }
+    button.setAttribute(
+      "aria-label",
+      hotspot.shapeText ||
+        hotspot.label ||
+        (hotspot.targetSlide ? `Go to slide ${hotspot.targetSlide}` : `Run ${hotspot.action} action`),
+    );
+    const layerMeta = (screen.layers || []).find((layer) => layer.shapeId === hotspot.shapeId);
+    if (layerMeta && layerMeta.zOrder != null) {
+      button.style.zIndex = String(layerMeta.zOrder);
+    }
+    let awaitingReveal = false;
+    let revealVisible = true;
+    if (layerMeta && layerMeta.animated) {
+      const layerEl = state.currentLayerElements.get(String(hotspot.shapeId));
+      const slideAnimations = state.animationSlides && state.animationSlides.get(screen.slide);
+      const animatedIds = slideAnimations ? collectAnimatedShapeIds(slideAnimations) : null;
+      const inTimingTree = animatedIds ? animatedIds.has(String(hotspot.shapeId)) : false;
+      // Gate only when the runtime is actually entrance-hiding this shape (timing tree
+      // known), so late anim-manifest boot does not permanently disable menu hotspots.
+      if (inTimingTree || (layerEl && !layerElementLooksRevealed(layerEl))) {
+        button.dataset.awaitsReveal = "1";
+        awaitingReveal = true;
+        revealVisible = layerElementLooksRevealed(layerEl);
+      }
+    }
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      unlockAudio();
+      // Navigation hyperlinks are shape actions: they must not be stolen by a
+      // pending OnNext build (title start, Attack/Flee). Fire non-gating media
+      // (BGM playFrom) as a side effect, then navigate on this same click.
+      if (hotspot.action === "hyperlink" && hotspot.targetSlide) {
+        const drained = drainNonGatingAnimationNodes("hotspot-hyperlink");
+        if (drained.length) {
+          runtimeLog("input:hotspot-media-sidefire", {
+            hotspotId: hotspot.id,
+            drained: drained.map((node) => animationNodeInfo(node)),
+          });
+        }
+        pushPlaythroughEvent({
+          kind: "hotspot",
+          detail: "hyperlink",
+          hotspotId: hotspot.id,
+          shapeId: hotspot.shapeId,
+          label: hotspot.shapeText || hotspot.label || null,
+          targetSlide: hotspot.targetSlide,
+          drainedNonGating: drained.length,
+        });
+        handleHotspotAction(hotspot);
+        return;
+      }
+      // Non-nav hotspots (media) still honor the OnNext continuum first.
+      if (advanceAnimation()) {
+        recordInteraction({
+          type: "hotspot-click",
+          action: "advance-animation",
+          result: "animation-advanced",
+          hotspotId: hotspot.id,
+          shapeId: hotspot.shapeId,
+          queueLengthAfter: state.animationQueue.length,
+        });
+        return;
+      }
+      handleHotspotAction(hotspot);
+    });
+    hotspotsLayer.append(button);
+    if (awaitingReveal) {
+      syncHotspotsForShapeVisibility(hotspot.shapeId, revealVisible);
+    }
+    renderedCount += 1;
+  }
+  runtimeLog("render:hotspots", {
+    screen: { id: screen.id, slide: screen.slide },
+    declaredCount: (screen.hotspots || []).length,
+    renderedCount,
+    skipped,
+  });
+}
+
+function positionLayerElement(element, layer) {
+  const bounds = layer.bounds;
+  element.className = `layer layer-${layer.type}`;
+  element.style.left = `${bounds.x * 100}%`;
+  element.style.top = `${bounds.y * 100}%`;
+  element.style.width = `${bounds.width * 100}%`;
+  element.style.height = `${bounds.height * 100}%`;
+  element.style.zIndex = String(layer.zOrder ?? 0);
+  element.dataset.layerId = layer.id;
+  element.dataset.shapeId = String(layer.shapeId);
+  element.dataset.animated = String(Boolean(layer.animated));
+  // Current metrics (mutated by set/animate) and base layout metrics (#ppt_* formulas).
+  element.dataset.pptX = String(bounds.x);
+  element.dataset.pptY = String(bounds.y);
+  element.dataset.pptW = String(bounds.width);
+  element.dataset.pptH = String(bounds.height);
+  element.dataset.basePptX = String(bounds.x);
+  element.dataset.basePptY = String(bounds.y);
+  element.dataset.basePptW = String(bounds.width);
+  element.dataset.basePptH = String(bounds.height);
+  applyLayerTransform(element, layer);
+  applyLayerVisualStyle(element, layer);
+}
+
+function pointWidthToContainer(value) {
+  return `${(Number(value || 0) / 720) * 100}cqw`;
+}
+
+function pointHeightToContainer(value) {
+  return `${(Number(value || 0) / 540) * 100}cqh`;
+}
+
+
+
+/** OOXML DrawingML preset geometries as CSS clip-paths (viewBox 21600). */
+const AUTOSHAPE_CLIP_PATHS = {
+  IRREGULAR_SEAL_1:
+    "polygon(50% 26.852%, 67.231% 0%, 65.532% 24.653%, 85.093% 20.634%, 77.324% 33.866%, 97.671% 37.671%, 81.514% 48.495%, 100% 61.528%, 77.949% 59.917%, 84.005% 83.773%, 64.907% 66.931%, 61.329% 91.375%, 48.759% 69.144%, 39.282% 100%, 35.718% 72.347%, 22.046% 81.56%, 26.236% 64.523%, 0.625% 67.532%, 17.231% 54.514%, 0% 39.884%, 21.421% 35.264%, 1.713% 10.625%, 33.852% 29.259%, 38.667% 10.625%)",
+  IRREGULAR_SEAL_2:
+    "polygon(53.065% 20.102%, 68.472% 0%, 67.245% 26.745%, 83.366% 14.685%, 75.833% 30.241%, 100% 30.764%, 78.634% 43.528%, 84.583% 52.269%, 75.833% 56.991%, 87.394% 72.37%, 67.778% 66.435%, 69.176% 80.417%, 56.389% 73.773%, 53.759% 87.231%, 45.704% 80.417%, 40.278% 91.259%, 34.847% 83.912%, 22.764% 100%, 22.245% 84.444%, 5.949% 82.523%, 15.417% 71.157%, 0% 59.616%, 18.218% 53.667%, 5.426% 38.287%, 24.87% 36.19%, 20.843% 16.782%, 39.583% 29.546%, 45.009% 8.736%)",
+  ELLIPSE: "ellipse(50% 50% at 50% 50%)",
+  OVAL: "ellipse(50% 50% at 50% 50%)",
+  STAR_4: "polygon(50% 0%, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0% 50%, 38% 38%)",
+  RIGHT_ARROW:
+    "polygon(0% 25%, 60% 25%, 60% 0%, 100% 50%, 60% 100%, 60% 75%, 0% 75%)",
+  LEFT_ARROW:
+    "polygon(40% 0%, 0% 50%, 40% 100%, 40% 75%, 100% 75%, 100% 25%, 40% 25%)",
+  DOWN_ARROW:
+    "polygon(25% 0%, 75% 0%, 75% 60%, 100% 60%, 50% 100%, 0% 60%, 25% 60%)",
+  UP_ARROW:
+    "polygon(50% 0%, 100% 40%, 75% 40%, 75% 100%, 25% 100%, 25% 40%, 0% 40%)",
+  TRIANGLE: "polygon(50% 0%, 100% 100%, 0% 100%)",
+  DIAMOND: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+  PENTAGON: "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)",
+  HEXAGON: "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)",
+  PLUS: "polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%)",
+  CROSS: "polygon(35% 0%, 65% 0%, 65% 35%, 100% 35%, 100% 65%, 65% 65%, 65% 100%, 35% 100%, 35% 65%, 0% 65%, 0% 35%, 35% 35%)",
+};
+
+function autoShapeClipPath(shapeType) {
+  if (!shapeType) {
+    return null;
+  }
+  const key = String(shapeType).toUpperCase();
+  return AUTOSHAPE_CLIP_PATHS[key] || null;
+}
+
+function applyAutoShapeGeometry(element, layer) {
+  const shapeType = String(layer.shapeType || "");
+  const clip = autoShapeClipPath(shapeType);
+  if (clip) {
+    element.style.clipPath = clip;
+    element.style.webkitClipPath = clip;
+    element.dataset.autoShapeClip = shapeType;
+  }
+  if (shapeType === "LINE") {
+    // PPT line AutoShapes are stroked diagonals in their bounding box.
+    element.classList.add("layer-line");
+    element.textContent = "";
+    element.style.backgroundColor = "transparent";
+    element.style.border = "none";
+    const style = layer.style || {};
+    const stroke = cssColorFromPpt(style.lineColor) || "#ffff00";
+    const widthPt = Number(style.lineWidth || 1.5);
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 100 100");
+    svg.setAttribute("preserveAspectRatio", "none");
+    svg.classList.add("layer-line-svg");
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", "0");
+    line.setAttribute("y1", "0");
+    line.setAttribute("x2", "100");
+    line.setAttribute("y2", "100");
+    line.setAttribute("stroke", stroke);
+    line.setAttribute("stroke-width", String(Math.max(widthPt * 1.2, 1)));
+    line.setAttribute("vector-effect", "non-scaling-stroke");
+    if (style.lineDash && style.lineDash !== "SOLID") {
+      line.setAttribute("stroke-dasharray", "6 4");
+    }
+    svg.append(line);
+    element.append(svg);
+  }
+}
+
+function isOpaqueCssColor(value) {
+  if (!value || typeof value !== "string") {
+    return false;
+  }
+  const hex = value.trim().replace(/^#/, "");
+  if (/^[0-9a-fA-F]{6}$/.test(hex)) {
+    return true;
+  }
+  if (/^[0-9a-fA-F]{8}$/.test(hex)) {
+    return Number.parseInt(hex.slice(6, 8), 16) >= 250;
+  }
+  return false;
+}
+
+function pointFontToContainer(value) {
+  return `${(Number(value || 1) / 540) * 100}cqh`;
+}
+
+function applyLayerTransform(element, layer) {
+  const transform = layer.transform || {};
+  const parts = [];
+  if (Number.isFinite(transform.rotation) && transform.rotation !== 0) {
+    parts.push(`rotate(${transform.rotation}deg)`);
+  }
+  const scaleX = transform.flipHorizontal ? -1 : 1;
+  const scaleY = transform.flipVertical ? -1 : 1;
+  if (scaleX !== 1 || scaleY !== 1) {
+    parts.push(`scale(${scaleX}, ${scaleY})`);
+  }
+  const baseTransform = parts.join(" ");
+  element.dataset.baseTransform = baseTransform;
+  element.style.transform = baseTransform;
+  element.style.transformOrigin = "center center";
+}
+
+
+function cssColorFromPpt(value) {
+  if (!value || typeof value !== "string") {
+    return value;
+  }
+  const trimmed = value.trim();
+  const hex = trimmed.replace(/^#/, "");
+  // Prefer #RRGGBB when alpha is opaque — widest CSS support.
+  if (/^[0-9a-fA-F]{8}$/.test(hex) && hex.slice(6, 8).toLowerCase() === "ff") {
+    return `#${hex.slice(0, 6)}`;
+  }
+  if (/^[0-9a-fA-F]{8}$/.test(hex)) {
+    const r = Number.parseInt(hex.slice(0, 2), 16);
+    const g = Number.parseInt(hex.slice(2, 4), 16);
+    const b = Number.parseInt(hex.slice(4, 6), 16);
+    const a = Number.parseInt(hex.slice(6, 8), 16) / 255;
+    return `rgba(${r}, ${g}, ${b}, ${a})`;
+  }
+  return trimmed;
+}
+
+function applyLayerVisualStyle(element, layer) {
+  const style = layer.style || {};
+  // WordArt fill colors the glyphs; a solid box fill would hide the logo.
+  // Picture shapes often carry a POI white fill that should not paint behind the bitmap.
+  if (style.fillColor && !layer.wordArt && layer.type !== "image") {
+    element.style.backgroundColor = cssColorFromPpt(style.fillColor);
+  }
+  if (style.lineColor && Number(style.lineWidth || 0) > 0 && !layer.wordArt && layer.type !== "image") {
+    element.style.border = `${style.lineWidth}pt solid ${cssColorFromPpt(style.lineColor)}`;
+  }
+  if (style.lineDash && style.lineDash !== "SOLID" && !layer.wordArt && layer.type !== "image") {
+    element.style.borderStyle = "dashed";
+  }
+}
+
+
+/** OOXML prstTxWarp defaults (pptx-svg / ECMA-376 style adj). */
+const WORDART_WARP_AV1 = {
+  TEXT_CURVE_UP: 45977,
+  TEXT_CURVE_DOWN: 45977,
+  TEXT_ARCH_UP: 10800000,
+  TEXT_ARCH_DOWN: 0,
+  // textDeflate / textInflate family default adj (0–100000).
+  TEXT_DEFLATE: 18750,
+};
+
+/**
+ * True path warp for WordArt Curve/Arch/Deflate presets via SVG.
+ * Curve/Arch: glyphs follow a single guide via SVG textPath.
+ * Deflate: OOXML dual-path (top+bottom) pinch — per-glyph scaleY from local
+ * guide gap (not a flat CSS scaleY on the whole string).
+ * Refs:
+ * - Microsoft Learn TextShapeValues.TextDeflate → textDeflate
+ * - Microsoft Learn PresetTextWrap dual-path warp (top+bottom guides)
+ * - OOXML a:prstTxWarp / ST_TextShapeType textDeflate
+ * - pptx-svg generate_warp_path textDeflate (adj default 18750):
+ *   mid cubic M 0,cy C w/3,cy+dip 2w/3,cy+dip w,cy
+ */
+function wordArtWarpPathD(geometry, w, h, av1) {
+  const geo = String(geometry || "").toUpperCase();
+  const cx = w / 2;
+  const cy = h / 2;
+  if (geo.includes("DEFLATE")) {
+    const dip = (h * (Number.isFinite(av1) ? av1 : WORDART_WARP_AV1.TEXT_DEFLATE)) / 100000;
+    // Centerline used by textPath fallback / debug; dual-path uses guides below.
+    return `M 0,${cy} C ${w / 3},${cy + dip} ${(2 * w) / 3},${cy + dip} ${w},${cy}`;
+  }
+  const adj = (h * (Number.isFinite(av1) ? av1 : 45977)) / 100000;
+  if (geo.includes("CURVE_DOWN")) {
+    return `M 0,${cy - adj} Q ${cx},${cy + adj} ${w},${cy - adj}`;
+  }
+  if (geo.includes("CURVE_UP")) {
+    return `M 0,${cy + adj} Q ${cx},${cy - adj} ${w},${cy + adj}`;
+  }
+  if (geo.includes("ARCH_DOWN")) {
+    const rx = cx;
+    const ry = Math.max(cy * 0.95, 1);
+    return `M ${cx + rx},${cy} A ${rx},${ry} 0 1 1 ${cx - rx},${cy}`;
+  }
+  if (geo.includes("ARCH_UP")) {
+    const rx = cx;
+    const ry = Math.max(cy * 0.95, 1);
+    return `M ${cx - rx},${cy} A ${rx},${ry} 0 1 1 ${cx + rx},${cy}`;
+  }
+  return `M 0,${cy} L ${w},${cy}`;
+}
+
+/** OOXML-style dual guides for textDeflate (top dips down, bottom rises up). */
+function wordArtDeflateGuides(w, h, av1) {
+  const dip = (h * (Number.isFinite(av1) ? av1 : WORDART_WARP_AV1.TEXT_DEFLATE)) / 100000;
+  const top0 = h * 0.06;
+  const bot0 = h * 0.94;
+  // Pinch strength: default adj 18750 → clear mid squeeze matching WordArt Deflate.
+  const pinch = Math.min(dip * 2.8, (bot0 - top0) * 0.48);
+  const topMid = top0 + pinch;
+  const botMid = bot0 - pinch;
+  return {
+    top0,
+    bot0,
+    top: `M 0,${top0} C ${w / 3},${topMid} ${(2 * w) / 3},${topMid} ${w},${top0}`,
+    bottom: `M 0,${bot0} C ${w / 3},${botMid} ${(2 * w) / 3},${botMid} ${w},${bot0}`,
+    // Cubic control points for sampling (same as path strings).
+    topCtrl: [
+      [0, top0],
+      [w / 3, topMid],
+      [(2 * w) / 3, topMid],
+      [w, top0],
+    ],
+    botCtrl: [
+      [0, bot0],
+      [w / 3, botMid],
+      [(2 * w) / 3, botMid],
+      [w, bot0],
+    ],
+  };
+}
+
+function cubicBezierPoint(ctrl, t) {
+  const mt = 1 - t;
+  const a = mt * mt * mt;
+  const b = 3 * mt * mt * t;
+  const c = 3 * mt * t * t;
+  const d = t * t * t;
+  return {
+    x: a * ctrl[0][0] + b * ctrl[1][0] + c * ctrl[2][0] + d * ctrl[3][0],
+    y: a * ctrl[0][1] + b * ctrl[1][1] + c * ctrl[2][1] + d * ctrl[3][1],
+  };
+}
+
+/**
+ * WordArt textPlain / textSlantUp: PowerPoint stretches the glyphs to fill
+ * the shape box exactly (both axes). Render as SVG text with textLength =
+ * box width and font-size from box height, in a viewBox with the box's
+ * aspect, preserveAspectRatio="none" so the stretch is faithful.
+ */
+function mountWordArtPlainFit(element, layer, slant) {
+  const text = String(layer.text || (layer.geoText && layer.geoText.unicode) || "");
+  if (!text) {
+    return false;
+  }
+  const style = layer.style || {};
+  const firstRun = (layer.textRuns || [])[0] || {};
+  const fillColor = cssColorFromPpt(style.fillColor || firstRun.fontColor || "#808080");
+  const strokeColor =
+    style.lineColor && Number(style.lineWidth || 0) > 0 ? cssColorFromPpt(style.lineColor) : null;
+  const boundsW = Math.max(Number(layer.bounds && layer.bounds.width) || 0.5, 0.05);
+  const boundsH = Math.max(Number(layer.bounds && layer.bounds.height) || 0.2, 0.05);
+  const vbW = 1000;
+  const vbH = Math.max(Math.round(vbW * (boundsH / boundsW)), 40);
+  const fontFamily = (layer.geoText && layer.geoText.fontFamily) || firstRun.fontFamily || "Arial Black";
+  const fontSize = vbH * 0.8;
+  const strokeWidth = strokeColor ? Math.max(Number(style.lineWidth || 1) * 2.5 * (vbH / 1000), 2.5) : 0;
+
+  element.textContent = "";
+  element.dataset.wordArtText = text;
+  element.dataset.wordArtWarp = slant ? "slant-up" : "plain";
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", "wordart-curve-svg wordart-plain-svg");
+  svg.setAttribute("viewBox", `0 0 ${vbW} ${vbH}`);
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", "100%");
+  svg.setAttribute("preserveAspectRatio", "none");
+  svg.setAttribute("aria-hidden", "true");
+
+  const svgText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  svgText.setAttribute("fill", fillColor);
+  svgText.setAttribute("font-family", `"${fontFamily}", Impact, "Arial Black", sans-serif`);
+  svgText.setAttribute("font-weight", "900");
+  svgText.setAttribute("font-size", String(fontSize));
+  svgText.setAttribute("x", String(vbW / 2));
+  svgText.setAttribute("y", String(vbH / 2));
+  svgText.setAttribute("text-anchor", "middle");
+  svgText.setAttribute("dominant-baseline", "middle");
+  svgText.setAttribute("textLength", String(Math.round(vbW * 0.98)));
+  svgText.setAttribute("lengthAdjust", "spacingAndGlyphs");
+  svgText.style.paintOrder = "stroke fill";
+  if (strokeColor) {
+    svgText.setAttribute("stroke", strokeColor);
+    svgText.setAttribute("stroke-width", String(strokeWidth));
+    svgText.setAttribute("stroke-linejoin", "round");
+    svgText.setAttribute("stroke-linecap", "round");
+  }
+  if (slant) {
+    svgText.setAttribute("transform", `rotate(-8 ${vbW / 2} ${vbH / 2})`);
+  }
+  svgText.textContent = text;
+  svg.append(svgText);
+  element.append(svg);
+  return true;
+}
+
+function mountWordArtPathWarp(element, layer, geometry) {
+  const text = String(layer.text || (layer.geoText && layer.geoText.unicode) || "");
+  if (!text) {
+    return false;
+  }
+  const geo = String(geometry || "").toUpperCase();
+  const vbW = 1000;
+  const vbH = 1000;
+  const isDeflate = geo.includes("DEFLATE");
+  let av1 = 45977;
+  if (isDeflate) {
+    av1 = WORDART_WARP_AV1.TEXT_DEFLATE;
+  } else if (geo.includes("CURVE")) {
+    av1 = WORDART_WARP_AV1.TEXT_CURVE_UP;
+  } else if (geo.includes("ARCH")) {
+    av1 = WORDART_WARP_AV1.TEXT_ARCH_UP;
+  }
+  const pathD = wordArtWarpPathD(geometry, vbW, vbH, av1);
+  const style = layer.style || {};
+  const firstRun = (layer.textRuns || [])[0] || {};
+  const fillColor = cssColorFromPpt(style.fillColor || firstRun.fontColor || "#808080");
+  const strokeColor =
+    style.lineColor && Number(style.lineWidth || 0) > 0
+      ? cssColorFromPpt(style.lineColor)
+      : null;
+  // viewBox units: ~2–4 keeps a readable outline at WordArt stage scale.
+  const strokeWidth = strokeColor ? Math.max(Number(style.lineWidth || 1) * 2.5, 18) : 0;
+  const fontFamily = (layer.geoText && layer.geoText.fontFamily) || firstRun.fontFamily || "Arial Black";
+  const pathId = `wordart-warp-${layer.shapeId || layer.id || "x"}`;
+  const isArch = geo.includes("ARCH");
+
+  element.textContent = "";
+  element.dataset.wordArtText = text;
+  element.dataset.wordArtWarp = isDeflate
+    ? "deflate"
+    : geo.includes("CURVE_DOWN")
+      ? "curve-down"
+      : geo.includes("CURVE_UP")
+        ? "curve-up"
+        : geo.includes("ARCH_DOWN")
+          ? "arch-down"
+          : "arch-up";
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("class", isDeflate ? "wordart-curve-svg wordart-deflate-svg" : "wordart-curve-svg");
+  svg.setAttribute("viewBox", `0 0 ${vbW} ${vbH}`);
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", "100%");
+  svg.setAttribute("preserveAspectRatio", "none");
+  svg.setAttribute("aria-hidden", "true");
+
+  if (isDeflate) {
+    // Dual-path Deflate: sample top/bottom cubics and scale each glyph's height
+    // by the local guide gap (PresetTextWrap algorithm intent).
+    // Match viewBox aspect to authored bounds so preserveAspectRatio=none does not
+    // horizontally squash a square coordinate system into a wide title box.
+    const boundsW = Math.max(Number(layer.bounds && layer.bounds.width) || 0.5, 0.05);
+    const boundsH = Math.max(Number(layer.bounds && layer.bounds.height) || 0.2, 0.05);
+    const deflateVbW = 1000;
+    const deflateVbH = Math.max(Math.round(deflateVbW * (boundsH / boundsW)), 220);
+    svg.setAttribute("viewBox", `0 0 ${deflateVbW} ${deflateVbH}`);
+
+    const guides = wordArtDeflateGuides(deflateVbW, deflateVbH, av1);
+    const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+    const topPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    topPath.setAttribute("id", `${pathId}-top`);
+    topPath.setAttribute("d", guides.top);
+    topPath.setAttribute("fill", "none");
+    const botPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    botPath.setAttribute("id", `${pathId}-bot`);
+    botPath.setAttribute("d", guides.bottom);
+    botPath.setAttribute("fill", "none");
+    defs.append(topPath, botPath);
+
+    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    g.setAttribute("fill", fillColor);
+    g.setAttribute("font-family", `"${fontFamily}", Impact, "Arial Black", sans-serif`);
+    g.setAttribute("font-weight", "900");
+    g.style.paintOrder = "stroke fill";
+    // Stroke scales with viewBox height so outlines stay readable on wide titles.
+    const deflateStroke = strokeColor
+      ? Math.max(Number(style.lineWidth || 1) * (deflateVbH / 120), 8)
+      : 0;
+    if (strokeColor) {
+      g.setAttribute("stroke", strokeColor);
+      g.setAttribute("stroke-width", String(deflateStroke));
+      g.setAttribute("stroke-linejoin", "round");
+      g.setAttribute("stroke-linecap", "round");
+    }
+
+    const chars = Array.from(text);
+    const n = Math.max(chars.length, 1);
+    const fullGap = guides.bot0 - guides.top0;
+    const padX = deflateVbW * 0.02;
+    const usableW = deflateVbW - padX * 2;
+    const slot = usableW / n;
+    // Prefer vertical fill (WordArt Deflate fills box height at ends). Allow
+    // modest overlap vs PPT dense Impact packing in this wide/short title box.
+    const baseFont = Math.min(fullGap * 0.84, slot * 1.55);
+
+    chars.forEach((ch, i) => {
+      const t = n === 1 ? 0.5 : (i + 0.5) / n;
+      const topPt = cubicBezierPoint(guides.topCtrl, t);
+      const botPt = cubicBezierPoint(guides.botCtrl, t);
+      const gap = Math.max(botPt.y - topPt.y, 1);
+      const scaleY = Math.max(gap / fullGap, 0.32);
+      const x = padX + slot * (i + 0.5);
+      const y = (topPt.y + botPt.y) / 2;
+      const glyph = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      glyph.setAttribute("x", String(x));
+      glyph.setAttribute("y", String(y));
+      glyph.setAttribute("text-anchor", "middle");
+      glyph.setAttribute("dominant-baseline", "middle");
+      glyph.setAttribute("font-size", String(baseFont));
+      // Vertical pinch only — Deflate keeps horizontal advance; scale about center.
+      glyph.setAttribute(
+        "transform",
+        `translate(${x} ${y}) scale(1 ${scaleY.toFixed(4)}) translate(${-x} ${-y})`,
+      );
+      glyph.textContent = ch;
+      g.append(glyph);
+    });
+
+    svg.append(defs, g);
+    element.append(svg);
+    return true;
+  }
+
+  // Fit short phrases (Yip!) along the arc; spacingAndGlyphs stretches to path.
+  const fontSize = isArch ? 220 : 280;
+  const startOffset = "50%";
+  const textAnchor = "middle";
+
+  const defs = document.createElementNS("http://www.w3.org/2000/svg", "defs");
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("id", pathId);
+  path.setAttribute("d", pathD);
+  path.setAttribute("fill", "none");
+  defs.append(path);
+
+  const svgText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  svgText.setAttribute("fill", fillColor);
+  svgText.setAttribute("font-family", `"${fontFamily}", Impact, "Arial Black", sans-serif`);
+  svgText.setAttribute("font-weight", "900");
+  svgText.setAttribute("font-size", String(fontSize));
+  svgText.setAttribute("dominant-baseline", "middle");
+  svgText.style.paintOrder = "stroke fill";
+  if (strokeColor) {
+    svgText.setAttribute("stroke", strokeColor);
+    svgText.setAttribute("stroke-width", String(strokeWidth));
+    svgText.setAttribute("stroke-linejoin", "round");
+    svgText.setAttribute("stroke-linecap", "round");
+  }
+
+  const textPath = document.createElementNS("http://www.w3.org/2000/svg", "textPath");
+  textPath.setAttribute("href", `#${pathId}`);
+  // Legacy Safari
+  textPath.setAttributeNS("http://www.w3.org/1999/xlink", "href", `#${pathId}`);
+  textPath.setAttribute("startOffset", startOffset);
+  textPath.setAttribute("text-anchor", textAnchor);
+  textPath.setAttribute("method", "align");
+  textPath.setAttribute("spacing", "auto");
+  // Approximate quadratic path length for Curve presets so glyphs fill the arc.
+  if (!isArch) {
+    const approxLen = Math.hypot(vbW / 2, (vbH * av1) / 100000) * 2 * 0.85;
+    textPath.setAttribute("textLength", String(Math.round(approxLen * 0.72)));
+    textPath.setAttribute("lengthAdjust", "spacingAndGlyphs");
+  }
+  textPath.textContent = text;
+
+  svgText.append(textPath);
+  svg.append(defs, svgText);
+  element.append(svg);
+  return true;
+}
+
+
+function applyTextLayerStyle(element, layer) {
+  const textStyle = layer.textStyle || {};
+  const firstRun = (layer.textRuns || [])[0] || {};
+  const firstParagraph = (layer.paragraphs || [])[0] || {};
+  const wordArt = Boolean(layer.wordArt);
+  element.style.display = "flex";
+  element.style.paddingLeft = pointWidthToContainer(wordArt ? 0 : textStyle.leftInset);
+  element.style.paddingRight = pointWidthToContainer(wordArt ? 0 : textStyle.rightInset);
+  element.style.paddingTop = pointHeightToContainer(wordArt ? 0 : textStyle.topInset);
+  element.style.paddingBottom = pointHeightToContainer(wordArt ? 0 : textStyle.bottomInset);
+  element.style.whiteSpace = textStyle.wordWrap === false || wordArt ? "pre" : "pre-wrap";
+  element.style.overflowWrap = textStyle.wordWrap === false || wordArt ? "normal" : "break-word";
+  element.style.textAlign = String((wordArt ? "CENTER" : firstParagraph.textAlign) || "LEFT").toLowerCase();
+  element.style.alignItems =
+    wordArt || textStyle.verticalAlignment === "MIDDLE"
+      ? "center"
+      : textStyle.verticalAlignment === "BOTTOM"
+        ? "flex-end"
+        : "flex-start";
+  element.style.justifyContent = wordArt ? "center" : "flex-start";
+  const fontFamily = (layer.geoText && layer.geoText.fontFamily) || firstRun.fontFamily;
+  if (wordArt) {
+    element.style.fontFamily = fontFamily
+      ? `"${fontFamily}", Impact, "Arial Black", sans-serif`
+      : 'Impact, "Arial Black", sans-serif';
+    // Fit glyphs inside the authored WordArt bounds. Never rewrite left/width —
+    // width:100% was stretching the layer across the stage so centered text
+    // (e.g. s014 "Yip!") appeared over the wrong house roof.
+    const boundsH = Number(layer.bounds.height) || 0;
+    const boundsW = Number(layer.bounds.width) || 0;
+    element.style.fontSize = `${Math.max(Math.min(boundsH * 55, boundsW * 90 || boundsH * 55), 1)}cqh`;
+    element.style.lineHeight = "0.9";
+    element.style.letterSpacing = "0.01em";
+    element.style.backgroundColor = "transparent";
+    element.style.border = "none";
+    // Let outline stroke extend slightly past glyph boxes.
+    element.style.overflow = "visible";
+    // Geometry-aware WordArt: true SVG path warp for Curve/Arch; CSS approx for Deflate.
+    const geometry = String(layer.wordArtGeometry || layer.shapeType || "");
+    element.dataset.wordArtGeometry = geometry;
+    element.classList.add("wordart-layer");
+    let geometryTransform = "scaleX(0.92)";
+    let pathWarped = false;
+    if (geometry.includes("PLAIN") || geometry.includes("SLANT")) {
+      // textPlain / textSlantUp WordArt fills its shape box (ProjectStar's
+      // title and credits links). SVG fit rendering replaces the flat text.
+      geometryTransform = "";
+      pathWarped = mountWordArtPlainFit(element, layer, geometry.includes("SLANT"));
+      if (pathWarped) {
+        element.style.backgroundColor = "transparent";
+      }
+    } else if (
+      geometry.includes("DEFLATE") ||
+      geometry.includes("CURVE_UP") ||
+      geometry.includes("CURVE_DOWN") ||
+      geometry.includes("ARCH_UP") ||
+      geometry.includes("ARCH_DOWN")
+    ) {
+      // Real SVG path / dual-path warp (not flat CSS scaleY). Keeps authored bounds.
+      geometryTransform = "";
+      element.style.fontSize = `${Math.max(Math.min(boundsH * 48, boundsW * 85 || boundsH * 48), 1)}cqh`;
+      if (geometry.includes("DEFLATE")) {
+        element.classList.add("wordart-deflate");
+        element.style.fontSize = `${Math.max(Math.min(boundsH * 55, boundsW * 88 || boundsH * 55), 1)}cqh`;
+      } else if (geometry.includes("CURVE_DOWN") || geometry.includes("ARCH_DOWN")) {
+        element.classList.add("wordart-curve-down");
+      } else {
+        element.classList.add("wordart-curve-up");
+      }
+      pathWarped = mountWordArtPathWarp(element, layer, geometry);
+      if (pathWarped) {
+        // PPT WordArt spPr is noFill (verified on all deck WordArts). fillColor is
+        // glyph ink, not a text-box plate. Never invent a solid background — that
+        // painted a white rectangle over scenes (e.g. s014 Yip! on blue sky).
+        // Hybrid PNG double-draw is handled by underlay hole masks instead.
+        element.style.backgroundColor = "transparent";
+      }
+    }
+    // Bake geometry into baseTransform so setupAnimations / motion / scale
+    // resets preserve the WordArt warp instead of wiping it.
+    const composed = `${element.dataset.baseTransform || ""} ${geometryTransform}`.trim();
+    element.dataset.baseTransform = composed;
+    element.dataset.wordArtTransform = geometryTransform;
+    element.style.transform = composed;
+    const style = layer.style || {};
+    const fillColor = style.fillColor || firstRun.fontColor;
+    if (fillColor) {
+      element.style.color = cssColorFromPpt(fillColor);
+    }
+    if (!pathWarped && style.lineColor && Number(style.lineWidth || 0) > 0) {
+      // PPT lineWidth is points; thicken slightly so outlines read at stage scale.
+      const strokePx = Math.max(Number(style.lineWidth) * 2.25, 2);
+      element.style.webkitTextStroke = `${strokePx}px ${cssColorFromPpt(style.lineColor)}`;
+      element.style.paintOrder = "stroke fill";
+    }
+  } else {
+    element.style.fontFamily = fontFamily ? `"${fontFamily}", Arial, sans-serif` : "Arial, sans-serif";
+  }
+  if (!wordArt) {
+    if (Number.isFinite(firstRun.fontSize)) {
+      element.style.fontSize = pointFontToContainer(firstRun.fontSize);
+    } else {
+      element.style.fontSize = `${Math.max(layer.bounds.height * 72, 1)}cqh`;
+    }
+  }
+  if (!wordArt && firstRun.fontColor) {
+    element.style.color = cssColorFromPpt(firstRun.fontColor);
+  }
+  element.style.fontWeight = wordArt ? "900" : firstRun.bold ? "700" : "400";
+  element.style.fontStyle = firstRun.italic ? "italic" : "normal";
+  element.style.textDecoration = firstRun.underline ? "underline" : firstRun.strikethrough ? "line-through" : "none";
+  if (Number.isFinite(firstParagraph.lineSpacing) && firstParagraph.lineSpacing > 0 && !wordArt) {
+    element.style.lineHeight = String(firstParagraph.lineSpacing / 100);
+  }
+}
+
+function layerArea(layer) {
+  const bounds = layer.bounds || {};
+  return (Number(bounds.width) || 0) * (Number(bounds.height) || 0);
+}
+
+/** Sparse addressable layers: keep composite PNG as underlay (Phase 5.6). */
+
+function isPathWarpedWordArt(layer) {
+  if (!layer || !layer.wordArt) {
+    return false;
+  }
+  const geometry = String(layer.wordArtGeometry || layer.shapeType || "").toUpperCase();
+  return (
+    geometry.includes("DEFLATE") ||
+    geometry.includes("CURVE_UP") ||
+    geometry.includes("CURVE_DOWN") ||
+    geometry.includes("ARCH_UP") ||
+    geometry.includes("ARCH_DOWN")
+  );
+}
+
+/** Clear CSS mask holes punched for live path-warped WordArt over hybrid PNG. */
+function clearPngUnderlayWordArtHoles() {
+  if (!screenImage) {
+    return;
+  }
+  screenImage.style.maskImage = "";
+  screenImage.style.webkitMaskImage = "";
+  screenImage.style.maskSize = "";
+  screenImage.style.webkitMaskSize = "";
+  screenImage.style.maskRepeat = "";
+  screenImage.style.webkitMaskRepeat = "";
+  screenImage.style.maskPosition = "";
+  screenImage.style.webkitMaskPosition = "";
+  screenImage.style.maskMode = "";
+  delete screenImage.dataset.wordArtUnderlayMask;
+}
+
+/**
+ * On hybrid slides, path-warped WordArt stays live (SVG warp) while the composite
+ * PNG still contains baked WordArt. Punch transparent holes in the underlay at
+ * those bounds so we do not need a fake solid plate on the WordArt layer.
+ */
+function applyPngUnderlayWordArtHoles(screen) {
+  if (!screenImage || !screenNeedsPngUnderlay(screen)) {
+    clearPngUnderlayWordArtHoles();
+    return;
+  }
+  // Title redesign (slide-002): landscape PNG carries baked logo/CTA; do not
+  // punch underlay holes for live WordArt (CSS hides WordArt + start text).
+  if (screen && screen.id === "slide-002") {
+    clearPngUnderlayWordArtHoles();
+    return;
+  }
+  const holes = (screen.layers || []).filter(isPathWarpedWordArt);
+  if (!holes.length) {
+    clearPngUnderlayWordArtHoles();
+    return;
+  }
+  const rects = holes
+    .map((layer) => {
+      const b = layer.bounds || {};
+      const x = Number(b.x);
+      const y = Number(b.y);
+      const w = Number(b.width);
+      const h = Number(b.height);
+      if (![x, y, w, h].every(Number.isFinite) || w <= 0 || h <= 0) {
+        return null;
+      }
+      // Slight pad so stroke/outline does not leave baked fringe.
+      const padX = Math.min(w * 0.04, 0.01);
+      const padY = Math.min(h * 0.08, 0.015);
+      return {
+        x: Math.max(x - padX, 0),
+        y: Math.max(y - padY, 0),
+        w: Math.min(w + padX * 2, 1),
+        h: Math.min(h + padY * 2, 1),
+      };
+    })
+    .filter(Boolean);
+  if (!rects.length) {
+    clearPngUnderlayWordArtHoles();
+    return;
+  }
+  const holeSvg = rects
+    .map(
+      (r) =>
+        `<rect x="${r.x}" y="${r.y}" width="${r.w}" height="${r.h}" fill="black"/>`,
+    )
+    .join("");
+  const svg =
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" preserveAspectRatio="none">` +
+    `<rect width="1" height="1" fill="white"/>${holeSvg}</svg>`;
+  const maskUrl = `url("data:image/svg+xml;utf8,${encodeURIComponent(svg)}")`;
+  screenImage.style.maskImage = maskUrl;
+  screenImage.style.webkitMaskImage = maskUrl;
+  screenImage.style.maskSize = "100% 100%";
+  screenImage.style.webkitMaskSize = "100% 100%";
+  screenImage.style.maskRepeat = "no-repeat";
+  screenImage.style.webkitMaskRepeat = "no-repeat";
+  screenImage.style.maskPosition = "center";
+  screenImage.style.webkitMaskPosition = "center";
+  screenImage.style.maskMode = "luminance";
+  screenImage.dataset.wordArtUnderlayMask = "1";
+}
+
+/**
+ * Non-clickable residual selfs (hub image self-links) stay visually muted.
+ * Combat selfs (e.g. s015 -flee) are clickable and reload the slide — do not mute them.
+ */
+function applyResidualCombatOptionStyle(screen) {
+  for (const hotspot of screen.hotspots || []) {
+    if (hotspot.clickable !== false) {
+      continue;
+    }
+    const residual =
+      hotspot.residualStatus === "accepted_source_self" ||
+      String(hotspot.behaviorStatus || "").startsWith("documented_residual_self");
+    if (!residual) {
+      continue;
+    }
+    const element = state.currentLayerElements.get(String(hotspot.shapeId));
+    if (!element) {
+      continue;
+    }
+    element.classList.add("residual-combat-option");
+    element.style.textDecoration = "none";
+    element.dataset.residualCombatOption = "true";
+    if (hotspot.resolveRationale) {
+      element.title = hotspot.resolveRationale;
+    } else {
+      element.title = "Unavailable (source self-link residual)";
+    }
+  }
+}
+
+function applyHybridPngTextPolicy(screen) {
+  // Always refresh WordArt underlay holes (clears when not hybrid).
+  applyPngUnderlayWordArtHoles(screen);
+  if (!screenNeedsPngUnderlay(screen)) {
+    return;
+  }
+  // Composite PNG already includes static text/WordArt; overlaying live text
+  // causes title-screen double-draw. Keep animated layers for entrance/media.
+  // Path-warped WordArt (Deflate/Curve/Arch) stays live so SVG warp is visible
+  // instead of the baked PNG approx; underlay holes hide baked ink (no plate).
+  // Visual-only hide: never disable clickable hotspots (separate #hotspots layer).
+  for (const layer of screen.layers || []) {
+    if (layer.type !== "text" || layer.animated) {
+      continue;
+    }
+    if (isPathWarpedWordArt(layer)) {
+      continue;
+    }
+    const element = state.currentLayerElements.get(String(layer.shapeId));
+    if (!element) {
+      continue;
+    }
+    element.classList.add("hybrid-png-text-hidden");
+    element.dataset.hybridHiddenText = "true";
+    // Ensure a hybrid-hidden text box cannot intercept hits meant for hotspots /
+    // stage OnNext continuum (defense in depth; CSS also sets pointer-events).
+    element.style.pointerEvents = "none";
+  }
+}
+
+function screenNeedsPngUnderlay(screen) {
+  const layers = screen.layers || [];
+  if (!layers.length) {
+    return false;
+  }
+  const maxArea = layers.reduce((max, layer) => Math.max(max, layerArea(layer)), 0);
+  const largeImages = layers.filter((layer) => layer.type === "image" && layerArea(layer) >= 0.5);
+  const nonEmptyText = layers.filter(
+    (layer) => layer.type === "text" && String(layer.text || "").trim() && !layer.emptyTextPlaceholder,
+  );
+  // Tall animated credit crawls (s201) are already addressable layers; keeping the
+  // composite PNG underlay double-draws baked + live scrolling text.
+  const largeAnimatedText = layers.some(
+    (layer) =>
+      layer.type === "text" &&
+      layer.animated &&
+      String(layer.text || "").trim() &&
+      !layer.emptyTextPlaceholder &&
+      layerArea(layer) >= 0.35,
+  );
+  if (largeAnimatedText) {
+    return false;
+  }
+  return largeImages.length === 0 && maxArea < 0.5 && nonEmptyText.length <= 2;
+}
+
+/**
+ * Some extracted pictures are 100% Office palette green (0,128,0) — PPT treated
+ * that as transparent, so they should not paint solid green boxes. Only hide
+ * near-pure-green placeholders; never key mixed sprite/background art (hills
+ * share that green).
+ */
+function hideIfPureOfficeGreenPlaceholder(image, hostElement) {
+  if (!image || image.dataset.greenPlaceholderChecked === "1") {
+    return;
+  }
+  const inspect = () => {
+    try {
+      const w = image.naturalWidth;
+      const h = image.naturalHeight;
+      if (!w || !h) {
+        return;
+      }
+      const canvas = document.createElement("canvas");
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      if (!ctx) {
+        return;
+      }
+      ctx.drawImage(image, 0, 0);
+      const data = ctx.getImageData(0, 0, w, h).data;
+      let opaque = 0;
+      let pureGreen = 0;
+      for (let i = 0; i < data.length; i += 4) {
+        if (data[i + 3] < 8) {
+          continue;
+        }
+        opaque += 1;
+        if (data[i] === 0 && data[i + 1] === 128 && data[i + 2] === 0) {
+          pureGreen += 1;
+        }
+      }
+      image.dataset.greenPlaceholderChecked = "1";
+      if (opaque > 0 && pureGreen / opaque >= 0.98) {
+        // Class survives setupAnimations style resets.
+        hostElement.classList.add("pure-green-placeholder");
+        hostElement.dataset.pureGreenPlaceholder = "true";
+      }
+    } catch (err) {
+      runtimeLog("render:green-placeholder-check-failed", { error: String(err) }, "warn");
+    }
+  };
+  if (image.complete && image.naturalWidth) {
+    inspect();
+  } else {
+    image.addEventListener("load", inspect, { once: true });
+  }
+}
+
+
+/**
+ * PowerPoint media/sound icons (MovieShape / p:pic + audioFile). In the OOXML
+ * timing tree every cMediaNode uses display="0" — icons show in edit mode only,
+ * not during slideshow. Match that: keep the layer element for media command
+ * targeting, but never paint the yellow speaker bitmap.
+ */
+function isSlideshowHiddenMediaIcon(layer) {
+  if (!layer) {
+    return false;
+  }
+  if (layer.hideDuringShow === true || layer.mediaDisplay === false) {
+    return true;
+  }
+  return String(layer.kind || "") === "MovieShape";
+}
+
+function renderLayers(screen) {
+  layersLayer.replaceChildren();
+  state.currentLayerElements = new Map();
+  const layers = screen.layers || [];
+  const typeCounts = {};
+  const animatedShapeIds = [];
+  let emptyPlaceholders = 0;
+  let hiddenMediaIcons = 0;
+  for (const layer of layers) {
+    const element = document.createElement("div");
+    positionLayerElement(element, layer);
+    const hideMediaIcon = isSlideshowHiddenMediaIcon(layer);
+    if (hideMediaIcon) {
+      // PPT slideshow: display="0" on cMediaNode — do not show speaker/media art.
+      element.classList.add("media-icon-hidden-during-show");
+      element.dataset.hideDuringShow = "true";
+      element.style.visibility = "hidden";
+      element.style.opacity = "0";
+      element.style.pointerEvents = "none";
+      hiddenMediaIcons += 1;
+      // Skip bitmap so yellow speaker never flashes before CSS applies.
+    } else if (layer.type === "image" && layer.instancePath) {
+      const image = document.createElement("img");
+      image.className = "layer-image";
+      // Animated GIF layers (msOG-extracted from PNG blips) must show the
+      // authored animation, not the static first-frame PNG instance.
+      image.src = assetUrl(layer.animatedInstancePath || layer.instancePath);
+      image.alt = "";
+      image.decoding = "async";
+      image.draggable = false;
+      hideIfPureOfficeGreenPlaceholder(image, element);
+      element.append(image);
+    } else if (layer.type === "shape") {
+      // Geometric AutoShapes (clip-art seals, arrows, ellipses, lines…).
+      element.classList.add("geometric-autoshape");
+      element.textContent = "";
+      applyAutoShapeGeometry(element, layer);
+    } else if (layer.type === "text") {
+      const emptyPlaceholder = Boolean(layer.emptyTextPlaceholder) || !String(layer.text || "").trim();
+      if (emptyPlaceholder && !layer.wordArt) {
+        emptyPlaceholders += 1;
+        const fill = layer.style && layer.style.fillColor;
+        const hasOpaqueFill = isOpaqueCssColor(fill);
+        // Filled empty AutoShapes are slide plates (e.g. black intro field), not
+        // hollow text boxes — keep the solid fill visible.
+        if (hasOpaqueFill) {
+          element.classList.add("filled-empty-shape");
+          element.textContent = "";
+          // Legacy path: still apply clip-path if a geometric type slipped through.
+          applyAutoShapeGeometry(element, layer);
+        } else {
+          element.classList.add("empty-text-placeholder");
+          // Keep animatable boxes in the DOM; hide non-animated decorative empties.
+          if (!layer.animated) {
+            element.style.visibility = "hidden";
+            element.style.pointerEvents = "none";
+          } else {
+            element.textContent = "";
+            element.style.backgroundColor = "transparent";
+          }
+        }
+      } else {
+        element.textContent = layer.text || "";
+        applyTextLayerStyle(element, layer);
+      }
+    }
+    state.currentLayerElements.set(String(layer.shapeId), element);
+    if (state.debug || state.hudEnabled) {
+      element.title = `${layer.id} (${layer.type}${layer.wordArt ? ", wordArt" : ""})`;
+      element.addEventListener("click", (event) => {
+        if (!(state.debug || state.hudEnabled)) {
+          return;
+        }
+        event.stopPropagation();
+        state.selectedDebugLayerId = layer.id;
+        recordInteraction({
+          type: "debug-layer-select",
+          layerId: layer.id,
+          shapeId: layer.shapeId,
+          result: "selected",
+        });
+        for (const child of layersLayer.children) {
+          child.classList.toggle("debug-layer-selected", child.dataset.layerId === layer.id);
+        }
+        updateDebugHud();
+      });
+    }
+    layersLayer.append(element);
+    typeCounts[layer.type] = (typeCounts[layer.type] || 0) + 1;
+    if (layer.animated) {
+      animatedShapeIds.push(layer.shapeId);
+    }
+  }
+  runtimeLog("render:layers", {
+    screen: { id: screen.id, slide: screen.slide },
+    layerCount: layers.length,
+    typeCounts,
+    emptyTextPlaceholders: emptyPlaceholders,
+    hiddenMediaIcons,
+    animatedLayerCount: animatedShapeIds.length,
+    animatedShapeIds,
+  });
+  return layers.length > 0;
+}
+
+function parsedStrings(items) {
+  const values = [];
+  for (const item of items || []) {
+    const parsed = item.parsed;
+    if (parsed && typeof parsed.stringValue === "string") {
+      values.push(parsed.stringValue);
+    }
+  }
+  return values;
+}
+
+function parsedModifiers(node) {
+  return (node.modifiers || []).map((modifier) => modifier.parsed).filter(Boolean);
+}
+
+function nodeParsed(node) {
+  return (node.timeNode && node.timeNode.parsed) || {};
+}
+
+function hasModifier(node, modifierType) {
+  return parsedModifiers(node).some((modifier) => modifier.modifierType === modifierType);
+}
+
+function modifierStrength(node, modifierType) {
+  const modifier = parsedModifiers(node).find((item) => item.modifierType === modifierType);
+  if (!modifier) {
+    return 0;
+  }
+  return Number.isFinite(modifier.floatValue) ? modifier.floatValue : 1;
+}
+
+function metricFor(element, property, useBase = false) {
+  const key = {
+    ppt_x: useBase ? "basePptX" : "pptX",
+    ppt_y: useBase ? "basePptY" : "pptY",
+    ppt_w: useBase ? "basePptW" : "pptW",
+    ppt_h: useBase ? "basePptH" : "pptH",
+  }[property];
+  return key ? Number.parseFloat(element.dataset[key] || "0") : 0;
+}
+
+function setMetric(element, property, value) {
+  const numeric = Number.isFinite(value) ? value : 0;
+  if (property === "ppt_x") {
+    element.dataset.pptX = String(numeric);
+    element.style.left = `${numeric * 100}%`;
+  } else if (property === "ppt_y") {
+    element.dataset.pptY = String(numeric);
+    element.style.top = `${numeric * 100}%`;
+  } else if (property === "ppt_w") {
+    element.dataset.pptW = String(numeric);
+    element.style.width = `${numeric * 100}%`;
+  } else if (property === "ppt_h") {
+    element.dataset.pptH = String(numeric);
+    element.style.height = `${numeric * 100}%`;
+  }
+}
+
+function evaluatePowerPointFormula(expression, element) {
+  if (typeof expression !== "string" || !expression.trim()) {
+    return null;
+  }
+  let formula = expression.trim().replace(/#/g, "");
+  if (formula.startsWith("(") && formula.endsWith(")")) {
+    formula = formula.slice(1, -1);
+  }
+  // #ppt_* in PowerPoint formulas refer to the authored shape anchor, not the
+  // live animated metrics (which set/animate may already have mutated).
+  formula = formula.replace(/\bppt_x\b/g, String(metricFor(element, "ppt_x", true)));
+  formula = formula.replace(/\bppt_y\b/g, String(metricFor(element, "ppt_y", true)));
+  formula = formula.replace(/\bppt_w\b/g, String(metricFor(element, "ppt_w", true)));
+  formula = formula.replace(/\bppt_h\b/g, String(metricFor(element, "ppt_h", true)));
+  if (!/^[\d+\-*/(). eE]+$/.test(formula)) {
+    return null;
+  }
+  try {
+    const value = Function(`"use strict"; return (${formula});`)();
+    return Number.isFinite(value) ? value : null;
+  } catch (_error) {
+    return null;
+  }
+}
+
+function propertyNameFromStrings(strings) {
+  for (let index = strings.length - 1; index >= 0; index -= 1) {
+    if (/^ppt_[xywh]$/.test(strings[index])) {
+      return strings[index];
+    }
+  }
+  return null;
+}
+
+function formulaStrings(strings, property) {
+  return strings.filter((value) => {
+    if (!value || value === property || value.startsWith("M ") || value.includes(";")) {
+      return false;
+    }
+    return value.includes("#") || value.includes("ppt_") || /^[(]?[+\-]?\d/.test(value);
+  });
+}
+
+function nodeDelay(node) {
+  let delay = 0;
+  for (const condition of node.conditions || []) {
+    const parsed = condition.parsed;
+    if (parsed && parsed.triggerObject === 2 && (parsed.triggerEvent === 3 || parsed.triggerEvent === 4)) {
+      continue;
+    }
+    if (parsed && Number.isFinite(parsed.delayMs) && parsed.delayMs > delay) {
+      delay = parsed.delayMs;
+    }
+  }
+  return delay;
+}
+
+function nodeUsesHoldFill(node) {
+  const parsed = nodeParsed(node);
+  return parsed.usesFill === true && parsed.fill === 3;
+}
+
+function nodeRestartMode(node) {
+  const parsed = nodeParsed(node);
+  return Number.isFinite(parsed.restart) ? parsed.restart : 0;
+}
+
+function nodeLocalId(node) {
+  const match = typeof node.id === "string" ? node.id.match(/tn(\d+)$/) : null;
+  return match ? Number.parseInt(match[1], 10) : null;
+}
+
+function triggerKey(triggerEvent, targetId) {
+  return `${triggerEvent}:${targetId}`;
+}
+
+function nodeTriggerConditions(node) {
+  return (node.conditions || [])
+    .map((condition) => condition.parsed)
+    .filter((condition) => {
+      return (
+        condition &&
+        condition.triggerObject === 2 &&
+        (condition.triggerEvent === 3 || condition.triggerEvent === 4) &&
+        Number.isFinite(condition.targetId) &&
+        condition.targetId > 0
+      );
+    });
+}
+
+function registerAnimationTriggerWaits(node) {
+  for (const condition of nodeTriggerConditions(node)) {
+    const key = triggerKey(condition.triggerEvent, condition.targetId);
+    const waiters = state.animationTriggerWaiters.get(key) || [];
+    waiters.push({
+      node,
+      delayMs: Number.isFinite(condition.delayMs) && condition.delayMs > 0 ? condition.delayMs : 0,
+    });
+    state.animationTriggerWaiters.set(key, waiters);
+    runtimeLog("animation:trigger-wait-registered", {
+      node: animationNodeInfo(node),
+      key,
+      waiterCountForKey: waiters.length,
+    });
+  }
+}
+
+function emitAnimationTrigger(triggerEvent, node) {
+  const localId = nodeLocalId(node);
+  if (!localId) {
+    runtimeLog("animation:trigger-not-emitted", {
+      triggerEvent,
+      node: animationNodeInfo(node),
+      reason: "node has no local id",
+    }, "warn");
+    return;
+  }
+  const key = triggerKey(triggerEvent, localId);
+  const waiters = state.animationTriggerWaiters.get(key);
+  if (!waiters || waiters.length === 0) {
+    runtimeLog("animation:trigger-emitted", {
+      triggerEvent,
+      key,
+      node: animationNodeInfo(node),
+      waiterCount: 0,
+    });
+    return;
+  }
+  state.animationTriggerWaiters.delete(key);
+  runtimeLog("animation:trigger-emitted", {
+    triggerEvent,
+    key,
+    node: animationNodeInfo(node),
+    waiterCount: waiters.length,
+    waiters: waiters.map((waiter) => ({ node: animationNodeInfo(waiter.node), delayMs: waiter.delayMs })),
+  });
+  for (const waiter of waiters) {
+    runAnimationNode(waiter.node, waiter.delayMs, true, true);
+  }
+}
+
+function nodeWaitsForClick(node) {
+  return (node.conditions || []).some((condition) => {
+    const event = condition.parsed && condition.parsed.triggerEvent;
+    return event === 9 || event === 10;
+  });
+}
+
+/** True if this node or any descendant has a behavior the player can run. */
+function nodeSubtreeHasBehaviors(node) {
+  if (!node) {
+    return false;
+  }
+  if ((node.behaviors || []).length > 0) {
+    return true;
+  }
+  for (const sub of node.subEffects || []) {
+    if (nodeSubtreeHasBehaviors(sub)) {
+      return true;
+    }
+  }
+  for (const child of node.children || []) {
+    if (nodeSubtreeHasBehaviors(child)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * OnNext/OnPrev queue entries with zero runnable behaviors (common PPT media
+ * AfterEffect placeholders: Display/MediaVolume variants, no command/set/effect
+ * atoms). Consuming a full user click for these is a port UX bug — skip/drain
+ * them without counting as a meaningful build advance.
+ */
+function isEmptyClickAdvanceNode(node) {
+  return Boolean(node) && !nodeSubtreeHasBehaviors(node);
+}
+
+/** Collect behavior kinds present anywhere under a timing node. */
+function collectSubtreeBehaviorKinds(node, kinds = new Set()) {
+  if (!node) {
+    return kinds;
+  }
+  for (const behavior of node.behaviors || []) {
+    kinds.add(String(behavior.kind || "unknown"));
+  }
+  for (const sub of node.subEffects || []) {
+    collectSubtreeBehaviorKinds(sub, kinds);
+  }
+  for (const child of node.children || []) {
+    collectSubtreeBehaviorKinds(child, kinds);
+  }
+  return kinds;
+}
+
+/**
+ * True when the only runnable behaviors under this OnNext node are media
+ * command atoms (playFrom / play / pause / stop). Visual builds (set/effect/
+ * motion/animate) still gate the click continuum; BGM must not.
+ */
+function isMediaCommandOnlyNode(node) {
+  if (!node || isEmptyClickAdvanceNode(node)) {
+    return false;
+  }
+  const kinds = collectSubtreeBehaviorKinds(node);
+  if (!kinds.size) {
+    return false;
+  }
+  for (const kind of kinds) {
+    if (kind !== "command") {
+      return false;
+    }
+  }
+  return true;
+}
+
+function isNonGatingClickAdvanceNode(node) {
+  return isEmptyClickAdvanceNode(node) || isMediaCommandOnlyNode(node);
+}
+
+/**
+ * Synchronously run media command atoms under a node. Timed scheduleAnimation
+ * paths are cancelled by navigate→setupAnimations clearAnimationTimers, so
+ * title BGM must fire inline with the hyperlink click.
+ */
+function fireMediaCommandsInSubtree(node) {
+  if (!node) {
+    return;
+  }
+  for (const behavior of node.behaviors || []) {
+    if (behavior.kind === "command") {
+      applyCommandBehavior(node, behavior, parsedStrings(behavior.variants));
+    }
+  }
+  for (const sub of node.subEffects || []) {
+    fireMediaCommandsInSubtree(sub);
+  }
+  for (const child of node.children || []) {
+    fireMediaCommandsInSubtree(child);
+  }
+  state.animationStartedNodes.add(node.id);
+  state.animationCompletedNodes.add(node.id);
+}
+
+/**
+ * Fire/drain empty + media-command-only OnNext nodes without consuming the
+ * click as a visual build advance. Used by hyperlink hotspots and by
+ * advanceAnimation before evaluating a real build.
+ */
+function drainNonGatingAnimationNodes(reason = "drain-non-gating") {
+  const drained = [];
+  while (state.animationQueue.length && isNonGatingClickAdvanceNode(state.animationQueue[0])) {
+    const node = state.animationQueue.shift();
+    drained.push(node);
+    const mediaOnly = isMediaCommandOnlyNode(node);
+    runtimeLog("input:animation-advance-non-gating", {
+      reason,
+      node: animationNodeInfo(node),
+      mediaOnly,
+      empty: isEmptyClickAdvanceNode(node),
+      queueLengthAfterShift: state.animationQueue.length,
+    });
+    if (mediaOnly) {
+      fireMediaCommandsInSubtree(node);
+    } else {
+      // Empty placeholders: keep start/complete bookkeeping consistent.
+      runAnimationNode(node, 0, true);
+    }
+  }
+  return drained;
+}
+
+function hotspotLooksLikeMenuOption(hotspot) {
+  const text = String(hotspot.shapeText || hotspot.label || "").toLowerCase().trim();
+  if (/\battack\b|\bflee\b|\bitem\b|\bmagic\b|\bdefend\b|\brun\b/.test(text)) {
+    return true;
+  }
+  return text.startsWith("-");
+}
+
+function hotspotLooksLikeContinueOrMedia(hotspot) {
+  if (!hotspot) {
+    return false;
+  }
+  if (hotspot.action === "media") {
+    return true;
+  }
+  const text = String(hotspot.shapeText || hotspot.label || "").toLowerCase();
+  return /click here|continue/.test(text);
+}
+
+/**
+ * Autoplay OnNext entrance when landing on continue/result beats (Attack→18
+ * motion, felled goblin, damage text, etc.). Without this, animated shapes stay
+ * entrance-hidden and ?debug=1 shows empty layer outlines ("green boxes") until
+ * a stage click — which feels like a broken Attack. Menu slides (Attack/Flee)
+ * keep click-gated builds. Authored autoAdvance slides also autoplay.
+ *
+ * Slide *navigation* stays click-gated via continue hyperlinks (29→30 etc.);
+ * autoplay only runs in-slide OnNext timing, it does not change slides.
+ */
+function screenShouldAutoplayAnimations(screen) {
+  if (!screen) {
+    return false;
+  }
+  if (screen.advancement && screen.advancement.autoAdvance) {
+    return true;
+  }
+  const clickable = (screen.hotspots || []).filter((hotspot) => hotspot.clickable);
+  if (!clickable.length) {
+    return false;
+  }
+  if (clickable.some(hotspotLooksLikeMenuOption)) {
+    return false;
+  }
+  return clickable.every(hotspotLooksLikeContinueOrMedia);
+}
+
+
+
+function iterateKind(iterate) {
+  if (!iterate || typeof iterate !== "object") {
+    return null;
+  }
+  if (iterate.iterateType === 2 || iterate.iterateTypeName === "byLetter") {
+    return "byLetter";
+  }
+  if (iterate.iterateType === 1 || iterate.iterateTypeName === "byWord") {
+    return "byWord";
+  }
+  return null;
+}
+
+function iterateIntervalMs(iterate, effectDurationMs) {
+  if (!iterate) {
+    return 0;
+  }
+  const interval = Number(iterate.iterateInterval);
+  if (!Number.isFinite(interval)) {
+    return 0;
+  }
+  if (iterate.iterateIntervalType === 1 || iterate.iterateIntervalTypeName === "percentage") {
+    return (interval / 100) * Math.max(effectDurationMs || 1, 1);
+  }
+  return Math.max(interval, 0);
+}
+
+function splitIterateText(text, kind) {
+  const value = String(text || "");
+  if (!value) {
+    return [];
+  }
+  if (kind === "byWord") {
+    const parts = value.match(/\S+|\s+/g);
+    return parts && parts.length ? parts : [value];
+  }
+  return Array.from(value);
+}
+
+function iterateIsBackwards(iterate) {
+  return Boolean(
+    iterate && (iterate.iterateDirection === 2 || iterate.iterateDirectionName === "backwards"),
+  );
+}
+
+function ensureIterateUnits(element, iterate) {
+  const kind = iterateKind(iterate);
+  if (!kind || !element) {
+    return null;
+  }
+  if (element.dataset.iteratePrepared === kind) {
+    const existing = Array.from(element.querySelectorAll(":scope > .anim-iterate-unit"));
+    if (!existing.length) {
+      return null;
+    }
+    return iterateIsBackwards(iterate) ? existing.slice().reverse() : existing;
+  }
+  if (element.querySelector("img") || element.querySelector("svg.wordart-curve-svg")) {
+    return null;
+  }
+  const text = element.dataset.wordArtText || element.textContent || "";
+  const parts = splitIterateText(text, kind);
+  if (!parts.length) {
+    return null;
+  }
+  element.textContent = "";
+  element.classList.add("anim-iterate-host");
+  element.dataset.iteratePrepared = kind;
+  const units = [];
+  for (const part of parts) {
+    const span = document.createElement("span");
+    span.className = "anim-iterate-unit";
+    span.textContent = part;
+    span.style.opacity = "0";
+    span.style.transform = "scale(1)";
+    span.style.transformOrigin = "center center";
+    if (/^\s+$/.test(part)) {
+      span.style.whiteSpace = "pre";
+    }
+    element.append(span);
+    units.push(span);
+  }
+  return iterateIsBackwards(iterate) ? units.slice().reverse() : units;
+}
+
+function buildIterateContext(node) {
+  const iterate = node && node.iterate;
+  if (!iterateKind(iterate)) {
+    return null;
+  }
+  let effectDurationMs = 0;
+  for (const child of node.children || []) {
+    effectDurationMs = Math.max(effectDurationMs, nodeDuration(child));
+  }
+  if (effectDurationMs <= 1) {
+    effectDurationMs = 500;
+  }
+  return {
+    iterate,
+    effectDurationMs,
+    hostUnits: new Map(),
+  };
+}
+
+function collectIterateShapeIds(node) {
+  const shapeIds = new Set();
+  for (const child of node.children || []) {
+    for (const target of child.targets || []) {
+      if (target.kind === "shape" && target.shapeId !== undefined) {
+        shapeIds.add(String(target.shapeId));
+      }
+    }
+    for (const behavior of child.behaviors || []) {
+      for (const target of behavior.targets || []) {
+        if (target.kind === "shape" && target.shapeId !== undefined) {
+          shapeIds.add(String(target.shapeId));
+        }
+      }
+    }
+  }
+  return shapeIds;
+}
+
+function prepareIterateTargets(node, iterateContext) {
+  if (!iterateContext) {
+    return;
+  }
+  for (const shapeId of collectIterateShapeIds(node)) {
+    const element = state.currentLayerElements.get(shapeId);
+    if (!element) {
+      continue;
+    }
+    const units = ensureIterateUnits(element, iterateContext.iterate);
+    if (units && units.length) {
+      iterateContext.hostUnits.set(shapeId, units);
+      runtimeLog("animation:iterate-prepared", {
+        shapeId,
+        kind: iterateKind(iterateContext.iterate),
+        unitCount: units.length,
+        intervalMs: iterateIntervalMs(iterateContext.iterate, iterateContext.effectDurationMs),
+        effectDurationMs: iterateContext.effectDurationMs,
+      });
+    }
+  }
+}
+
+function iterateExtraDuration(node) {
+  const iterate = node && node.iterate;
+  if (!iterateKind(iterate)) {
+    return 0;
+  }
+  let effectDurationMs = 0;
+  for (const child of node.children || []) {
+    effectDurationMs = Math.max(effectDurationMs, nodeDuration(child));
+  }
+  if (effectDurationMs <= 1) {
+    effectDurationMs = 500;
+  }
+  const interval = iterateIntervalMs(iterate, effectDurationMs);
+  let maxUnits = 1;
+  for (const shapeId of collectIterateShapeIds(node)) {
+    const element = state.currentLayerElements.get(shapeId);
+    if (!element) {
+      continue;
+    }
+    const text = element.dataset.iteratePrepared
+      ? Array.from(element.querySelectorAll(":scope > .anim-iterate-unit"))
+          .map((unit) => unit.textContent || "")
+          .join("")
+      : element.textContent || "";
+    maxUnits = Math.max(maxUnits, splitIterateText(text, iterateKind(iterate)).length || 1);
+  }
+  return interval * Math.max(maxUnits - 1, 0);
+}
+
+function iterateContextStaggerExtra(iterateContext) {
+  if (!iterateContext || !iterateKind(iterateContext.iterate)) {
+    return 0;
+  }
+  const interval = iterateIntervalMs(iterateContext.iterate, iterateContext.effectDurationMs);
+  let maxUnits = 1;
+  for (const units of iterateContext.hostUnits.values()) {
+    maxUnits = Math.max(maxUnits, (units && units.length) || 1);
+  }
+  return interval * Math.max(maxUnits - 1, 0);
+}
+
+function resetIterateHost(element) {
+  if (!element || !element.dataset.iteratePrepared) {
+    return;
+  }
+  const text = Array.from(element.querySelectorAll(":scope > .anim-iterate-unit"))
+    .map((unit) => unit.textContent || "")
+    .join("");
+  element.textContent = text;
+  delete element.dataset.iteratePrepared;
+  element.classList.remove("anim-iterate-host");
+}
+
+function animateIterateUnitFade(unit, timing) {
+  unit.style.visibility = "visible";
+  unit.style.opacity = "0";
+  if (typeof unit.animate === "function") {
+    try {
+      const animation = unit.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: Math.max(timing.duration, 1),
+        easing: cssEasing(timing),
+        fill: "forwards",
+      });
+      animation.addEventListener("finish", () => {
+        unit.style.opacity = "1";
+      });
+      return;
+    } catch (_error) {
+      // Fall through.
+    }
+  }
+  unit.style.opacity = "1";
+}
+
+function animateIterateUnitScale(unit, startScale, timing) {
+  const from = Number.isFinite(startScale) ? Math.max(startScale, 0.01) : 0.1;
+  if (unit.dataset.iterScaleStarted === "1") {
+    return;
+  }
+  unit.dataset.iterScaleStarted = "1";
+  unit.style.transformOrigin = "center center";
+  if (typeof unit.animate === "function") {
+    try {
+      const animation = unit.animate(
+        [{ transform: `scale(${from})` }, { transform: "scale(1)" }],
+        {
+          duration: Math.max(timing.duration, 1),
+          easing: cssEasing(timing),
+          fill: "forwards",
+        },
+      );
+      animation.addEventListener("finish", () => {
+        unit.style.transform = "scale(1)";
+      });
+      return;
+    } catch (_error) {
+      // Fall through.
+    }
+  }
+  unit.style.transform = "scale(1)";
+}
+
+function applyBehaviorToIterateUnits(node, behavior, hostElements, strings, timing, iterateContext) {
+  const kind = iterateKind(iterateContext.iterate);
+  const interval = iterateIntervalMs(iterateContext.iterate, iterateContext.effectDurationMs);
+  let unitTotal = 0;
+  for (const host of hostElements) {
+    const shapeId = host.dataset.shapeId;
+    let units = iterateContext.hostUnits.get(shapeId);
+    if (!units || !units.length) {
+      units = ensureIterateUnits(host, iterateContext.iterate);
+      if (units && units.length) {
+        iterateContext.hostUnits.set(shapeId, units);
+      }
+    }
+    if (!units || !units.length) {
+      runtimeLog(
+        "animation:iterate-whole-shape",
+        {
+          node: animationNodeInfo(node),
+          iterate: iterateContext.iterate,
+          reason: "no text units available — whole-shape apply",
+          shapeId,
+        },
+        "info",
+      );
+      if (behavior.kind === "set") {
+        applySetBehavior([host], strings);
+      } else if (behavior.kind === "effect") {
+        applyEffectBehavior([host], strings, timing, behavior);
+      } else if (behavior.kind === "animate") {
+        applyAnimateBehavior([host], strings, timing);
+      } else if (behavior.kind === "motion") {
+        applyMotionBehavior([host], strings, timing);
+      } else if (behavior.kind === "scale") {
+        applyScaleBehavior([host], behavior, timing);
+      }
+      continue;
+    }
+
+    // Container holds letters; letters own opacity/visibility for stagger.
+    host.style.visibility = "visible";
+    if (host.style.opacity === "0" || host.style.opacity === "") {
+      host.style.opacity = "1";
+    }
+
+    for (let index = 0; index < units.length; index += 1) {
+      const unit = units[index];
+      const delay = index * interval;
+      unitTotal += 1;
+      scheduleAnimation(
+        () => {
+          if (behavior.kind === "set") {
+            const visibility = strings.includes("hidden")
+              ? "hidden"
+              : strings.includes("visible") || strings.includes("style.visibility")
+                ? "visible"
+                : null;
+            if (visibility) {
+              unit.style.visibility = visibility;
+              // Appear/set-visible letter builds: units are created at opacity 0 for
+              // stagger; revealing visibility alone left s183's top caption invisible
+              // inside the white box (opacity stayed 0).
+              if (visibility === "visible") {
+                unit.style.opacity = "1";
+              } else if (visibility === "hidden") {
+                unit.style.opacity = "0";
+              }
+            }
+            return;
+          }
+          if (behavior.kind === "effect") {
+            if (strings.some((value) => value === "fade" || value === "dissolve")) {
+              animateIterateUnitFade(unit, timing);
+            }
+            return;
+          }
+          if (behavior.kind === "animate") {
+            const property = propertyNameFromStrings(strings);
+            if (property === "ppt_w" || property === "ppt_h") {
+              const formulas = formulaStrings(strings, property);
+              const values = [];
+              for (const formula of formulas) {
+                const value = evaluatePowerPointFormula(formula, host);
+                if (value !== null) {
+                  values.push(value);
+                }
+              }
+              const base = metricFor(host, property, true);
+              const start = values.length && base > 0 ? values[0] / base : 0.1;
+              animateIterateUnitScale(unit, start, timing);
+            }
+            // Position metrics (ppt_x/ppt_y) stay shape-level; letter stagger uses fade+grow.
+            return;
+          }
+          if (behavior.kind === "scale") {
+            animateIterateUnitScale(unit, 0.1, timing);
+          }
+        },
+        delay,
+        "animation-iterate-unit",
+        {
+          node: animationNodeInfo(node),
+          kind,
+          unitIndex: index,
+          unitCount: units.length,
+          delayMs: delay,
+          behaviorKind: behavior.kind,
+          shapeId,
+        },
+      );
+    }
+  }
+  runtimeLog("animation:iterate-units", {
+    node: animationNodeInfo(node),
+    kind,
+    behaviorKind: behavior.kind,
+    intervalMs: interval,
+    effectDurationMs: iterateContext.effectDurationMs,
+    unitApplications: unitTotal,
+    strings,
+  });
+}
+
+function targetsFor(node, behavior) {
+  const targets = behavior.targets && behavior.targets.length ? behavior.targets : node.targets || [];
+  return targets
+    .filter((target) => target.kind === "shape" && target.shapeId !== undefined)
+    .map((target) => state.currentLayerElements.get(String(target.shapeId)))
+    .filter(Boolean);
+}
+
+function animationElementInfo(element) {
+  if (!element) {
+    return null;
+  }
+  return {
+    layerId: element.dataset.layerId,
+    shapeId: element.dataset.shapeId,
+    animated: element.dataset.animated === "true",
+    metrics: {
+      x: Number.parseFloat(element.dataset.pptX || "0"),
+      y: Number.parseFloat(element.dataset.pptY || "0"),
+      width: Number.parseFloat(element.dataset.pptW || "0"),
+      height: Number.parseFloat(element.dataset.pptH || "0"),
+    },
+    style: {
+      visibility: element.style.visibility || "",
+      opacity: element.style.opacity || "",
+      transform: element.style.transform || "",
+      transition: element.style.transition || "",
+    },
+  };
+}
+
+function nodeDuration(node) {
+  const parsed = nodeParsed(node);
+  if (!parsed || !Number.isFinite(parsed.durationMs) || parsed.durationMs <= 1) {
+    return 1;
+  }
+  return parsed.durationMs;
+}
+
+function nodeTiming(node) {
+  const duration = nodeDuration(node);
+  const acceleration = modifierStrength(node, 3);
+  const deceleration = modifierStrength(node, 4);
+  let timingFunction = "linear";
+  if (acceleration > 0 && deceleration > 0) {
+    timingFunction = "ease-in-out";
+  } else if (acceleration > 0) {
+    timingFunction = "ease-in";
+  } else if (deceleration > 0) {
+    timingFunction = "ease-out";
+  }
+  return {
+    duration,
+    timingFunction,
+    autoReverse: hasModifier(node, 5),
+    holdFill: nodeUsesHoldFill(node),
+  };
+}
+
+function nodeSequenceData(node) {
+  return (node.sequence && node.sequence.parsed) || null;
+}
+
+function nodeChildrenRunOnClick(node) {
+  const sequence = nodeSequenceData(node);
+  return Boolean(sequence && sequence.usesNextAction && sequence.nextAction === 1 && (node.children || []).length > 1);
+}
+
+function nodeRunsSequentialChildren(node) {
+  const sequence = nodeSequenceData(node);
+  return Boolean(sequence && sequence.usesConcurrency && sequence.concurrency === 0);
+}
+
+function subtreeDuration(node) {
+  const children = node.children || [];
+  const subEffects = node.subEffects || [];
+  const nested = children.concat(subEffects);
+  const iterateExtra = iterateExtraDuration(node);
+  if (!nested.length) {
+    return nodeDelay(node) + nodeDuration(node) + iterateExtra;
+  }
+  if (nodeRunsSequentialChildren(node) && children.length) {
+    const childTotal = children.reduce((total, child) => total + subtreeDuration(child), 0);
+    const subMax = subEffects.length
+      ? Math.max(...subEffects.map((child) => subtreeDuration(child)))
+      : 0;
+    return nodeDelay(node) + nodeDuration(node) + Math.max(childTotal, subMax) + iterateExtra;
+  }
+  return nodeDelay(node) + Math.max(nodeDuration(node), ...nested.map((child) => subtreeDuration(child))) + iterateExtra;
+}
+
+/**
+ * Time from node start until OnEnd should fire.
+ * Parallel/sequential *children* extend the parent; subordinate AfterEffects that
+ * wait on this node's OnEnd must NOT be included (circular). Without this,
+ * duration-0 effect groups emit OnEnd at 1ms and Hide-After-Animation immediately
+ * kills motion-path goblins (s018 CAN'T ESCAPE standing goblin, etc.).
+ */
+function nodeOnEndDelayMs(node, iterateExtraMs = 0) {
+  const children = node.children || [];
+  if (!children.length) {
+    return nodeDuration(node) + iterateExtraMs;
+  }
+  if (nodeRunsSequentialChildren(node)) {
+    const childTotal = children.reduce((total, child) => total + subtreeDuration(child), 0);
+    return nodeDuration(node) + childTotal + iterateExtraMs;
+  }
+  return Math.max(nodeDuration(node), ...children.map((child) => subtreeDuration(child))) + iterateExtraMs;
+}
+
+function transitionList(properties, timing) {
+  return properties.map((property) => `${property} ${timing.duration}ms ${timing.timingFunction}`).join(", ");
+}
+
+/** Merge CSS transitions so concurrent behaviors (scale + ppt_x/ppt_y) do not clobber each other. */
+function applyCssTransition(element, properties, timing) {
+  const existing = (element.style.transition || "")
+    .split(",")
+    .map((part) => part.trim())
+    .filter((part) => part && part !== "none");
+  const filtered = existing.filter((part) => !properties.some((property) => part.startsWith(`${property} `) || part === property));
+  const addition = transitionList(properties, timing);
+  element.style.transition = [...filtered, addition].filter(Boolean).join(", ");
+}
+
+function clearCssTransition(element, properties = null) {
+  if (!properties) {
+    element.style.transition = "none";
+    return;
+  }
+  const existing = (element.style.transition || "")
+    .split(",")
+    .map((part) => part.trim())
+    .filter((part) => part && part !== "none");
+  const filtered = existing.filter((part) => !properties.some((property) => part.startsWith(`${property} `) || part === property));
+  element.style.transition = filtered.length ? filtered.join(", ") : "none";
+}
+
+
+/** Reveal a layer that was pre-hidden for entrance; used by set/motion/animate. */
+function hotspotButtonsForShape(shapeId) {
+  if (shapeId === undefined || shapeId === null || !hotspotsLayer) {
+    return [];
+  }
+  return [...hotspotsLayer.querySelectorAll(`button.hotspot[data-shape-id="${String(shapeId)}"]`)];
+}
+
+/**
+ * PPT hyperlinks live on shapes: if the shape is still entrance-hidden, the
+ * hotspot must not steal clicks (combat "Click here to continue" otherwise
+ * navigates before dissolve text appears). Stage clicks still advance OnNext.
+ */
+function syncHotspotsForShapeVisibility(shapeId, visible) {
+  for (const button of hotspotButtonsForShape(shapeId)) {
+    if (button.dataset.awaitsReveal !== "1") {
+      continue;
+    }
+    button.classList.toggle("hotspot-awaiting-reveal", !visible);
+    button.style.visibility = visible ? "visible" : "hidden";
+    button.style.pointerEvents = visible ? "auto" : "none";
+    button.tabIndex = visible ? 0 : -1;
+    button.setAttribute("aria-hidden", visible ? "false" : "true");
+  }
+}
+
+function layerElementLooksRevealed(element) {
+  if (!element) {
+    return false;
+  }
+  // setupAnimations uses inline visibility/opacity; empty means not entrance-hidden.
+  if (element.style.visibility === "hidden") {
+    return false;
+  }
+  if (element.style.opacity === "0") {
+    return false;
+  }
+  return true;
+}
+
+/** Re-sync after setupAnimations (including late boot anim-manifest load). */
+function syncAllAnimatedHotspots() {
+  if (!hotspotsLayer) {
+    return;
+  }
+  for (const button of hotspotsLayer.querySelectorAll('button.hotspot[data-awaits-reveal="1"]')) {
+    const shapeId = button.dataset.shapeId;
+    const layerEl = state.currentLayerElements.get(String(shapeId));
+    syncHotspotsForShapeVisibility(shapeId, layerElementLooksRevealed(layerEl));
+  }
+}
+
+function revealAnimationElement(element) {
+  if (!element) {
+    return;
+  }
+  // Media icons stay slideshow-hidden (PPT display="0") even if a set/effect targets them.
+  if (element.classList && element.classList.contains("media-icon-hidden-during-show")) {
+    return;
+  }
+  element.style.visibility = "visible";
+  // setupAnimations pre-hides with opacity "0"; clear that unless a fade will re-zero it.
+  if (element.style.opacity === "" || element.style.opacity === "0") {
+    element.style.opacity = "1";
+  }
+  if (element.dataset && element.dataset.shapeId) {
+    syncHotspotsForShapeVisibility(element.dataset.shapeId, true);
+  }
+}
+
+function applySetBehavior(elements, strings) {
+  let applied = false;
+  if (strings.includes("style.visibility") || strings.includes("visible") || strings.includes("hidden")) {
+    const visibility = strings.includes("hidden") ? "hidden" : strings.includes("visible") ? "visible" : null;
+    if (visibility) {
+      runtimeLog("animation:set-visibility", {
+        visibility,
+        targetCount: elements.length,
+        targets: elements.map(animationElementInfo),
+      });
+      for (const element of elements) {
+        if (visibility === "visible") {
+          // Paired fade/dissolve re-zeros opacity in applyEffectBehavior (same tick).
+          revealAnimationElement(element);
+        } else {
+          element.style.visibility = visibility;
+          element.style.opacity = "0";
+          if (element.dataset && element.dataset.shapeId) {
+            syncHotspotsForShapeVisibility(element.dataset.shapeId, false);
+          }
+        }
+      }
+      applied = true;
+    }
+  }
+
+  const property = propertyNameFromStrings(strings);
+  if (property) {
+    const formulas = formulaStrings(strings, property);
+    const expression = formulas.length ? formulas[formulas.length - 1] : null;
+    runtimeLog("animation:set-metric", {
+      property,
+      expression,
+      formulas,
+      targetCount: elements.length,
+      targets: elements.map(animationElementInfo),
+    });
+    for (const element of elements) {
+      if (!expression) {
+        continue;
+      }
+      const value = evaluatePowerPointFormula(expression, element);
+      if (value === null) {
+        runtimeLog(
+          "animation:set-metric-invalid",
+          { property, expression, target: animationElementInfo(element) },
+          "warn",
+        );
+        continue;
+      }
+      clearCssTransition(element, cssPropertiesForMetric(property));
+      setMetric(element, property, value);
+      applied = true;
+    }
+  }
+
+  if (!applied) {
+    runtimeLog("animation:set-skipped", { strings, reason: "no visibility or ppt_* property recognized" }, "warn");
+  }
+}
+
+/** PPT TimeEffectBehaviorAtom second uint32: 0=transition in, 1=transition out. */
+function effectTransitionIsOut(behavior) {
+  const atom = ((behavior && behavior.atoms) || []).find(
+    (item) => item.type === 61750 && typeof item.payloadHex === "string" && item.payloadHex.length >= 16,
+  );
+  if (!atom) {
+    return null;
+  }
+  const b0 = Number.parseInt(atom.payloadHex.slice(8, 10), 16);
+  const b1 = Number.parseInt(atom.payloadHex.slice(10, 12), 16);
+  const b2 = Number.parseInt(atom.payloadHex.slice(12, 14), 16);
+  const b3 = Number.parseInt(atom.payloadHex.slice(14, 16), 16);
+  if (![b0, b1, b2, b3].every(Number.isFinite)) {
+    return null;
+  }
+  const value = b0 | (b1 << 8) | (b2 << 16) | (b3 << 24);
+  return value === 1;
+}
+
+function effectFilterName(strings) {
+  const normalized = strings.map((value) => String(value).toLowerCase());
+  const named = normalized.find(
+    (value) =>
+      value === "fade" ||
+      value === "dissolve" ||
+      value.startsWith("blinds") ||
+      value.startsWith("box") ||
+      value.startsWith("diamond") ||
+      value.startsWith("strips") ||
+      value.startsWith("wipe"),
+  );
+  return named || null;
+}
+
+function applyEffectBehavior(elements, strings, timing, behavior = null) {
+  const filter = effectFilterName(strings);
+  if (!filter) {
+    runtimeLog("animation:effect-skipped", { strings, reason: "no supported effect filter" });
+    return;
+  }
+  let isOut = effectTransitionIsOut(behavior);
+  if (isOut === null) {
+    // Fallback: blinds/box in this deck are exits; fade/dissolve default to entrance.
+    isOut = filter.startsWith("blinds") || filter.startsWith("box");
+  }
+  const duration = Math.max(timing.duration, 1);
+  runtimeLog("animation:effect", {
+    effect: filter,
+    direction: isOut ? "out" : "in",
+    timing,
+    targetCount: elements.length,
+    targets: elements.map(animationElementInfo),
+  });
+  for (const element of elements) {
+    const restoreAutoShapeClipAfterEffect = () => {
+      // Effect keyframes (especially box) temporarily override clip-path.
+      // finishIn used to blanket-clear clipPath, which turned yellow LEFT/DOWN
+      // ARROW AutoShapes into solid rectangles after dissolve/fade completed
+      // (world-map slides 65/84/93). Restore OOXML preset geometry when present.
+      const key = element.dataset && element.dataset.autoShapeClip;
+      const clip = key ? autoShapeClipPath(key) : null;
+      if (clip) {
+        element.style.clipPath = clip;
+        element.style.webkitClipPath = clip;
+      } else {
+        element.style.clipPath = "";
+        element.style.webkitClipPath = "";
+      }
+    };
+    const finishOut = () => {
+      element.style.opacity = "0";
+      element.style.visibility = "hidden";
+      element.style.clipPath = "";
+      element.style.webkitClipPath = "";
+      element.style.maskImage = "";
+      element.style.webkitMaskImage = "";
+      if (element.dataset && element.dataset.shapeId) {
+        syncHotspotsForShapeVisibility(element.dataset.shapeId, false);
+      }
+    };
+    const finishIn = () => {
+      element.style.opacity = "1";
+      element.style.visibility = "visible";
+      restoreAutoShapeClipAfterEffect();
+      element.style.maskImage = "";
+      element.style.webkitMaskImage = "";
+      if (element.dataset && element.dataset.shapeId) {
+        syncHotspotsForShapeVisibility(element.dataset.shapeId, true);
+      }
+    };
+
+    let keyframes;
+    if (filter.startsWith("blinds")) {
+      // Horizontal blinds: stripe mask collapses (out) or opens (in).
+      const closed = {
+        opacity: 0,
+        webkitMaskImage: "repeating-linear-gradient(to bottom, #000 0 0px, transparent 0px 12px)",
+        maskImage: "repeating-linear-gradient(to bottom, #000 0 0px, transparent 0px 12px)",
+      };
+      const open = {
+        opacity: 1,
+        webkitMaskImage: "repeating-linear-gradient(to bottom, #000 0 12px, transparent 12px 12px)",
+        maskImage: "repeating-linear-gradient(to bottom, #000 0 12px, transparent 12px 12px)",
+      };
+      keyframes = isOut ? [open, closed] : [closed, open];
+    } else if (filter.startsWith("box")) {
+      // box(in) exit: iris closes from edges toward center.
+      const open = { opacity: 1, clipPath: "inset(0% 0% 0% 0%)", webkitClipPath: "inset(0% 0% 0% 0%)" };
+      const closed = { opacity: 0, clipPath: "inset(50% 50% 50% 50%)", webkitClipPath: "inset(50% 50% 50% 50%)" };
+      keyframes = isOut ? [open, closed] : [closed, open];
+    } else if (filter.startsWith("diamond")) {
+      // diamond: clip-path polygon grows from center point to a diamond
+      // covering the corners (ProjectStar magazine/battle accents).
+      const open = {
+        opacity: 1,
+        clipPath: "polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%)",
+        webkitClipPath: "polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%)",
+      };
+      const closed = {
+        opacity: 1,
+        clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
+        webkitClipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)",
+      };
+      keyframes = isOut ? [open, closed] : [closed, open];
+    } else if (filter.startsWith("strips")) {
+      // strips(upLeft): diagonal strip reveal approximated with a
+      // bottom-right inset sweep.
+      const open = { opacity: 1, clipPath: "inset(0% 0% 0% 0%)", webkitClipPath: "inset(0% 0% 0% 0%)" };
+      const closed = { opacity: 1, clipPath: "inset(100% 100% 0% 0%)", webkitClipPath: "inset(100% 100% 0% 0%)" };
+      keyframes = isOut ? [open, closed] : [closed, open];
+    } else if (filter.startsWith("wipe")) {
+      // wipe(down|left|right|up): directional inset reveal.
+      const open = { opacity: 1, clipPath: "inset(0% 0% 0% 0%)", webkitClipPath: "inset(0% 0% 0% 0%)" };
+      let closedInset = "inset(0% 100% 0% 0%)";
+      if (filter.includes("(down)")) closedInset = "inset(0% 0% 100% 0%)";
+      else if (filter.includes("(up)")) closedInset = "inset(100% 0% 0% 0%)";
+      else if (filter.includes("(right)")) closedInset = "inset(0% 0% 0% 100%)";
+      const closed = { opacity: 1, clipPath: closedInset, webkitClipPath: closedInset };
+      keyframes = isOut ? [open, closed] : [closed, open];
+    } else {
+      // fade / dissolve
+      keyframes = isOut ? [{ opacity: 1 }, { opacity: 0 }] : [{ opacity: 0 }, { opacity: 1 }];
+    }
+
+    if (isOut) {
+      element.style.visibility = "visible";
+      if (element.style.opacity === "" || element.style.opacity === "0") {
+        element.style.opacity = "1";
+      }
+    } else {
+      element.style.visibility = "visible";
+      element.style.opacity = "0";
+    }
+
+    if (typeof element.animate === "function") {
+      try {
+        const animation = element.animate(keyframes, {
+          duration,
+          easing: cssEasing(timing),
+          fill: "forwards",
+        });
+        animation.addEventListener("finish", () => {
+          try {
+            if (typeof animation.commitStyles === "function") {
+              animation.commitStyles();
+            }
+          } catch (_commitErr) {
+            /* ignore */
+          }
+          try {
+            animation.cancel();
+          } catch (_cancelErr) {
+            /* ignore */
+          }
+          if (isOut) {
+            finishOut();
+          } else {
+            finishIn();
+          }
+        });
+      } catch (_error) {
+        if (isOut) {
+          finishOut();
+        } else {
+          finishIn();
+        }
+      }
+    } else if (isOut) {
+      finishOut();
+    } else {
+      finishIn();
+    }
+
+    if (timing.autoReverse) {
+      scheduleAnimation(() => {
+        runtimeLog("animation:effect-autoreverse", { target: animationElementInfo(element), effect: filter });
+        if (isOut) {
+          finishIn();
+        } else {
+          element.style.opacity = "0";
+        }
+      }, duration, "effect-auto-reverse", { target: animationElementInfo(element) });
+    }
+  }
+}
+
+function cssPropertiesForMetric(property) {
+  // Only the active metric — concurrent ppt_x + ppt_y animates must not clear each other.
+  if (property === "ppt_x") {
+    return ["left"];
+  }
+  if (property === "ppt_y") {
+    return ["top"];
+  }
+  if (property === "ppt_w") {
+    return ["width"];
+  }
+  if (property === "ppt_h") {
+    return ["height"];
+  }
+  return [];
+}
+
+function cssEasing(timing) {
+  if (timing.timingFunction === "ease-in-out") {
+    return "ease-in-out";
+  }
+  if (timing.timingFunction === "ease-in") {
+    return "ease-in";
+  }
+  if (timing.timingFunction === "ease-out") {
+    return "ease-out";
+  }
+  return "linear";
+}
+
+function metricToCssValue(property, value) {
+  return `${value * 100}%`;
+}
+
+function animateMetricValues(element, property, values, timing) {
+  const unique = values.filter((value, index) => index === 0 || value !== values[index - 1]);
+  if (!unique.length) {
+    return;
+  }
+  const original = metricFor(element, property);
+  const cssProperty = cssPropertiesForMetric(property)[0];
+  if (!cssProperty) {
+    return;
+  }
+
+  const keyframeValues = unique.length === 1 ? [original, unique[0]] : unique;
+  const frames = keyframeValues.map((value) => ({ [cssProperty]: metricToCssValue(property, value) }));
+  // Commit final metric immediately for layout formulas / later behaviors.
+  setMetric(element, property, keyframeValues[keyframeValues.length - 1]);
+  if (typeof element.animate === "function" && frames.length >= 2) {
+    try {
+      element.animate(frames, {
+        duration: Math.max(timing.duration, 1),
+        easing: cssEasing(timing),
+        fill: timing.holdFill || !timing.autoReverse ? "forwards" : "none",
+      });
+    } catch (_error) {
+      // Fall through to discrete set if WAAPI rejects the keyframes.
+    }
+  }
+
+  if (timing.autoReverse) {
+    scheduleAnimation(() => {
+      runtimeLog("animation:property-autoreverse", {
+        property,
+        value: keyframeValues[0],
+        target: animationElementInfo(element),
+      });
+      setMetric(element, property, keyframeValues[0]);
+    }, timing.duration, "property-auto-reverse", { property, target: animationElementInfo(element) });
+  } else if (!timing.holdFill) {
+    scheduleAnimation(() => {
+      runtimeLog("animation:property-fill-reset", {
+        property,
+        value: original,
+        target: animationElementInfo(element),
+      });
+      setMetric(element, property, original);
+    }, timing.duration, "property-fill-reset", { property, target: animationElementInfo(element) });
+  }
+}
+
+function applyAnimateBehavior(elements, strings, timing) {
+  const property = propertyNameFromStrings(strings);
+  if (!property) {
+    runtimeLog("animation:animate-skipped", { strings, reason: "no ppt_x/ppt_y/ppt_w/ppt_h property" }, "warn");
+    return;
+  }
+  const formulas = formulaStrings(strings, property);
+  runtimeLog("animation:animate", {
+    property,
+    formulas,
+    timing,
+    targetCount: elements.length,
+    targets: elements.map(animationElementInfo),
+  });
+  for (const element of elements) {
+    const values = [];
+    for (const formula of formulas) {
+      const value = evaluatePowerPointFormula(formula, element);
+      if (value === null) {
+        runtimeLog(
+          "animation:animate-target-invalid",
+          { property, formula, target: animationElementInfo(element) },
+          "warn",
+        );
+        continue;
+      }
+      values.push(value);
+    }
+    if (!values.length) {
+      continue;
+    }
+    runtimeLog("animation:animate-target", {
+      property,
+      values,
+      formulas,
+      element: animationElementInfo(element),
+    });
+    // Fly in/out (ppt_x/ppt_y) often pairs with set-visible; also reveal here so
+    // metric motion is visible even if set was skipped or opacity stayed at 0.
+    revealAnimationElement(element);
+    animateMetricValues(element, property, values, timing);
+  }
+}
+
+/** Tokenize PPT/VML-style motion path (M/L/C, scientific notation). */
+function tokenizeMotionPath(path) {
+  if (typeof path !== "string") {
+    return [];
+  }
+  const tokens = [];
+  const re = /([MLCZmlcz])|([+\-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+\-]?\d+)?)/g;
+  let match = re.exec(path);
+  while (match) {
+    tokens.push(match[0]);
+    match = re.exec(path);
+  }
+  return tokens;
+}
+
+function parseMotionPath(path) {
+  const tokens = tokenizeMotionPath(path);
+  if (!tokens.length || tokens[0].toUpperCase() !== "M") {
+    return null;
+  }
+  let index = 0;
+  const segments = [];
+  let start = null;
+  let current = { x: 0, y: 0 };
+  const commands = [];
+
+  function readNumber() {
+    if (index >= tokens.length) {
+      return null;
+    }
+    const value = Number(tokens[index]);
+    if (!Number.isFinite(value)) {
+      return null;
+    }
+    index += 1;
+    return value;
+  }
+
+  function readPoint() {
+    const x = readNumber();
+    const y = readNumber();
+    if (!Number.isFinite(x) || !Number.isFinite(y)) {
+      return null;
+    }
+    return { x, y };
+  }
+
+  while (index < tokens.length) {
+    const token = tokens[index];
+    if (!/^[A-Za-z]$/.test(token)) {
+      break;
+    }
+    const cmd = token.toUpperCase();
+    index += 1;
+    commands.push(cmd);
+    if (cmd === "M") {
+      const point = readPoint();
+      if (!point) {
+        return null;
+      }
+      current = point;
+      if (!start) {
+        start = { ...point };
+      }
+      while (index < tokens.length && !/^[A-Za-z]$/.test(tokens[index])) {
+        const next = readPoint();
+        if (!next) {
+          break;
+        }
+        segments.push({ cmd: "L", from: { ...current }, to: { ...next } });
+        current = next;
+      }
+    } else if (cmd === "L") {
+      while (index < tokens.length && !/^[A-Za-z]$/.test(tokens[index])) {
+        const next = readPoint();
+        if (!next) {
+          break;
+        }
+        segments.push({ cmd: "L", from: { ...current }, to: { ...next } });
+        current = next;
+      }
+    } else if (cmd === "C") {
+      while (index < tokens.length && !/^[A-Za-z]$/.test(tokens[index])) {
+        const c1 = readPoint();
+        const c2 = readPoint();
+        const end = readPoint();
+        if (!c1 || !c2 || !end) {
+          break;
+        }
+        segments.push({
+          cmd: "C",
+          from: { ...current },
+          c1,
+          c2,
+          to: { ...end },
+        });
+        current = end;
+      }
+    } else if (cmd === "Z" && start) {
+      segments.push({ cmd: "L", from: { ...current }, to: { ...start } });
+      current = { ...start };
+    } else {
+      break;
+    }
+  }
+
+  if (!start) {
+    return null;
+  }
+  let kind = "line";
+  if (commands.includes("C")) {
+    kind = "cubic";
+  } else if (segments.length > 1) {
+    kind = "polyline";
+  }
+  return {
+    start,
+    end: { ...current },
+    segments,
+    commands,
+    kind,
+  };
+}
+
+function pointOnCubic(p0, p1, p2, p3, t) {
+  const u = 1 - t;
+  const uu = u * u;
+  const tt = t * t;
+  return {
+    x: uu * u * p0.x + 3 * uu * t * p1.x + 3 * u * tt * p2.x + tt * t * p3.x,
+    y: uu * u * p0.y + 3 * uu * t * p1.y + 3 * u * tt * p2.y + tt * t * p3.y,
+  };
+}
+
+function distance2d(a, b) {
+  const dx = b.x - a.x;
+  const dy = b.y - a.y;
+  return Math.hypot(dx, dy);
+}
+
+function densifyMotionPath(parsed, stepsPerCubic = 16) {
+  const points = [{ ...parsed.start }];
+  for (const segment of parsed.segments || []) {
+    if (segment.cmd === "L") {
+      points.push({ ...segment.to });
+    } else if (segment.cmd === "C") {
+      for (let step = 1; step <= stepsPerCubic; step += 1) {
+        points.push(pointOnCubic(segment.from, segment.c1, segment.c2, segment.to, step / stepsPerCubic));
+      }
+    }
+  }
+  return points;
+}
+
+/** Arc-length sample a PPT motion path into intermediate points (Phase 5.4). */
+function sampleMotionPath(path, sampleCount = 48) {
+  const parsed = parseMotionPath(path);
+  if (!parsed) {
+    return null;
+  }
+  const dense = densifyMotionPath(parsed, 16);
+  const count = Math.max(2, sampleCount | 0);
+  let samples;
+  if (dense.length <= 1) {
+    samples = [{ ...dense[0] }];
+  } else {
+    const lengths = [0];
+    for (let index = 1; index < dense.length; index += 1) {
+      lengths.push(lengths[index - 1] + distance2d(dense[index - 1], dense[index]));
+    }
+    const total = lengths[lengths.length - 1];
+    samples = [];
+    if (total <= 1e-12) {
+      samples = [{ ...dense[0] }, { ...dense[dense.length - 1] }];
+    } else {
+      let cursor = 0;
+      for (let index = 0; index < count; index += 1) {
+        const target = (total * index) / (count - 1);
+        while (cursor < lengths.length - 1 && lengths[cursor + 1] < target) {
+          cursor += 1;
+        }
+        if (cursor >= lengths.length - 1) {
+          samples.push({ ...dense[dense.length - 1] });
+          continue;
+        }
+        const span = lengths[cursor + 1] - lengths[cursor];
+        const t = span <= 1e-12 ? 0 : (target - lengths[cursor]) / span;
+        samples.push({
+          x: dense[cursor].x + (dense[cursor + 1].x - dense[cursor].x) * t,
+          y: dense[cursor].y + (dense[cursor + 1].y - dense[cursor].y) * t,
+        });
+      }
+    }
+  }
+  samples[samples.length - 1] = { ...parsed.end };
+  return {
+    parsed,
+    samples,
+    endpoint: { ...parsed.end },
+    kind: parsed.kind,
+  };
+}
+
+function motionEndpoint(path) {
+  const sampled = sampleMotionPath(path, 2);
+  return sampled ? sampled.endpoint : null;
+}
+
+function motionTranslate(baseTransform, point) {
+  return `${baseTransform} translate(${point.x * 100}cqw, ${point.y * 100}cqh)`.trim();
+}
+
+function applyMotionBehavior(elements, strings, timing) {
+  const path = strings.find((value) => typeof value === "string" && /^M\s/i.test(value));
+  const sampled = path ? sampleMotionPath(path, 48) : null;
+  if (!sampled || !sampled.samples.length) {
+    runtimeLog("animation:motion-skipped", { path, strings, reason: "no valid motion path samples" }, "warn");
+    return;
+  }
+  const endpoint = sampled.endpoint;
+  runtimeLog("animation:motion", {
+    path,
+    endpoint,
+    kind: sampled.kind,
+    sampleCount: sampled.samples.length,
+    timing,
+    targetCount: elements.length,
+    targets: elements.map(animationElementInfo),
+  });
+  for (const element of elements) {
+    // Motion paths are not preceded by set-visible in this deck (e.g. s014 goblin hop /
+    // knock-off composite). Reveal so the path reads instead of animating opacity 0.
+    revealAnimationElement(element);
+    const baseTransform = element.dataset.baseTransform || "";
+    const endTransform = motionTranslate(baseTransform, endpoint);
+    const startTransform = element.style.transform || baseTransform || "none";
+    element.style.transform = endTransform;
+    runtimeLog("animation:motion-frame", {
+      endpoint,
+      kind: sampled.kind,
+      sampleCount: sampled.samples.length,
+      baseTransform,
+      target: animationElementInfo(element),
+    });
+    if (typeof element.animate === "function") {
+      try {
+        const keyframes = sampled.samples.map((point, index) => ({
+          transform: motionTranslate(baseTransform, point),
+          offset: sampled.samples.length === 1 ? 0 : index / (sampled.samples.length - 1),
+        }));
+        // Ensure first keyframe matches current visual when path start is non-zero.
+        if (keyframes.length) {
+          keyframes[0] = {
+            transform: motionTranslate(baseTransform, sampled.samples[0]),
+            offset: 0,
+          };
+        }
+        element.animate(keyframes, {
+          duration: Math.max(timing.duration, 1),
+          easing: cssEasing(timing),
+          fill: "forwards",
+        });
+      } catch (_error) {
+        // Keep endTransform (endpoint jump) if WAAPI rejects multi-keyframe path.
+        runtimeLog("animation:motion-animate-failed", { path, endpoint }, "warn");
+      }
+    }
+    if (timing.autoReverse) {
+      scheduleAnimation(() => {
+        runtimeLog("animation:motion-autoreverse", { target: animationElementInfo(element) });
+        element.style.transform = startTransform;
+      }, timing.duration, "motion-auto-reverse", { target: animationElementInfo(element) });
+    } else if (!timing.holdFill) {
+      scheduleAnimation(() => {
+        runtimeLog("animation:motion-fill-reset", { target: animationElementInfo(element) });
+        element.style.transform = baseTransform;
+      }, timing.duration, "motion-fill-reset", { target: animationElementInfo(element) });
+    }
+  }
+}
+
+function littleEndianFloatFromHex(hex, offset) {
+  if (typeof hex !== "string" || hex.length < offset * 2 + 8) {
+    return null;
+  }
+  const bytes = new Uint8Array(4);
+  for (let index = 0; index < 4; index += 1) {
+    bytes[index] = Number.parseInt(hex.slice((offset + index) * 2, (offset + index + 1) * 2), 16);
+  }
+  return new DataView(bytes.buffer).getFloat32(0, true);
+}
+
+function scaleTargetFromBehavior(behavior) {
+  const atom = (behavior.atoms || []).find((item) => item.type === 61753 && typeof item.payloadHex === "string");
+  if (!atom) {
+    return null;
+  }
+  const fromX = littleEndianFloatFromHex(atom.payloadHex, 12);
+  const fromY = littleEndianFloatFromHex(atom.payloadHex, 16);
+  const toX = littleEndianFloatFromHex(atom.payloadHex, 20);
+  const toY = littleEndianFloatFromHex(atom.payloadHex, 24);
+  if (![fromX, fromY, toX, toY].every(Number.isFinite)) {
+    return null;
+  }
+  return {
+    from: { x: fromX / 100, y: fromY / 100 },
+    to: { x: toX / 100, y: toY / 100 },
+  };
+}
+
+function applyScaleBehavior(elements, behavior, timing) {
+  const scale = scaleTargetFromBehavior(behavior);
+  if (!scale) {
+    runtimeLog("animation:scale-skipped", { timing, reason: "scale atom missing or invalid" }, "warn");
+    return;
+  }
+  runtimeLog("animation:scale", {
+    scale,
+    timing,
+    targetCount: elements.length,
+    targets: elements.map(animationElementInfo),
+  });
+  for (const element of elements) {
+    const baseTransform = element.dataset.baseTransform || "";
+    const holdTransform = `${baseTransform} scale(${scale.to.x}, ${scale.to.y})`.trim();
+    element.style.transform = holdTransform;
+    runtimeLog("animation:scale-frame", {
+      scale,
+      baseTransform,
+      target: animationElementInfo(element),
+    });
+    if (typeof element.animate === "function") {
+      try {
+        element.animate(
+          [
+            { transform: `${baseTransform} scale(${scale.from.x}, ${scale.from.y})`.trim() },
+            { transform: holdTransform },
+          ],
+          {
+            duration: Math.max(timing.duration, 1),
+            easing: cssEasing(timing),
+            fill: "forwards",
+          },
+        );
+      } catch (_error) {
+        // Keep holdTransform already applied.
+      }
+    }
+    if (timing.autoReverse) {
+      scheduleAnimation(() => {
+        runtimeLog("animation:scale-autoreverse", { target: animationElementInfo(element) });
+        element.style.transform = `${baseTransform} scale(${scale.from.x}, ${scale.from.y})`.trim();
+      }, timing.duration, "scale-auto-reverse", { target: animationElementInfo(element) });
+    }
+  }
+}
+
+function applyCommandBehavior(node, behavior, strings) {
+  if (!strings.some((value) => value.startsWith("playFrom"))) {
+    runtimeLog("animation:command-skipped", { node: animationNodeInfo(node), strings, reason: "playFrom command not present" });
+    return;
+  }
+  const targets = behavior.targets && behavior.targets.length ? behavior.targets : node.targets || [];
+  const startMatch = strings.find((value) => value.startsWith("playFrom"))?.match(/playFrom\(([-+\d.]+)\)/);
+  const startSeconds = startMatch ? Number.parseFloat(startMatch[1]) : 0;
+  runtimeLog("animation:command", {
+    node: animationNodeInfo(node),
+    strings,
+    startSeconds,
+    targets: targets.map((target) => ({ kind: target.kind, shapeId: target.shapeId })),
+  });
+  for (const target of targets) {
+    if (target.kind !== "shape") {
+      continue;
+    }
+    const binding = state.mediaBindings.get(`${state.current.slide}:${target.shapeId}`);
+    if (binding && binding.status === "mapped" && binding.audioSource) {
+      playAudioSource(binding.audioSource, startSeconds, binding.cueBehavior || {});
+    } else {
+      runtimeLog("animation:command-audio-unhandled", {
+        node: animationNodeInfo(node),
+        target,
+        binding: binding || null,
+      }, "warn");
+    }
+  }
+}
+
+function applyBehavior(node, behavior, iterateContext = null) {
+  const strings = parsedStrings(behavior.variants);
+  const timing = nodeTiming(node);
+  runtimeLog("animation:behavior", {
+    node: animationNodeInfo(node),
+    kind: behavior.kind,
+    strings,
+    timing,
+    iterate: iterateContext ? iterateContext.iterate : null,
+    targets: (behavior.targets && behavior.targets.length ? behavior.targets : node.targets || []).map((target) => ({
+      kind: target.kind,
+      shapeId: target.shapeId,
+    })),
+  });
+  if (behavior.kind === "command") {
+    applyCommandBehavior(node, behavior, strings);
+    return;
+  }
+  const elements = targetsFor(node, behavior);
+  if (elements.length === 0) {
+    runtimeLog("animation:behavior-no-elements", {
+      node: animationNodeInfo(node),
+      kind: behavior.kind,
+      strings,
+      declaredTargets: behavior.targets || node.targets || [],
+    }, "warn");
+    return;
+  }
+  if (iterateContext && iterateKind(iterateContext.iterate)) {
+    applyBehaviorToIterateUnits(node, behavior, elements, strings, timing, iterateContext);
+    return;
+  }
+  if (behavior.kind === "set") {
+    applySetBehavior(elements, strings);
+  } else if (behavior.kind === "effect") {
+    applyEffectBehavior(elements, strings, timing, behavior);
+  } else if (behavior.kind === "animate") {
+    applyAnimateBehavior(elements, strings, timing);
+  } else if (behavior.kind === "motion") {
+    applyMotionBehavior(elements, strings, timing);
+  } else if (behavior.kind === "scale") {
+    applyScaleBehavior(elements, behavior, timing);
+  } else {
+    runtimeLog("animation:behavior-unsupported", { node: animationNodeInfo(node), kind: behavior.kind }, "warn");
+  }
+}
+
+function runAnimationNode(node, baseDelay = 0, allowClickNode = false, allowTriggeredNode = false, autoplay = false, iterateContext = null) {
+  runtimeLog("animation:node-evaluate", {
+    node: animationNodeInfo(node),
+    baseDelay,
+    allowClickNode,
+    allowTriggeredNode,
+    autoplay,
+    completed: state.animationCompletedNodes.has(node.id),
+  });
+  if (state.animationCompletedNodes.has(node.id) && nodeRestartMode(node) === 0 && !allowTriggeredNode && !allowClickNode) {
+    runtimeLog("animation:node-skipped", { node: animationNodeInfo(node), reason: "already completed and restart is disabled" });
+    return;
+  }
+  if (nodeTriggerConditions(node).length > 0 && !allowTriggeredNode) {
+    registerAnimationTriggerWaits(node);
+    runtimeLog("animation:node-waiting", { node: animationNodeInfo(node), reason: "start/end trigger condition" });
+    return;
+  }
+  if (nodeWaitsForClick(node) && !allowClickNode && !autoplay) {
+    state.animationQueue.push(node);
+    runtimeLog("animation:node-queued", {
+      node: animationNodeInfo(node),
+      reason: "OnNext/OnPrev click condition",
+      queueLength: state.animationQueue.length,
+    });
+    return;
+  }
+  const startDelay = baseDelay + nodeDelay(node);
+  const nodeDetails = { node: animationNodeInfo(node), startDelay, baseDelay };
+  const localIterate = buildIterateContext(node);
+  const activeIterate = localIterate || iterateContext;
+  if (localIterate) {
+    prepareIterateTargets(node, localIterate);
+  }
+  scheduleAnimation(() => {
+    state.animationStartedNodes.add(node.id);
+    runtimeLog("animation:node-started", {
+      ...nodeDetails,
+      startedCount: state.animationStartedNodes.size,
+    });
+    emitAnimationTrigger(3, node);
+  }, startDelay, "animation-node-start", nodeDetails);
+  if (node.behaviors && node.behaviors.length) {
+    scheduleAnimation(() => {
+      runtimeLog("animation:node-behaviors-start", {
+        ...nodeDetails,
+        behaviorCount: node.behaviors.length,
+      });
+      for (const behavior of node.behaviors) {
+        applyBehavior(node, behavior, activeIterate);
+      }
+    }, startDelay, "animation-node-behaviors", nodeDetails);
+  }
+  // Subordinate effects (RT_TimeSubEffectContainer) run with the parent node.
+  scheduleSubEffectNodes(node, startDelay, autoplay, activeIterate);
+  const onEndIterateExtra = activeIterate
+    ? localIterate
+      ? iterateExtraDuration(node)
+      : iterateContextStaggerExtra(activeIterate)
+    : 0;
+  scheduleAnimation(() => {
+    state.animationCompletedNodes.add(node.id);
+    runtimeLog("animation:node-completed", {
+      ...nodeDetails,
+      completedCount: state.animationCompletedNodes.size,
+      onEndDelayMs: nodeOnEndDelayMs(node, onEndIterateExtra),
+    });
+    emitAnimationTrigger(4, node);
+  }, startDelay + nodeOnEndDelayMs(node, onEndIterateExtra), "animation-node-complete", nodeDetails);
+  runtimeLog("animation:node-scheduled", {
+    ...nodeDetails,
+    durationMs: nodeDuration(node),
+    behaviorCount: (node.behaviors || []).length,
+    subEffectCount: (node.subEffects || []).length,
+    childCount: (node.children || []).length,
+    iterate: node.iterate || null,
+  });
+  scheduleChildNodes(node, startDelay, autoplay, activeIterate, allowClickNode);
+}
+
+
+/** PPT TimePropertyID TL_TPID_AfterEffect (instance 13). */
+function isAfterEffectNode(node) {
+  return (node.variants || []).some((variant) => {
+    const parsed = variant.parsed;
+    return variant.instance === 13 && parsed && parsed.boolValue === true;
+  });
+}
+
+/**
+ * "Hide on Next Mouse Click" after-effects are TimeSubEffectContainers that set
+ * style.visibility=hidden with AfterEffect=true and no OnBegin/OnEnd trigger.
+ * (MasterPos=2 in the extract; OnEnd-gated after-effects keep their conditions.)
+ * They must not run with the parent entrance — defer until the next OnNext click.
+ */
+function isHideOnNextClickAfterEffect(node) {
+  return isAfterEffectNode(node) && nodeTriggerConditions(node).length === 0;
+}
+
+function queueHideOnNextClickAfterEffect(node) {
+  if (state.pendingAfterEffectHides.some((pending) => pending.id === node.id)) {
+    return;
+  }
+  state.pendingAfterEffectHides.push(node);
+  runtimeLog("animation:aftereffect-queued", {
+    node: animationNodeInfo(node),
+    reason: "Hide on Next Mouse Click (AfterEffect set hidden)",
+    pendingCount: state.pendingAfterEffectHides.length,
+    targets: (node.targets || []).map((target) => ({ kind: target.kind, shapeId: target.shapeId })),
+  });
+}
+
+function cancelElementAnimations(element) {
+  if (!element || typeof element.getAnimations !== "function") {
+    return;
+  }
+  try {
+    for (const animation of element.getAnimations()) {
+      animation.cancel();
+    }
+  } catch (_error) {
+    // Ignore browsers without full WAAPI cancel support.
+  }
+}
+
+/**
+ * Apply Hide-on-Next AfterEffect immediately (sync).
+ * Scheduling via setTimeout raced the next entrance dissolve and could leave a
+ * WAAPI fill:forwards opacity composite ghosting under the new caption.
+ */
+function applyHideOnNextClickAfterEffectNow(node) {
+  const behavior = (node.behaviors || []).find((item) => item.kind === "set") || (node.behaviors || [])[0] || null;
+  const elements = behavior
+    ? targetsFor(node, behavior)
+    : targetsFor(node, { targets: node.targets || [] });
+  runtimeLog("animation:aftereffect-apply", {
+    node: animationNodeInfo(node),
+    targetCount: elements.length,
+    targets: elements.map(animationElementInfo),
+  });
+  for (const element of elements) {
+    cancelElementAnimations(element);
+    element.style.visibility = "hidden";
+    element.style.opacity = "0";
+    element.style.transition = "none";
+    if (element.dataset && element.dataset.shapeId) {
+      syncHotspotsForShapeVisibility(element.dataset.shapeId, false);
+    }
+  }
+  state.animationStartedNodes.add(node.id);
+  state.animationCompletedNodes.add(node.id);
+}
+
+function flushPendingAfterEffectHides() {
+  if (!state.pendingAfterEffectHides.length) {
+    return;
+  }
+  const pending = state.pendingAfterEffectHides.slice();
+  state.pendingAfterEffectHides = [];
+  runtimeLog("animation:aftereffect-flush", {
+    count: pending.length,
+    nodes: pending.map((node) => animationNodeInfo(node)),
+  });
+  for (const node of pending) {
+    applyHideOnNextClickAfterEffectNow(node);
+  }
+}
+
+function scheduleSubEffectNodes(node, startDelay, autoplay = false, iterateContext = null) {
+  const subEffects = node.subEffects || [];
+  if (!subEffects.length) {
+    return;
+  }
+  runtimeLog("animation:subeffects-scheduled", {
+    parent: animationNodeInfo(node),
+    subEffectCount: subEffects.length,
+    startDelay,
+    children: subEffects.map((child) => animationNodeInfo(child)),
+  });
+  for (const sub of subEffects) {
+    // AfterEffect "Hide on Next Click": defer until the next OnNext advance.
+    if (isHideOnNextClickAfterEffect(sub)) {
+      queueHideOnNextClickAfterEffect(sub);
+      continue;
+    }
+    // OnEnd-gated Hide After Animation: binary targetId is often the OOXML cTn
+    // id, while emitAnimationTrigger keys on extract serial (s194-tn0034 → 34 vs
+    // wait 4:33). Stars on s194 never hid and stacked as white boxes over the art.
+    // Schedule against the parent entrance end instead of a mismatched waiter.
+    const endTriggers = nodeTriggerConditions(sub).filter((condition) => condition.triggerEvent === 4);
+    if (endTriggers.length && endTriggers.length === nodeTriggerConditions(sub).length) {
+      const parentLocalId = nodeLocalId(node);
+      const matchesParent = parentLocalId !== null && endTriggers.some((condition) => condition.targetId === parentLocalId);
+      if (!matchesParent) {
+        // +32ms so dissolve/fade finishIn (same nominal end) cannot re-show the shape.
+        const hideAt = startDelay + nodeOnEndDelayMs(node) + 32;
+        runtimeLog("animation:subeffect-onend-parent", {
+          parent: animationNodeInfo(node),
+          sub: animationNodeInfo(sub),
+          parentLocalId,
+          waitedTargetIds: endTriggers.map((condition) => condition.targetId),
+          hideAtMs: hideAt,
+          reason: "OnEnd targetId≠extract serial; bind to parent entrance end",
+        });
+        scheduleAnimation(
+          () => {
+            applyHideOnNextClickAfterEffectNow(sub);
+          },
+          hideAt,
+          "animation-subeffect-onend-hide",
+          { parent: animationNodeInfo(node), sub: animationNodeInfo(sub), hideAtMs: hideAt },
+        );
+        continue;
+      }
+    }
+    // Other sub-effects (e.g. OnEnd-gated hide when ids match) run with parent /
+    // register trigger waits as usual.
+    runAnimationNode(sub, startDelay, false, false, autoplay, iterateContext);
+  }
+}
+
+function scheduleChildNodes(node, startDelay, autoplay = false, iterateContext = null, allowClickNode = false) {
+  const children = node.children || [];
+  if (!children.length) {
+    runtimeLog("animation:children-none", { node: animationNodeInfo(node) });
+    return;
+  }
+  if (nodeChildrenRunOnClick(node) && !autoplay) {
+    // PPT: the click that opens a click-sequence also plays the first build.
+    // Without this, the first stage click only enqueues children and shows
+    // nothing (dead click) — e.g. s003 post-title story beats.
+    if (allowClickNode && children.length) {
+      for (let index = 1; index < children.length; index += 1) {
+        state.animationQueue.push(children[index]);
+      }
+      runtimeLog("animation:children-queued", {
+        node: animationNodeInfo(node),
+        reason: "sequence opened by click; first child runs now",
+        childCount: children.length,
+        remainingQueued: children.length - 1,
+        queueLength: state.animationQueue.length,
+        firstChild: animationNodeInfo(children[0]),
+        children: children.map((child) => animationNodeInfo(child)),
+      });
+      runAnimationNode(children[0], startDelay, true, false, autoplay, iterateContext);
+      return;
+    }
+    for (const child of children) {
+      state.animationQueue.push(child);
+    }
+    runtimeLog("animation:children-queued", {
+      node: animationNodeInfo(node),
+      reason: "sequence waits for click",
+      childCount: children.length,
+      queueLength: state.animationQueue.length,
+      children: children.map((child) => animationNodeInfo(child)),
+    });
+    return;
+  }
+  if (nodeRunsSequentialChildren(node)) {
+    let childDelay = 0;
+    for (const child of children) {
+      runtimeLog("animation:child-scheduled", {
+        parent: animationNodeInfo(node),
+        child: animationNodeInfo(child),
+        mode: "sequential",
+        startDelay: startDelay + childDelay,
+      });
+      runAnimationNode(child, startDelay + childDelay, false, false, autoplay, iterateContext);
+      childDelay += subtreeDuration(child);
+    }
+    return;
+  }
+  for (const child of children) {
+    runtimeLog("animation:child-scheduled", {
+      parent: animationNodeInfo(node),
+      child: animationNodeInfo(child),
+      mode: "parallel",
+      startDelay,
+      iterate: iterateContext ? iterateContext.iterate : null,
+    });
+    runAnimationNode(child, startDelay, false, false, autoplay, iterateContext);
+  }
+}
+
+function collectAnimatedShapeIds(slideAnimations) {
+  const shapeIds = new Set();
+  const stack = [...(slideAnimations.rootTimeNodes || [])];
+  while (stack.length) {
+    const node = stack.pop();
+    for (const target of node.targets || []) {
+      if (target.kind === "shape" && target.shapeId !== undefined) {
+        shapeIds.add(String(target.shapeId));
+      }
+    }
+    for (const behavior of node.behaviors || []) {
+      for (const target of behavior.targets || []) {
+        if (target.kind === "shape" && target.shapeId !== undefined) {
+          shapeIds.add(String(target.shapeId));
+        }
+      }
+    }
+    stack.push(...(node.subEffects || []));
+    stack.push(...(node.children || []));
+  }
+  return shapeIds;
+}
+
+/** PPT TimePropertyID TL_TPID_EffectType (variant instance 11). */
+const PPT_EFFECT_TYPE_ENTRANCE = 1;
+const PPT_EFFECT_TYPE_EXIT = 2;
+
+function timeVariantInt(node, instanceId) {
+  for (const variant of node.variants || []) {
+    const parsed = variant.parsed;
+    if (variant.instance === instanceId && parsed && typeof parsed.intValue === "number") {
+      return parsed.intValue;
+    }
+  }
+  return null;
+}
+
+function behaviorTargetShapeIds(node, behavior) {
+  const ids = new Set();
+  for (const target of [...(behavior.targets || []), ...(node.targets || [])]) {
+    if (target.kind === "shape" && target.shapeId !== undefined) {
+      ids.add(String(target.shapeId));
+    }
+  }
+  return ids;
+}
+
+/**
+ * PPT motion paths are deltas from the authored position. A first point near
+ * (0,0) means the sprite is already on-slide (s023 goblin attack). A large
+ * first point is a fly-in (s014 hop / s019 slash) and must stay pre-hidden.
+ */
+function motionPathStartsNearOrigin(strings) {
+  const path = strings.find((value) => typeof value === "string" && /^m\s/i.test(value));
+  if (!path) {
+    return true;
+  }
+  const match = path.match(/^m\s+([-+eE.\d]+)\s+([-+eE.\d]+)/i);
+  if (!match) {
+    return true;
+  }
+  const x = Number.parseFloat(match[1]);
+  const y = Number.parseFloat(match[2]);
+  if (!Number.isFinite(x) || !Number.isFinite(y)) {
+    return true;
+  }
+  return Math.abs(x) < 0.04 && Math.abs(y) < 0.04;
+}
+
+/**
+ * Shapes that must start hidden until an entrance / fly-in reveals them.
+ * On-slide motion (counter goblins) and exit-only (s019 blinds kill) stay
+ * visible from slide land.
+ */
+function collectEntranceHiddenShapeIds(slideAnimations) {
+  const roles = new Map();
+  const ensure = (shapeId) => {
+    if (!roles.has(shapeId)) {
+      roles.set(shapeId, { entranceReveal: false, motionFlyIn: false, exitOnly: false });
+    }
+    return roles.get(shapeId);
+  };
+
+  const walk = (node, inheritedEffectType) => {
+    const typed = timeVariantInt(node, 11);
+    const effectType = typed !== null ? typed : inheritedEffectType;
+    for (const behavior of node.behaviors || []) {
+      const strings = parsedStrings(behavior.variants).map((value) => String(value).toLowerCase());
+      const kind = String(behavior.kind || "");
+      const targets = behaviorTargetShapeIds(node, behavior);
+      const setVisible =
+        kind === "set" && strings.includes("style.visibility") && strings.includes("visible");
+      const setHidden =
+        kind === "set" && strings.includes("style.visibility") && strings.includes("hidden");
+      const isFadeDissolve =
+        kind === "effect" && strings.some((value) => value === "fade" || value === "dissolve");
+      const isExitEffect = kind === "effect" && effectType === PPT_EFFECT_TYPE_EXIT;
+      const isEntranceEffect =
+        kind === "effect" &&
+        (effectType === PPT_EFFECT_TYPE_ENTRANCE || (isFadeDissolve && effectType !== PPT_EFFECT_TYPE_EXIT));
+      const isMotion = kind === "motion" || kind === "animate" || kind === "scale";
+      const flyIn = isMotion && kind === "motion" && !motionPathStartsNearOrigin(strings);
+      for (const shapeId of targets) {
+        const role = ensure(shapeId);
+        if (setVisible || isEntranceEffect) {
+          role.entranceReveal = true;
+        }
+        if (flyIn) {
+          role.motionFlyIn = true;
+        }
+        if (setHidden || isExitEffect) {
+          role.exitOnly = true;
+        }
+      }
+    }
+    for (const child of node.children || []) {
+      walk(child, effectType);
+    }
+    for (const sub of node.subEffects || []) {
+      walk(sub, effectType);
+    }
+  };
+
+  for (const root of slideAnimations.rootTimeNodes || []) {
+    walk(root, null);
+  }
+
+  const shapeIds = new Set();
+  for (const [shapeId, role] of roles) {
+    // Entrances + off-slide fly-ins start hidden. On-slide motion and exit-only
+    // stay visible (s023/s025/s032 goblins; s019 felled blinds).
+    if (role.entranceReveal || role.motionFlyIn) {
+      shapeIds.add(shapeId);
+    }
+  }
+  return shapeIds;
+}
+
+function setupAnimations(screen) {
+  // Auto-advance slides and continue-only result beats autoplay OnNext entrances
+  // (Attack→motion/text). Menu slides keep click-gated builds.
+  const autoplay = screenShouldAutoplayAnimations(screen);
+  runtimeLog("animation:setup-start", {
+    screen: { id: screen.id, slide: screen.slide },
+    layerElementCount: state.currentLayerElements.size,
+    loadedAnimationSlide: state.animationSlides.has(screen.slide),
+    autoplay,
+  });
+  clearAnimationTimers();
+  for (const element of state.currentLayerElements.values()) {
+    element.classList.remove("hybrid-png-text-hidden");
+    delete element.dataset.hybridHiddenText;
+    resetIterateHost(element);
+    element.style.visibility = "";
+    element.style.opacity = "";
+    element.style.transition = "";
+    element.style.transform = element.dataset.baseTransform || "";
+  }
+  const slideAnimations = state.animationSlides.get(screen.slide);
+  if (!slideAnimations) {
+    runtimeLog("animation:setup-none", {
+      screen: { id: screen.id, slide: screen.slide },
+      reason: state.animations ? "slide has no animation entry" : "animation manifest not loaded",
+    });
+    return;
+  }
+  // Entrance targets start hidden until set/effect reveals them.
+  // Motion-only + exit-only stay visible (s023 goblins; s019 felled blinds).
+  const entranceHiddenShapeIds = collectEntranceHiddenShapeIds(slideAnimations);
+  for (const shapeId of entranceHiddenShapeIds) {
+    const element = state.currentLayerElements.get(String(shapeId));
+    if (!element) {
+      continue;
+    }
+    element.style.visibility = "hidden";
+    element.style.opacity = "0";
+  }
+  runtimeLog("animation:setup-roots", {
+    screen: { id: screen.id, slide: screen.slide },
+    rootCount: (slideAnimations.rootTimeNodes || []).length,
+    entranceHiddenShapeIds: Array.from(entranceHiddenShapeIds),
+    animatedShapeIds: Array.from(collectAnimatedShapeIds(slideAnimations)),
+    roots: (slideAnimations.rootTimeNodes || []).map((node) => animationNodeInfo(node)),
+  });
+  for (const node of slideAnimations.rootTimeNodes || []) {
+    runAnimationNode(node, 0, false, false, autoplay);
+  }
+  // Hotspots may already exist (late anim-manifest boot re-setup) — gate them now.
+  syncAllAnimatedHotspots();
+}
+
+function advanceAnimation() {
+  // PPT After Animation → Hide on Next Mouse Click fires on this click,
+  // before (or as) the next OnNext build starts — prevents stacked text.
+  flushPendingAfterEffectHides();
+  // Drain empty placeholders and media-command-only OnNext nodes (BGM playFrom)
+  // so they do not burn a full click before a real build or hyperlink.
+  const skippedNonGating = drainNonGatingAnimationNodes("advanceAnimation");
+  const node = state.animationQueue.shift();
+  if (!node) {
+    runtimeLog("input:animation-advance", {
+      action: "advance-animation",
+      result: skippedNonGating.length
+        ? "only non-gating OnNext nodes drained (empty/media)"
+        : "no queued animation node",
+      queueLength: 0,
+      skippedNonGatingCount: skippedNonGating.length,
+      skippedNonGating: skippedNonGating.map((item) => animationNodeInfo(item)),
+    });
+    // Returning false lets hotspot continuum fall through to hyperlink/media.
+    return false;
+  }
+  runtimeLog("input:animation-advance", {
+    action: "advance-animation",
+    result: "running queued animation node",
+    node: animationNodeInfo(node),
+    queueLengthAfterShift: state.animationQueue.length,
+    skippedNonGatingCount: skippedNonGating.length,
+    skippedNonGating: skippedNonGating.map((item) => animationNodeInfo(item)),
+  });
+  runAnimationNode(node, 0, true);
+  return true;
+}
+
+function renderScreen(screen) {
+  // End any in-flight slide transition from the previous screen before rebuilding.
+  finishSlideTransition("render-screen");
+  const slideNumber = String(screen.slide).padStart(3, "0");
+  const layers = screen.layers || [];
+  const renderedLayers = renderLayers(screen);
+  const typeCounts = layerTypeCounts(layers);
+  const maxArea = layers.reduce((max, layer) => Math.max(max, layerArea(layer)), 0);
+  const pngUnderlay = renderedLayers && screenNeedsPngUnderlay(screen);
+  runtimeLog("render:screen-start", {
+    screen: { id: screen.id, slide: screen.slide },
+    image: screen.image,
+    renderedLayers,
+    pngUnderlay,
+    hotspotCount: (screen.hotspots || []).length,
+    transition: screen.transition || null,
+  });
+  screenImage.alt = `Screen ${slideNumber}`;
+  screenImage.src = assetUrl(screen.image);
+  // Hybrid: sparse layer stacks keep the reconstructed PNG as underlay (Phase 5.6).
+  screenImage.hidden = renderedLayers && !pngUnderlay;
+  screenImage.classList.toggle("png-underlay", Boolean(pngUnderlay));
+  layersLayer.hidden = !renderedLayers;
+  missingRender.hidden = true;
+  stage.dataset.loading = "false";
+  stage.dataset.screenId = screen.id || "";
+  // Source slide solid fill (often white). Full-bleed black shapes still paint over it.
+  stage.style.backgroundColor = cssColorFromPpt(screen.backgroundColor) || "#070604";
+  state.lastRenderDecision = {
+    screenId: screen.id,
+    slide: screen.slide,
+    summary: renderedLayers
+      ? pngUnderlay
+        ? `hybrid-mode (${layers.length} sparse layers + PNG underlay)`
+        : `layers-mode (${layers.length} layers; hide PNG)`
+      : "png-mode (no layers; show composite image)",
+    layersPresent: layers.length > 0,
+    layerTypeCounts: typeCounts,
+    maxLayerArea: maxArea,
+    hidePngBecauseLayers: Boolean(renderedLayers) && !pngUnderlay,
+    pngUnderlay: Boolean(pngUnderlay),
+    backgroundColor: screen.backgroundColor || null,
+    hotspotCount: (screen.hotspots || []).length,
+    transition: screen.transition || null,
+    problems: collectRuntimeProblems(screen),
+  };
+  runtimeLog("render:decision", state.lastRenderDecision);
+  setupAnimations(screen);
+  applyHybridPngTextPolicy(screen);
+  applyResidualCombatOptionStyle(screen);
+  applySlideTransition(screen);
+  scheduleAutoAdvance(screen);
+  renderHotspots(screen);
+  setStatus(state.hudEnabled ? `Screen ${slideNumber} [debug]` : `Screen ${slideNumber}`);
+  runtimeLog("render:screen-complete", {
+    screen: { id: screen.id, slide: screen.slide },
+    imageHidden: screenImage.hidden,
+    layersHidden: layersLayer.hidden,
+    queuedAnimationNodes: state.animationQueue.length,
+    pendingAnimationTimers: state.animationTimers.length,
+    autoplayAnimations: screenShouldAutoplayAnimations(screen),
+  });
+  pushPlaythroughEvent({
+    kind: "slide",
+    detail: "enter",
+    targetSlide: screen.slide,
+    hotspots: (screen.hotspots || []).filter((hotspot) => hotspot.clickable).length,
+    queueLen: state.animationQueue.length,
+    autoplay: screenShouldAutoplayAnimations(screen),
+  });
+  updateDebugHud();
+}
+
+function animationTimelineForScreen(screen) {
+  const slideAnimations = state.animationSlides.get(screen.slide);
+  if (!slideAnimations) {
+    return {
+      available: false,
+      rootCount: 0,
+      durationMs: 0,
+    };
+  }
+  const roots = slideAnimations.rootTimeNodes || [];
+  const durations = roots.map((node) => subtreeDuration(node)).filter(Number.isFinite);
+  return {
+    available: true,
+    rootCount: roots.length,
+    durationMs: durations.length > 0 ? Math.max(...durations) : 0,
+  };
+}
+
+function screenAllowsAutoAdvance(screen) {
+  if (!screen) {
+    return false;
+  }
+  // Prefer advancement block (build_advancement_model); fall back to transition flags.
+  if (screen.advancement && typeof screen.advancement.autoAdvance === "boolean") {
+    return screen.advancement.autoAdvance;
+  }
+  return Boolean(screen.transition && (screen.transition.flagNames || []).includes("autoAdvance"));
+}
+
+function autoAdvanceSourceDelayMs(screen) {
+  if (!screen) {
+    return null;
+  }
+  const advDelay = screen.advancement && screen.advancement.autoAdvanceDelayMs;
+  if (Number.isFinite(advDelay) && advDelay > 0) {
+    return advDelay;
+  }
+  const slideTimeMs = screen.transition && screen.transition.slideTimeMs;
+  if (Number.isFinite(slideTimeMs) && slideTimeMs > 0) {
+    return slideTimeMs;
+  }
+  return null;
+}
+
+function scheduleAutoAdvance(screen) {
+  const transition = screen.transition;
+  const advancement = screen.advancement || null;
+  runtimeLog("navigation:auto-advance-evaluate", {
+    screen: { id: screen.id, slide: screen.slide },
+    advancement,
+    transition: transition || null,
+    startSlideOverride: state.startSlideOverride,
+  });
+  clearAutoAdvanceTimer("rescheduled");
+  // ?slide=N only selects the boot slide. Auto-advance still follows advancement
+  // policy after max(slideTime, animation timeline) so the PPT continuum works
+  // under the usual QA URL (?debug=1&slide=1). Non-auto slides never schedule.
+  if (!screenAllowsAutoAdvance(screen)) {
+    runtimeLog("navigation:auto-advance-not-scheduled", {
+      screen: { id: screen.id, slide: screen.slide },
+      reason: "advancement.autoAdvance is false (or transition autoAdvance flag missing)",
+    });
+    return;
+  }
+  const sourceDelayMs = autoAdvanceSourceDelayMs(screen);
+  if (!Number.isFinite(sourceDelayMs) || sourceDelayMs <= 0) {
+    runtimeLog("navigation:auto-advance-not-scheduled", {
+      screen: { id: screen.id, slide: screen.slide },
+      reason: "autoAdvanceDelayMs / slideTimeMs missing or not positive",
+      advancementDelayMs: advancement ? advancement.autoAdvanceDelayMs : null,
+      transitionSlideTimeMs: transition ? transition.slideTimeMs : null,
+    });
+    return;
+  }
+  const nextId = nextSequentialScreenId(screen);
+  const nextScreen = nextId ? state.screens.get(nextId) : null;
+  if (!nextScreen) {
+    runtimeLog("navigation:auto-advance-not-scheduled", {
+      screen: { id: screen.id, slide: screen.slide },
+      reason: "next sequential screen missing",
+      requestedNextId: nextId,
+    }, "warn");
+    return;
+  }
+  const animationTimeline = animationTimelineForScreen(screen);
+  const scheduledDelayMs = Math.max(sourceDelayMs, animationTimeline.durationMs);
+  const timerId = ++state.autoAdvanceSequence;
+  const fromScreen = { id: screen.id, slide: screen.slide };
+  const toScreen = { id: nextScreen.id, slide: nextScreen.slide };
+  runtimeLog("navigation:auto-advance-scheduled", {
+    timerId,
+    from: fromScreen,
+    to: toScreen,
+    sourceDelayMs,
+    animationTimeline,
+    scheduledDelayMs,
+    startSlideOverride: state.startSlideOverride,
+    sourceRecordOffset: transition ? transition.recordOffset ?? null : null,
+    sourceRawHex: transition ? transition.rawHex ?? null : null,
+    reason: animationTimeline.durationMs > sourceDelayMs
+      ? "wait for the longer of PowerPoint slide time and decoded animation timeline"
+      : "PowerPoint autoAdvance slide time; animation timeline completes before it",
+  });
+  const timerRecord = {
+    id: timerId,
+    handle: null,
+    fromScreen,
+    toScreen,
+    delayMs: scheduledDelayMs,
+  };
+  timerRecord.handle = window.setTimeout(() => {
+    if (state.autoAdvanceTimer !== timerRecord) {
+      runtimeLog("navigation:auto-advance-stale", {
+        timerId,
+        from: fromScreen,
+        to: toScreen,
+        reason: "timer was replaced or cleared",
+      }, "warn");
+      return;
+    }
+    state.autoAdvanceTimer = null;
+    runtimeLog("navigation:auto-advance-fired", {
+      timerId,
+      from: fromScreen,
+      to: toScreen,
+      sourceDelayMs,
+      animationTimeline,
+      scheduledDelayMs,
+    });
+    navigateTo(nextScreen.id);
+  }, scheduledDelayMs);
+  state.autoAdvanceTimer = timerRecord;
+  updateDebugHud();
+}
+
+function transitionDuration(screen) {
+  const speed = screen.transition && screen.transition.speed;
+  if (speed === 0) {
+    return 900;
+  }
+  if (speed === 1) {
+    return 650;
+  }
+  return 400;
+}
+
+function transitionEffectClass(transition) {
+  const effectType = transition && transition.effectType;
+  if (!effectType) {
+    return null;
+  }
+  return `transition-effect-${effectType}`;
+}
+
+function transitionDirectionClass(transition) {
+  const direction = transition && transition.effectDirection;
+  return Number.isFinite(direction) ? `transition-direction-${direction}` : "transition-direction-0";
+}
+
+function clearSlideTransitionClasses() {
+  const removedClasses = [];
+  for (const className of Array.from(stage.classList)) {
+    if (className.startsWith("transition-effect-") || className.startsWith("transition-direction-")) {
+      stage.classList.remove(className);
+      removedClasses.push(className);
+    }
+  }
+  if (removedClasses.length > 0) {
+    runtimeLog("transition:classes-cleared", { removedClasses });
+  }
+}
+
+function applySlideTransition(screen) {
+  const transition = screen.transition;
+  if (!transition || transition.effectType === 0) {
+    runtimeLog("transition:not-applied", {
+      screen: { id: screen.id, slide: screen.slide },
+      transition: transition || null,
+      reason: !transition ? "no transition" : "effectType is zero",
+    });
+    clearSlideTransitionClasses();
+    return;
+  }
+  const durationMs = transitionDuration(screen);
+  const effectClass = transitionEffectClass(transition);
+  const directionClass = transitionDirectionClass(transition);
+  runtimeLog("transition:apply", {
+    screen: { id: screen.id, slide: screen.slide },
+    effectType: transition.effectType,
+    effectDirection: transition.effectDirection,
+    effectClass,
+    directionClass,
+    durationMs,
+    transition,
+  });
+  stage.style.setProperty("--transition-duration", `${durationMs}ms`);
+  clearSlideTransitionClasses();
+  stage.classList.add(effectClass, directionClass);
+  stage.classList.remove("is-transitioning");
+  void stage.offsetWidth;
+  stage.classList.add("is-transitioning");
+  runtimeLog("transition:started", {
+    screen: { id: screen.id, slide: screen.slide },
+    classList: Array.from(stage.classList),
+  });
+  clearTransitionTimers();
+  scheduleTransitionTimer(() => {
+    finishSlideTransition("completed");
+  }, durationMs, "slide-transition-cleanup", {
+    screen: { id: screen.id, slide: screen.slide },
+    effectType: transition.effectType,
+    effectDirection: transition.effectDirection,
+  });
+}
+
+screenImage.addEventListener("error", () => {
+  runtimeLog("render:image-error", {
+    src: screenImage.src,
+    currentScreen: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+  }, "error");
+  screenImage.hidden = true;
+  missingRender.hidden = false;
+});
+
+screenImage.addEventListener("load", () => {
+  runtimeLog("render:image-loaded", {
+    src: screenImage.src,
+    naturalWidth: screenImage.naturalWidth,
+    naturalHeight: screenImage.naturalHeight,
+    currentScreen: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+  });
+});
+
+window.addEventListener("error", (event) => {
+  runtimeLog("runtime:uncaught-error", {
+    message: event.message,
+    filename: event.filename || null,
+    line: event.lineno || null,
+    column: event.colno || null,
+    stack: event.error?.stack || null,
+  }, "error");
+});
+
+window.addEventListener("unhandledrejection", (event) => {
+  const reason = event.reason;
+  runtimeLog("runtime:unhandled-rejection", {
+    message: reason instanceof Error ? reason.message : String(reason),
+    stack: reason instanceof Error ? reason.stack || null : null,
+  }, "error");
+});
+
+function screenAllowsStageClickAdvance(screen) {
+  if (!screen) {
+    return false;
+  }
+  if (screen.advancement && typeof screen.advancement.stageClickAdvancesSlide === "boolean") {
+    return screen.advancement.stageClickAdvancesSlide;
+  }
+  // Fallback for older manifests without advancement block.
+  return Boolean(screen.transition && (screen.transition.flagNames || []).includes("manualAdvance"));
+}
+
+function nextSequentialScreenId(screen) {
+  if (!screen) {
+    return null;
+  }
+  if (screen.advancement && screen.advancement.nextSequentialId) {
+    return screen.advancement.nextSequentialId;
+  }
+  if (!Number.isFinite(screen.slide)) {
+    return null;
+  }
+  return screenId(Number(screen.slide) + 1);
+}
+
+function handleStageClick() {
+  runtimeLog("input:stage-click", {
+    action: "unlock-audio-and-advancement-continuum",
+    queueLengthBefore: state.animationQueue.length,
+    currentScreen: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+    advancement: state.current ? state.current.advancement || null : null,
+  });
+  unlockAudio();
+  // 1) PowerPoint OnNext / OnPrev animation queue first.
+  if (advanceAnimation()) {
+    recordInteraction({
+      type: "stage-click",
+      action: "advance-animation",
+      result: "animation-advanced",
+      queueLengthAfter: state.animationQueue.length,
+    });
+    return;
+  }
+  // 2) After builds are done: only advance the slide when PPT fManualAdvance is set.
+  if (screenAllowsStageClickAdvance(state.current)) {
+    const nextId = nextSequentialScreenId(state.current);
+    if (nextId && state.screens.has(nextId)) {
+      navigateTo(nextId, {
+        type: "stage-click",
+        action: "click-advance-slide",
+        result: "navigated",
+        from: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+        to: nextId,
+      });
+      return;
+    }
+    recordInteraction({
+      type: "stage-click",
+      action: "click-advance-slide",
+      result: "next-slide-missing",
+      nextId,
+    });
+    return;
+  }
+  // 3) Hyperlink-only (or media-only) slides: blank stage is inert.
+  recordInteraction({
+    type: "stage-click",
+    action: "no-op",
+    result: "no-queued-animation-and-no-click-advance",
+    queueLengthAfter: 0,
+    modes: state.current && state.current.advancement ? state.current.advancement.modes : null,
+  });
+}
+
+stage.addEventListener("click", () => {
+  handleStageClick();
+});
+
+restartButton.addEventListener("click", () => {
+  runtimeLog("input:restart", { startScreen: state.manifest?.startScreen || null });
+  unlockAudio();
+  stopAudio();
+  navigateTo(state.manifest.startScreen);
+});
+
+muteButton.addEventListener("click", () => {
+  state.muted = !state.muted;
+  runtimeLog("input:mute-toggle", { muted: state.muted });
+  updateAudioMute();
+});
+
+runtimeLog("manifest:request", { path: "game-manifest.json" });
+fetch(assetUrl("game-manifest.json"), { cache: "no-store" })
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`Manifest load failed: ${response.status}`);
+    }
+    runtimeLog("manifest:response", { status: response.status, url: response.url });
+    return response.json();
+  })
+  .then((manifest) => {
+    state.manifest = manifest;
+    state.screens = new Map(manifest.screens.map((screen) => [screen.id, screen]));
+    state.mediaBindings = new Map((manifest.mediaBindings || []).map((binding) => [`${binding.slide}:${binding.shapeId}`, binding]));
+    runtimeLog("manifest:loaded", {
+      format: manifest.format || null,
+      startScreen: manifest.startScreen,
+      screenCount: state.screens.size,
+      mediaBindingCount: state.mediaBindings.size,
+      audioEntryCount: (manifest.audio || []).length,
+      animationStatus: manifest.animationStatus || null,
+      transitionStatus: manifest.transitionStatus || null,
+      layerStatus: manifest.layerStatus || null,
+    });
+    prepareAudio();
+    updateAudioMute();
+    const initialId =
+      state.startSlideOverride !== null && state.screens.has(screenId(state.startSlideOverride))
+        ? screenId(state.startSlideOverride)
+        : manifest.startScreen;
+    if (state.startSlideOverride !== null && initialId !== manifest.startScreen) {
+      runtimeLog("navigation:start-override", {
+        requestedSlide: state.startSlideOverride,
+        initialId,
+        defaultStartScreen: manifest.startScreen,
+      });
+    }
+    navigateTo(initialId, {
+      type: "boot",
+      action: "start-screen",
+      requestedSlide: state.startSlideOverride,
+    });
+    return loadAnimations(manifest)
+      .then((animations) => {
+        state.animations = animations;
+        state.animationSlides = new Map((animations?.slides || []).map((slide) => [slide.slide, slide]));
+        runtimeLog("animation:runtime-ready", {
+          slideCount: state.animationSlides.size,
+          currentScreen: state.current ? { id: state.current.id, slide: state.current.slide } : null,
+        });
+        if (state.current) {
+          // setupAnimations clears animationTimers only — transitionTimers keep
+          // slide-transition cleanup alive across this late boot re-setup.
+          setupAnimations(state.current);
+          applyHybridPngTextPolicy(state.current);
+          // Re-bind hotspots now that entrance-hidden shapes are known (gates
+          // animated "continue" links that were clickable during the gap).
+          renderHotspots(state.current);
+          // Reschedule with animation timeline now that manifests are loaded.
+          // ?slide=N does not suppress: delay is already max(slideTime, timeline).
+          scheduleAutoAdvance(state.current);
+        }
+        updateDebugHud();
+      })
+      .catch((error) => {
+        runtimeLog("animation:manifest-error", { message: error.message, stack: error.stack || null }, "error");
+        console.warn(error);
+      });
+  })
+  .catch((error) => {
+    runtimeLog("manifest:error", { message: error.message, stack: error.stack || null }, "error");
+    setStatus(error.message);
+    missingRender.hidden = false;
+  });

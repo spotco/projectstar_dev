@@ -1,0 +1,804 @@
+:root {
+  color-scheme: dark;
+  --page: #12110f;
+  --panel: #1d1a15;
+  --line: #6f5f3d;
+  --text: #f2ead8;
+  --muted: #b6a987;
+  --focus: #e8c75f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 12%, #353028 0, var(--page) 52%);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #2a251d;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  border-color: var(--focus);
+  outline: none;
+}
+
+.game-shell {
+  width: min(100vw, 1280px);
+  padding: 12px;
+}
+
+.stage-wrap {
+  display: grid;
+  place-items: center;
+}
+
+.stage {
+  position: relative;
+  width: min(100%, calc(100vh - 72px) * 4 / 3);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #070604;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+  container-type: size;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.screen.png-underlay {
+  /* Sparse layer mode: composite raster sits under addressable layers. */
+  z-index: 0;
+}
+
+.layers {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.wordart-layer {
+  text-transform: none;
+  /* PPT WordArt spPr is noFill — never show a text-box plate behind glyphs. */
+  background: transparent;
+}
+
+.wordart-deflate {
+  /* Dual-path SVG warp lives in .wordart-deflate-svg; keep overflow for stroke. */
+  transform-origin: center center;
+  overflow: visible;
+}
+
+.wordart-deflate-svg text {
+  paint-order: stroke fill;
+}
+
+.wordart-curve-up,
+.wordart-curve-down {
+  transform-origin: center center;
+  /* Path warp lives in SVG; keep overflow visible for stroke. */
+  overflow: visible;
+}
+
+.wordart-curve-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.wordart-curve-svg text {
+  paint-order: stroke fill;
+}
+
+.empty-text-placeholder {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Static text already present in the PNG underlay (hybrid mode).
+   Visual-only: must not disable #hotspots hit targets for the same shapes. */
+.layer.hybrid-png-text-hidden {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Non-clickable residual combat OPTION (s015 flee, etc.): look inert, keep text. */
+.layer.residual-combat-option {
+  opacity: 0.45;
+  text-decoration: none !important;
+  cursor: default;
+  pointer-events: none;
+}
+
+.stage.is-transitioning .layers,
+.stage.is-transitioning .screen {
+  animation: slide-fade-in var(--transition-duration, 400ms) ease-out both;
+}
+
+/* SSSlideInfoAtom effectType → OOXML names. Goblins deck: 3=checker,
+   11=zoom, 21=comb, 22=newsflash, 23=fade, 27=circle. ProjectStar adds
+   (resolved against the LibreOffice pptx lens, 2026-10-23):
+   5=dissolve, 6=fade, 8=randomBar, 10=wipe, 26=wheel */
+.stage.is-transitioning.transition-effect-3 .layers,
+.stage.is-transitioning.transition-effect-3 .screen {
+  animation-name: slide-checker-in;
+}
+
+.stage.is-transitioning.transition-effect-11 .layers,
+.stage.is-transitioning.transition-effect-11 .screen {
+  animation-name: slide-zoom-in;
+}
+
+.stage.is-transitioning.transition-effect-21 .layers,
+.stage.is-transitioning.transition-effect-21 .screen {
+  animation-name: slide-comb-in;
+}
+
+.stage.is-transitioning.transition-effect-22 .layers,
+.stage.is-transitioning.transition-effect-22 .screen {
+  animation-name: slide-newsflash-in;
+}
+
+.stage.is-transitioning.transition-effect-23 .layers,
+.stage.is-transitioning.transition-effect-23 .screen {
+  animation-name: slide-fade-in;
+}
+
+.stage.is-transitioning.transition-effect-27 .layers,
+.stage.is-transitioning.transition-effect-27 .screen {
+  animation-name: slide-circle-in;
+}
+
+.stage.is-transitioning.transition-effect-5 .layers,
+.stage.is-transitioning.transition-effect-5 .screen {
+  animation-name: slide-dissolve-in;
+}
+
+.stage.is-transitioning.transition-effect-6 .layers,
+.stage.is-transitioning.transition-effect-6 .screen {
+  animation-name: slide-fade-in;
+}
+
+.stage.is-transitioning.transition-effect-8 .layers,
+.stage.is-transitioning.transition-effect-8 .screen {
+  animation-name: slide-randombar-in;
+}
+
+.stage.is-transitioning.transition-effect-10 .layers,
+.stage.is-transitioning.transition-effect-10 .screen {
+  animation-name: slide-wipe-in;
+}
+
+.stage.is-transitioning.transition-effect-26 .layers,
+.stage.is-transitioning.transition-effect-26 .screen {
+  animation-name: slide-wheel-in;
+}
+
+@keyframes slide-dissolve-in {
+  from {
+    opacity: 0;
+    filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='d'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2'/%3E%3CfeDisplacementMap in='SourceGraphic' scale='24'/%3E%3C/filter%3E%3C/svg%3E#d");
+  }
+
+  to {
+    opacity: 1;
+    filter: none;
+  }
+}
+
+@keyframes slide-randombar-in {
+  0% {
+    clip-path: inset(0 0 92% 0);
+    opacity: 0.4;
+  }
+
+  35% {
+    clip-path: inset(0 0 55% 0);
+    opacity: 0.7;
+  }
+
+  70% {
+    clip-path: inset(0 0 22% 0);
+    opacity: 0.9;
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-wipe-in {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes slide-wheel-in {
+  0% {
+    clip-path: polygon(50% 50%, 50% 0, 50% 0);
+    opacity: 0.6;
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 50% 100%);
+    opacity: 0.9;
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-newsflash-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.35) rotate(-12deg);
+  }
+
+  55% {
+    opacity: 1;
+    transform: scale(1.08) rotate(3deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes slide-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-circle-in {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  to {
+    clip-path: circle(75% at 50% 50%);
+  }
+}
+
+@keyframes slide-comb-in {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0.85;
+  }
+
+  50% {
+    clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-checker-in {
+  0% {
+    opacity: 0;
+    filter: contrast(200%) brightness(1.25);
+    transform: scale(1.02);
+  }
+
+  40% {
+    opacity: 0.55;
+    filter: contrast(140%);
+  }
+
+  100% {
+    opacity: 1;
+    filter: contrast(100%) brightness(1);
+    transform: scale(1);
+  }
+}
+
+/* Do not reverse fade/newsflash/zoom with animation-direction — fill-mode can leave
+   #layers at opacity 0 (blank stage). Directional flips are baked into comb only. */
+.stage.is-transitioning.transition-direction-1.transition-effect-21 .layers,
+.stage.is-transitioning.transition-direction-1.transition-effect-21 .screen {
+  animation-name: slide-comb-in-vertical;
+}
+
+@keyframes slide-comb-in-vertical {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    opacity: 0.85;
+  }
+
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0 45%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+  }
+}
+
+.layer {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.layer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.layer-text {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.05;
+}
+
+.anim-iterate-host {
+  /* Letter/word units are flex/flow children of the text layer. */
+}
+
+.anim-iterate-unit {
+  display: inline-block;
+  white-space: pre;
+  transform-origin: center center;
+}
+
+.layer-shape {
+  background: transparent;
+}
+
+.layer-shape.geometric-autoshape,
+.layer.geometric-autoshape {
+  /* Clip-path comes from OOXML preset polygons in app.js. */
+  overflow: visible;
+}
+
+.layer-line-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+
+.missing-render {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    #11100e;
+  background-size: 48px 48px;
+}
+
+/* Author display:grid must not defeat the HTML hidden attribute (UA [hidden]
+   is weaker than any author stylesheet rule). */
+.missing-render[hidden] {
+  display: none;
+}
+
+.missing-render p {
+  margin: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hotspots {
+  position: absolute;
+  inset: 0;
+  z-index: 100000;
+}
+
+.hotspot {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: transparent;
+}
+
+.hotspot:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.debug .hotspot {
+  outline: 2px solid rgba(232, 199, 95, 0.85);
+  background: rgba(232, 199, 95, 0.16);
+}
+
+.debug .layer {
+  outline: 1px solid rgba(120, 180, 255, 0.25);
+}
+
+/* Extracted pictures that are ~100% Office transparent-green — hide so they
+   do not paint solid green boxes (PPT chroma). Survives anim style resets. */
+
+/* PowerPoint media/sound icons (MovieShape). OOXML cMediaNode display="0"
+   hides them during slideshow; edit mode still shows the yellow speaker. */
+.layer.media-icon-hidden-during-show {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  outline: none !important;
+}
+
+.layer.pure-green-placeholder {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  outline: none !important;
+}
+
+
+/* Entrance-hidden layers: skip outlines so empty "green boxes" on grass
+   are not mistaken for missing art when content is still pre-reveal. */
+.debug .layer[style*="visibility: hidden"],
+.debug .layer[style*="visibility:hidden"] {
+  outline: none;
+}
+
+.layer.debug-layer-selected {
+  outline: 2px solid #5ec8ff !important;
+  z-index: 99999 !important;
+}
+
+.debug-hud {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 1000000;
+  width: min(420px, calc(100vw - 24px));
+  /* Keep HUD in the upper viewport so combat OPTION (bottom-right) stays free. */
+  max-height: min(48vh, calc(100vh - 120px));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(18, 17, 15, 0.94);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  overflow: hidden;
+  /* Do not steal stage/hotspot hits (combat OPTION is bottom-right under the HUD).
+     Interactive chrome re-enables pointer-events below. */
+  pointer-events: none;
+}
+
+/* Only real controls capture clicks; body/chapters chrome passes through to stage. */
+.debug-hud button,
+.debug-hud select {
+  pointer-events: auto;
+}
+.debug-hud.is-collapsed .debug-hud-header {
+  pointer-events: auto;
+}
+
+.debug-hud[hidden] {
+  display: none !important;
+}
+
+.debug-hud.is-collapsed {
+  width: auto;
+  max-width: calc(100vw - 24px);
+  max-height: none;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.debug-hud-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 44px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: -2px 0 0;
+}
+
+.debug-hud.is-collapsed .debug-hud-header {
+  margin: 0;
+  padding: 0 4px 0 0;
+  cursor: pointer;
+}
+
+.debug-hud-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.debug-hud.is-collapsed .debug-hud-title {
+  display: none;
+}
+
+.debug-hud-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid rgba(232, 199, 95, 0.55);
+  border-radius: 8px;
+  background: rgba(40, 34, 24, 0.95);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  flex: 0 0 auto;
+}
+
+.debug-hud-toggle:hover,
+.debug-hud-toggle:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-color: rgba(232, 199, 95, 0.95);
+}
+
+.debug-hud.is-collapsed .debug-hud-toggle {
+  min-width: 72px;
+  border-radius: 8px;
+}
+
+.debug-hud-toggle-glyph {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.debug-hud-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.debug-hud.is-collapsed .debug-hud-panel {
+  display: none !important;
+}
+
+.debug-hud-meta {
+  color: var(--muted);
+}
+
+.debug-hud-body {
+  margin: 0;
+  padding: 8px;
+  overflow: auto;
+  max-height: min(28vh, 240px);
+  border: 1px solid rgba(111, 95, 61, 0.45);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.35);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.debug-hud-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.debug-hud-chapters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.35rem 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.debug-hud-chapters-label {
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+.debug-chapter-select {
+  flex: 1 1 8rem;
+  min-width: 0;
+  max-width: 14rem;
+  font: inherit;
+  font-size: 0.7rem;
+  background: #111;
+  color: #eee;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  padding: 0.2rem 0.3rem;
+}
+
+.debug-hud-chapters button,
+.debug-hud-footer button {
+  min-height: 30px;
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.control-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding-top: 10px;
+}
+
+.control-strip output {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .game-shell {
+    padding: 6px;
+  }
+
+  .stage {
+    width: 100%;
+  }
+
+  .control-strip {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Compact combat/slide annotation on stage — never captures hits (OPTION safe). */
+.combat-debug-overlay {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  z-index: 40;
+  max-width: min(46%, 280px);
+  padding: 4px 6px;
+  border: 1px solid rgba(232, 199, 95, 0.45);
+  border-radius: 4px;
+  background: rgba(8, 7, 5, 0.72);
+  color: #f2ead8;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 10px;
+  line-height: 1.3;
+  pointer-events: none;
+  white-space: pre-wrap;
+}
+
+.combat-debug-overlay[hidden] {
+  display: none !important;
+}
+
+.combat-debug-overlay-body {
+  margin: 0;
+  font: inherit;
+  white-space: pre-wrap;
+}
+
+
+/* Animated-shape hyperlinks: inert until the layer is revealed. */
+.hotspot.hotspot-awaiting-reveal {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.debug .hotspot.hotspot-awaiting-reveal {
+  outline-color: rgba(232, 199, 95, 0.25);
+  background: rgba(232, 199, 95, 0.05);
+}
+
+/* ——— Title screen redesign (slide-002 only) ———
+   Landscape-only PNG carries centered title/subtitle/CTA (Impact-like + Broadway
+   yellow start link). Hide live WordArt + start text to avoid double-draw.
+   Hotspot is repositioned to the painted CTA center (not original PPT offset). */
+.stage[data-screen-id="slide-002"] .wordart-layer,
+.stage[data-screen-id="slide-002"] .wordart-deflate,
+.stage[data-screen-id="slide-002"] .layer[data-shape-id="2052"],
+.stage[data-screen-id="slide-002"] .layer[data-shape-id="2056"] {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Center start hotspot over painted CTA plaque (720x540: x205-515, y365-410). */
+.stage[data-screen-id="slide-002"] .hotspot[data-shape-id="2056"] {
+  left: 28.472% !important;
+  top: 67.593% !important;
+  width: 43.056% !important;
+  height: 8.333% !important;
+  transform: none;
+  border-radius: 8px;
+  animation: title-cta-pulse 2.4s ease-in-out infinite;
+}
+
+.stage[data-screen-id="slide-002"] .hotspot[data-shape-id="2056"]:hover,
+.stage[data-screen-id="slide-002"] .hotspot[data-shape-id="2056"]:focus-visible {
+  outline: 2px solid rgba(255, 220, 80, 0.85);
+  outline-offset: 2px;
+  background: rgba(255, 220, 80, 0.08);
+}
+
+@keyframes title-cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 60, 0.0); }
+  50% { box-shadow: 0 0 0 6px rgba(255, 215, 60, 0.22); }
+}

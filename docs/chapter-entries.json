@@ -1,0 +1,118 @@
+{
+  "format": "projectstar-chapter-entries-runtime-v1",
+  "title": "Debug chapters",
+  "entries": [
+    {
+      "id": "title",
+      "label": "s001 \u00b7 Title / opening cinematics",
+      "slide": 1,
+      "hint": "?debug=1&slide=1",
+      "ok": true
+    },
+    {
+      "id": "first-ship-battle",
+      "label": "s006 \u00b7 First ship battle (opening)",
+      "slide": 6,
+      "hint": "?debug=1&slide=6",
+      "ok": true
+    },
+    {
+      "id": "root-34",
+      "label": "s034 \u00b7 `",
+      "slide": 34,
+      "hint": "?debug=1&slide=34",
+      "ok": true
+    },
+    {
+      "id": "root-52",
+      "label": "s052 \u00b7 \u201cResearch\u2026\u201d",
+      "slide": 52,
+      "hint": "?debug=1&slide=52",
+      "ok": true
+    },
+    {
+      "id": "root-104",
+      "label": "s104 \u00b7 Okay\u2026 Well that was weird\u2026 as usual\u2026",
+      "slide": 104,
+      "hint": "?debug=1&slide=104",
+      "ok": true
+    },
+    {
+      "id": "root-121",
+      "label": "s121 \u00b7 Buy",
+      "slide": 121,
+      "hint": "?debug=1&slide=121",
+      "ok": true
+    },
+    {
+      "id": "root-129",
+      "label": "s129 \u00b7 Secret message!!\nlol this train animation is sadly pa",
+      "slide": 129,
+      "hint": "?debug=1&slide=129",
+      "ok": true
+    },
+    {
+      "id": "root-154",
+      "label": "s154 \u00b7 !!!!",
+      "slide": 154,
+      "hint": "?debug=1&slide=154",
+      "ok": true
+    },
+    {
+      "id": "root-166",
+      "label": "s166 \u00b7 (oh man.. What do I do\u2026.)",
+      "slide": 166,
+      "hint": "?debug=1&slide=166",
+      "ok": true
+    },
+    {
+      "id": "root-197",
+      "label": "s197 \u00b7 That\u2019s it! I know, I can stay at Caina\u2019s place!\nThe t",
+      "slide": 197,
+      "hint": "?debug=1&slide=197",
+      "ok": true
+    },
+    {
+      "id": "root-218",
+      "label": "s218 \u00b7 Inside the convention center\u2026",
+      "slide": 218,
+      "hint": "?debug=1&slide=218",
+      "ok": true
+    },
+    {
+      "id": "root-243",
+      "label": "s243 \u00b7 Over here!",
+      "slide": 243,
+      "hint": "?debug=1&slide=243",
+      "ok": true
+    },
+    {
+      "id": "root-273",
+      "label": "s273 \u00b7 Shameless waste of time eh? Ahahhahahahhahahahaha\u2026. I",
+      "slide": 273,
+      "hint": "?debug=1&slide=273",
+      "ok": true
+    },
+    {
+      "id": "root-308",
+      "label": "s308 \u00b7 Yay more gif\u2019s like I said. This is gonna be cool.",
+      "slide": 308,
+      "hint": "?debug=1&slide=308",
+      "ok": true
+    },
+    {
+      "id": "root-356",
+      "label": "s356 \u00b7 -Projectstar Part 1-\n2005-2006 Spotco Mootothemax@gma",
+      "slide": 356,
+      "hint": "?debug=1&slide=356",
+      "ok": true
+    },
+    {
+      "id": "root-358",
+      "label": "s358 \u00b7 Sound Test",
+      "slide": 358,
+      "hint": "?debug=1&slide=358",
+      "ok": true
+    }
+  ]
+}

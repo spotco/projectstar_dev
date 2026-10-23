@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Project Star</title>
+    <link rel="icon" type="image/png" href="assets/project/projectstar_button.png">
+    <link rel="apple-touch-icon" href="assets/project/projectstar_button.png">
+    <link id="runtime-styles" rel="stylesheet">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="stage-wrap" aria-label="Game stage">
+        <div id="stage" class="stage" data-loading="true">
+          <img id="screen" class="screen" alt="">
+          <div id="layers" class="layers" aria-hidden="true"></div>
+          <div id="missing-render" class="missing-render" hidden>
+            <p>Screen render pending</p>
+          </div>
+          <div id="hotspots" class="hotspots" aria-live="off"></div>
+        </div>
+      </section>
+      <nav class="control-strip" aria-label="Game controls">
+        <button id="restart" type="button">Restart</button>
+        <button id="mute" type="button" aria-pressed="false">Mute</button>
+        <output id="status" aria-live="polite">Loading</output>
+      </nav>
+    </main>
+    <script>
+      (() => {
+        const cacheBust = `?no-cache=${Date.now()}`;
+        document.getElementById("runtime-styles").href = `styles.css${cacheBust}`;
+        const appScript = document.createElement("script");
+        appScript.src = `app.js${cacheBust}`;
+        document.body.append(appScript);
+      })();
+    </script>
+  </body>
+</html>
