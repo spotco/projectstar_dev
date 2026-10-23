@@ -1,0 +1,842 @@
+"""Build a non-Aspose slide layer manifest from Apache POI audit output.
+
+The browser port needs image/text objects as separately addressable layers so
+PowerPoint animations can target them. This script consumes the POI audit TSV
+for slide shape bounds/text/picture instances, the embedded asset inventory for
+source image payloads, and the PP10 timing audit for known animation targets.
+It writes a generated layer manifest and copies every picture instance to its
+own per-slide file.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import shutil
+from pathlib import Path
+
+
+def parse_bool(value: str) -> bool:
+    return value.lower() == "true"
+
+
+def parse_optional_float(value: str) -> float | None:
+    if value == "" or value.lower() == "null":
+        return None
+    return float(value)
+
+
+def parse_optional_string(value: str) -> str | None:
+    return value if value and value.lower() != "null" else None
+
+
+def clean_geotext(value: str) -> str:
+    """Normalize WordArt geotext.unicode payloads.
+
+    Some WordArt strings are stored with surrounding '+' markers
+    (for example ``+GOBLINSRPG3+``). Strip matching outer markers only.
+    """
+    text = value.replace("\x00", "").strip()
+    if len(text) >= 2 and text.startswith("+") and text.endswith("+"):
+        text = text[1:-1]
+    return normalize_ppt_text(text)
+
+
+# POI HSLF text for this deck consistently mis-decodes a small set of Windows
+# symbol characters (smart quotes / ellipsis / apostrophe). Map them back to the
+# intended punctuation used throughout the adventure text.
+PPT_TEXT_ARTIFACT_REPLACEMENTS = {
+    "Æ": "'",  # don't / I'm / CAN'T
+    "æ": "'",
+    "à": "…",  # trailing ellipsis (continue…, ago…)
+    "ô": "\u201c",  # opening double quote
+    "ö": "\u201d",  # closing double quote
+    "Ö": "…",  # mid-sentence ellipsis (credits/end card)
+    "ù": ":",  # Credits: title separator
+}
+PPT_TEXT_MOJIBAKE_MAP = str.maketrans(PPT_TEXT_ARTIFACT_REPLACEMENTS)
+
+
+def normalize_ppt_text(value: str | None) -> str:
+    """Fix known POI encoding artifacts; leave other Unicode unchanged."""
+    if not value:
+        return ""
+    text = str(value).replace("\x00", "")
+    return text.translate(PPT_TEXT_MOJIBAKE_MAP)
+
+
+def normalize_text_runs(runs: list[dict[str, object]] | None) -> list[dict[str, object]]:
+    if not runs:
+        return []
+    out: list[dict[str, object]] = []
+    for run in runs:
+        item = dict(run)
+        if "text" in item:
+            item["text"] = normalize_ppt_text(str(item.get("text") or ""))
+            item["length"] = len(str(item["text"]))
+        out.append(item)
+    return out
+
+
+def normalize_paragraphs(paragraphs: list[dict[str, object]] | None) -> list[dict[str, object]]:
+    if not paragraphs:
+        return []
+    out: list[dict[str, object]] = []
+    for para in paragraphs:
+        item = dict(para)
+        # paragraphs may only store indices; text field is rare
+        if "text" in item and item["text"] is not None:
+            item["text"] = normalize_ppt_text(str(item["text"]))
+        out.append(item)
+    return out
+
+
+def parse_poi_audit(
+    path: Path,
+) -> tuple[dict[str, object], dict[int, list[dict[str, object]]], dict[int, dict[str, object]]]:
+    metadata: dict[str, object] = {}
+    shapes: dict[tuple[int, int], dict[str, object]] = {}
+    by_slide: dict[int, list[dict[str, object]]] = {}
+    slide_backgrounds: dict[int, dict[str, object]] = {}
+
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
+        if not line:
+            continue
+        parts = line.split("\t")
+        key = parts[0]
+        if "=" in key and len(parts) == 1:
+            name, value = key.split("=", 1)
+            metadata[name] = value
+            continue
+        if key == "SLIDEBG":
+            slide = int(parts[1])
+            slide_backgrounds[slide] = {
+                "fillType": int(parts[2]),
+                "foregroundColor": parse_optional_string(parts[3]),
+                "backgroundColor": parse_optional_string(parts[4]),
+                "picture": parse_optional_string(parts[5]) if len(parts) > 5 else None,
+            }
+            continue
+        if key == "SHAPE":
+            slide = int(parts[1])
+            z_order = int(parts[2])
+            shape_id = int(parts[3])
+            shape = {
+                "slide": slide,
+                "zOrder": z_order,
+                "shapeId": shape_id,
+                "kind": parts[4],
+                "name": parts[5],
+                "bounds": {
+                    "x": float(parts[6]),
+                    "y": float(parts[7]),
+                    "width": float(parts[8]),
+                    "height": float(parts[9]),
+                },
+            }
+            shapes[(slide, shape_id)] = shape
+            by_slide.setdefault(slide, []).append(shape)
+        elif key == "GEOMETRY":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape["geometry"] = {
+                    "shapeType": parse_optional_string(parts[4]),
+                    "rotation": float(parts[5]),
+                    "flipHorizontal": parse_bool(parts[6]),
+                    "flipVertical": parse_bool(parts[7]),
+                    "placeholder": parse_bool(parts[8]),
+                }
+        elif key == "STYLE":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape["style"] = {
+                    "fillColor": parse_optional_string(parts[4]),
+                    "lineColor": parse_optional_string(parts[5]),
+                    "lineWidth": float(parts[6]),
+                    "lineDash": parse_optional_string(parts[7]),
+                    "lineCap": parse_optional_string(parts[8]),
+                    "lineCompound": parse_optional_string(parts[9]),
+                }
+        elif key == "PICTURE":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is None:
+                continue
+            shape["picture"] = {
+                "pictureIndex": int(parts[4]),
+                "pictureType": parts[5],
+                "sourceBytes": int(parts[6]),
+            }
+        elif key == "CLIP":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape["clip"] = {
+                    "top": int(parts[4]),
+                    "right": int(parts[5]),
+                    "bottom": int(parts[6]),
+                    "left": int(parts[7]),
+                    "units": "poi-picture-clipping-insets",
+                }
+        elif key == "GEOTEXT":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape["geoText"] = {
+                    "unicode": "" if len(parts) < 5 or parts[4] == "null" else parts[4].replace("\\r", "\r").replace("\\n", "\n"),
+                    "fontFamily": parse_optional_string(parts[5]) if len(parts) > 5 else None,
+                }
+        elif key == "TEXT":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is None:
+                continue
+            shape["text"] = (
+                "" if len(parts) < 5 or parts[4] == "null" else parts[4].replace("\\r", "\r").replace("\\n", "\n")
+            )
+        elif key == "TEXTSTYLE":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape["textStyle"] = {
+                    "wordWrap": parse_bool(parts[4]),
+                    "wordWrapEx": int(parts[5]),
+                    "verticalAlignment": parse_optional_string(parts[6]),
+                    "textDirection": parse_optional_string(parts[7]),
+                    "textRotation": parse_optional_string(parts[8]),
+                    "leftInset": float(parts[9]),
+                    "rightInset": float(parts[10]),
+                    "topInset": float(parts[11]),
+                    "bottomInset": float(parts[12]),
+                    "textHeight": float(parts[13]),
+                }
+        elif key == "PARAGRAPH":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape.setdefault("paragraphs", []).append(
+                    {
+                        "paragraphIndex": int(parts[4]),
+                        "start": int(parts[5]),
+                        "length": int(parts[6]),
+                        "textAlign": parse_optional_string(parts[7]),
+                        "fontAlign": parse_optional_string(parts[8]),
+                        "indentLevel": int(parts[9]),
+                        "leftMargin": parse_optional_float(parts[10]),
+                        "rightMargin": parse_optional_float(parts[11]),
+                        "indent": parse_optional_float(parts[12]),
+                        "lineSpacing": parse_optional_float(parts[13]),
+                        "spaceBefore": parse_optional_float(parts[14]),
+                        "spaceAfter": parse_optional_float(parts[15]),
+                        "bullet": parse_bool(parts[16]),
+                        "bulletChar": parse_optional_string(parts[17]),
+                        "bulletFont": parse_optional_string(parts[18]),
+                        "bulletSize": parse_optional_float(parts[19]),
+                    }
+                )
+        elif key == "TEXTRUN":
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape.setdefault("textRuns", []).append(
+                    {
+                        "paragraphIndex": int(parts[4]),
+                        "runIndex": int(parts[5]),
+                        "start": int(parts[6]),
+                        "length": int(parts[7]),
+                        "text": parts[8].replace("\\r", "\r").replace("\\n", "\n"),
+                        "fontFamily": parse_optional_string(parts[9]),
+                        "fontSize": parse_optional_float(parts[10]),
+                        "bold": parse_bool(parts[11]),
+                        "italic": parse_bool(parts[12]),
+                        "underline": parse_bool(parts[13]),
+                        "strikethrough": parse_bool(parts[14]),
+                        "fontColor": parse_optional_string(parts[15]),
+                    }
+                )
+        elif key in {"SHAPELINK", "TEXTLINK"}:
+            slide = int(parts[1])
+            shape_id = int(parts[3])
+            shape = shapes.get((slide, shape_id))
+            if shape is not None:
+                shape.setdefault("hyperlinks", []).append(
+                    {
+                        "source": key,
+                        "id": int(parts[4]),
+                        "type": parse_optional_string(parts[5]),
+                        "label": parse_optional_string(parts[6]),
+                        "address": parse_optional_string(parts[7]) if len(parts) > 7 else None,
+                    }
+                )
+
+    return metadata, by_slide, slide_backgrounds
+
+
+
+def color_alpha(value: str | None) -> int | None:
+    """Return 0-255 alpha for #RRGGBB / #RRGGBBAA, else None."""
+    if not value or not isinstance(value, str):
+        return None
+    text = value.lstrip("#")
+    if len(text) == 6:
+        return 255
+    if len(text) == 8:
+        try:
+            return int(text[6:8], 16)
+        except ValueError:
+            return None
+    return None
+
+
+def is_opaque_fill(value: str | None) -> bool:
+    alpha = color_alpha(value)
+    return alpha is not None and alpha >= 250
+
+
+def layer_fill_color(layer: dict[str, object]) -> str | None:
+    style = layer.get("style")
+    if not isinstance(style, dict):
+        return None
+    fill = style.get("fillColor")
+    return fill if isinstance(fill, str) and fill else None
+
+
+def promote_full_bleed_background(slide_entry: dict[str, object]) -> None:
+    """POI SLIDEBG is often unused follow-master white.
+
+    Authored dark (or other) slide fields are frequently full-bleed AutoShapes
+    with solid fills. Promote the bottom-most opaque full-bleed fill to
+    backgroundColor so stage/reconstruct pick it up for every slide.
+    """
+    layers = slide_entry.get("layers")
+    if not isinstance(layers, list):
+        return
+    for layer in layers:
+        if not isinstance(layer, dict):
+            continue
+        bounds = layer.get("bounds") if isinstance(layer.get("bounds"), dict) else {}
+        width = float(bounds.get("width") or 0.0)
+        height = float(bounds.get("height") or 0.0)
+        if width < 0.99 or height < 0.99:
+            continue
+        fill = layer_fill_color(layer)
+        if not is_opaque_fill(fill):
+            continue
+        # Skip white fills that merely duplicate the POI default canvas.
+        if fill and fill.lower().startswith("#ffffff"):
+            continue
+        slide_entry["backgroundColor"] = fill
+        slide_entry["backgroundColorSource"] = {
+            "kind": "full_bleed_shape_fill",
+            "shapeId": layer.get("shapeId"),
+            "layerId": layer.get("id"),
+        }
+        break
+
+
+
+# Empty AutoShapes with real PPT preset geometry (seals, arrows, stars, …)
+# must not be typed as text placeholders — the runtime needs type=shape so it
+# can apply clip-path / stroke rendering. RECT/ROUND_RECT/TEXT_* stay as text
+# plates / captions (filled-empty rectangles are intentional for slide fields).
+TEXT_OR_PLATE_SHAPE_TYPES = frozenset(
+    {
+        "TEXT_BOX",
+        "TEXT_PLAIN",
+        "TEXT_PLAIN_TEXT",
+        "RECT",
+        "RECTANGLE",
+        "ROUND_RECT",
+        "ROUND_RECTANGLE",
+    }
+)
+
+
+def is_geometric_autoshape(shape_type: str | None) -> bool:
+    if not shape_type:
+        return False
+    return shape_type.upper() not in TEXT_OR_PLATE_SHAPE_TYPES and not shape_type.upper().startswith("TEXT_")
+
+def is_word_art_shape(shape: dict[str, object]) -> bool:
+    if shape.get("geoText"):
+        return True
+    shape_type = str(shape.get("geometry", {}).get("shapeType") or shape.get("shapeType") or "")
+    if not shape_type.startswith("TEXT_"):
+        return False
+    return shape_type not in {"TEXT_BOX", "TEXT_PLAIN"}
+
+
+def normal_bounds(bounds: dict[str, float], width: float, height: float) -> dict[str, object]:
+    x = bounds["x"]
+    y = bounds["y"]
+    w = bounds["width"]
+    h = bounds["height"]
+    return {
+        "x": x / width,
+        "y": y / height,
+        "width": w / width,
+        "height": h / height,
+        "points": bounds,
+    }
+
+
+def copy_picture_instance(
+    source_asset: Path,
+    output_root: Path,
+    slide: int,
+    shape_id: int,
+    asset_suffix: str,
+) -> Path:
+    slide_dir = output_root / f"slide-{slide:03d}"
+    slide_dir.mkdir(parents=True, exist_ok=True)
+    target = slide_dir / f"shape-{shape_id}.{asset_suffix}"
+    shutil.copy2(source_asset, target)
+    return target
+
+
+def resolve_picture_asset(
+    embedded_assets: list[dict[str, object]],
+    picture_index: int,
+    source_bytes: int,
+) -> dict[str, object]:
+    # HSLFPictureShape#getPictureIndex is usually 1-based against the bitmap
+    # list, but this deck has at least one non-extracted/non-bitmap picture in
+    # POI's numbering near the end. Prefer nearby index candidates whose byte
+    # count matches the POI picture payload, then fall back to a unique byte-size
+    # match.
+    candidates = []
+    for asset_index in (picture_index - 1, picture_index - 2, picture_index):
+        if 0 <= asset_index < len(embedded_assets):
+            asset = embedded_assets[asset_index]
+            if int(asset["bytes"]) == source_bytes:
+                candidates.append(asset)
+    if candidates:
+        return candidates[0]
+
+    by_size = [asset for asset in embedded_assets if int(asset["bytes"]) == source_bytes]
+    if len(by_size) == 1:
+        return by_size[0]
+
+    # ProjectStar: POI reports WMF pictures with a synthesised 22-byte
+    # Aldus placeable header included in the byte count, while the stored
+    # asset is the bare decompressed WMF (see extract_ppt.extract_wmf).
+    wmf_by_size = [
+        asset
+        for asset in embedded_assets
+        if asset.get("encoding") == "wmf" and int(asset["bytes"]) == source_bytes - 22
+    ]
+    if len(wmf_by_size) == 1:
+        return wmf_by_size[0]
+
+    raise ValueError(
+        f"Could not resolve POI picture index {picture_index} with source byte count {source_bytes}"
+    )
+
+
+def _wildcard_align(poi_text: str, binary_text: str) -> str | None:
+    """Return binary text if POI text matches it with '?' as wildcard.
+
+    POI HSLF decodes several ProjectStar characters (curly apostrophe,
+    ellipsis, curly quotes) as literal '?' (e.g. ``You?re``), while the
+    binary TextChars/TextBytes records carry the correct Unicode. A match
+    requires equal length and equality at every non-'?' POI position, so
+    real question marks (present in both) pass through unchanged.
+    """
+    poi_norm = poi_text.replace("\r\n", "\n").replace("\r", "\n").rstrip("\n")
+    bin_norm = binary_text.replace("\r\n", "\n").replace("\r", "\n").rstrip("\n")
+    if len(poi_norm) != len(bin_norm) or not poi_norm:
+        return None
+    if all(p == b or p == "?" for p, b in zip(poi_norm, bin_norm)):
+        return bin_norm
+    return None
+
+
+def apply_binary_text_corrections(
+    shapes_by_slide: dict[int, list[dict[str, object]]],
+    inventory: dict[str, object],
+) -> int:
+    binary: dict[tuple[int, int], str] = {}
+    for run in inventory.get("text_runs", []):
+        if run.get("slide") is None or run.get("shape_id") is None:
+            continue
+        key = (int(run["slide"]), int(run["shape_id"]))
+        binary[key] = binary.get(key, "") + str(run.get("text") or "")
+    corrected = 0
+    for slide, shapes in shapes_by_slide.items():
+        for shape in shapes:
+            poi_text = shape.get("text")
+            if not isinstance(poi_text, str) or "?" not in poi_text:
+                continue
+            candidate = binary.get((slide, int(shape["shapeId"])))
+            if not candidate:
+                continue
+            fixed = _wildcard_align(poi_text, candidate)
+            if fixed is None or fixed == poi_text:
+                continue
+            shape["text"] = fixed
+            # Re-slice the corrected text into the POI text runs by their
+            # recorded start/length so styled runs keep their boundaries.
+            for run in shape.get("textRuns", []):
+                start = int(run.get("start", 0))
+                length = int(run.get("length", 0))
+                if start + length <= len(fixed):
+                    run["text"] = fixed[start : start + length]
+            corrected += 1
+    return corrected
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--inventory", type=Path, default=Path("generated/inventory.json"))
+    parser.add_argument("--poi-audit", type=Path, default=Path("generated/poi_audit.tsv"))
+    parser.add_argument("--timing-tree", type=Path, default=Path("generated/timing_tree_audit.json"))
+    parser.add_argument("--output", type=Path, default=Path("generated/layers.json"))
+    parser.add_argument("--asset-output", type=Path, default=Path("generated/slide-assets"))
+    args = parser.parse_args()
+
+    inventory = json.loads(args.inventory.read_text(encoding="utf-8"))
+    timing_tree = json.loads(args.timing_tree.read_text(encoding="utf-8"))
+    metadata, shapes_by_slide, slide_backgrounds = parse_poi_audit(args.poi_audit)
+    text_corrections = apply_binary_text_corrections(shapes_by_slide, inventory)
+    if text_corrections:
+        print(f"Binary-text corrections applied to {text_corrections} shapes (POI '?' artifacts)")
+
+    page_size = str(metadata.get("pageSize", "720x540")).split("x")
+    page_width = float(page_size[0])
+    page_height = float(page_size[1])
+    embedded_assets = inventory["embedded_assets"]
+    animation_targets = {
+        int(slide): set(map(int, shape_ids))
+        for slide, shape_ids in timing_tree.get("animationTargets", {}).get("shapeTargetsBySlide", {}).items()
+    }
+    actions_by_shape: dict[tuple[int, int], list[dict[str, object]]] = {}
+    for action in inventory.get("interactive_actions", []):
+        if action.get("shape_id") is None:
+            continue
+        slide = int(action["slide"])
+        shape_id = int(action["shape_id"])
+        actions_by_shape.setdefault((slide, shape_id), []).append(
+            {
+                "recordOffset": action["record_offset"],
+                "actionCode": action["action_code"],
+                "soundRef": action["sound_ref"],
+                "hyperlinkId": action["hyperlink_id"],
+                "targetLabel": action["target_label"],
+                "targetSlide": action["target_slide"],
+                "flagsHex": action["flags_hex"],
+            }
+        )
+
+    slides: list[dict[str, object]] = []
+    image_instance_count = 0
+    text_layer_count = 0
+    shape_layer_count = 0
+    animated_layer_count = 0
+
+    for slide in range(1, int(metadata.get("slides", len(shapes_by_slide))) + 1):
+        layers: list[dict[str, object]] = []
+        for shape in sorted(shapes_by_slide.get(slide, []), key=lambda item: int(item["zOrder"])):
+            shape_id = int(shape["shapeId"])
+            animated = shape_id in animation_targets.get(slide, set())
+            base = {
+                "id": f"slide-{slide:03d}-shape-{shape_id}",
+                "slide": slide,
+                "shapeId": shape_id,
+                "zOrder": shape["zOrder"],
+                "kind": shape["kind"],
+                "name": shape["name"],
+                "bounds": normal_bounds(shape["bounds"], page_width, page_height),
+                "animated": animated,
+            }
+            if "geometry" in shape:
+                geometry = dict(shape["geometry"])
+                base["shapeType"] = geometry.pop("shapeType")
+                base["transform"] = {
+                    "rotation": geometry["rotation"],
+                    "flipHorizontal": geometry["flipHorizontal"],
+                    "flipVertical": geometry["flipVertical"],
+                }
+                base["placeholder"] = geometry["placeholder"]
+            if "style" in shape:
+                base["style"] = shape["style"]
+            if "hyperlinks" in shape:
+                base["hyperlinks"] = shape["hyperlinks"]
+            if (slide, shape_id) in actions_by_shape:
+                base["actions"] = actions_by_shape[(slide, shape_id)]
+            if animated:
+                animated_layer_count += 1
+            if "picture" in shape:
+                picture = shape["picture"]
+                asset = resolve_picture_asset(
+                    embedded_assets,
+                    int(picture["pictureIndex"]),
+                    int(picture["sourceBytes"]),
+                )
+                source_asset = Path(asset["path"])
+                suffix = source_asset.suffix.lstrip(".") or "png"
+                instance_path = copy_picture_instance(source_asset, args.asset_output, slide, shape_id, suffix)
+                layer = {
+                    **base,
+                    "type": "image",
+                    "assetId": asset["id"],
+                    "sourceAssetPath": asset["path"],
+                    "instancePath": instance_path.as_posix(),
+                    "pictureIndex": picture["pictureIndex"],
+                    "pictureType": picture["pictureType"],
+                    "sourceBytes": picture["sourceBytes"],
+                }
+                # ProjectStar: PNG assets with an msOG chunk carry the
+                # original animated GIF; copy it as a sibling instance so
+                # the runtime can display the animation (the PNG instance
+                # remains the static/reconstructed-render source).
+                animated_gif = asset.get("animatedGif")
+                if isinstance(animated_gif, dict) and animated_gif.get("path"):
+                    gif_path = copy_picture_instance(
+                        Path(str(animated_gif["path"])), args.asset_output, slide, shape_id, "gif"
+                    )
+                    layer["animatedInstancePath"] = gif_path.as_posix()
+                    layer["animatedGif"] = {
+                        "frames": animated_gif.get("frames"),
+                        "width": animated_gif.get("width"),
+                        "height": animated_gif.get("height"),
+                    }
+                # ProjectStar: WMF assets are rasterised by
+                # tools/convert_wmf.py; point the instance at the PNG.
+                if asset.get("encoding") == "wmf":
+                    converted = Path(str(asset["path"]) + ".png")
+                    if converted.exists():
+                        png_instance = copy_picture_instance(
+                            converted, args.asset_output, slide, shape_id, "png"
+                        )
+                        layer["wmfInstancePath"] = instance_path.as_posix()
+                        layer["instancePath"] = png_instance.as_posix()
+                        layer["convertedFromWmf"] = True
+                    else:
+                        layer["wmfUnconverted"] = True
+                if "clip" in shape:
+                    layer["clip"] = shape["clip"]
+                instance_file = Path(layer["instancePath"])
+                if instance_file.exists():
+                    layer["instanceBytes"] = instance_file.stat().st_size
+                image_instance_count += 1
+            elif "text" in shape or shape.get("geoText"):
+                poi_text = normalize_ppt_text(str(shape.get("text") or ""))
+                geo = shape.get("geoText") if isinstance(shape.get("geoText"), dict) else None
+                raw_geo = str(geo.get("unicode") or "") if geo else ""
+                geo_text = clean_geotext(raw_geo) if geo else ""
+                text_value = poi_text if poi_text.strip() else geo_text
+                word_art = bool(geo_text) or is_word_art_shape(shape)
+                empty_placeholder = not str(text_value).strip() and not word_art
+                shape_type_name = str(
+                    shape.get("geometry", {}).get("shapeType")
+                    or shape.get("shapeType")
+                    or base.get("shapeType")
+                    or ""
+                )
+                # Geometric clip-art AutoShapes (explosions, arrows, ellipses…)
+                # with no authored text are vector shapes, not empty text boxes.
+                if empty_placeholder and is_geometric_autoshape(shape_type_name):
+                    layer = {
+                        **base,
+                        "type": "shape",
+                        "text": "",
+                        "wordArt": False,
+                        "emptyTextPlaceholder": False,
+                        "geometricAutoShape": True,
+                    }
+                    shape_layer_count += 1
+                    layers.append(layer)
+                    continue
+                layer = {
+                    **base,
+                    "type": "text",
+                    "text": text_value,
+                    "wordArt": word_art,
+                    "emptyTextPlaceholder": empty_placeholder,
+                }
+                if word_art:
+                    layer["wordArtGeometry"] = str(
+                        shape.get("geometry", {}).get("shapeType")
+                        or shape.get("shapeType")
+                        or "TEXT_PLAIN_TEXT"
+                    )
+                if geo:
+                    layer["geoText"] = {
+                        "unicode": geo_text,
+                        "fontFamily": geo.get("fontFamily"),
+                        "rawUnicode": geo.get("unicode"),
+                    }
+                if "textStyle" in shape:
+                    layer["textStyle"] = shape["textStyle"]
+                if "paragraphs" in shape:
+                    layer["paragraphs"] = normalize_paragraphs(shape["paragraphs"])
+                if "textRuns" in shape:
+                    layer["textRuns"] = normalize_text_runs(shape["textRuns"])
+                # WordArt often has empty POI text runs; synthesize style from geotext + fill.
+                if word_art and text_value:
+                    fill_color = None
+                    style = shape.get("style") if isinstance(shape.get("style"), dict) else {}
+                    if isinstance(style, dict):
+                        fill_color = style.get("fillColor")
+                    font_family = (geo or {}).get("fontFamily") if geo else None
+                    if not layer.get("textRuns") or not any(
+                        str(run.get("text") or "").strip() for run in layer.get("textRuns", [])
+                    ):
+                        layer["textRuns"] = [
+                            {
+                                "paragraphIndex": 0,
+                                "runIndex": 0,
+                                "start": 0,
+                                "length": len(text_value),
+                                "text": text_value,
+                                "fontFamily": font_family or "Impact",
+                                "fontSize": None,
+                                "bold": True,
+                                "italic": False,
+                                "underline": False,
+                                "strikethrough": False,
+                                "fontColor": fill_color or "#000000ff",
+                            }
+                        ]
+                    if not layer.get("paragraphs"):
+                        layer["paragraphs"] = [
+                            {
+                                "paragraphIndex": 0,
+                                "start": 0,
+                                "length": len(text_value),
+                                "textAlign": "CENTER",
+                                "fontAlign": "BASELINE",
+                                "indentLevel": 0,
+                                "leftMargin": 0.0,
+                                "rightMargin": None,
+                                "indent": 0.0,
+                                "lineSpacing": 100.0,
+                                "spaceBefore": 0.0,
+                                "spaceAfter": 0.0,
+                                "bullet": False,
+                                "bulletChar": "•",
+                                "bulletFont": "Arial",
+                                "bulletSize": 100.0,
+                            }
+                        ]
+                    if not layer.get("textStyle"):
+                        layer["textStyle"] = {
+                            "wordWrap": False,
+                            "wordWrapEx": 2,
+                            "verticalAlignment": "MIDDLE",
+                            "textDirection": "HORIZONTAL",
+                            "textRotation": None,
+                            "leftInset": 0.0,
+                            "rightInset": 0.0,
+                            "topInset": 0.0,
+                            "bottomInset": 0.0,
+                            "textHeight": float((shape.get("bounds") or {}).get("height") or 0) * 0.85,
+                        }
+                # Schema stability for empty decorative text shapes (still animatable).
+                if empty_placeholder:
+                    layer.setdefault("textRuns", [])
+                    layer.setdefault("paragraphs", [])
+                    layer.setdefault(
+                        "textStyle",
+                        {
+                            "wordWrap": True,
+                            "wordWrapEx": 0,
+                            "verticalAlignment": "TOP",
+                            "textDirection": "HORIZONTAL",
+                            "textRotation": None,
+                            "leftInset": 0.0,
+                            "rightInset": 0.0,
+                            "topInset": 0.0,
+                            "bottomInset": 0.0,
+                            "textHeight": 0.0,
+                        },
+                    )
+                text_layer_count += 1
+            else:
+                layer = {**base, "type": "shape", "geometricAutoShape": is_geometric_autoshape(str(base.get("shapeType") or ""))}
+                shape_layer_count += 1
+            layers.append(layer)
+        slide_entry: dict[str, object] = {"slide": slide, "layers": layers}
+        background = slide_backgrounds.get(slide)
+        if background:
+            slide_entry["background"] = background
+            # Prefer solid foreground fill for slide canvas color.
+            if background.get("foregroundColor"):
+                slide_entry["backgroundColor"] = background["foregroundColor"]
+        # Override follow-master / default white when a full-bleed solid shape
+        # is the authored field color (e.g. slide 1 / 55 / 198 black plates).
+        promote_full_bleed_background(slide_entry)
+        slides.append(slide_entry)
+
+    report = {
+        "format": "projectstar-layer-manifest-v1",
+        "source": inventory["source"],
+        "pageSize": {"width": page_width, "height": page_height, "units": "points"},
+        "coordinateSource": "Apache POI HSLF shape anchors",
+        "assetOutput": args.asset_output.as_posix(),
+        "slides": slides,
+        "summary": {
+            "slides": len(slides),
+            "layers": sum(len(slide["layers"]) for slide in slides),
+            "imageInstances": image_instance_count,
+            "textLayers": text_layer_count,
+            "shapeLayers": shape_layer_count,
+            "animatedLayers": animated_layer_count,
+            "animatedShapeTargets": sum(len(targets) for targets in animation_targets.values()),
+            "styledLayers": sum(
+                1 for slide in slides for layer in slide["layers"] if "style" in layer
+            ),
+            "transformLayers": sum(
+                1 for slide in slides for layer in slide["layers"] if "transform" in layer
+            ),
+            "textStyleLayers": sum(
+                1 for slide in slides for layer in slide["layers"] if "textStyle" in layer
+            ),
+            "paragraphs": sum(
+                len(layer.get("paragraphs", [])) for slide in slides for layer in slide["layers"]
+            ),
+            "textRuns": sum(
+                len(layer.get("textRuns", [])) for slide in slides for layer in slide["layers"]
+            ),
+            "actionBoundLayers": sum(
+                1 for slide in slides for layer in slide["layers"] if "actions" in layer
+            ),
+            "hyperlinkBoundLayers": sum(
+                1 for slide in slides for layer in slide["layers"] if "hyperlinks" in layer
+            ),
+            "emptyTextPlaceholders": sum(
+                1
+                for slide in slides
+                for layer in slide["layers"]
+                if layer.get("emptyTextPlaceholder")
+            ),
+            "wordArtLayers": sum(
+                1 for slide in slides for layer in slide["layers"] if layer.get("wordArt")
+            ),
+            "textEncodingNormalization": {
+                "replacements": dict(PPT_TEXT_ARTIFACT_REPLACEMENTS),
+                "policy": "POI symbol mis-decode repair for apostrophe/ellipsis/quotes (Phase 5.7)",
+            },
+        },
+    }
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
+    print(
+        f"Wrote {args.output} with {image_instance_count} image instances, "
+        f"{text_layer_count} text layers, {shape_layer_count} shape layers, {animated_layer_count} animated layers"
+    )
+
+
+if __name__ == "__main__":
+    main()

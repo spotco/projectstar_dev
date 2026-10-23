@@ -1,0 +1,17 @@
+# Disposable research environment (JDK, POI, venv, ad-hoc probes/screenshots).
+# Not a runtime dependency; docs only reference local paths under this tree.
+_port_analysis_tmp/
+
+__pycache__/
+*.py[cod]
+
+# Generated port output (keep source and plans tracked)
+build/
+dist/
+site/
+generated/renders/
+
+# Local editor/OS files
+.DS_Store
+Thumbs.db
+.vscode/
