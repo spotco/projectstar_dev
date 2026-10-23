@@ -1,0 +1,1064 @@
+{
+  "format": "projectstar-auto-advance-timing-v1",
+  "policy": "runtime scheduledDelayMs = max(slideTimeMs, animationTimeline.durationMs)",
+  "summary": {
+    "autoAdvanceSlideCount": 117,
+    "extendedByAnimationCount": 13,
+    "maxEffectiveDelayMs": 39000.0
+  },
+  "slides": [
+    {
+      "slide": 1,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 2500.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 2,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 4,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 2000.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 6,
+      "slideTimeMs": 5000.0,
+      "animationTimelineMs": 1080.0,
+      "effectiveDelayMs": 5000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 7,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 8,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 9,
+      "slideTimeMs": 5000.0,
+      "animationTimelineMs": 3781.0,
+      "effectiveDelayMs": 5000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 3
+    },
+    {
+      "slide": 12,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 8880.0,
+      "effectiveDelayMs": 8880.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 13,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 7080.0,
+      "effectiveDelayMs": 7080.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 14,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 8100.0,
+      "effectiveDelayMs": 8100.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 19,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 5680.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 20,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 7780.0,
+      "effectiveDelayMs": 7780.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 22,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 5600.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 23,
+      "slideTimeMs": 10000.0,
+      "animationTimelineMs": 8100.0,
+      "effectiveDelayMs": 10000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 25,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 3000.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 27,
+      "slideTimeMs": 12000.0,
+      "animationTimelineMs": 10600.0,
+      "effectiveDelayMs": 12000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 30,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 14561.0,
+      "effectiveDelayMs": 14561.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 32,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 33,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 9741.0,
+      "effectiveDelayMs": 9741.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 34,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 44,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 2000.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 46,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 78,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 81,
+      "slideTimeMs": 5000.0,
+      "animationTimelineMs": 2220.0,
+      "effectiveDelayMs": 5000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 86,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 1040.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 104,
+      "slideTimeMs": 5000.0,
+      "animationTimelineMs": 1580.0,
+      "effectiveDelayMs": 5000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 108,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 2500.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 110,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 111,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 4500.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 113,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 10480.0,
+      "effectiveDelayMs": 10480.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 114,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 80.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 115,
+      "slideTimeMs": 10000.0,
+      "animationTimelineMs": 4580.0,
+      "effectiveDelayMs": 10000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 116,
+      "slideTimeMs": 17000.0,
+      "animationTimelineMs": 13740.0,
+      "effectiveDelayMs": 17000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 117,
+      "slideTimeMs": 7000.0,
+      "animationTimelineMs": 4200.0,
+      "effectiveDelayMs": 7000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 120,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 2160.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 125,
+      "slideTimeMs": 14000.0,
+      "animationTimelineMs": 9360.0,
+      "effectiveDelayMs": 14000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 126,
+      "slideTimeMs": 13000.0,
+      "animationTimelineMs": 8020.0,
+      "effectiveDelayMs": 13000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 128,
+      "slideTimeMs": 300.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 300.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 130,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 131,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 3000.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 133,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 3000.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 136,
+      "slideTimeMs": 11000.0,
+      "animationTimelineMs": 9000.0,
+      "effectiveDelayMs": 11000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 138,
+      "slideTimeMs": 39000.0,
+      "animationTimelineMs": 24820.0,
+      "effectiveDelayMs": 39000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 141,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 5000.0,
+      "effectiveDelayMs": 5000.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 143,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 3000.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 146,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 2580.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 154,
+      "slideTimeMs": 5000.0,
+      "animationTimelineMs": 2001.0,
+      "effectiveDelayMs": 5000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 155,
+      "slideTimeMs": 100.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 100.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 163,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 500.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 164,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 165,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 80.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 171,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 300.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 172,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 173,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 175,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 176,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 500.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 4
+    },
+    {
+      "slide": 177,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 178,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 179,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 181,
+      "slideTimeMs": 10000.0,
+      "animationTimelineMs": 5180.0,
+      "effectiveDelayMs": 10000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 183,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 184,
+      "slideTimeMs": 15000.0,
+      "animationTimelineMs": 7560.0,
+      "effectiveDelayMs": 15000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 185,
+      "slideTimeMs": 5000.0,
+      "animationTimelineMs": 1840.0,
+      "effectiveDelayMs": 5000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 186,
+      "slideTimeMs": 8000.0,
+      "animationTimelineMs": 2940.0,
+      "effectiveDelayMs": 8000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 187,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 189,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 190,
+      "slideTimeMs": 9000.0,
+      "animationTimelineMs": 3340.0,
+      "effectiveDelayMs": 9000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 191,
+      "slideTimeMs": 12000.0,
+      "animationTimelineMs": 7000.0,
+      "effectiveDelayMs": 12000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 195,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 203,
+      "slideTimeMs": 7000.0,
+      "animationTimelineMs": 1580.0,
+      "effectiveDelayMs": 7000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 210,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 213,
+      "slideTimeMs": 11000.0,
+      "animationTimelineMs": 8000.0,
+      "effectiveDelayMs": 11000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 214,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 2000.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 233,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 6000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 237,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 238,
+      "slideTimeMs": 5000.0,
+      "animationTimelineMs": 6220.0,
+      "effectiveDelayMs": 6220.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 242,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 244,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 245,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 247,
+      "slideTimeMs": 1500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 250,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 251,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 256,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 258,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 265,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 266,
+      "slideTimeMs": 1500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 267,
+      "slideTimeMs": 4000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 4000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 273,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 274,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 580.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 275,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 277,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 281,
+      "slideTimeMs": 1500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 282,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 283,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 284,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 285,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 286,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 287,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 288,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 289,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 290,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 291,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 293,
+      "slideTimeMs": 3000.0,
+      "animationTimelineMs": 1080.0,
+      "effectiveDelayMs": 3000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 296,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 297,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 298,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 299,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 300,
+      "slideTimeMs": 1000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 301,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 302,
+      "slideTimeMs": 2000.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 2000.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 307,
+      "slideTimeMs": 500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 321,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 6240.0,
+      "effectiveDelayMs": 6240.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 329,
+      "slideTimeMs": 6000.0,
+      "animationTimelineMs": 6240.0,
+      "effectiveDelayMs": 6240.0,
+      "extendedByAnimation": true,
+      "animationRootCount": 1,
+      "onNextConditionCount": 2
+    },
+    {
+      "slide": 344,
+      "slideTimeMs": 100.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 100.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 345,
+      "slideTimeMs": 200.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 200.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 346,
+      "slideTimeMs": 100.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 100.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    },
+    {
+      "slide": 347,
+      "slideTimeMs": 1500.0,
+      "animationTimelineMs": 1.0,
+      "effectiveDelayMs": 1500.0,
+      "extendedByAnimation": false,
+      "animationRootCount": 1,
+      "onNextConditionCount": 0
+    }
+  ]
+}

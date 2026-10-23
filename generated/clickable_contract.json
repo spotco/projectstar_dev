@@ -1,0 +1,357 @@
+{
+  "format": "projectstar-clickable-contract-v1",
+  "summary": {
+    "okCount": 216,
+    "violationCount": 0,
+    "residualSelfCount": 11,
+    "residualExplicitNoopCount": 17,
+    "orphanContinueStageClickCount": 0,
+    "passed": true
+  },
+  "violations": [],
+  "residualSelfHyperlinks": [
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1119189",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1120001",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1120886",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1121515",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1121657",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1122387",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1122535",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1122683",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1123431",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1123579",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1123727",
+      "reason": "documented_residual_self",
+      "resolveMethod": "confirmed_self_label_match",
+      "shapeText": null,
+      "residualKind": "hub_image_self",
+      "clickable": false
+    }
+  ],
+  "residualExplicitNoops": [
+    {
+      "slide": 20,
+      "hotspotId": "s020-a612785",
+      "shapeId": 22547,
+      "shapeText": "-shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 23,
+      "hotspotId": "s023-a640911",
+      "shapeId": 25614,
+      "shapeText": "-missile",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 23,
+      "hotspotId": "s023-a641116",
+      "shapeId": 25615,
+      "shapeText": "-shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 34,
+      "hotspotId": "s034-a742313",
+      "shapeId": 38919,
+      "shapeText": null,
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 34,
+      "hotspotId": "s034-a742437",
+      "shapeId": 38920,
+      "shapeText": null,
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 52,
+      "hotspotId": "s052-a871311",
+      "shapeId": 59406,
+      "shapeText": "-\u201dHow Ya doin\u2019 baby?\u201d",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 65,
+      "hotspotId": "s065-a923822",
+      "shapeId": 75785,
+      "shapeText": "-\u201dHow Ya doin\u2019 baby?\u201d",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 73,
+      "hotspotId": "s073-a939167",
+      "shapeId": 85001,
+      "shapeText": "-\u201dHow Ya doin\u2019 baby?\u201d",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 270,
+      "hotspotId": "s270-a1766281",
+      "shapeId": 316423,
+      "shapeText": "Are you having fun?\rHelp me conquer my greatest insecurities and send me feedback at\rmootothemax@gmail.com. Plz or I will li3k die of shame.",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 317,
+      "hotspotId": "s317-a2088238",
+      "shapeId": 384009,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 332,
+      "hotspotId": "s332-a2306063",
+      "shapeId": 394252,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 342,
+      "hotspotId": "s342-a2438721",
+      "shapeId": 422938,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 343,
+      "hotspotId": "s343-a2464931",
+      "shapeId": 423955,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 344,
+      "hotspotId": "s344-a2469685",
+      "shapeId": 425990,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 345,
+      "hotspotId": "s345-a2471263",
+      "shapeId": 427014,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 346,
+      "hotspotId": "s346-a2472745",
+      "shapeId": 428038,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    },
+    {
+      "slide": 347,
+      "hotspotId": "s347-a2474489",
+      "shapeId": 429062,
+      "shapeText": "-Shot",
+      "note": "binary action=none without continue/combat label (decorative)"
+    }
+  ],
+  "orphanContinueStageClicks": [],
+  "okSample": [
+    {
+      "slide": 3,
+      "hotspotId": "s003-a408262",
+      "kind": "navigation",
+      "target": 4
+    },
+    {
+      "slide": 11,
+      "hotspotId": "s011-a532656",
+      "kind": "navigation",
+      "target": 12
+    },
+    {
+      "slide": 15,
+      "hotspotId": "s015-a571595",
+      "kind": "navigation",
+      "target": 16
+    },
+    {
+      "slide": 18,
+      "hotspotId": "s018-a595484",
+      "kind": "navigation",
+      "target": 19
+    },
+    {
+      "slide": 21,
+      "hotspotId": "s021-a619668",
+      "kind": "navigation",
+      "target": 22
+    },
+    {
+      "slide": 21,
+      "hotspotId": "s021-a619928",
+      "kind": "navigation",
+      "target": 27
+    },
+    {
+      "slide": 35,
+      "hotspotId": "s035-a747458",
+      "kind": "navigation",
+      "target": 36
+    },
+    {
+      "slide": 35,
+      "hotspotId": "s035-a747804",
+      "kind": "navigation",
+      "target": 37
+    },
+    {
+      "slide": 35,
+      "hotspotId": "s035-a747916",
+      "kind": "navigation",
+      "target": 38
+    },
+    {
+      "slide": 36,
+      "hotspotId": "s036-a755970",
+      "kind": "navigation",
+      "target": 38
+    },
+    {
+      "slide": 36,
+      "hotspotId": "s036-a756088",
+      "kind": "navigation",
+      "target": 37
+    },
+    {
+      "slide": 37,
+      "hotspotId": "s037-a757309",
+      "kind": "navigation",
+      "target": 36
+    },
+    {
+      "slide": 37,
+      "hotspotId": "s037-a757689",
+      "kind": "navigation",
+      "target": 38
+    },
+    {
+      "slide": 38,
+      "hotspotId": "s038-a758982",
+      "kind": "navigation",
+      "target": 36
+    },
+    {
+      "slide": 38,
+      "hotspotId": "s038-a759472",
+      "kind": "navigation",
+      "target": 37
+    },
+    {
+      "slide": 38,
+      "hotspotId": "s038-a759784",
+      "kind": "navigation",
+      "target": 39
+    },
+    {
+      "slide": 42,
+      "hotspotId": "s042-a817584",
+      "kind": "navigation",
+      "target": 44
+    },
+    {
+      "slide": 42,
+      "hotspotId": "s042-a817632",
+      "kind": "navigation",
+      "target": 81
+    },
+    {
+      "slide": 42,
+      "hotspotId": "s042-a818044",
+      "kind": "navigation",
+      "target": 43
+    },
+    {
+      "slide": 43,
+      "hotspotId": "s043-a825733",
+      "kind": "navigation",
+      "target": 44
+    }
+  ]
+}

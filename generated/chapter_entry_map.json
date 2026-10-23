@@ -1,0 +1,251 @@
+{
+  "format": "projectstar-chapter-entry-map-v1",
+  "summary": {
+    "zeroInboundCount": 0,
+    "sealedIslandCount": 0,
+    "chapterCount": 16,
+    "walksAllOk": true
+  },
+  "chapters": [
+    {
+      "id": "title",
+      "title": "Title / opening cinematics",
+      "entrySlide": 1,
+      "entryHint": "?debug=1&slide=1",
+      "subgraphSize": 358,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "notes": "Auto-advance opening; -Start- on s003 advances to s004",
+      "priority": 0
+    },
+    {
+      "id": "first-ship-battle",
+      "title": "First ship battle (opening)",
+      "entrySlide": 6,
+      "entryHint": "?debug=1&slide=6",
+      "subgraphSize": null,
+      "outcome": "combat_debug",
+      "ok": true,
+      "notes": "-shot battle menus from s010; Game Over at s026",
+      "priority": 0
+    },
+    {
+      "id": "root-34",
+      "title": "`",
+      "entrySlide": 34,
+      "entryHint": "?debug=1&slide=34",
+      "subgraphSize": 325,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        174,
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-52",
+      "title": "\u201cResearch\u2026\u201d",
+      "entrySlide": 52,
+      "entryHint": "?debug=1&slide=52",
+      "subgraphSize": 303,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        174,
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-104",
+      "title": "Okay\u2026 Well that was weird\u2026 as usual\u2026",
+      "entrySlide": 104,
+      "entryHint": "?debug=1&slide=104",
+      "subgraphSize": 255,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        174,
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-121",
+      "title": "Buy",
+      "entrySlide": 121,
+      "entryHint": "?debug=1&slide=121",
+      "subgraphSize": 238,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        174,
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-129",
+      "title": "Secret message!!\nlol this train animation is sadly pathetic\u2026",
+      "entrySlide": 129,
+      "entryHint": "?debug=1&slide=129",
+      "subgraphSize": 230,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        174,
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-154",
+      "title": "!!!!",
+      "entrySlide": 154,
+      "entryHint": "?debug=1&slide=154",
+      "subgraphSize": 205,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        174,
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-166",
+      "title": "(oh man.. What do I do\u2026.)",
+      "entrySlide": 166,
+      "entryHint": "?debug=1&slide=166",
+      "subgraphSize": 193,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        174,
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-197",
+      "title": "That\u2019s it! I know, I can stay at Caina\u2019s place!\nThe trains are closed now\u2026 Maybe",
+      "entrySlide": 197,
+      "entryHint": "?debug=1&slide=197",
+      "subgraphSize": 160,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-218",
+      "title": "Inside the convention center\u2026",
+      "entrySlide": 218,
+      "entryHint": "?debug=1&slide=218",
+      "subgraphSize": 142,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-243",
+      "title": "Over here!",
+      "entrySlide": 243,
+      "entryHint": "?debug=1&slide=243",
+      "subgraphSize": 116,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-273",
+      "title": "Shameless waste of time eh? Ahahhahahahhahahahaha\u2026. I dunno.",
+      "entrySlide": 273,
+      "entryHint": "?debug=1&slide=273",
+      "subgraphSize": 86,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-308",
+      "title": "Yay more gif\u2019s like I said. This is gonna be cool.",
+      "entrySlide": 308,
+      "entryHint": "?debug=1&slide=308",
+      "subgraphSize": 51,
+      "outcome": "reaches_terminal",
+      "ok": true,
+      "terminals": [
+        322,
+        330
+      ],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-356",
+      "title": "-Projectstar Part 1-\n2005-2006 Spotco Mootothemax@gmail.com\nDesigner- Shiny\nArti",
+      "entrySlide": 356,
+      "entryHint": "?debug=1&slide=356",
+      "subgraphSize": 4,
+      "outcome": "loop_or_hub",
+      "ok": true,
+      "terminals": [],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    },
+    {
+      "id": "root-358",
+      "title": "Sound Test",
+      "entrySlide": 358,
+      "entryHint": "?debug=1&slide=358",
+      "subgraphSize": 4,
+      "outcome": "loop_or_hub",
+      "ok": true,
+      "terminals": [],
+      "notes": "Zero-inbound or primary catalog seed",
+      "priority": 3
+    }
+  ],
+  "zeroInboundRoots": [],
+  "sealedIslands": [],
+  "tierB": {
+    "mode": "chapter_select",
+    "titleDirectedReachable": 358,
+    "note": "Title path reaches the full 358-slide deck under the DocSummary slideId decode; chapter entries are debug shortcuts, not bridges."
+  }
+}

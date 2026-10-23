@@ -1,0 +1,3591 @@
+{
+  "format": "projectstar-sequential-advance-edges-v1",
+  "summary": {
+    "stageClickEdgeCount": 121,
+    "manualAdvanceEdgeCount": 0,
+    "fallbackStageClickEdgeCount": 121,
+    "autoAdvanceEdgeCount": 117,
+    "totalSequentialEdges": 238
+  },
+  "manualAdvanceEdges": [],
+  "fallbackStageClickEdges": [
+    {
+      "from": 5,
+      "to": 6,
+      "toId": "slide-006",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "toId": "slide-011",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 16,
+      "to": 17,
+      "toId": "slide-017",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 17,
+      "to": 18,
+      "toId": "slide-018",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 24,
+      "to": 25,
+      "toId": "slide-025",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 28,
+      "to": 29,
+      "toId": "slide-029",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 29,
+      "to": 30,
+      "toId": "slide-030",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 31,
+      "to": 32,
+      "toId": "slide-032",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 39,
+      "to": 40,
+      "toId": "slide-040",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 40,
+      "to": 41,
+      "toId": "slide-041",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 41,
+      "to": 42,
+      "toId": "slide-042",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 45,
+      "to": 46,
+      "toId": "slide-046",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 47,
+      "to": 48,
+      "toId": "slide-048",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 51,
+      "to": 52,
+      "toId": "slide-052",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 58,
+      "to": 59,
+      "toId": "slide-059",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 62,
+      "to": 63,
+      "toId": "slide-063",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 64,
+      "to": 65,
+      "toId": "slide-065",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 79,
+      "to": 80,
+      "toId": "slide-080",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 80,
+      "to": 81,
+      "toId": "slide-081",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 84,
+      "to": 85,
+      "toId": "slide-085",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 85,
+      "to": 86,
+      "toId": "slide-086",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 87,
+      "to": 88,
+      "toId": "slide-088",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 88,
+      "to": 89,
+      "toId": "slide-089",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 89,
+      "to": 90,
+      "toId": "slide-090",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 90,
+      "to": 91,
+      "toId": "slide-091",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 91,
+      "to": 92,
+      "toId": "slide-092",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 92,
+      "to": 93,
+      "toId": "slide-093",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 93,
+      "to": 94,
+      "toId": "slide-094",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 94,
+      "to": 95,
+      "toId": "slide-095",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 95,
+      "to": 96,
+      "toId": "slide-096",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 96,
+      "to": 97,
+      "toId": "slide-097",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 97,
+      "to": 98,
+      "toId": "slide-098",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 98,
+      "to": 99,
+      "toId": "slide-099",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 99,
+      "to": 100,
+      "toId": "slide-100",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 100,
+      "to": 101,
+      "toId": "slide-101",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 101,
+      "to": 102,
+      "toId": "slide-102",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 102,
+      "to": 103,
+      "toId": "slide-103",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 103,
+      "to": 104,
+      "toId": "slide-104",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 106,
+      "to": 107,
+      "toId": "slide-107",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 107,
+      "to": 108,
+      "toId": "slide-108",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 109,
+      "to": 110,
+      "toId": "slide-110",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 127,
+      "to": 128,
+      "toId": "slide-128",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 129,
+      "to": 130,
+      "toId": "slide-130",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 132,
+      "to": 133,
+      "toId": "slide-133",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 134,
+      "to": 135,
+      "toId": "slide-135",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 3
+    },
+    {
+      "from": 135,
+      "to": 136,
+      "toId": "slide-136",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 137,
+      "to": 138,
+      "toId": "slide-138",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 139,
+      "to": 140,
+      "toId": "slide-140",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 140,
+      "to": 141,
+      "toId": "slide-141",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 142,
+      "to": 143,
+      "toId": "slide-143",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 156,
+      "to": 157,
+      "toId": "slide-157",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 162,
+      "to": 163,
+      "toId": "slide-163",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 167,
+      "to": 168,
+      "toId": "slide-168",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 169,
+      "to": 170,
+      "toId": "slide-170",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 170,
+      "to": 171,
+      "toId": "slide-171",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 188,
+      "to": 189,
+      "toId": "slide-189",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 192,
+      "to": 193,
+      "toId": "slide-193",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 202,
+      "to": 203,
+      "toId": "slide-203",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 204,
+      "to": 205,
+      "toId": "slide-205",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 205,
+      "to": 206,
+      "toId": "slide-206",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 206,
+      "to": 207,
+      "toId": "slide-207",
+      "kind": "stage_click_advance",
+      "resolveMethod": "continue_text_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 207,
+      "to": 208,
+      "toId": "slide-208",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 208,
+      "to": 209,
+      "toId": "slide-209",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 209,
+      "to": 210,
+      "toId": "slide-210",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 211,
+      "to": 212,
+      "toId": "slide-212",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 212,
+      "to": 213,
+      "toId": "slide-213",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 215,
+      "to": 216,
+      "toId": "slide-216",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 216,
+      "to": 217,
+      "toId": "slide-217",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 223,
+      "to": 224,
+      "toId": "slide-224",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 227,
+      "to": 228,
+      "toId": "slide-228",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 228,
+      "to": 229,
+      "toId": "slide-229",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 229,
+      "to": 230,
+      "toId": "slide-230",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 230,
+      "to": 231,
+      "toId": "slide-231",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 231,
+      "to": 232,
+      "toId": "slide-232",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 232,
+      "to": 233,
+      "toId": "slide-233",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 234,
+      "to": 235,
+      "toId": "slide-235",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 235,
+      "to": 236,
+      "toId": "slide-236",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 241,
+      "to": 242,
+      "toId": "slide-242",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 243,
+      "to": 244,
+      "toId": "slide-244",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 248,
+      "to": 249,
+      "toId": "slide-249",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 249,
+      "to": 250,
+      "toId": "slide-250",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 252,
+      "to": 253,
+      "toId": "slide-253",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 257,
+      "to": 258,
+      "toId": "slide-258",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 260,
+      "to": 261,
+      "toId": "slide-261",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 262,
+      "to": 263,
+      "toId": "slide-263",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 276,
+      "to": 277,
+      "toId": "slide-277",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 278,
+      "to": 279,
+      "toId": "slide-279",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 279,
+      "to": 280,
+      "toId": "slide-280",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 280,
+      "to": 281,
+      "toId": "slide-281",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 294,
+      "to": 295,
+      "toId": "slide-295",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 295,
+      "to": 296,
+      "toId": "slide-296",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 303,
+      "to": 304,
+      "toId": "slide-304",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 304,
+      "to": 305,
+      "toId": "slide-305",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 305,
+      "to": 306,
+      "toId": "slide-306",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 306,
+      "to": 307,
+      "toId": "slide-307",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 308,
+      "to": 309,
+      "toId": "slide-309",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 309,
+      "to": 310,
+      "toId": "slide-310",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 3
+    },
+    {
+      "from": 311,
+      "to": 312,
+      "toId": "slide-312",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 317,
+      "to": 318,
+      "toId": "slide-318",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 318,
+      "to": 319,
+      "toId": "slide-319",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 319,
+      "to": 320,
+      "toId": "slide-320",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 320,
+      "to": 321,
+      "toId": "slide-321",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 325,
+      "to": 326,
+      "toId": "slide-326",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 326,
+      "to": 327,
+      "toId": "slide-327",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 327,
+      "to": 328,
+      "toId": "slide-328",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 328,
+      "to": 329,
+      "toId": "slide-329",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 332,
+      "to": 333,
+      "toId": "slide-333",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 333,
+      "to": 334,
+      "toId": "slide-334",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 334,
+      "to": 335,
+      "toId": "slide-335",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 335,
+      "to": 336,
+      "toId": "slide-336",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 336,
+      "to": 337,
+      "toId": "slide-337",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 337,
+      "to": 338,
+      "toId": "slide-338",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 3
+    },
+    {
+      "from": 339,
+      "to": 340,
+      "toId": "slide-340",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 342,
+      "to": 343,
+      "toId": "slide-343",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 343,
+      "to": 344,
+      "toId": "slide-344",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 348,
+      "to": 349,
+      "toId": "slide-349",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 349,
+      "to": 350,
+      "toId": "slide-350",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 350,
+      "to": 351,
+      "toId": "slide-351",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 351,
+      "to": 352,
+      "toId": "slide-352",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 352,
+      "to": 353,
+      "toId": "slide-353",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 353,
+      "to": 354,
+      "toId": "slide-354",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    }
+  ],
+  "autoAdvanceEdges": [
+    {
+      "from": 1,
+      "to": 2,
+      "toId": "slide-002",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "toId": "slide-003",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "toId": "slide-005",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "toId": "slide-007",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "toId": "slide-008",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "toId": "slide-009",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "toId": "slide-010",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "toId": "slide-013",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 13,
+      "to": 14,
+      "toId": "slide-014",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "toId": "slide-015",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 19,
+      "to": 20,
+      "toId": "slide-020",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 20,
+      "to": 21,
+      "toId": "slide-021",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 22,
+      "to": 23,
+      "toId": "slide-023",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 23,
+      "to": 24,
+      "toId": "slide-024",
+      "kind": "auto_advance",
+      "delayMs": 10000
+    },
+    {
+      "from": 25,
+      "to": 26,
+      "toId": "slide-026",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 27,
+      "to": 28,
+      "toId": "slide-028",
+      "kind": "auto_advance",
+      "delayMs": 12000
+    },
+    {
+      "from": 30,
+      "to": 31,
+      "toId": "slide-031",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 32,
+      "to": 33,
+      "toId": "slide-033",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 33,
+      "to": 34,
+      "toId": "slide-034",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 34,
+      "to": 35,
+      "toId": "slide-035",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 44,
+      "to": 45,
+      "toId": "slide-045",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 46,
+      "to": 47,
+      "toId": "slide-047",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 78,
+      "to": 79,
+      "toId": "slide-079",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 81,
+      "to": 82,
+      "toId": "slide-082",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 86,
+      "to": 87,
+      "toId": "slide-087",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 104,
+      "to": 105,
+      "toId": "slide-105",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 108,
+      "to": 109,
+      "toId": "slide-109",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 110,
+      "to": 111,
+      "toId": "slide-111",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 111,
+      "to": 112,
+      "toId": "slide-112",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 113,
+      "to": 114,
+      "toId": "slide-114",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 114,
+      "to": 115,
+      "toId": "slide-115",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 115,
+      "to": 116,
+      "toId": "slide-116",
+      "kind": "auto_advance",
+      "delayMs": 10000
+    },
+    {
+      "from": 116,
+      "to": 117,
+      "toId": "slide-117",
+      "kind": "auto_advance",
+      "delayMs": 17000
+    },
+    {
+      "from": 117,
+      "to": 118,
+      "toId": "slide-118",
+      "kind": "auto_advance",
+      "delayMs": 7000
+    },
+    {
+      "from": 120,
+      "to": 121,
+      "toId": "slide-121",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 125,
+      "to": 126,
+      "toId": "slide-126",
+      "kind": "auto_advance",
+      "delayMs": 14000
+    },
+    {
+      "from": 126,
+      "to": 127,
+      "toId": "slide-127",
+      "kind": "auto_advance",
+      "delayMs": 13000
+    },
+    {
+      "from": 128,
+      "to": 129,
+      "toId": "slide-129",
+      "kind": "auto_advance",
+      "delayMs": 300
+    },
+    {
+      "from": 130,
+      "to": 131,
+      "toId": "slide-131",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 131,
+      "to": 132,
+      "toId": "slide-132",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 133,
+      "to": 134,
+      "toId": "slide-134",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 136,
+      "to": 137,
+      "toId": "slide-137",
+      "kind": "auto_advance",
+      "delayMs": 11000
+    },
+    {
+      "from": 138,
+      "to": 139,
+      "toId": "slide-139",
+      "kind": "auto_advance",
+      "delayMs": 39000
+    },
+    {
+      "from": 141,
+      "to": 142,
+      "toId": "slide-142",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 143,
+      "to": 144,
+      "toId": "slide-144",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 146,
+      "to": 147,
+      "toId": "slide-147",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 154,
+      "to": 155,
+      "toId": "slide-155",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 155,
+      "to": 156,
+      "toId": "slide-156",
+      "kind": "auto_advance",
+      "delayMs": 100
+    },
+    {
+      "from": 163,
+      "to": 164,
+      "toId": "slide-164",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 164,
+      "to": 165,
+      "toId": "slide-165",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 165,
+      "to": 166,
+      "toId": "slide-166",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 171,
+      "to": 172,
+      "toId": "slide-172",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 172,
+      "to": 173,
+      "toId": "slide-173",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 173,
+      "to": 174,
+      "toId": "slide-174",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 175,
+      "to": 176,
+      "toId": "slide-176",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 176,
+      "to": 177,
+      "toId": "slide-177",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 177,
+      "to": 178,
+      "toId": "slide-178",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 178,
+      "to": 179,
+      "toId": "slide-179",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 179,
+      "to": 180,
+      "toId": "slide-180",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 181,
+      "to": 182,
+      "toId": "slide-182",
+      "kind": "auto_advance",
+      "delayMs": 10000
+    },
+    {
+      "from": 183,
+      "to": 184,
+      "toId": "slide-184",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 184,
+      "to": 185,
+      "toId": "slide-185",
+      "kind": "auto_advance",
+      "delayMs": 15000
+    },
+    {
+      "from": 185,
+      "to": 186,
+      "toId": "slide-186",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 186,
+      "to": 187,
+      "toId": "slide-187",
+      "kind": "auto_advance",
+      "delayMs": 8000
+    },
+    {
+      "from": 187,
+      "to": 188,
+      "toId": "slide-188",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 189,
+      "to": 190,
+      "toId": "slide-190",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 190,
+      "to": 191,
+      "toId": "slide-191",
+      "kind": "auto_advance",
+      "delayMs": 9000
+    },
+    {
+      "from": 191,
+      "to": 192,
+      "toId": "slide-192",
+      "kind": "auto_advance",
+      "delayMs": 12000
+    },
+    {
+      "from": 195,
+      "to": 196,
+      "toId": "slide-196",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 203,
+      "to": 204,
+      "toId": "slide-204",
+      "kind": "auto_advance",
+      "delayMs": 7000
+    },
+    {
+      "from": 210,
+      "to": 211,
+      "toId": "slide-211",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 213,
+      "to": 214,
+      "toId": "slide-214",
+      "kind": "auto_advance",
+      "delayMs": 11000
+    },
+    {
+      "from": 214,
+      "to": 215,
+      "toId": "slide-215",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 233,
+      "to": 234,
+      "toId": "slide-234",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 237,
+      "to": 238,
+      "toId": "slide-238",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 238,
+      "to": 239,
+      "toId": "slide-239",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 242,
+      "to": 243,
+      "toId": "slide-243",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 244,
+      "to": 245,
+      "toId": "slide-245",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 245,
+      "to": 246,
+      "toId": "slide-246",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 247,
+      "to": 248,
+      "toId": "slide-248",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    },
+    {
+      "from": 250,
+      "to": 251,
+      "toId": "slide-251",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 251,
+      "to": 252,
+      "toId": "slide-252",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 256,
+      "to": 257,
+      "toId": "slide-257",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 258,
+      "to": 259,
+      "toId": "slide-259",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 265,
+      "to": 266,
+      "toId": "slide-266",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 266,
+      "to": 267,
+      "toId": "slide-267",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    },
+    {
+      "from": 267,
+      "to": 268,
+      "toId": "slide-268",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 273,
+      "to": 274,
+      "toId": "slide-274",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 274,
+      "to": 275,
+      "toId": "slide-275",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 275,
+      "to": 276,
+      "toId": "slide-276",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 277,
+      "to": 278,
+      "toId": "slide-278",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 281,
+      "to": 282,
+      "toId": "slide-282",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    },
+    {
+      "from": 282,
+      "to": 283,
+      "toId": "slide-283",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 283,
+      "to": 284,
+      "toId": "slide-284",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 284,
+      "to": 285,
+      "toId": "slide-285",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 285,
+      "to": 286,
+      "toId": "slide-286",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 286,
+      "to": 287,
+      "toId": "slide-287",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 287,
+      "to": 288,
+      "toId": "slide-288",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 288,
+      "to": 289,
+      "toId": "slide-289",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 289,
+      "to": 290,
+      "toId": "slide-290",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 290,
+      "to": 291,
+      "toId": "slide-291",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 291,
+      "to": 292,
+      "toId": "slide-292",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 293,
+      "to": 294,
+      "toId": "slide-294",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 296,
+      "to": 297,
+      "toId": "slide-297",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 297,
+      "to": 298,
+      "toId": "slide-298",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 298,
+      "to": 299,
+      "toId": "slide-299",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 299,
+      "to": 300,
+      "toId": "slide-300",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 300,
+      "to": 301,
+      "toId": "slide-301",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 301,
+      "to": 302,
+      "toId": "slide-302",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 302,
+      "to": 303,
+      "toId": "slide-303",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 307,
+      "to": 308,
+      "toId": "slide-308",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 321,
+      "to": 322,
+      "toId": "slide-322",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 329,
+      "to": 330,
+      "toId": "slide-330",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 344,
+      "to": 345,
+      "toId": "slide-345",
+      "kind": "auto_advance",
+      "delayMs": 100
+    },
+    {
+      "from": 345,
+      "to": 346,
+      "toId": "slide-346",
+      "kind": "auto_advance",
+      "delayMs": 200
+    },
+    {
+      "from": 346,
+      "to": 347,
+      "toId": "slide-347",
+      "kind": "auto_advance",
+      "delayMs": 100
+    },
+    {
+      "from": 347,
+      "to": 348,
+      "toId": "slide-348",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    }
+  ],
+  "allSequentialEdges": [
+    {
+      "from": 1,
+      "to": 2,
+      "toId": "slide-002",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "toId": "slide-003",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "toId": "slide-005",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "toId": "slide-006",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "toId": "slide-007",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "toId": "slide-008",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "toId": "slide-009",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "toId": "slide-010",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "toId": "slide-011",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "toId": "slide-013",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 13,
+      "to": 14,
+      "toId": "slide-014",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 14,
+      "to": 15,
+      "toId": "slide-015",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 16,
+      "to": 17,
+      "toId": "slide-017",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 17,
+      "to": 18,
+      "toId": "slide-018",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 19,
+      "to": 20,
+      "toId": "slide-020",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 20,
+      "to": 21,
+      "toId": "slide-021",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 22,
+      "to": 23,
+      "toId": "slide-023",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 23,
+      "to": 24,
+      "toId": "slide-024",
+      "kind": "auto_advance",
+      "delayMs": 10000
+    },
+    {
+      "from": 24,
+      "to": 25,
+      "toId": "slide-025",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 25,
+      "to": 26,
+      "toId": "slide-026",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 27,
+      "to": 28,
+      "toId": "slide-028",
+      "kind": "auto_advance",
+      "delayMs": 12000
+    },
+    {
+      "from": 28,
+      "to": 29,
+      "toId": "slide-029",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 29,
+      "to": 30,
+      "toId": "slide-030",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 30,
+      "to": 31,
+      "toId": "slide-031",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 31,
+      "to": 32,
+      "toId": "slide-032",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 32,
+      "to": 33,
+      "toId": "slide-033",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 33,
+      "to": 34,
+      "toId": "slide-034",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 34,
+      "to": 35,
+      "toId": "slide-035",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 39,
+      "to": 40,
+      "toId": "slide-040",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 40,
+      "to": 41,
+      "toId": "slide-041",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 41,
+      "to": 42,
+      "toId": "slide-042",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 44,
+      "to": 45,
+      "toId": "slide-045",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 45,
+      "to": 46,
+      "toId": "slide-046",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 46,
+      "to": 47,
+      "toId": "slide-047",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 47,
+      "to": 48,
+      "toId": "slide-048",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 51,
+      "to": 52,
+      "toId": "slide-052",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 58,
+      "to": 59,
+      "toId": "slide-059",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 62,
+      "to": 63,
+      "toId": "slide-063",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 64,
+      "to": 65,
+      "toId": "slide-065",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 78,
+      "to": 79,
+      "toId": "slide-079",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 79,
+      "to": 80,
+      "toId": "slide-080",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 80,
+      "to": 81,
+      "toId": "slide-081",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 81,
+      "to": 82,
+      "toId": "slide-082",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 84,
+      "to": 85,
+      "toId": "slide-085",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 85,
+      "to": 86,
+      "toId": "slide-086",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 86,
+      "to": 87,
+      "toId": "slide-087",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 87,
+      "to": 88,
+      "toId": "slide-088",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 88,
+      "to": 89,
+      "toId": "slide-089",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 89,
+      "to": 90,
+      "toId": "slide-090",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 90,
+      "to": 91,
+      "toId": "slide-091",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 91,
+      "to": 92,
+      "toId": "slide-092",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 92,
+      "to": 93,
+      "toId": "slide-093",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 93,
+      "to": 94,
+      "toId": "slide-094",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 94,
+      "to": 95,
+      "toId": "slide-095",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 95,
+      "to": 96,
+      "toId": "slide-096",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 96,
+      "to": 97,
+      "toId": "slide-097",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 97,
+      "to": 98,
+      "toId": "slide-098",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 98,
+      "to": 99,
+      "toId": "slide-099",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 99,
+      "to": 100,
+      "toId": "slide-100",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 100,
+      "to": 101,
+      "toId": "slide-101",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 101,
+      "to": 102,
+      "toId": "slide-102",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 102,
+      "to": 103,
+      "toId": "slide-103",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 103,
+      "to": 104,
+      "toId": "slide-104",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 104,
+      "to": 105,
+      "toId": "slide-105",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 106,
+      "to": 107,
+      "toId": "slide-107",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 107,
+      "to": 108,
+      "toId": "slide-108",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 108,
+      "to": 109,
+      "toId": "slide-109",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 109,
+      "to": 110,
+      "toId": "slide-110",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 110,
+      "to": 111,
+      "toId": "slide-111",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 111,
+      "to": 112,
+      "toId": "slide-112",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 113,
+      "to": 114,
+      "toId": "slide-114",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 114,
+      "to": 115,
+      "toId": "slide-115",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 115,
+      "to": 116,
+      "toId": "slide-116",
+      "kind": "auto_advance",
+      "delayMs": 10000
+    },
+    {
+      "from": 116,
+      "to": 117,
+      "toId": "slide-117",
+      "kind": "auto_advance",
+      "delayMs": 17000
+    },
+    {
+      "from": 117,
+      "to": 118,
+      "toId": "slide-118",
+      "kind": "auto_advance",
+      "delayMs": 7000
+    },
+    {
+      "from": 120,
+      "to": 121,
+      "toId": "slide-121",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 125,
+      "to": 126,
+      "toId": "slide-126",
+      "kind": "auto_advance",
+      "delayMs": 14000
+    },
+    {
+      "from": 126,
+      "to": 127,
+      "toId": "slide-127",
+      "kind": "auto_advance",
+      "delayMs": 13000
+    },
+    {
+      "from": 127,
+      "to": 128,
+      "toId": "slide-128",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 128,
+      "to": 129,
+      "toId": "slide-129",
+      "kind": "auto_advance",
+      "delayMs": 300
+    },
+    {
+      "from": 129,
+      "to": 130,
+      "toId": "slide-130",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 130,
+      "to": 131,
+      "toId": "slide-131",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 131,
+      "to": 132,
+      "toId": "slide-132",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 132,
+      "to": 133,
+      "toId": "slide-133",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 133,
+      "to": 134,
+      "toId": "slide-134",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 134,
+      "to": 135,
+      "toId": "slide-135",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 3
+    },
+    {
+      "from": 135,
+      "to": 136,
+      "toId": "slide-136",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 136,
+      "to": 137,
+      "toId": "slide-137",
+      "kind": "auto_advance",
+      "delayMs": 11000
+    },
+    {
+      "from": 137,
+      "to": 138,
+      "toId": "slide-138",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 138,
+      "to": 139,
+      "toId": "slide-139",
+      "kind": "auto_advance",
+      "delayMs": 39000
+    },
+    {
+      "from": 139,
+      "to": 140,
+      "toId": "slide-140",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 140,
+      "to": 141,
+      "toId": "slide-141",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 141,
+      "to": 142,
+      "toId": "slide-142",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 142,
+      "to": 143,
+      "toId": "slide-143",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 143,
+      "to": 144,
+      "toId": "slide-144",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 146,
+      "to": 147,
+      "toId": "slide-147",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 154,
+      "to": 155,
+      "toId": "slide-155",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 155,
+      "to": 156,
+      "toId": "slide-156",
+      "kind": "auto_advance",
+      "delayMs": 100
+    },
+    {
+      "from": 156,
+      "to": 157,
+      "toId": "slide-157",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 162,
+      "to": 163,
+      "toId": "slide-163",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 163,
+      "to": 164,
+      "toId": "slide-164",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 164,
+      "to": 165,
+      "toId": "slide-165",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 165,
+      "to": 166,
+      "toId": "slide-166",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 167,
+      "to": 168,
+      "toId": "slide-168",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 169,
+      "to": 170,
+      "toId": "slide-170",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 170,
+      "to": 171,
+      "toId": "slide-171",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 171,
+      "to": 172,
+      "toId": "slide-172",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 172,
+      "to": 173,
+      "toId": "slide-173",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 173,
+      "to": 174,
+      "toId": "slide-174",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 175,
+      "to": 176,
+      "toId": "slide-176",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 176,
+      "to": 177,
+      "toId": "slide-177",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 177,
+      "to": 178,
+      "toId": "slide-178",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 178,
+      "to": 179,
+      "toId": "slide-179",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 179,
+      "to": 180,
+      "toId": "slide-180",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 181,
+      "to": 182,
+      "toId": "slide-182",
+      "kind": "auto_advance",
+      "delayMs": 10000
+    },
+    {
+      "from": 183,
+      "to": 184,
+      "toId": "slide-184",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 184,
+      "to": 185,
+      "toId": "slide-185",
+      "kind": "auto_advance",
+      "delayMs": 15000
+    },
+    {
+      "from": 185,
+      "to": 186,
+      "toId": "slide-186",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 186,
+      "to": 187,
+      "toId": "slide-187",
+      "kind": "auto_advance",
+      "delayMs": 8000
+    },
+    {
+      "from": 187,
+      "to": 188,
+      "toId": "slide-188",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 188,
+      "to": 189,
+      "toId": "slide-189",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 189,
+      "to": 190,
+      "toId": "slide-190",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 190,
+      "to": 191,
+      "toId": "slide-191",
+      "kind": "auto_advance",
+      "delayMs": 9000
+    },
+    {
+      "from": 191,
+      "to": 192,
+      "toId": "slide-192",
+      "kind": "auto_advance",
+      "delayMs": 12000
+    },
+    {
+      "from": 192,
+      "to": 193,
+      "toId": "slide-193",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 195,
+      "to": 196,
+      "toId": "slide-196",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 202,
+      "to": 203,
+      "toId": "slide-203",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 203,
+      "to": 204,
+      "toId": "slide-204",
+      "kind": "auto_advance",
+      "delayMs": 7000
+    },
+    {
+      "from": 204,
+      "to": 205,
+      "toId": "slide-205",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 205,
+      "to": 206,
+      "toId": "slide-206",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 206,
+      "to": 207,
+      "toId": "slide-207",
+      "kind": "stage_click_advance",
+      "resolveMethod": "continue_text_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 207,
+      "to": 208,
+      "toId": "slide-208",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 6
+    },
+    {
+      "from": 208,
+      "to": 209,
+      "toId": "slide-209",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 209,
+      "to": 210,
+      "toId": "slide-210",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 210,
+      "to": 211,
+      "toId": "slide-211",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 211,
+      "to": 212,
+      "toId": "slide-212",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 212,
+      "to": 213,
+      "toId": "slide-213",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 213,
+      "to": 214,
+      "toId": "slide-214",
+      "kind": "auto_advance",
+      "delayMs": 11000
+    },
+    {
+      "from": 214,
+      "to": 215,
+      "toId": "slide-215",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 215,
+      "to": 216,
+      "toId": "slide-216",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 216,
+      "to": 217,
+      "toId": "slide-217",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 223,
+      "to": 224,
+      "toId": "slide-224",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 227,
+      "to": 228,
+      "toId": "slide-228",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 228,
+      "to": 229,
+      "toId": "slide-229",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 229,
+      "to": 230,
+      "toId": "slide-230",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 230,
+      "to": 231,
+      "toId": "slide-231",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 231,
+      "to": 232,
+      "toId": "slide-232",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 232,
+      "to": 233,
+      "toId": "slide-233",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 233,
+      "to": 234,
+      "toId": "slide-234",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 234,
+      "to": 235,
+      "toId": "slide-235",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 235,
+      "to": 236,
+      "toId": "slide-236",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 237,
+      "to": 238,
+      "toId": "slide-238",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 238,
+      "to": 239,
+      "toId": "slide-239",
+      "kind": "auto_advance",
+      "delayMs": 5000
+    },
+    {
+      "from": 241,
+      "to": 242,
+      "toId": "slide-242",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 242,
+      "to": 243,
+      "toId": "slide-243",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 243,
+      "to": 244,
+      "toId": "slide-244",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 244,
+      "to": 245,
+      "toId": "slide-245",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 245,
+      "to": 246,
+      "toId": "slide-246",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 247,
+      "to": 248,
+      "toId": "slide-248",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    },
+    {
+      "from": 248,
+      "to": 249,
+      "toId": "slide-249",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 249,
+      "to": 250,
+      "toId": "slide-250",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 250,
+      "to": 251,
+      "toId": "slide-251",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 251,
+      "to": 252,
+      "toId": "slide-252",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 252,
+      "to": 253,
+      "toId": "slide-253",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 256,
+      "to": 257,
+      "toId": "slide-257",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 257,
+      "to": 258,
+      "toId": "slide-258",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 258,
+      "to": 259,
+      "toId": "slide-259",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 260,
+      "to": 261,
+      "toId": "slide-261",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 262,
+      "to": 263,
+      "toId": "slide-263",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 265,
+      "to": 266,
+      "toId": "slide-266",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 266,
+      "to": 267,
+      "toId": "slide-267",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    },
+    {
+      "from": 267,
+      "to": 268,
+      "toId": "slide-268",
+      "kind": "auto_advance",
+      "delayMs": 4000
+    },
+    {
+      "from": 273,
+      "to": 274,
+      "toId": "slide-274",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 274,
+      "to": 275,
+      "toId": "slide-275",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 275,
+      "to": 276,
+      "toId": "slide-276",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 276,
+      "to": 277,
+      "toId": "slide-277",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 277,
+      "to": 278,
+      "toId": "slide-278",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 278,
+      "to": 279,
+      "toId": "slide-279",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 279,
+      "to": 280,
+      "toId": "slide-280",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 280,
+      "to": 281,
+      "toId": "slide-281",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 281,
+      "to": 282,
+      "toId": "slide-282",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    },
+    {
+      "from": 282,
+      "to": 283,
+      "toId": "slide-283",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 283,
+      "to": 284,
+      "toId": "slide-284",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 284,
+      "to": 285,
+      "toId": "slide-285",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 285,
+      "to": 286,
+      "toId": "slide-286",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 286,
+      "to": 287,
+      "toId": "slide-287",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 287,
+      "to": 288,
+      "toId": "slide-288",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 288,
+      "to": 289,
+      "toId": "slide-289",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 289,
+      "to": 290,
+      "toId": "slide-290",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 290,
+      "to": 291,
+      "toId": "slide-291",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 291,
+      "to": 292,
+      "toId": "slide-292",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 293,
+      "to": 294,
+      "toId": "slide-294",
+      "kind": "auto_advance",
+      "delayMs": 3000
+    },
+    {
+      "from": 294,
+      "to": 295,
+      "toId": "slide-295",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 295,
+      "to": 296,
+      "toId": "slide-296",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 296,
+      "to": 297,
+      "toId": "slide-297",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 297,
+      "to": 298,
+      "toId": "slide-298",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 298,
+      "to": 299,
+      "toId": "slide-299",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 299,
+      "to": 300,
+      "toId": "slide-300",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 300,
+      "to": 301,
+      "toId": "slide-301",
+      "kind": "auto_advance",
+      "delayMs": 1000
+    },
+    {
+      "from": 301,
+      "to": 302,
+      "toId": "slide-302",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 302,
+      "to": 303,
+      "toId": "slide-303",
+      "kind": "auto_advance",
+      "delayMs": 2000
+    },
+    {
+      "from": 303,
+      "to": 304,
+      "toId": "slide-304",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 304,
+      "to": 305,
+      "toId": "slide-305",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 4
+    },
+    {
+      "from": 305,
+      "to": 306,
+      "toId": "slide-306",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 306,
+      "to": 307,
+      "toId": "slide-307",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 307,
+      "to": 308,
+      "toId": "slide-308",
+      "kind": "auto_advance",
+      "delayMs": 500
+    },
+    {
+      "from": 308,
+      "to": 309,
+      "toId": "slide-309",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 309,
+      "to": 310,
+      "toId": "slide-310",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 3
+    },
+    {
+      "from": 311,
+      "to": 312,
+      "toId": "slide-312",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 317,
+      "to": 318,
+      "toId": "slide-318",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 318,
+      "to": 319,
+      "toId": "slide-319",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 319,
+      "to": 320,
+      "toId": "slide-320",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 320,
+      "to": 321,
+      "toId": "slide-321",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 321,
+      "to": 322,
+      "toId": "slide-322",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 325,
+      "to": 326,
+      "toId": "slide-326",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 326,
+      "to": 327,
+      "toId": "slide-327",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 327,
+      "to": 328,
+      "toId": "slide-328",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 328,
+      "to": 329,
+      "toId": "slide-329",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 329,
+      "to": 330,
+      "toId": "slide-330",
+      "kind": "auto_advance",
+      "delayMs": 6000
+    },
+    {
+      "from": 332,
+      "to": 333,
+      "toId": "slide-333",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 333,
+      "to": 334,
+      "toId": "slide-334",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 334,
+      "to": 335,
+      "toId": "slide-335",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 335,
+      "to": 336,
+      "toId": "slide-336",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 0
+    },
+    {
+      "from": 336,
+      "to": 337,
+      "toId": "slide-337",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 337,
+      "to": 338,
+      "toId": "slide-338",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 3
+    },
+    {
+      "from": 339,
+      "to": 340,
+      "toId": "slide-340",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 342,
+      "to": 343,
+      "toId": "slide-343",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 343,
+      "to": 344,
+      "toId": "slide-344",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 344,
+      "to": 345,
+      "toId": "slide-345",
+      "kind": "auto_advance",
+      "delayMs": 100
+    },
+    {
+      "from": 345,
+      "to": 346,
+      "toId": "slide-346",
+      "kind": "auto_advance",
+      "delayMs": 200
+    },
+    {
+      "from": 346,
+      "to": 347,
+      "toId": "slide-347",
+      "kind": "auto_advance",
+      "delayMs": 100
+    },
+    {
+      "from": 347,
+      "to": 348,
+      "toId": "slide-348",
+      "kind": "auto_advance",
+      "delayMs": 1500
+    },
+    {
+      "from": 348,
+      "to": 349,
+      "toId": "slide-349",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 349,
+      "to": 350,
+      "toId": "slide-350",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 350,
+      "to": 351,
+      "toId": "slide-351",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 351,
+      "to": 352,
+      "toId": "slide-352",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 352,
+      "to": 353,
+      "toId": "slide-353",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    },
+    {
+      "from": 353,
+      "to": 354,
+      "toId": "slide-354",
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2
+    }
+  ]
+}

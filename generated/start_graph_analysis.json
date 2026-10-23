@@ -1,0 +1,6638 @@
+{
+  "format": "projectstar-start-graph-analysis-v1",
+  "summary": {
+    "slideCount": 358,
+    "reachableFromStartCount": 358,
+    "reachableFromStart": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358
+    ],
+    "matchesExpectedBaseline": true,
+    "weakComponentCount": 1,
+    "weakComponents": [
+      {
+        "size": 358,
+        "min": 1,
+        "max": 358,
+        "slides": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          "...",
+          353,
+          354,
+          355,
+          356,
+          357,
+          358
+        ]
+      }
+    ],
+    "binaryExternalEdgesFromStartComponent": [],
+    "actionCodeCounts": {
+      "0": 21,
+      "4": 218,
+      "6": 26
+    },
+    "zeroInboundCount": 0,
+    "sealedIslandCount": 0,
+    "sourceLimitation": false,
+    "inventedBridgeApplied": false,
+    "conclusions": [
+      "Extractor re-check: inventory holds all interactive actions; action codes are only hyperlink(4)=218, media(6)=26, none(0)=21. No jump/macro/run actions.",
+      "ExHyperlink audit (prior + reconfirmed pattern): single friendly-name CString only; no separate slide-id target atom to mis-parse.",
+      "Directed reachability from slide 1: 358 slides (baseline 358).",
+      "No binary hyperlink leaves the start-reachable component into mid/late game (external binary edges=0).",
+      "Sealed undirected islands under current decode: ",
+      "Zero-inbound roots (not reachable except debug jump): .",
+      "Full-deck reachability holds under the DocSummary slideId decode; no invented bridges were applied or are needed."
+    ]
+  },
+  "expectedStartReachable": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358
+  ],
+  "earlyLoopFrontier": [
+    {
+      "slide": 1,
+      "runtimeOut": [
+        2
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Presents"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 2,
+      "runtimeOut": [
+        3
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Presents",
+        "Added this part for some reason. Second version, first version said \u201cit\u2019s true!\u201d and I thought it was STUFU (David-SNUFU!!) so bye it goes"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 3,
+      "runtimeOut": [
+        4
+      ],
+      "binaryOut": [
+        4
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Project Star",
+        "-Start-",
+        "Part 1",
+        "2005 spotco",
+        "Song doesn\u2019t really fit\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 4,
+      "runtimeOut": [
+        5
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 5,
+      "runtimeOut": [
+        6
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 6,
+      "runtimeOut": [
+        7
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "You\u2019re under arrest, criminal.",
+        "Ah yes\u2026 major text overhaul."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 7,
+      "runtimeOut": [
+        8
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "What are you talking about? Me? A criminal? You\u2019re fooling yourself.\nAre you one of the corporation\u2019s men?",
+        "Lol corporation\u2026 "
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 8,
+      "runtimeOut": [
+        9
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Ha! You can\u2019t fool me. \nI was assigned to the important job of re-acquiring the corporation money you\u2019re carrying."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 9,
+      "runtimeOut": [
+        10
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I get it\u2026 you\u2019re the assassin they\u2019ve sent out to get me\u2026 and it appears you\u2019re new to the business\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 10,
+      "runtimeOut": [
+        11
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Don\u2019t underestimate me, to think you\u2019re so good.",
+        "-shot",
+        "20",
+        "25",
+        "   Anti-Force Bomb"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 11,
+      "runtimeOut": [
+        12
+      ],
+      "binaryOut": [
+        12
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "-shot",
+        "25",
+        "0"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 12,
+      "runtimeOut": [
+        13
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Don\u2019t underestimate me!",
+        "ALL RET LASER 100%\nRETURN FAST\u2026.\nCHARGED<< FINAL\nTARGET LOCKED\nAWAITING IGNITION+\n<<<IGNITION PROVIDED\nAWAIT STANDBY<<<\nFIRING<<<<\nFIRING SOLUTION++YES\nVERY, VERY, YES.",
+        "meh"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 13,
+      "runtimeOut": [
+        14
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 15",
+        "Take this!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 14,
+      "runtimeOut": [
+        15
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "0",
+        "-shot",
+        "Flare Cannon",
+        "Hull Damage 10",
+        "25"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 15,
+      "runtimeOut": [
+        16
+      ],
+      "binaryOut": [
+        16
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "0",
+        "15",
+        "-shot"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 16,
+      "runtimeOut": [
+        17
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield damage 15"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 17,
+      "runtimeOut": [
+        18
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "15",
+        "0",
+        "Flare cannon",
+        "-shot",
+        "Hull Damage 10"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 18,
+      "runtimeOut": [
+        19
+      ],
+      "binaryOut": [
+        19
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "0",
+        "5",
+        "-shot"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 19,
+      "runtimeOut": [
+        20
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 15"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 20,
+      "runtimeOut": [
+        21
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "0",
+        "Flare cannon",
+        "MISS",
+        "5",
+        "-shot"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 21,
+      "runtimeOut": [
+        22,
+        27
+      ],
+      "binaryOut": [
+        22,
+        27
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "0",
+        "5",
+        "-shot",
+        "-missile",
+        "That was a close one\u2026 I better finish this quick.\nA round of missiles will do him in."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 22,
+      "runtimeOut": [
+        23
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Hull Damage 15"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 23,
+      "runtimeOut": [
+        24
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "0",
+        "5",
+        "-missile",
+        "-shot",
+        "Flare cannon"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 24,
+      "runtimeOut": [
+        25
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Err\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 25,
+      "runtimeOut": [
+        26
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 26,
+      "runtimeOut": [],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "You do not DESERVE a hidden secret!"
+      ],
+      "leavePaths": [
+        "restart_only"
+      ]
+    },
+    {
+      "slide": 27,
+      "runtimeOut": [
+        28
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "SWE-IV Missile",
+        "Hull damage 45"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 28,
+      "runtimeOut": [
+        29
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 29,
+      "runtimeOut": [
+        30
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 30,
+      "runtimeOut": [
+        31
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Ha ha... I guess that\u2019s it for you, huh?",
+        "Surrender now, and you\u2019ll live, at least to see another day.",
+        "I told you, I have nothing of the corporation\u2019s, it just wanted me dead.\nAnd you did it, nice job."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 31,
+      "runtimeOut": [
+        32
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Wait\u2026 what are you talking about you have no money\u2026? Hold on a sec~!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 32,
+      "runtimeOut": [
+        33
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 33,
+      "runtimeOut": [
+        34
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I\u2019ve failed\u2026 the money\u2019s gone with him\u2026 \nHow will I ever explain this\u2026",
+        "I guess I\u2019d better return back home\u2026 \nIt\u2019s all over for me\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 34,
+      "runtimeOut": [
+        35
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "`",
+        "(2.5 parsec radius)",
+        "-=Local map=-",
+        "In order to travel long distances, you need to launch from a Warp Gate.\nThere should be a Warp Gate around here\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 35,
+      "runtimeOut": [
+        36,
+        37,
+        38
+      ],
+      "binaryOut": [
+        36,
+        37,
+        38
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "-=Local map=-",
+        "(2.5 parsec radius)",
+        "**select destination",
+        "Starport: galactic empires inspired."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 36,
+      "runtimeOut": [
+        37,
+        38
+      ],
+      "binaryOut": [
+        37,
+        38
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "-=Local map=-",
+        "(2.5 parsec radius)",
+        "Planet** 7392-REN\n-=info=-\n*gas giant\n*unexplored\n",
+        "**select destination"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 37,
+      "runtimeOut": [
+        36,
+        38
+      ],
+      "binaryOut": [
+        36,
+        38
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "-=Local map=-",
+        "(2.5 parsec radius)",
+        "Planet** 7393-REN\n-=info=-\n*oceanic/continental\n*mapped\n",
+        "**select destination"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 38,
+      "runtimeOut": [
+        36,
+        37,
+        39
+      ],
+      "binaryOut": [
+        36,
+        37,
+        39
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "-=Local map=-",
+        "(2.5 parsec radius)",
+        "Warp Gate **23431\n-=info=-\n*In service\n*Food/lodgings\n*Contact for destination & pricing info.",
+        "**select destination",
+        "     go to"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 39,
+      "runtimeOut": [
+        40
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 40,
+      "runtimeOut": [
+        41
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 41,
+      "runtimeOut": [
+        42
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 42,
+      "runtimeOut": [
+        43,
+        44,
+        81
+      ],
+      "binaryOut": [
+        43,
+        44,
+        81
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Well, this is the warp gate.\nWhat to do next?",
+        "-Land\n-Continue",
+        "-=option=-"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 43,
+      "runtimeOut": [
+        44,
+        81
+      ],
+      "binaryOut": [
+        44,
+        81
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u2026\u2026\u2026..",
+        "-=option=-",
+        "-Land\n-Continue"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 44,
+      "runtimeOut": [
+        45
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 45,
+      "runtimeOut": [
+        46
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 46,
+      "runtimeOut": [
+        47
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 47,
+      "runtimeOut": [
+        48
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "First time I drew a full body in this game. Art style changes, like"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 48,
+      "runtimeOut": [
+        49,
+        51,
+        58,
+        78
+      ],
+      "binaryOut": [
+        49,
+        51,
+        58,
+        78
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Hmm\u2026 Nice crowd\u2026\nNow why\u2019d I come here in the first place?",
+        "Auughhh\u2026 horrible glass effect now that I look back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 49,
+      "runtimeOut": [
+        48,
+        50
+      ],
+      "binaryOut": [
+        48,
+        50
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 50,
+      "runtimeOut": [
+        49
+      ],
+      "binaryOut": [
+        49
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Got the Magic sword!",
+        "(Back)",
+        "Special\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 51,
+      "runtimeOut": [
+        52
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "What is it\u2026",
+        "What\u2019s with the frown?\nNo reason to be looking so mad.",
+        "Well, if you\u2019d have my job, you\u2019d probably be \u201cfrowning\u201d too.",
+        "Probably\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 52,
+      "runtimeOut": [
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "binaryOut": [
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u201cResearch\u2026\u201d",
+        "-\u201cCurrent News\u201d",
+        "-\u201cThis warp gate\u201d",
+        "-\u201cYour Ship model\u201d",
+        "   Back!!!"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 53,
+      "runtimeOut": [
+        52
+      ],
+      "binaryOut": [
+        52
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Don\u2019t even try\u2026",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 54,
+      "runtimeOut": [
+        52
+      ],
+      "binaryOut": [
+        52
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Model: F-11Y",
+        "This is your ship?\nIt\u2019s a standard model in bad condition. \nPretty pathetic.\nThen again, knowing you, you couldn\u2019t afford anything better\u2026",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 55,
+      "runtimeOut": [
+        52
+      ],
+      "binaryOut": [
+        52
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Hmm\u2026 ",
+        "Legislature Debates,",
+        "Terrorism arrests,\n",
+        "Assassinations,",
+        "Every day life.\nStuff I know YOU wouldn\u2019t care about."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 56,
+      "runtimeOut": [
+        52
+      ],
+      "binaryOut": [
+        52
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "This old piece of orbiting crap is warp gate No.23431.",
+        "Stationed between 4 minor systems REN, WBL, UYO and GMY, there\u2019s not to much too activity here, only about 100,000 travelers a year.",
+        "But hey, it\u2019s all good to you, huh?",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 57,
+      "runtimeOut": [
+        52,
+        60,
+        62,
+        78
+      ],
+      "binaryOut": [
+        52,
+        60,
+        62,
+        78
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 58,
+      "runtimeOut": [
+        59
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yes, may I help you, sir?",
+        "Umm, no it\u2019s allright\u2026. Thank you for asking\u2026",
+        "(Man.. This guy\u2019s scary lookin\u2019\u2026)"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 59,
+      "runtimeOut": [
+        61,
+        64,
+        78
+      ],
+      "binaryOut": [
+        61,
+        64,
+        78
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 60,
+      "runtimeOut": [
+        57
+      ],
+      "binaryOut": [
+        57
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "InfoLAdy1.MainB"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 61,
+      "runtimeOut": [
+        59
+      ],
+      "binaryOut": [
+        59
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "BUSI1.MainB"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 62,
+      "runtimeOut": [
+        63
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yes, may I help you, sir?",
+        "Umm, no it\u2019s allright\u2026. Thank you for asking\u2026",
+        "(Man.. This guy\u2019s scary lookin\u2019\u2026)",
+        "(As Second)"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 63,
+      "runtimeOut": [
+        72,
+        73,
+        78
+      ],
+      "binaryOut": [
+        72,
+        73,
+        78
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "ALL OUT Info then Busi"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 64,
+      "runtimeOut": [
+        65
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "What is it\u2026",
+        "What\u2019s with the frown?\nNo reason to be looking so mad.",
+        "Well, if you\u2019d have my job, you\u2019d probably be \u201cfrowning\u201d too.",
+        "Probably\u2026",
+        "Info lady 2"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 65,
+      "runtimeOut": [
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "binaryOut": [
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u201cResearch\u2026\u201d",
+        "-\u201cCurrent News\u201d",
+        "-\u201cThis warp gate\u201d",
+        "-\u201cYour Ship model\u201d",
+        "   Back!!!"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 66,
+      "runtimeOut": [
+        65
+      ],
+      "binaryOut": [
+        65
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Don\u2019t even try\u2026",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 67,
+      "runtimeOut": [
+        65
+      ],
+      "binaryOut": [
+        65
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Model: F-11Y",
+        "This is your ship?\nIt\u2019s a standard model in bad condition. \nPretty pathetic.\nThen again, knowing you, you couldn\u2019t afford anything better\u2026",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 68,
+      "runtimeOut": [
+        65
+      ],
+      "binaryOut": [
+        65
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Hmm\u2026 ",
+        "Legislature Debates,",
+        "Terrorism arrests,\n",
+        "Assassinations,",
+        "Every day life.\nStuff I know YOU wouldn\u2019t care about."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 69,
+      "runtimeOut": [
+        65
+      ],
+      "binaryOut": [
+        65
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "This old piece of orbiting crap is warp gate No.23431.",
+        "Stationed between 4 minor systems REN, WBL, UYO and GMY, there\u2019s not to much too activity here, only about 100,000 travelers a year.",
+        "But hey, it\u2019s all good to you, huh?",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 70,
+      "runtimeOut": [
+        65,
+        71,
+        78
+      ],
+      "binaryOut": [
+        65,
+        71,
+        78
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "All out Busi then info"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 71,
+      "runtimeOut": [
+        70
+      ],
+      "binaryOut": [
+        70
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Allout Busi>info"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 72,
+      "runtimeOut": [
+        70
+      ],
+      "binaryOut": [
+        70
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Allout info>Busi"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 73,
+      "runtimeOut": [
+        63,
+        74,
+        75,
+        76,
+        77
+      ],
+      "binaryOut": [
+        63,
+        74,
+        75,
+        76,
+        77
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u201cResearch\u2026\u201d",
+        "-\u201cCurrent News\u201d",
+        "-\u201cThis warp gate\u201d",
+        "-\u201cYour Ship model\u201d",
+        "   Back!!!"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 74,
+      "runtimeOut": [
+        73
+      ],
+      "binaryOut": [
+        73
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Don\u2019t even try\u2026",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 75,
+      "runtimeOut": [
+        73
+      ],
+      "binaryOut": [
+        73
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Model: F-11Y",
+        "This is your ship?\nIt\u2019s a standard model in bad condition. \nPretty pathetic.\nThen again, knowing you, you couldn\u2019t afford anything better\u2026",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 76,
+      "runtimeOut": [
+        73
+      ],
+      "binaryOut": [
+        73
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Hmm\u2026 ",
+        "Legislature Debates,",
+        "Terrorism arrests,\n",
+        "Assassinations,",
+        "Every day life.\nStuff I know YOU wouldn\u2019t care about."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 77,
+      "runtimeOut": [
+        73
+      ],
+      "binaryOut": [
+        73
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "This old piece of orbiting crap is warp gate No.23431.",
+        "Stationed between 4 minor systems REN, WBL, UYO and GMY, there\u2019s not to much too activity here, only about 100,000 travelers a year.",
+        "But hey, it\u2019s all good to you, huh?",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 78,
+      "runtimeOut": [
+        79
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "EXIT"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 79,
+      "runtimeOut": [
+        80
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 80,
+      "runtimeOut": [
+        81
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 81,
+      "runtimeOut": [
+        82
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Operator #2386",
+        "Leahin",
+        "**PLEASE TRANSMIT DESTINATION COORDINATES**",
+        "Hmm? Oh, yah that. Now hold on a sec\u2026",
+        "LEAHIN Credits\n2000"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 82,
+      "runtimeOut": [
+        83,
+        84
+      ],
+      "binaryOut": [
+        83,
+        84
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "System Quisti Vela V\n(CURRENT LOCAL)",
+        "System Zeta Pasm II\n-=Click to Go to=-\n",
+        "System Quisti Vela VI\n-=Click to Go to=-\n",
+        "System Quisti Vela IV -=Click to Go to=-\n",
+        "I need to return to system Quisti Vela VI. That shouldn\u2019t be too hard to find, should it?"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 83,
+      "runtimeOut": [
+        84
+      ],
+      "binaryOut": [
+        83,
+        84
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "System Quisti Vela V\n(CURRENT LOCAL)",
+        "System Zeta Pasm II\n-=Click to Go to=-\n",
+        "System Quisti Vela VI\n-=Click to Go to=-\n",
+        "System Quisti Vela IV\n-=Click to Go to=-\n",
+        "Not that one\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 84,
+      "runtimeOut": [
+        85
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Operator #2386",
+        "Leahin",
+        "Yah, system Quisti Vela VI. Transmitting data.",
+        "LEAHIN Credits\n2000",
+        "FACILITY Credits\nXXXXXXXXXXXXXXXXXXX"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 85,
+      "runtimeOut": [
+        86
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "FACILITY Credits\nXXXXXXXXXXXXXXXXXXX",
+        "Operator #2386",
+        "Leahin",
+        "SIR, IT\u2019S A STANDARD FARE\u2026",
+        "Yah, yah, whatever. Just take it."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 86,
+      "runtimeOut": [
+        87
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Operator #2386",
+        "FACILITY Credits\nXXXXXXXXXXXXXXXXXXX",
+        "LEAHIN Credits\n1250",
+        "Leahin",
+        "WELL, SIR, ENJOY YOUR TRIP\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 87,
+      "runtimeOut": [
+        88
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Well, here goes\u2026",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 88,
+      "runtimeOut": [
+        89
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 89,
+      "runtimeOut": [
+        90
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 90,
+      "runtimeOut": [
+        91
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 91,
+      "runtimeOut": [
+        92
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 92,
+      "runtimeOut": [
+        93
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 93,
+      "runtimeOut": [
+        94
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 94,
+      "runtimeOut": [
+        95
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 95,
+      "runtimeOut": [
+        96
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 96,
+      "runtimeOut": [
+        97
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 97,
+      "runtimeOut": [
+        98
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 98,
+      "runtimeOut": [
+        99
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 99,
+      "runtimeOut": [
+        100
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 100,
+      "runtimeOut": [
+        101
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 101,
+      "runtimeOut": [
+        102
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 102,
+      "runtimeOut": [
+        103
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 103,
+      "runtimeOut": [
+        104
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 104,
+      "runtimeOut": [
+        105
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Okay\u2026 Well that was weird\u2026 as usual\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 105,
+      "runtimeOut": [
+        106
+      ],
+      "binaryOut": [
+        106
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "-=option=-\n-Land"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 106,
+      "runtimeOut": [
+        107
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 107,
+      "runtimeOut": [
+        108
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 108,
+      "runtimeOut": [
+        109
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 109,
+      "runtimeOut": [
+        110
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 110,
+      "runtimeOut": [
+        111
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 111,
+      "runtimeOut": [
+        112
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 112,
+      "runtimeOut": [
+        113
+      ],
+      "binaryOut": [
+        113
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Before I go home, I need to get the ship repaired."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 113,
+      "runtimeOut": [
+        114
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Mechanic",
+        "Leahin",
+        "LEAHIN Credits\n1250",
+        "SHOP Credits\n29500",
+        "Hey, dude. What do you need?"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 114,
+      "runtimeOut": [
+        115
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Mechanic",
+        "Leahin",
+        "LEAHIN Credits\n1250",
+        "SHOP Credits\n29500",
+        "Just do it."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 115,
+      "runtimeOut": [
+        116
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Mechanic",
+        "Leahin",
+        "LEAHIN Credits\n1250",
+        "SHOP Credits\n29500",
+        "Just do it."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 116,
+      "runtimeOut": [
+        117
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Mechanic",
+        "Leahin",
+        "LEAHIN Credits\n1250",
+        "SHOP Credits\n29500",
+        "Hmm\u2026 It\u2019ll be about\u2026 1200 credits."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 117,
+      "runtimeOut": [
+        118
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Mechanic",
+        "Leahin",
+        "LEAHIN Credits\n1250",
+        "SHOP Credits\n29500",
+        "50"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 118,
+      "runtimeOut": [
+        119
+      ],
+      "binaryOut": [
+        119
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I guess that\u2019s everything here.",
+        "The cheapest way home is by train. The station\u2019s just north from here."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 119,
+      "runtimeOut": [
+        120,
+        124
+      ],
+      "binaryOut": [
+        120,
+        124
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 120,
+      "runtimeOut": [
+        121
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Shipyard Manager",
+        "Leahin",
+        "Ah, yes, sir may I be of service?",
+        "I\u2019m.. I\u2019m just looking.",
+        "LEAHIN Credits\n50"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 121,
+      "runtimeOut": [
+        122,
+        123
+      ],
+      "binaryOut": [
+        122,
+        123
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Buy",
+        "AR2\u2014model3089\nAn economic model not meant for major combat. Medium sized storage bays & lowest possible fuel consumption.   ",
+        "Shld- 5\nHull- 10",
+        "M450 Cannon\nAdd-on available to most small to medium sized ships.\nLaunches explosive shots for medium damage.",
+        "6000 credits"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 122,
+      "runtimeOut": [
+        122,
+        123
+      ],
+      "binaryOut": [
+        122,
+        123
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Buy",
+        "AR2\u2014model3089\nAn economic model not meant for major combat. Medium sized storage bays & lowest possible fuel consumption.   ",
+        "Shld- 5\nHull- 10",
+        "M450 Cannon\nAdd-on available to most small to medium sized ships.\nLaunches explosive shots for medium damage.",
+        "6000 credits"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 123,
+      "runtimeOut": [
+        124
+      ],
+      "binaryOut": [
+        124
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 124,
+      "runtimeOut": [
+        125
+      ],
+      "binaryOut": [
+        125
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 125,
+      "runtimeOut": [
+        126
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Secret message!!\nYah baby!\nThis is the first time I ever\nDrew the Leahin without using the original radio menu picture as the head!\n100% freehand, baby!\nI\u2019d say it looks pretty good, huh?",
+        "\u2026\u2026\u2026\u2026\u2026\u2026..",
+        "Hey! Leahin! You\u2019re back!",
+        "Oh\u2026 Caina\u2026it\u2019s you\u2026 Why are you here?"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 126,
+      "runtimeOut": [
+        127
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Any reason I can\u2019t be here? I was just out shopping and I just decided to stop by\u2026",
+        "Just\u2026\nForget I said it.",
+        "Hmmph\u2026 Whatever."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 127,
+      "runtimeOut": [
+        128
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 128,
+      "runtimeOut": [
+        129
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 129,
+      "runtimeOut": [
+        130
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Secret message!!\nlol this train animation is sadly pathetic\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 130,
+      "runtimeOut": [
+        131
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "It\u2019s here! Come on, Leahin, lets go!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 131,
+      "runtimeOut": [
+        132
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 132,
+      "runtimeOut": [
+        133
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I\u2019m just wondering\u2026 what\u2019s wrong?",
+        "What?",
+        "You\u2019ve been acting all depressed\u2026\nWhat happened?",
+        "Oh\u2026.  Nothing."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 133,
+      "runtimeOut": [
+        134
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 134,
+      "runtimeOut": [
+        135
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 135,
+      "runtimeOut": [
+        136
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "So, how\u2019d it go?",
+        "Hmm\u2026 the mission?\nOh, allright I guess.",
+        "So, that means that they\u2019ll leave\u2026",
+        "Hmm\u2026 I guess\u2026",
+        "That\u2019s great! I guess you\u2019re safe now, huh?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 136,
+      "runtimeOut": [
+        137
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 137,
+      "runtimeOut": [
+        138
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 138,
+      "runtimeOut": [
+        139
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "So, what\u2019d you buy?",
+        "Oh, this? Um\u2026 Some stuff\u2026",
+        "Some stuff for what?",
+        "Oh, umm.. I\u2019m leaving on a trip tomorrow.",
+        "Really? And when will you be back?"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 139,
+      "runtimeOut": [
+        140
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 140,
+      "runtimeOut": [
+        141
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 141,
+      "runtimeOut": [
+        142
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 142,
+      "runtimeOut": [
+        143
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "This is your stop, right?",
+        "It is.\n",
+        "Then I guess I\u2019ll be seeing you later. Call if you need me."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 143,
+      "runtimeOut": [
+        144
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 144,
+      "runtimeOut": [
+        145
+      ],
+      "binaryOut": [
+        145
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Building 342\u2026\nBefore I go back, I better get some rest\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 145,
+      "runtimeOut": [
+        146
+      ],
+      "binaryOut": [
+        146
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 146,
+      "runtimeOut": [
+        147
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Out of order\u2026 I\u2019ll have to use the emergency stairs."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 147,
+      "runtimeOut": [
+        148
+      ],
+      "binaryOut": [
+        148
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 148,
+      "runtimeOut": [
+        149
+      ],
+      "binaryOut": [
+        149
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 149,
+      "runtimeOut": [
+        150
+      ],
+      "binaryOut": [
+        150
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 150,
+      "runtimeOut": [
+        151
+      ],
+      "binaryOut": [
+        151
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 151,
+      "runtimeOut": [
+        152
+      ],
+      "binaryOut": [
+        152
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 152,
+      "runtimeOut": [
+        153
+      ],
+      "binaryOut": [
+        153
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "This is the floor."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 153,
+      "runtimeOut": [
+        154
+      ],
+      "binaryOut": [
+        154
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Room 323\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 154,
+      "runtimeOut": [
+        155
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "!!!!",
+        "Someone's here!!\n"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 155,
+      "runtimeOut": [
+        156
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Someone's here!!\n"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 156,
+      "runtimeOut": [
+        157
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Someone's here!!\n"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 157,
+      "runtimeOut": [
+        158,
+        162
+      ],
+      "binaryOut": [
+        158,
+        162
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I guess I can assume you know why I\u2019m here. Sit down, and maybe we can have a chat.",
+        "It you!"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 158,
+      "runtimeOut": [
+        157,
+        159
+      ],
+      "binaryOut": [
+        157,
+        159
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "All your base are belong to us!  HAhAHa!     Leahin said \u201cIT YOU!\u201d I did it on purpose!         You actually thought I was capable of making grammar errors???\nWhat? You don\u2019t get the joke?                                   \nWell, if you were                   you\u2019d get it\u2026\n-Shiny",
+        "BACK",
+        "Spencer"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 159,
+      "runtimeOut": [
+        160
+      ],
+      "binaryOut": [
+        160
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "OH SCHNAPPS\nYOU FREEZE THE GAME"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 160,
+      "runtimeOut": [
+        161
+      ],
+      "binaryOut": [
+        161
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "OH SCHNAPPS\nYOU FREEZE THE GAME"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 161,
+      "runtimeOut": [
+        157
+      ],
+      "binaryOut": [
+        157
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "OH SCHNAPPS\nYOU FREEZE THE GAME"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 162,
+      "runtimeOut": [
+        163
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Why are you here?",
+        "\u2026\u2026\u2026.",
+        "Because you\u2019re back.",
+        "What\u2019s that supposed to mean?",
+        "It means that you failed that mission.\nYou know what I\u2019m talking about."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 163,
+      "runtimeOut": [
+        164
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Hands up.. You\u2019re coming with me."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 164,
+      "runtimeOut": [
+        165
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Hands up.. You\u2019re coming with me.",
+        "Heh heh\u2026 A gun. You sure came prepared."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 165,
+      "runtimeOut": [
+        166
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Heh heh\u2026 A gun. You sure came prepared.",
+        "Don\u2019t be a smart-a**."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 166,
+      "runtimeOut": [
+        167,
+        175
+      ],
+      "binaryOut": [
+        167,
+        175
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "(oh man.. What do I do\u2026.)",
+        "Options\n-Punch him\n-Insult\n"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 167,
+      "runtimeOut": [
+        168
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Insult",
+        "Heh\u2026",
+        "You sure got the look goin\u2019 for ya\u2026\nA suit\u2026 round glasses.. Even a tie! Evil corporate agent.. Nice style.",
+        "Pathetic last words. Don\u2019t get me angry.",
+        "(\u2026\u2026.. That sure got nowhere fast.)"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 168,
+      "runtimeOut": [
+        169,
+        175
+      ],
+      "binaryOut": [
+        169,
+        175
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Menu after Insult",
+        "Options\n-Punch him\n-Insult Again..?"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 169,
+      "runtimeOut": [
+        170
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Insult twice-Gonna die!!!",
+        "Heh.. Lame story there. \u201cIt was just all a test of your skill.\u201d Sounds like a wanna-be Neon Genesis Evangelion style plot twist there\u2026",
+        "Wait..\n\n",
+        "\u2026\u2026\u2026.",
+        "Okay,.. You know what? I\u2019ve had enough of . Shut Up for Good!!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 170,
+      "runtimeOut": [
+        171
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Wait..\n\n",
+        "Okay,.. You know what? I\u2019ve had enough of . Shut Up for Good!!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 171,
+      "runtimeOut": [
+        172
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 172,
+      "runtimeOut": [
+        173
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 173,
+      "runtimeOut": [
+        174
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 174,
+      "runtimeOut": [],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "Full of vexation come I, with complaint against my child, my daughter Hermia."
+      ],
+      "leavePaths": [
+        "restart_only"
+      ]
+    },
+    {
+      "slide": 175,
+      "runtimeOut": [
+        176
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Punch!!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 176,
+      "runtimeOut": [
+        177
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "HAH!!\n"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 177,
+      "runtimeOut": [
+        178
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 178,
+      "runtimeOut": [
+        179
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 179,
+      "runtimeOut": [
+        180
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "You\u2026.."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 180,
+      "runtimeOut": [
+        181,
+        183
+      ],
+      "binaryOut": [
+        181,
+        183
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Heh.. That worked out nice.\nNow I should\u2026",
+        "Options\n-Ask Questions\u2026\n-Grab The Gun!!",
+        "(that punch animation was pretty awesome, eh?)"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 181,
+      "runtimeOut": [
+        182
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Ask questions. Stufu. Or David style, SNUFU!!",
+        "Now tell me\u2026 What was that you were talking about\u2026. A test? Why are you here?",
+        "\u2026",
+        "(Crap\u2026Didn\u2019t think he\u2019d answer.)"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 182,
+      "runtimeOut": [
+        183
+      ],
+      "binaryOut": [
+        183
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Options\n-Grab The Gun!!\n"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 183,
+      "runtimeOut": [
+        184
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay Grab the gun."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 184,
+      "runtimeOut": [
+        185
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Ha\u2026Who\u2019s The Man Now, Dog?",
+        "\u2026\u2026.",
+        "Now tell me\u2026 Why are you here? What do you want?",
+        "It\u2019s about time I leave.",
+        "Wait.. What? You\u2019re not in the position to be making the decisions here\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 185,
+      "runtimeOut": [
+        186
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "HAhAHa!! Watch this!",
+        "Uhh\u2026 what are you trying to do\u2026?"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 186,
+      "runtimeOut": [
+        187
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "HAhAHa!! Watch this!",
+        "Wait.. You\u2019re not gonna jump\u2026are you\u2026.",
+        "Exactly. Don\u2019t think it\u2019s over\u2026 I\u2019ll be back. Later."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 187,
+      "runtimeOut": [
+        188
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 188,
+      "runtimeOut": [
+        189
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "LOL that turned out funnier than expected."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 189,
+      "runtimeOut": [
+        190
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "!!!!!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 190,
+      "runtimeOut": [
+        191
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "!!!!!",
+        "Did he just do that\u2026.?",
+        "That\u2019s a pretty long fall\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 191,
+      "runtimeOut": [
+        192
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "That\u2019s at least 5 stories\u2026",
+        "I doubt anyone could of survived that\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 192,
+      "runtimeOut": [
+        193
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Is he dead\u2026 Is it all over?",
+        "\u2026He said he would be coming back\u2026and if not him, someone else\u2026",
+        "I should leave\u2026 They could come back any time\u2026 I need a place to stay, at least overnight.. but where\u2026?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 193,
+      "runtimeOut": [
+        194,
+        198
+      ],
+      "binaryOut": [
+        194,
+        198
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I need somewhere to stay\u2026 Not here, though I\u2019m sure they\u2019ll be coming back\u2026\nWhere though\u2026 Let me think\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 194,
+      "runtimeOut": [
+        195
+      ],
+      "binaryOut": [
+        195
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 195,
+      "runtimeOut": [
+        196
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 196,
+      "runtimeOut": [
+        197
+      ],
+      "binaryOut": [
+        197
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 197,
+      "runtimeOut": [
+        200
+      ],
+      "binaryOut": [
+        200
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "That\u2019s it! I know, I can stay at Caina\u2019s place!\nThe trains are closed now\u2026 Maybe I could go there on a Taxi\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 198,
+      "runtimeOut": [
+        194,
+        199
+      ],
+      "binaryOut": [
+        194,
+        199
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I need somewhere to stay\u2026 Not here, though I\u2019m sure they\u2019ll be coming back\u2026\nWhere though\u2026 Let me think\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 199,
+      "runtimeOut": [
+        194
+      ],
+      "binaryOut": [
+        194
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 200,
+      "runtimeOut": [
+        201
+      ],
+      "binaryOut": [
+        201
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 201,
+      "runtimeOut": [
+        202
+      ],
+      "binaryOut": [
+        202
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Auto-Taxi system\u2026? Never used one of these before\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 202,
+      "runtimeOut": [
+        203
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Err\u2026 Show a map of the surrounding area\u2026 Can you do that?",
+        "*ZZT*\u2026*ZZZT*\u2026 This is  system Quisti Vela VI galactic Taxi service\u2026 model 3X Hovercraft\u2026 How may I be of service...?",
+        "Of course, sir.\n\n\n"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 203,
+      "runtimeOut": [
+        204
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Starship landing zone ",
+        "City no.86\n(you are here)",
+        "City no.87",
+        "City no.90",
+        "I know Caina lives near City 87\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 204,
+      "runtimeOut": [
+        205
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Err\u2026Take me to City 87.",
+        "Of course. Now, can you pay the 50 credits it\u2019ll cost?",
+        "50 credits\u2026? I\u2019ve got exactly that much.",
+        "Yay the big 202. This game has now officially grown larger than goblinsRPG3. 8/19/2005"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 205,
+      "runtimeOut": [
+        206
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "FACILITY Credits\nXXXXXXXXXXXXXXXXXXX",
+        "LEAHIN Credits\n50",
+        "-50",
+        "+50",
+        "Operator"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 206,
+      "runtimeOut": [
+        207
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "FACILITY Credits\nXXXXXXXXXXXXXXXXXXX",
+        "LEAHIN Credits\n50",
+        "Operator",
+        "Leahin",
+        "0"
+      ],
+      "leavePaths": [
+        "stage_click_continue_text"
+      ]
+    },
+    {
+      "slide": 207,
+      "runtimeOut": [
+        208
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 208,
+      "runtimeOut": [
+        209
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 209,
+      "runtimeOut": [
+        210
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 210,
+      "runtimeOut": [
+        211
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u201cLater..\u201d"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 211,
+      "runtimeOut": [
+        212
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u2026\u2026\u2026\u2026\u2026\u2026\u2026.",
+        "\u2026\u2026 So, how are you doing? Everything allright in your life?",
+        "Err\u2026 I\u2019m allright I guess\u2026\nWhy\u2019d you ask?",
+        "I dunno\u2026 Just that I\u2019m bored\u2026\nHow far are we, anyway?",
+        "It\u2019s not far now."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 212,
+      "runtimeOut": [
+        213
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 213,
+      "runtimeOut": [
+        214
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Oh wow that worked out nice."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 214,
+      "runtimeOut": [
+        215
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 215,
+      "runtimeOut": [
+        216
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 216,
+      "runtimeOut": [
+        217
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Oh.. Man\u2026I forgot\u2026 I don\u2019t even know where Caina lives\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 217,
+      "runtimeOut": [
+        218,
+        225
+      ],
+      "binaryOut": [
+        218,
+        225
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Oh.. Man\u2026I forgot\u2026 I don\u2019t even know where Caina lives\u2026",
+        "She has to be somewhere\u2026 Maybe someone around here knows her\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 218,
+      "runtimeOut": [
+        217,
+        219,
+        220
+      ],
+      "binaryOut": [
+        217,
+        219,
+        220
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Inside the convention center\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 219,
+      "runtimeOut": [
+        217,
+        220
+      ],
+      "binaryOut": [
+        217,
+        220
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Fish!!",
+        "Oh wow\u2026 Fish\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 220,
+      "runtimeOut": [
+        218,
+        221,
+        222,
+        223
+      ],
+      "binaryOut": [
+        218,
+        221,
+        222,
+        223
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Like, actually inside"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 221,
+      "runtimeOut": [
+        218,
+        222,
+        223
+      ],
+      "binaryOut": [
+        218,
+        222,
+        223
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Try the elevator.",
+        "Err\u2026 Do you have an appointment\u2026?\nYou need to sign in here\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 222,
+      "runtimeOut": [
+        220
+      ],
+      "binaryOut": [
+        220
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Free Food!!!",
+        "Free food\u2026 I am pretty hungry\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 223,
+      "runtimeOut": [
+        224
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Err\u2026 Welcome. Um\u2026 Do you have any Business here\u2026?",
+        "Oh.. Then please leave. Sorry.\n",
+        "Oh.. Umm\u2026 not really."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 224,
+      "runtimeOut": [
+        225
+      ],
+      "binaryOut": [
+        225
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Maybe somewhere else\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 225,
+      "runtimeOut": [
+        226
+      ],
+      "binaryOut": [
+        226
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay finally leave."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 226,
+      "runtimeOut": [
+        227
+      ],
+      "binaryOut": [
+        227
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 227,
+      "runtimeOut": [
+        228
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Caina!!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 228,
+      "runtimeOut": [
+        229
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Caina!!",
+        "Huh\u2026? Who is it?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 229,
+      "runtimeOut": [
+        230
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Caina!!",
+        "Huh\u2026? Who is it?",
+        "Hey, I\u2019ve been looking for you\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 230,
+      "runtimeOut": [
+        231
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Caina!!",
+        "Huh\u2026? Who is it?",
+        "Hey, I\u2019ve been looking for you\u2026",
+        "Oh\u2026 Leahin\u2026 It\u2019s you. What are you doing here\u2026?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 231,
+      "runtimeOut": [
+        232
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Caina!!",
+        "Huh\u2026? Who is it?",
+        "Hey, I\u2019ve been looking for you\u2026",
+        "Oh\u2026 Leahin\u2026 It\u2019s you. What are you doing here\u2026?",
+        "Oh, Err\u2026 I was visiting\u2026\nAnd I need to ask, can I stay at your house for a while?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 232,
+      "runtimeOut": [
+        233
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Well\u2026 are you gonna finish your meal?",
+        "\u2026Hmm? Oh, sorry\u2026\nIt\u2019s just I was thinking\u2026",
+        "Thinking what?",
+        "It\u2019s the trip tomorrow\u2026\nThis is probably the last time I\u2019ll ever be here\u2026",
+        "Wait\u2026 What? You\u2019re leaving forever?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 233,
+      "runtimeOut": [
+        234
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Well, okay\u2026\nWe\u2019ll keep in touch and still be friends, right?",
+        "Oh.. Yes, I do.\n\n",
+        "Of course."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 234,
+      "runtimeOut": [
+        235
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Your arm\u2026 I never noticed it before\u2026 \nYou always wore a glove over it\u2026",
+        "Of course."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 235,
+      "runtimeOut": [
+        236
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Your arm\u2026 I never noticed it before\u2026 \nYou always wore a glove over it\u2026",
+        "My arm\u2026 you mean this?",
+        "\u2026Yah\u2026",
+        "And you\u2019re wondering how I got it?",
+        "It\u2019s from a long time ago\u2026 \nIt\u2026 It doesn\u2019t matter now."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 236,
+      "runtimeOut": [
+        237
+      ],
+      "binaryOut": [
+        237
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Come on\u2026 we\u2019re leaving.\nDon\u2019t worry about the trash\u2026 They\u2019ll clean it up.",
+        "Yu-gi-oh!!"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 237,
+      "runtimeOut": [
+        238
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Look familiar?"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 238,
+      "runtimeOut": [
+        239
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "You don\u2019t know where I live, right?\nThen follow me."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 239,
+      "runtimeOut": [
+        240
+      ],
+      "binaryOut": [
+        240
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 240,
+      "runtimeOut": [
+        241
+      ],
+      "binaryOut": [
+        241
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 241,
+      "runtimeOut": [
+        242
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "It\u2019s in here.\nCome inside, You\u2019re tired, right?",
+        "Well, I haven\u2019t slept for days\u2026\nI guess I am.",
+        "You guess?",
+        "Well, I am.\n",
+        "Allright, let\u2019s go."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 242,
+      "runtimeOut": [
+        243
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 243,
+      "runtimeOut": [
+        244
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Over here!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 244,
+      "runtimeOut": [
+        245
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Over here!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 245,
+      "runtimeOut": [
+        246
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Over here!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 246,
+      "runtimeOut": [
+        247
+      ],
+      "binaryOut": [
+        247
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Over here!",
+        "Come on, hurry up!",
+        "Admiring my beautiful form, are you?"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 247,
+      "runtimeOut": [
+        248
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 248,
+      "runtimeOut": [
+        249
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 249,
+      "runtimeOut": [
+        250
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "PURE AWESOMENESS!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 250,
+      "runtimeOut": [
+        251
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 251,
+      "runtimeOut": [
+        252
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 252,
+      "runtimeOut": [
+        253
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Over here."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 253,
+      "runtimeOut": [
+        254,
+        255
+      ],
+      "binaryOut": [
+        254,
+        255
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Over here."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 254,
+      "runtimeOut": [
+        255
+      ],
+      "binaryOut": [
+        255
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 255,
+      "runtimeOut": [
+        256
+      ],
+      "binaryOut": [
+        256
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 256,
+      "runtimeOut": [
+        257
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 257,
+      "runtimeOut": [
+        258
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "So, this is your apartment\u2026?\nNot really what I expected\u2026",
+        "Not what you expected?\nWhy? \u2026Because It\u2019s so messy?",
+        "Yeah\u2026 That would be it\u2026",
+        "Well\u2026 You can enjoy it to the fullest extent.  \nI\u2019ve got to take a shower. If you really want, there\u2019s some magazines lying around\u2026 read those.",
+        "Ha ha\u2026 wait around while you take a shower? \nI\u2019m pretty good at that\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 258,
+      "runtimeOut": [
+        259
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 259,
+      "runtimeOut": [
+        260,
+        265
+      ],
+      "binaryOut": [
+        260,
+        265
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I\u2019m gonna take a shower\u2026 don\u2019t try anything messed up, okay?\nIf you really want something to do, read some of the magazines lying around."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 260,
+      "runtimeOut": [
+        261
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "That was not funny.",
+        "Yes it was.",
+        "Leave me alone."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 261,
+      "runtimeOut": [
+        262,
+        265
+      ],
+      "binaryOut": [
+        262,
+        265
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "If you really want something to do, read some of the magazines lying around.\nAnd leave me alone, seriously.",
+        "Lol aftertime"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 262,
+      "runtimeOut": [
+        263
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Do you want me to friggin\u2019 rip your head off?? \nLEAVE ME THE HECK ALONE!!"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 263,
+      "runtimeOut": [
+        264,
+        265
+      ],
+      "binaryOut": [
+        264,
+        265
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "If you really want something to do, read some of the magazines lying around.\nAnd leave me alone, seriously."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 264,
+      "runtimeOut": [
+        265
+      ],
+      "binaryOut": [
+        265
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "If you really want something to do, read some of the magazines lying around.\nAnd leave me alone, seriously.",
+        "I\u2019d rather not\u2026 She\u2019ll probably take up that threat."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 265,
+      "runtimeOut": [
+        266
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 266,
+      "runtimeOut": [
+        267
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "HEADLINE!! Studies Show you should exercise.\nDarn strait, it\u2019s true! Well, this is filler space so I have to make up some sort filler for the headline and articles. And here\u2019s some random Picture!!1!",
+        "Yah\u2026. Lots of filler mnn hnn.\nThis is gonna take me a while.\nWell you should exercise.  Mr. T agrees, right?\nHe\u2019s cool. For some reason I keep putting him in the game.",
+        "Like ur mom sez, you should excersize somewhat every day until you die of starvation.",
+        "Oh rly you sez? \nYah rly I sez bak.\nWhy don\u2019t you just ignore all this pointless filler and continue with ur life?\nI already lost mine\u2026\n\n*Peace Out*",
+        "Don\u2019t Run With Scissors!!!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 267,
+      "runtimeOut": [
+        268
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "What kind of crap magazine is this\u2026?"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 268,
+      "runtimeOut": [
+        269,
+        270
+      ],
+      "binaryOut": [
+        269,
+        270
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "(first page)",
+        "HEADLINE!! Studies Show you should exercise.\nDarn strait, it\u2019s true! Well, this is filler space so I have to make up some sort filler for the headline and articles. And here\u2019s some random Picture!!1!",
+        "Yah\u2026. Lots of filler mnn hnn.\nThis is gonna take me a while.\nWell you should exercise.  Mr. T agrees, right?\nHe\u2019s cool. For some reason I keep putting him in the game.",
+        "Like ur mom sez, you should excersize somewhat every day until you die of starvation.",
+        "Oh rly you sez? \nYah rly I sez bak.\nWhy don\u2019t you just ignore all this pointless filler and continue with ur life?\nI already lost mine\u2026\n\n*Peace Out*"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 269,
+      "runtimeOut": [
+        268
+      ],
+      "binaryOut": [
+        268
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "SPOTCO",
+        "-Weekly Magazine-\n",
+        "\nIssue twenty-somethingth",
+        "This week, We Interview random people!",
+        "And plus,\nWhere do babies come from? Do you know? Do you really want to know?\nFind Out!"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 270,
+      "runtimeOut": [
+        268,
+        271
+      ],
+      "binaryOut": [
+        268,
+        271
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "2nd page.",
+        "Are you having fun?\nHelp me conquer my greatest insecurities and send me feedback at\nmootothemax@gmail.com. Plz or I will li3k die of shame.",
+        "Could you say \u201cno\u201d to a face like this?",
+        "We wanna know. For personal reasons. Enter in our latest poll and let us see.\nP.S. Pugs PWN\n",
+        "BILLY: PLEASE REPORT TO TEH OFFICE; UR MOM IS LOOKING FOR U."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 271,
+      "runtimeOut": [
+        270,
+        272
+      ],
+      "binaryOut": [
+        270,
+        272
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Last actual page",
+        "Them peoples won\u2019t leave me alone!\nHere we interview random people, as advertised in teh cover.\n(us): So how are you today?\nPOO: What? Who are you?\nBUT: Yah seriously leave us alone.\nMOM: Would this happen to be one of them candid camera taped reviews?\n(us): Kinda\u2026 If u look at it that way\u2026\nBUT: wait\u2026 are our names being made into hilarious acronyms?\n(us): Kinda\u2026\nPOO: Leave us the F&%$ alone.\nSo there you have it. \u2013 success!",
+        "With Sweet Mercy!",
+        "Will The Real Slim Shady Please Report To The Principal\u2019s Office",
+        "Yahoo! I\u2019m-a almost done wit this magazine!\nDarn you must agree making a magazine full of filler is hecka annoying, yet I somehow did it! I hope you enjoyed it more than I did! I doubt anyone actually read all the articles! Ah well!"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 272,
+      "runtimeOut": [
+        271,
+        273
+      ],
+      "binaryOut": [
+        271,
+        273
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Back page. Puttin\u2019 I an Advertissme later here, rright?",
+        "(More ads)",
+        "Free Candy for little kids!",
+        "Just step inside the van! ",
+        "Do you like puppies?"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 273,
+      "runtimeOut": [
+        274
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Shameless waste of time eh? Ahahhahahahhahahahaha\u2026. I dunno."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 274,
+      "runtimeOut": [
+        275
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "That was\u2026dumb\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 275,
+      "runtimeOut": [
+        276
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "That was\u2026dumb\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 276,
+      "runtimeOut": [
+        277
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "That was\u2026dumb\u2026",
+        "Well now\u2026 having fun?",
+        "How can you read these magazines? They\u2019re just so\u2026 dumb.",
+        "\u2026Whatever."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 277,
+      "runtimeOut": [
+        278
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 278,
+      "runtimeOut": [
+        279
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Well, Leahin\u2026 I was just wondering\u2026 what are you going to do now?",
+        "I don\u2019t know\u2026 probably leave this planet\u2026live somewhere else.",
+        "Live somewhere else? Do you have any idea where?",
+        "Somewhere nice and warm.\nPreferably.\n",
+        "The corporation\u2026 won\u2019t they find you?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 279,
+      "runtimeOut": [
+        280
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Well, Leahin\u2026 I was just wondering\u2026 what are you going to do now?",
+        "Live somewhere else? Do you have any idea where?",
+        "The corporation\u2026 won\u2019t they find you?",
+        "So\u2026 you\u2019ve got everything all nice and planned out?",
+        "Well\u2026 good night. For the last time, probably."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 280,
+      "runtimeOut": [
+        281
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 281,
+      "runtimeOut": [
+        282
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 282,
+      "runtimeOut": [
+        283
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 283,
+      "runtimeOut": [
+        284
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 284,
+      "runtimeOut": [
+        285
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 285,
+      "runtimeOut": [
+        286
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "(The next morning)",
+        "Cinematic effect??"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 286,
+      "runtimeOut": [
+        287
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Sup dudes. 12/28/05"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 287,
+      "runtimeOut": [
+        288
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 288,
+      "runtimeOut": [
+        289
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 289,
+      "runtimeOut": [
+        290
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 290,
+      "runtimeOut": [
+        291
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 291,
+      "runtimeOut": [
+        292
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 292,
+      "runtimeOut": [
+        293
+      ],
+      "binaryOut": [
+        293
+      ],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 293,
+      "runtimeOut": [
+        294
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "If you\u2019ve ever noticed, I used to re-draw every character almost every scene. Now, that I got Photoshop I just keep on reusing the same sprites.\nLol?\n1/9/06 didn\u2019t work on much\u2026",
+        "So\u2026 This is it\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 294,
+      "runtimeOut": [
+        295
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "So\u2026 This is it\u2026",
+        "This is probably the last I\u2019ll ever see of you, right?",
+        "Why say that?",
+        "You\u2019re running away\u2026 Now you\u2019re at their mercy. You need to stand up and fight back!",
+        "That\u2019s probably not the best idea\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 295,
+      "runtimeOut": [
+        296
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "I was just joking\u2026 \nWell, wherever you\u2019re going, good luck and don\u2019t like\u2026 die\u2026 you know?",
+        "That\u2019s probably not the best idea\u2026",
+        "I won\u2019t, I won\u2019t. Don\u2019t worry about it.",
+        "And wherever you\u2019re going\u2026 good luck with whatever.",
+        "Thanks\u2026 means a lot from you\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 296,
+      "runtimeOut": [
+        297
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 297,
+      "runtimeOut": [
+        298
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 298,
+      "runtimeOut": [
+        299
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 299,
+      "runtimeOut": [
+        300
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 300,
+      "runtimeOut": [
+        301
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 301,
+      "runtimeOut": [
+        302
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 302,
+      "runtimeOut": [
+        303
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 303,
+      "runtimeOut": [
+        304
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Omg just look at that GIF technology, like mentioned in the magazine!\nI should a done this earlier! This would have been hecka tough if I didn\u2019t do the gif.\nIf u think this is cool, wait and see what I have in store for you in a few slides."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 304,
+      "runtimeOut": [
+        305
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 305,
+      "runtimeOut": [
+        306
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u2026hello?",
+        "Oh, Diamv it\u2019s you\u2026",
+        "\u2026What about it?",
+        "Yeah I\u2019m coming\u2026",
+        "You\u2019ve got business to attend to?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 306,
+      "runtimeOut": [
+        307
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 307,
+      "runtimeOut": [
+        308
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 308,
+      "runtimeOut": [
+        309
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay more gif\u2019s like I said. This is gonna be cool.",
+        "That\u2019s strange\u2026 somebody\u2019s following me\u2026",
+        "Show yourself!\n",
+        "Urk\u2026",
+        "HAhAHa! It\u2019s me! Not expecting that, were you?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 309,
+      "runtimeOut": [
+        310
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Err\u2026 I landed on grass and only sustained minor injuries\u2026",
+        "HAhAHa\u2026 Tis\u2019 not reason of  myself. I just do as told, see?",
+        "Ah, yes, for the decision has already been made!",
+        "Oh\u2026 I see\u2026 Everything all makes sense now\u2026\n**SARCASM**",
+        "Why do you keep following me... Why do you want me dead?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 310,
+      "runtimeOut": [
+        311
+      ],
+      "binaryOut": [
+        311
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "You thought I was gonna let you off without at least another battle?",
+        "I won\u2019t be fighting you this time\u2026\nThough I do have something just as good to take my place\u2026",
+        "Hey! Come back here! \nWhat the crap is this thing? ",
+        "-Shot",
+        "Activating Force Field\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 311,
+      "runtimeOut": [
+        312
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "TEXT PROMPT!\nYay TEXT PROMPT!\nI HEARTS THE TEXT\nPROMPT BECAUSE THIS \nIS TEH FILLER TEXT\u2026\nMEH WHAT DO YOU \nEXPECT FOR ME TO SAY?\nRANDOM JARGON, LOL."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 312,
+      "runtimeOut": [
+        313
+      ],
+      "binaryOut": [
+        313
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 0",
+        "GOBLINs-3type missile",
+        "Shield damage 10",
+        "Jan.24.06\nA gif background\u2026trying something new\u2026 I hope It won\u2019t lag\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 313,
+      "runtimeOut": [
+        314
+      ],
+      "binaryOut": [
+        314
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 0",
+        "GOBLINs-3type missile",
+        "Shield damage 10",
+        "After first round of firing\u2026"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 314,
+      "runtimeOut": [
+        315,
+        323
+      ],
+      "binaryOut": [
+        315,
+        323
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 0",
+        "#OUT OF MISSILES#",
+        "Beginning self-destruct process\u2026 not gonna be fun\u2026 Stupid un-linearity\u2026 just more work for me\u2026 and there\u2019s setting the music, on 3-diffirent branching paths!!! NOO!!     YAR!!! So much work ahead\u2026   -1/27/06",
+        "-Shot"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 315,
+      "runtimeOut": [
+        316,
+        331
+      ],
+      "binaryOut": [
+        316,
+        331
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 0",
+        "debug\n3. shot",
+        "-Shot",
+        "                   2\u2026                  "
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 316,
+      "runtimeOut": [
+        317,
+        332
+      ],
+      "binaryOut": [
+        317,
+        332
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 0",
+        "debug\n3. Shot\n2. shot",
+        "-Shot",
+        "                   1\u2026                  "
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 317,
+      "runtimeOut": [
+        318
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Hull Damage 10",
+        "debug\n3. Shot\n2. Shot\nShot\nDEAD!",
+        "-Shot",
+        "                   0\u2026                  "
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 318,
+      "runtimeOut": [
+        319
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 319,
+      "runtimeOut": [
+        320
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 320,
+      "runtimeOut": [
+        321
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 321,
+      "runtimeOut": [
+        322
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Err\u2026."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 322,
+      "runtimeOut": [],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "And You were so close to winning\u2026",
+        "You sujxx!!11!"
+      ],
+      "leavePaths": [
+        "restart_only"
+      ]
+    },
+    {
+      "slide": 323,
+      "runtimeOut": [
+        324
+      ],
+      "binaryOut": [
+        324
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Shield Damage 0",
+        "debug\n3. missile",
+        "                   2\u2026                  ",
+        "SWE-IV Missile",
+        "-Shot"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 324,
+      "runtimeOut": [
+        325
+      ],
+      "binaryOut": [
+        325
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 0",
+        "debug\n3. Missile\n2. Shot",
+        "                   1\u2026                  ",
+        "SHIELD RELEASE"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 325,
+      "runtimeOut": [
+        326
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Hull Damage 10",
+        "debug\n3. Missile\n2. Shot\n1. Shot\nDEAD!",
+        "                   0\u2026                  ",
+        "SELF-DESTRUCT"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 326,
+      "runtimeOut": [
+        327
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 327,
+      "runtimeOut": [
+        328
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 328,
+      "runtimeOut": [
+        329
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 329,
+      "runtimeOut": [
+        330
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Err\u2026."
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 330,
+      "runtimeOut": [],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "That was pretty challenging, eh?",
+        "You sujxx!!11!"
+      ],
+      "leavePaths": [
+        "restart_only"
+      ]
+    },
+    {
+      "slide": 331,
+      "runtimeOut": [
+        325
+      ],
+      "binaryOut": [
+        325
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield Damage 0",
+        "debug\n3. Shot\n2. Missile",
+        "                   1\u2026                  ",
+        "SHIELD RELEASE"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 332,
+      "runtimeOut": [
+        333
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Hull damage 25",
+        "debug\n3. Shot\n2. Shot\n1. Missile\nWIN!",
+        "-Shot",
+        "SWE-IV Missile"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 333,
+      "runtimeOut": [
+        334
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 334,
+      "runtimeOut": [
+        335
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 335,
+      "runtimeOut": [
+        336
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 336,
+      "runtimeOut": [
+        337
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 337,
+      "runtimeOut": [
+        338
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "You\u2019re here!",
+        "Oh\u2026 it\u2019s you\u2026\nHow are you not dead?",
+        "Hah, that probe you sent to stop me was nothing!",
+        "Now\u2019s about the time I make another dazzling escape\u2026",
+        "HEY!\nYou\u2019re not going anywhere!\nTell me, Why are you here? What does the Corporation want?"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 338,
+      "runtimeOut": [
+        339
+      ],
+      "binaryOut": [
+        339
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "0",
+        "25",
+        "-shot",
+        "Tell me everything, or you\u2019re going down!",
+        "Just leave me alone."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 339,
+      "runtimeOut": [
+        340
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Same as Last time, same as last time, same as last time.\nWasn\u2019t that last battle laggy as heck?\nDoesn\u2019t this part feel so \n\u201cSilky smooth\u201d?\nWell, this is the last part of this projectstar. Has fun."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 340,
+      "runtimeOut": [
+        341
+      ],
+      "binaryOut": [
+        341
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield damage 15",
+        "20",
+        "25",
+        "0"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 341,
+      "runtimeOut": [
+        342
+      ],
+      "binaryOut": [
+        342
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield damage 15",
+        "Primary Canon Fire",
+        "MISS",
+        "3rd menu,\nLast menu"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 342,
+      "runtimeOut": [
+        343
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        " Double Laser",
+        "Shield damage 15",
+        "Last fire\nSHOT",
+        "-Shot",
+        "25"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 343,
+      "runtimeOut": [
+        344
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay hax\nProbe",
+        "-Shot",
+        "25",
+        "0",
+        "Mechanical Disruption Probe"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 344,
+      "runtimeOut": [
+        345
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay hax\nProbe",
+        "-Shot",
+        "25",
+        "0"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 345,
+      "runtimeOut": [
+        346
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay hax\nProbe",
+        "-Shot",
+        "25",
+        "0"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 346,
+      "runtimeOut": [
+        347
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay hax\nProbe",
+        "-Shot",
+        "25",
+        "0",
+        "Flashbang!"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 347,
+      "runtimeOut": [
+        348
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Yay hax\nProbe",
+        "-Shot",
+        "25",
+        "0",
+        "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ]
+    },
+    {
+      "slide": 348,
+      "runtimeOut": [
+        349
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Arrgg\u2026 How did you\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 349,
+      "runtimeOut": [
+        350
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 350,
+      "runtimeOut": [
+        351
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "\u2026\u2026\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 351,
+      "runtimeOut": [
+        352
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 352,
+      "runtimeOut": [
+        353
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Omg this picture took the LONGEST time EVER to draw. I mean, the planet itself took at least 20 mins alone\u2026 And it doesn\u2019t even look that good\u2026 Was so much easier on paper\u2026 And it actually looked really good too\u2026\n2/24/06",
+        "\u2026\u2026.",
+        "\u2026I wonder how Leahin\u2019s doing\u2026"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 353,
+      "runtimeOut": [
+        354
+      ],
+      "binaryOut": [],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Hey.. I\u2019m back.",
+        "So you\u2019re finally here? \nWhat took you so long?",
+        "\u2026business\u2026 Don't know\u2026 stuff\u2026.",
+        "Whatever.\nThen since you\u2019re here\u2026 lets go.",
+        "Of course."
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ]
+    },
+    {
+      "slide": 354,
+      "runtimeOut": [
+        355
+      ],
+      "binaryOut": [
+        355
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Whatever.\nThen since you\u2019re here\u2026 lets go.",
+        "Of course.",
+        "To Be Continued",
+        "End of PROJECTSTAR part 1",
+        "Press ESC to Quit"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 355,
+      "runtimeOut": [
+        356,
+        357,
+        358
+      ],
+      "binaryOut": [
+        356,
+        357,
+        358
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Whatever.\nThen since you\u2019re here\u2026 lets go.",
+        "Of course.",
+        "2005-2006 SPOTCO\u00a9",
+        "Extras Menu",
+        "-Credits"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 356,
+      "runtimeOut": [
+        355
+      ],
+      "binaryOut": [
+        355
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "-Projectstar Part 1-\n2005-2006 Spotco Mootothemax@gmail.com\nDesigner- Shiny\nArtist- Shiny\nProgrammer- Shiny\nAll that other crap- Shiny\nMusic from Nobuo Uematsu, the awesomest music composer ever.\nSpecial Thanks to:\nDavid,\nBrian, \nColin, \nJosh \nand Spencer \nfor help early on.\nStan is a communist.\nThanks for playin\u2019",
+        "Back?"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 357,
+      "runtimeOut": [
+        355
+      ],
+      "binaryOut": [
+        355
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Aww Yeah.",
+        "Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    },
+    {
+      "slide": 358,
+      "runtimeOut": [
+        355
+      ],
+      "binaryOut": [
+        355
+      ],
+      "externalRuntimeOut": [],
+      "texts": [
+        "Sound Test",
+        "-Title Theme (FFVIII Main theme)",
+        "-Battle 1 (FFVIII Laguna\u2019s Battle)",
+        "-Train (FFVI Terra)",
+        "- Battle 2 (FFVII Still More Fighting)"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ]
+    }
+  ],
+  "islandDetails": [],
+  "zeroInboundSlides": [],
+  "keySlides": {
+    "17": {
+      "slide": 17,
+      "texts": [
+        "15",
+        "0",
+        "Flare cannon",
+        "-shot",
+        "Hull Damage 10"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ],
+      "autoAdvance": false,
+      "stageClick": true,
+      "hotspots": []
+    },
+    "21": {
+      "slide": 21,
+      "texts": [
+        "0",
+        "5",
+        "-shot",
+        "-missile",
+        "That was a close one\u2026 I better finish this quick.\nA round of missiles will do him in."
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ],
+      "autoAdvance": false,
+      "stageClick": false,
+      "hotspots": [
+        {
+          "action": "hyperlink",
+          "targetSlide": 22,
+          "resolveMethod": "binary_label",
+          "shapeText": "-shot"
+        },
+        {
+          "action": "hyperlink",
+          "targetSlide": 27,
+          "resolveMethod": "binary_label",
+          "shapeText": "-missile"
+        }
+      ]
+    },
+    "34": {
+      "slide": 34,
+      "texts": [
+        "`",
+        "(2.5 parsec radius)",
+        "-=Local map=-",
+        "In order to travel long distances, you need to launch from a Warp Gate.\nThere should be a Warp Gate around here\u2026"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ],
+      "autoAdvance": true,
+      "stageClick": false,
+      "hotspots": [
+        {
+          "action": "none",
+          "targetSlide": null,
+          "resolveMethod": null,
+          "shapeText": null
+        },
+        {
+          "action": "none",
+          "targetSlide": null,
+          "resolveMethod": null,
+          "shapeText": null
+        }
+      ]
+    },
+    "36": {
+      "slide": 36,
+      "texts": [
+        "-=Local map=-",
+        "(2.5 parsec radius)",
+        "Planet** 7392-REN\n-=info=-\n*gas giant\n*unexplored\n",
+        "**select destination"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ],
+      "autoAdvance": false,
+      "stageClick": false,
+      "hotspots": [
+        {
+          "action": "hyperlink",
+          "targetSlide": 38,
+          "resolveMethod": "binary_label",
+          "shapeText": null
+        },
+        {
+          "action": "hyperlink",
+          "targetSlide": 37,
+          "resolveMethod": "binary_label",
+          "shapeText": null
+        }
+      ]
+    },
+    "42": {
+      "slide": 42,
+      "texts": [
+        "Well, this is the warp gate.\nWhat to do next?",
+        "-Land\n-Continue",
+        "-=option=-"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ],
+      "autoAdvance": false,
+      "stageClick": false,
+      "hotspots": [
+        {
+          "action": "hyperlink",
+          "targetSlide": 44,
+          "resolveMethod": "binary_label",
+          "shapeText": "-Land\r-Continue"
+        },
+        {
+          "action": "hyperlink",
+          "targetSlide": 81,
+          "resolveMethod": "binary_label",
+          "shapeText": "-Land\r-Continue"
+        },
+        {
+          "action": "hyperlink",
+          "targetSlide": 43,
+          "resolveMethod": "binary_label",
+          "shapeText": null
+        }
+      ]
+    },
+    "43": {
+      "slide": 43,
+      "texts": [
+        "\u2026\u2026\u2026..",
+        "-=option=-",
+        "-Land\n-Continue"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ],
+      "autoAdvance": false,
+      "stageClick": false,
+      "hotspots": [
+        {
+          "action": "hyperlink",
+          "targetSlide": 44,
+          "resolveMethod": "binary_label",
+          "shapeText": "-Land\r-Continue"
+        },
+        {
+          "action": "hyperlink",
+          "targetSlide": 81,
+          "resolveMethod": "binary_label",
+          "shapeText": "-Land\r-Continue"
+        }
+      ]
+    },
+    "45": {
+      "slide": 45,
+      "texts": [],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ],
+      "autoAdvance": false,
+      "stageClick": true,
+      "hotspots": []
+    },
+    "46": {
+      "slide": 46,
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ],
+      "autoAdvance": true,
+      "stageClick": false,
+      "hotspots": []
+    },
+    "47": {
+      "slide": 47,
+      "texts": [
+        "First time I drew a full body in this game. Art style changes, like"
+      ],
+      "leavePaths": [
+        "stage_click_interstitial"
+      ],
+      "autoAdvance": false,
+      "stageClick": true,
+      "hotspots": []
+    },
+    "55": {
+      "slide": 55,
+      "texts": [
+        "Hmm\u2026 ",
+        "Legislature Debates,",
+        "Terrorism arrests,\n",
+        "Assassinations,",
+        "Every day life.\nStuff I know YOU wouldn\u2019t care about.",
+        "   Back"
+      ],
+      "leavePaths": [
+        "non_self_hyperlink"
+      ],
+      "autoAdvance": false,
+      "stageClick": false,
+      "hotspots": [
+        {
+          "action": "hyperlink",
+          "targetSlide": 52,
+          "resolveMethod": "binary_label",
+          "shapeText": "   Back"
+        }
+      ]
+    },
+    "20": {
+      "slide": 20,
+      "texts": [
+        "0",
+        "Flare cannon",
+        "MISS",
+        "5",
+        "-shot"
+      ],
+      "leavePaths": [
+        "auto_advance"
+      ],
+      "autoAdvance": true,
+      "stageClick": false,
+      "hotspots": [
+        {
+          "action": "none",
+          "targetSlide": null,
+          "resolveMethod": null,
+          "shapeText": "-shot"
+        }
+      ]
+    },
+    "25": {
+      "slide": 25,
+      "texts": [],
+      "leavePaths": [
+        "auto_advance"
+      ],
+      "autoAdvance": true,
+      "stageClick": false,
+      "hotspots": []
+    }
+  },
+  "policy": {
+    "doNotInventForwardBridges": true,
+    "reason": "All navigation atoms are decoded; early loop and islands match binary labels. Playability promotes (continue/self/combat-all-self) already applied; further story bridges need human PPT oracle or proven misparse."
+  }
+}

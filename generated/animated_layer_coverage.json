@@ -1,0 +1,8257 @@
+{
+  "format": "projectstar-animated-layer-coverage-v1",
+  "summary": {
+    "shapeTargets": 1373,
+    "animatedLayers": 1373,
+    "coveredTargets": 1373,
+    "slidesWithAnimatedTargets": 228,
+    "layerTypes": {
+      "image": 269,
+      "shape": 542,
+      "text": 562
+    },
+    "missingLayers": 0,
+    "missingAnimatedFlags": 0,
+    "animatedWithoutTargets": 0
+  },
+  "coveredTargets": [
+    {
+      "slide": 1,
+      "shapeId": 154636,
+      "layerId": "slide-001-shape-154636",
+      "type": "text"
+    },
+    {
+      "slide": 1,
+      "shapeId": 154637,
+      "layerId": "slide-001-shape-154637",
+      "type": "image"
+    },
+    {
+      "slide": 3,
+      "shapeId": 4113,
+      "layerId": "slide-003-shape-4113",
+      "type": "image"
+    },
+    {
+      "slide": 4,
+      "shapeId": 5129,
+      "layerId": "slide-004-shape-5129",
+      "type": "image"
+    },
+    {
+      "slide": 4,
+      "shapeId": 5130,
+      "layerId": "slide-004-shape-5130",
+      "type": "image"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6467,
+      "layerId": "slide-005-shape-6467",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6468,
+      "layerId": "slide-005-shape-6468",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6469,
+      "layerId": "slide-005-shape-6469",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6470,
+      "layerId": "slide-005-shape-6470",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6471,
+      "layerId": "slide-005-shape-6471",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6472,
+      "layerId": "slide-005-shape-6472",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6473,
+      "layerId": "slide-005-shape-6473",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6474,
+      "layerId": "slide-005-shape-6474",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6475,
+      "layerId": "slide-005-shape-6475",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6476,
+      "layerId": "slide-005-shape-6476",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6477,
+      "layerId": "slide-005-shape-6477",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6478,
+      "layerId": "slide-005-shape-6478",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6479,
+      "layerId": "slide-005-shape-6479",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6480,
+      "layerId": "slide-005-shape-6480",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6481,
+      "layerId": "slide-005-shape-6481",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6482,
+      "layerId": "slide-005-shape-6482",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6483,
+      "layerId": "slide-005-shape-6483",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6484,
+      "layerId": "slide-005-shape-6484",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6485,
+      "layerId": "slide-005-shape-6485",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6486,
+      "layerId": "slide-005-shape-6486",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6487,
+      "layerId": "slide-005-shape-6487",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6488,
+      "layerId": "slide-005-shape-6488",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6489,
+      "layerId": "slide-005-shape-6489",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6490,
+      "layerId": "slide-005-shape-6490",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6491,
+      "layerId": "slide-005-shape-6491",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6492,
+      "layerId": "slide-005-shape-6492",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6493,
+      "layerId": "slide-005-shape-6493",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6494,
+      "layerId": "slide-005-shape-6494",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6495,
+      "layerId": "slide-005-shape-6495",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6496,
+      "layerId": "slide-005-shape-6496",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6497,
+      "layerId": "slide-005-shape-6497",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6498,
+      "layerId": "slide-005-shape-6498",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6499,
+      "layerId": "slide-005-shape-6499",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6500,
+      "layerId": "slide-005-shape-6500",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6501,
+      "layerId": "slide-005-shape-6501",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6502,
+      "layerId": "slide-005-shape-6502",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6503,
+      "layerId": "slide-005-shape-6503",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6504,
+      "layerId": "slide-005-shape-6504",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6505,
+      "layerId": "slide-005-shape-6505",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6506,
+      "layerId": "slide-005-shape-6506",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6507,
+      "layerId": "slide-005-shape-6507",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6508,
+      "layerId": "slide-005-shape-6508",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6509,
+      "layerId": "slide-005-shape-6509",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6510,
+      "layerId": "slide-005-shape-6510",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6511,
+      "layerId": "slide-005-shape-6511",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6512,
+      "layerId": "slide-005-shape-6512",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6513,
+      "layerId": "slide-005-shape-6513",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6514,
+      "layerId": "slide-005-shape-6514",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6515,
+      "layerId": "slide-005-shape-6515",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6516,
+      "layerId": "slide-005-shape-6516",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6517,
+      "layerId": "slide-005-shape-6517",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6518,
+      "layerId": "slide-005-shape-6518",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6519,
+      "layerId": "slide-005-shape-6519",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6520,
+      "layerId": "slide-005-shape-6520",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6521,
+      "layerId": "slide-005-shape-6521",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6522,
+      "layerId": "slide-005-shape-6522",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6523,
+      "layerId": "slide-005-shape-6523",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6524,
+      "layerId": "slide-005-shape-6524",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6525,
+      "layerId": "slide-005-shape-6525",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6526,
+      "layerId": "slide-005-shape-6526",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6527,
+      "layerId": "slide-005-shape-6527",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6528,
+      "layerId": "slide-005-shape-6528",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6529,
+      "layerId": "slide-005-shape-6529",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6530,
+      "layerId": "slide-005-shape-6530",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6531,
+      "layerId": "slide-005-shape-6531",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6532,
+      "layerId": "slide-005-shape-6532",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6533,
+      "layerId": "slide-005-shape-6533",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6534,
+      "layerId": "slide-005-shape-6534",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6535,
+      "layerId": "slide-005-shape-6535",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6537,
+      "layerId": "slide-005-shape-6537",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6538,
+      "layerId": "slide-005-shape-6538",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6539,
+      "layerId": "slide-005-shape-6539",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6540,
+      "layerId": "slide-005-shape-6540",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6541,
+      "layerId": "slide-005-shape-6541",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6542,
+      "layerId": "slide-005-shape-6542",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6543,
+      "layerId": "slide-005-shape-6543",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6544,
+      "layerId": "slide-005-shape-6544",
+      "type": "shape"
+    },
+    {
+      "slide": 5,
+      "shapeId": 6572,
+      "layerId": "slide-005-shape-6572",
+      "type": "image"
+    },
+    {
+      "slide": 6,
+      "shapeId": 7181,
+      "layerId": "slide-006-shape-7181",
+      "type": "image"
+    },
+    {
+      "slide": 6,
+      "shapeId": 7183,
+      "layerId": "slide-006-shape-7183",
+      "type": "text"
+    },
+    {
+      "slide": 7,
+      "shapeId": 8200,
+      "layerId": "slide-007-shape-8200",
+      "type": "image"
+    },
+    {
+      "slide": 7,
+      "shapeId": 8201,
+      "layerId": "slide-007-shape-8201",
+      "type": "text"
+    },
+    {
+      "slide": 8,
+      "shapeId": 9221,
+      "layerId": "slide-008-shape-9221",
+      "type": "image"
+    },
+    {
+      "slide": 8,
+      "shapeId": 9222,
+      "layerId": "slide-008-shape-9222",
+      "type": "text"
+    },
+    {
+      "slide": 9,
+      "shapeId": 10245,
+      "layerId": "slide-009-shape-10245",
+      "type": "image"
+    },
+    {
+      "slide": 9,
+      "shapeId": 10246,
+      "layerId": "slide-009-shape-10246",
+      "type": "text"
+    },
+    {
+      "slide": 9,
+      "shapeId": 10247,
+      "layerId": "slide-009-shape-10247",
+      "type": "image"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11271,
+      "layerId": "slide-010-shape-11271",
+      "type": "image"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11272,
+      "layerId": "slide-010-shape-11272",
+      "type": "text"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11277,
+      "layerId": "slide-010-shape-11277",
+      "type": "text"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11278,
+      "layerId": "slide-010-shape-11278",
+      "type": "text"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11279,
+      "layerId": "slide-010-shape-11279",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11290,
+      "layerId": "slide-010-shape-11290",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11291,
+      "layerId": "slide-010-shape-11291",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11292,
+      "layerId": "slide-010-shape-11292",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11293,
+      "layerId": "slide-010-shape-11293",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11294,
+      "layerId": "slide-010-shape-11294",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11295,
+      "layerId": "slide-010-shape-11295",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11296,
+      "layerId": "slide-010-shape-11296",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11298,
+      "layerId": "slide-010-shape-11298",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11299,
+      "layerId": "slide-010-shape-11299",
+      "type": "shape"
+    },
+    {
+      "slide": 10,
+      "shapeId": 11300,
+      "layerId": "slide-010-shape-11300",
+      "type": "text"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13319,
+      "layerId": "slide-012-shape-13319",
+      "type": "image"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13321,
+      "layerId": "slide-012-shape-13321",
+      "type": "text"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13322,
+      "layerId": "slide-012-shape-13322",
+      "type": "shape"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13323,
+      "layerId": "slide-012-shape-13323",
+      "type": "shape"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13325,
+      "layerId": "slide-012-shape-13325",
+      "type": "shape"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13326,
+      "layerId": "slide-012-shape-13326",
+      "type": "shape"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13327,
+      "layerId": "slide-012-shape-13327",
+      "type": "shape"
+    },
+    {
+      "slide": 12,
+      "shapeId": 13331,
+      "layerId": "slide-012-shape-13331",
+      "type": "text"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14354,
+      "layerId": "slide-013-shape-14354",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14355,
+      "layerId": "slide-013-shape-14355",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14356,
+      "layerId": "slide-013-shape-14356",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14357,
+      "layerId": "slide-013-shape-14357",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14358,
+      "layerId": "slide-013-shape-14358",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14359,
+      "layerId": "slide-013-shape-14359",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14360,
+      "layerId": "slide-013-shape-14360",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14361,
+      "layerId": "slide-013-shape-14361",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14362,
+      "layerId": "slide-013-shape-14362",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14363,
+      "layerId": "slide-013-shape-14363",
+      "type": "shape"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14364,
+      "layerId": "slide-013-shape-14364",
+      "type": "text"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14367,
+      "layerId": "slide-013-shape-14367",
+      "type": "text"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14368,
+      "layerId": "slide-013-shape-14368",
+      "type": "image"
+    },
+    {
+      "slide": 13,
+      "shapeId": 14370,
+      "layerId": "slide-013-shape-14370",
+      "type": "text"
+    },
+    {
+      "slide": 14,
+      "shapeId": 16392,
+      "layerId": "slide-014-shape-16392",
+      "type": "text"
+    },
+    {
+      "slide": 14,
+      "shapeId": 16394,
+      "layerId": "slide-014-shape-16394",
+      "type": "shape"
+    },
+    {
+      "slide": 14,
+      "shapeId": 16395,
+      "layerId": "slide-014-shape-16395",
+      "type": "text"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18438,
+      "layerId": "slide-016-shape-18438",
+      "type": "text"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18440,
+      "layerId": "slide-016-shape-18440",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18441,
+      "layerId": "slide-016-shape-18441",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18442,
+      "layerId": "slide-016-shape-18442",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18443,
+      "layerId": "slide-016-shape-18443",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18444,
+      "layerId": "slide-016-shape-18444",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18445,
+      "layerId": "slide-016-shape-18445",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18446,
+      "layerId": "slide-016-shape-18446",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18447,
+      "layerId": "slide-016-shape-18447",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18448,
+      "layerId": "slide-016-shape-18448",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18449,
+      "layerId": "slide-016-shape-18449",
+      "type": "shape"
+    },
+    {
+      "slide": 16,
+      "shapeId": 18450,
+      "layerId": "slide-016-shape-18450",
+      "type": "text"
+    },
+    {
+      "slide": 17,
+      "shapeId": 19463,
+      "layerId": "slide-017-shape-19463",
+      "type": "text"
+    },
+    {
+      "slide": 17,
+      "shapeId": 19477,
+      "layerId": "slide-017-shape-19477",
+      "type": "shape"
+    },
+    {
+      "slide": 17,
+      "shapeId": 19478,
+      "layerId": "slide-017-shape-19478",
+      "type": "text"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21510,
+      "layerId": "slide-019-shape-21510",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21511,
+      "layerId": "slide-019-shape-21511",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21512,
+      "layerId": "slide-019-shape-21512",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21513,
+      "layerId": "slide-019-shape-21513",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21514,
+      "layerId": "slide-019-shape-21514",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21515,
+      "layerId": "slide-019-shape-21515",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21516,
+      "layerId": "slide-019-shape-21516",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21517,
+      "layerId": "slide-019-shape-21517",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21518,
+      "layerId": "slide-019-shape-21518",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21519,
+      "layerId": "slide-019-shape-21519",
+      "type": "shape"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21520,
+      "layerId": "slide-019-shape-21520",
+      "type": "text"
+    },
+    {
+      "slide": 19,
+      "shapeId": 21522,
+      "layerId": "slide-019-shape-21522",
+      "type": "text"
+    },
+    {
+      "slide": 20,
+      "shapeId": 22541,
+      "layerId": "slide-020-shape-22541",
+      "type": "text"
+    },
+    {
+      "slide": 20,
+      "shapeId": 22543,
+      "layerId": "slide-020-shape-22543",
+      "type": "shape"
+    },
+    {
+      "slide": 20,
+      "shapeId": 22544,
+      "layerId": "slide-020-shape-22544",
+      "type": "text"
+    },
+    {
+      "slide": 21,
+      "shapeId": 23567,
+      "layerId": "slide-021-shape-23567",
+      "type": "text"
+    },
+    {
+      "slide": 21,
+      "shapeId": 23580,
+      "layerId": "slide-021-shape-23580",
+      "type": "image"
+    },
+    {
+      "slide": 21,
+      "shapeId": 23581,
+      "layerId": "slide-021-shape-23581",
+      "type": "text"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24582,
+      "layerId": "slide-022-shape-24582",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24583,
+      "layerId": "slide-022-shape-24583",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24584,
+      "layerId": "slide-022-shape-24584",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24585,
+      "layerId": "slide-022-shape-24585",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24586,
+      "layerId": "slide-022-shape-24586",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24587,
+      "layerId": "slide-022-shape-24587",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24588,
+      "layerId": "slide-022-shape-24588",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24589,
+      "layerId": "slide-022-shape-24589",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24590,
+      "layerId": "slide-022-shape-24590",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24591,
+      "layerId": "slide-022-shape-24591",
+      "type": "shape"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24592,
+      "layerId": "slide-022-shape-24592",
+      "type": "text"
+    },
+    {
+      "slide": 22,
+      "shapeId": 24594,
+      "layerId": "slide-022-shape-24594",
+      "type": "text"
+    },
+    {
+      "slide": 23,
+      "shapeId": 25616,
+      "layerId": "slide-023-shape-25616",
+      "type": "text"
+    },
+    {
+      "slide": 23,
+      "shapeId": 25618,
+      "layerId": "slide-023-shape-25618",
+      "type": "shape"
+    },
+    {
+      "slide": 23,
+      "shapeId": 25619,
+      "layerId": "slide-023-shape-25619",
+      "type": "text"
+    },
+    {
+      "slide": 24,
+      "shapeId": 26632,
+      "layerId": "slide-024-shape-26632",
+      "type": "image"
+    },
+    {
+      "slide": 24,
+      "shapeId": 26633,
+      "layerId": "slide-024-shape-26633",
+      "type": "text"
+    },
+    {
+      "slide": 24,
+      "shapeId": 26638,
+      "layerId": "slide-024-shape-26638",
+      "type": "shape"
+    },
+    {
+      "slide": 25,
+      "shapeId": 27661,
+      "layerId": "slide-025-shape-27661",
+      "type": "image"
+    },
+    {
+      "slide": 25,
+      "shapeId": 27662,
+      "layerId": "slide-025-shape-27662",
+      "type": "shape"
+    },
+    {
+      "slide": 25,
+      "shapeId": 27663,
+      "layerId": "slide-025-shape-27663",
+      "type": "shape"
+    },
+    {
+      "slide": 25,
+      "shapeId": 27664,
+      "layerId": "slide-025-shape-27664",
+      "type": "shape"
+    },
+    {
+      "slide": 25,
+      "shapeId": 27665,
+      "layerId": "slide-025-shape-27665",
+      "type": "shape"
+    },
+    {
+      "slide": 25,
+      "shapeId": 27666,
+      "layerId": "slide-025-shape-27666",
+      "type": "shape"
+    },
+    {
+      "slide": 26,
+      "shapeId": 28678,
+      "layerId": "slide-026-shape-28678",
+      "type": "text"
+    },
+    {
+      "slide": 26,
+      "shapeId": 28679,
+      "layerId": "slide-026-shape-28679",
+      "type": "image"
+    },
+    {
+      "slide": 26,
+      "shapeId": 28680,
+      "layerId": "slide-026-shape-28680",
+      "type": "text"
+    },
+    {
+      "slide": 26,
+      "shapeId": 28681,
+      "layerId": "slide-026-shape-28681",
+      "type": "text"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29712,
+      "layerId": "slide-027-shape-29712",
+      "type": "text"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29717,
+      "layerId": "slide-027-shape-29717",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29719,
+      "layerId": "slide-027-shape-29719",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29720,
+      "layerId": "slide-027-shape-29720",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29721,
+      "layerId": "slide-027-shape-29721",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29722,
+      "layerId": "slide-027-shape-29722",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29723,
+      "layerId": "slide-027-shape-29723",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29724,
+      "layerId": "slide-027-shape-29724",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29725,
+      "layerId": "slide-027-shape-29725",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29726,
+      "layerId": "slide-027-shape-29726",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29727,
+      "layerId": "slide-027-shape-29727",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29728,
+      "layerId": "slide-027-shape-29728",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29729,
+      "layerId": "slide-027-shape-29729",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29730,
+      "layerId": "slide-027-shape-29730",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29731,
+      "layerId": "slide-027-shape-29731",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29732,
+      "layerId": "slide-027-shape-29732",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29736,
+      "layerId": "slide-027-shape-29736",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29738,
+      "layerId": "slide-027-shape-29738",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29739,
+      "layerId": "slide-027-shape-29739",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29740,
+      "layerId": "slide-027-shape-29740",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29741,
+      "layerId": "slide-027-shape-29741",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29742,
+      "layerId": "slide-027-shape-29742",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29743,
+      "layerId": "slide-027-shape-29743",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29744,
+      "layerId": "slide-027-shape-29744",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29745,
+      "layerId": "slide-027-shape-29745",
+      "type": "shape"
+    },
+    {
+      "slide": 27,
+      "shapeId": 29746,
+      "layerId": "slide-027-shape-29746",
+      "type": "text"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31756,
+      "layerId": "slide-030-shape-31756",
+      "type": "image"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31757,
+      "layerId": "slide-030-shape-31757",
+      "type": "text"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31758,
+      "layerId": "slide-030-shape-31758",
+      "type": "text"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31759,
+      "layerId": "slide-030-shape-31759",
+      "type": "image"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31760,
+      "layerId": "slide-030-shape-31760",
+      "type": "text"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31761,
+      "layerId": "slide-030-shape-31761",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31762,
+      "layerId": "slide-030-shape-31762",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31763,
+      "layerId": "slide-030-shape-31763",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31764,
+      "layerId": "slide-030-shape-31764",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31765,
+      "layerId": "slide-030-shape-31765",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31766,
+      "layerId": "slide-030-shape-31766",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31767,
+      "layerId": "slide-030-shape-31767",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31768,
+      "layerId": "slide-030-shape-31768",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31769,
+      "layerId": "slide-030-shape-31769",
+      "type": "shape"
+    },
+    {
+      "slide": 30,
+      "shapeId": 31771,
+      "layerId": "slide-030-shape-31771",
+      "type": "shape"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32772,
+      "layerId": "slide-031-shape-32772",
+      "type": "image"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32773,
+      "layerId": "slide-031-shape-32773",
+      "type": "image"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32774,
+      "layerId": "slide-031-shape-32774",
+      "type": "text"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32778,
+      "layerId": "slide-031-shape-32778",
+      "type": "shape"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32780,
+      "layerId": "slide-031-shape-32780",
+      "type": "shape"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32783,
+      "layerId": "slide-031-shape-32783",
+      "type": "shape"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32785,
+      "layerId": "slide-031-shape-32785",
+      "type": "shape"
+    },
+    {
+      "slide": 31,
+      "shapeId": 32786,
+      "layerId": "slide-031-shape-32786",
+      "type": "shape"
+    },
+    {
+      "slide": 33,
+      "shapeId": 34822,
+      "layerId": "slide-033-shape-34822",
+      "type": "image"
+    },
+    {
+      "slide": 33,
+      "shapeId": 34823,
+      "layerId": "slide-033-shape-34823",
+      "type": "text"
+    },
+    {
+      "slide": 33,
+      "shapeId": 34829,
+      "layerId": "slide-033-shape-34829",
+      "type": "text"
+    },
+    {
+      "slide": 33,
+      "shapeId": 34830,
+      "layerId": "slide-033-shape-34830",
+      "type": "shape"
+    },
+    {
+      "slide": 34,
+      "shapeId": 38924,
+      "layerId": "slide-034-shape-38924",
+      "type": "shape"
+    },
+    {
+      "slide": 34,
+      "shapeId": 38925,
+      "layerId": "slide-034-shape-38925",
+      "type": "image"
+    },
+    {
+      "slide": 34,
+      "shapeId": 38926,
+      "layerId": "slide-034-shape-38926",
+      "type": "text"
+    },
+    {
+      "slide": 35,
+      "shapeId": 35866,
+      "layerId": "slide-035-shape-35866",
+      "type": "text"
+    },
+    {
+      "slide": 39,
+      "shapeId": 41993,
+      "layerId": "slide-039-shape-41993",
+      "type": "image"
+    },
+    {
+      "slide": 39,
+      "shapeId": 41994,
+      "layerId": "slide-039-shape-41994",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 41996,
+      "layerId": "slide-039-shape-41996",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 41998,
+      "layerId": "slide-039-shape-41998",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 41999,
+      "layerId": "slide-039-shape-41999",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42000,
+      "layerId": "slide-039-shape-42000",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42001,
+      "layerId": "slide-039-shape-42001",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42002,
+      "layerId": "slide-039-shape-42002",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42003,
+      "layerId": "slide-039-shape-42003",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42004,
+      "layerId": "slide-039-shape-42004",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42005,
+      "layerId": "slide-039-shape-42005",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42006,
+      "layerId": "slide-039-shape-42006",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42007,
+      "layerId": "slide-039-shape-42007",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42008,
+      "layerId": "slide-039-shape-42008",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42009,
+      "layerId": "slide-039-shape-42009",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42010,
+      "layerId": "slide-039-shape-42010",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42011,
+      "layerId": "slide-039-shape-42011",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42012,
+      "layerId": "slide-039-shape-42012",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42013,
+      "layerId": "slide-039-shape-42013",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42014,
+      "layerId": "slide-039-shape-42014",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42015,
+      "layerId": "slide-039-shape-42015",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42016,
+      "layerId": "slide-039-shape-42016",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42017,
+      "layerId": "slide-039-shape-42017",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42018,
+      "layerId": "slide-039-shape-42018",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42019,
+      "layerId": "slide-039-shape-42019",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42020,
+      "layerId": "slide-039-shape-42020",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42021,
+      "layerId": "slide-039-shape-42021",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42022,
+      "layerId": "slide-039-shape-42022",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42023,
+      "layerId": "slide-039-shape-42023",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42024,
+      "layerId": "slide-039-shape-42024",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42025,
+      "layerId": "slide-039-shape-42025",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42026,
+      "layerId": "slide-039-shape-42026",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42027,
+      "layerId": "slide-039-shape-42027",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42028,
+      "layerId": "slide-039-shape-42028",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42029,
+      "layerId": "slide-039-shape-42029",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42030,
+      "layerId": "slide-039-shape-42030",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42031,
+      "layerId": "slide-039-shape-42031",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42032,
+      "layerId": "slide-039-shape-42032",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42033,
+      "layerId": "slide-039-shape-42033",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42034,
+      "layerId": "slide-039-shape-42034",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42035,
+      "layerId": "slide-039-shape-42035",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42036,
+      "layerId": "slide-039-shape-42036",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42037,
+      "layerId": "slide-039-shape-42037",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42038,
+      "layerId": "slide-039-shape-42038",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42039,
+      "layerId": "slide-039-shape-42039",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42040,
+      "layerId": "slide-039-shape-42040",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42041,
+      "layerId": "slide-039-shape-42041",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42042,
+      "layerId": "slide-039-shape-42042",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42043,
+      "layerId": "slide-039-shape-42043",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42044,
+      "layerId": "slide-039-shape-42044",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42045,
+      "layerId": "slide-039-shape-42045",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42046,
+      "layerId": "slide-039-shape-42046",
+      "type": "shape"
+    },
+    {
+      "slide": 39,
+      "shapeId": 42047,
+      "layerId": "slide-039-shape-42047",
+      "type": "shape"
+    },
+    {
+      "slide": 41,
+      "shapeId": 43014,
+      "layerId": "slide-041-shape-43014",
+      "type": "shape"
+    },
+    {
+      "slide": 41,
+      "shapeId": 43016,
+      "layerId": "slide-041-shape-43016",
+      "type": "image"
+    },
+    {
+      "slide": 41,
+      "shapeId": 43017,
+      "layerId": "slide-041-shape-43017",
+      "type": "text"
+    },
+    {
+      "slide": 42,
+      "shapeId": 44039,
+      "layerId": "slide-042-shape-44039",
+      "type": "image"
+    },
+    {
+      "slide": 42,
+      "shapeId": 44044,
+      "layerId": "slide-042-shape-44044",
+      "type": "shape"
+    },
+    {
+      "slide": 42,
+      "shapeId": 44045,
+      "layerId": "slide-042-shape-44045",
+      "type": "image"
+    },
+    {
+      "slide": 42,
+      "shapeId": 44046,
+      "layerId": "slide-042-shape-44046",
+      "type": "text"
+    },
+    {
+      "slide": 42,
+      "shapeId": 44047,
+      "layerId": "slide-042-shape-44047",
+      "type": "text"
+    },
+    {
+      "slide": 42,
+      "shapeId": 44048,
+      "layerId": "slide-042-shape-44048",
+      "type": "text"
+    },
+    {
+      "slide": 42,
+      "shapeId": 44052,
+      "layerId": "slide-042-shape-44052",
+      "type": "text"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49158,
+      "layerId": "slide-043-shape-49158",
+      "type": "image"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49162,
+      "layerId": "slide-043-shape-49162",
+      "type": "image"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49163,
+      "layerId": "slide-043-shape-49163",
+      "type": "image"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49164,
+      "layerId": "slide-043-shape-49164",
+      "type": "text"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49175,
+      "layerId": "slide-043-shape-49175",
+      "type": "shape"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49176,
+      "layerId": "slide-043-shape-49176",
+      "type": "image"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49180,
+      "layerId": "slide-043-shape-49180",
+      "type": "text"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49181,
+      "layerId": "slide-043-shape-49181",
+      "type": "text"
+    },
+    {
+      "slide": 43,
+      "shapeId": 49182,
+      "layerId": "slide-043-shape-49182",
+      "type": "text"
+    },
+    {
+      "slide": 44,
+      "shapeId": 48133,
+      "layerId": "slide-044-shape-48133",
+      "type": "image"
+    },
+    {
+      "slide": 45,
+      "shapeId": 50183,
+      "layerId": "slide-045-shape-50183",
+      "type": "image"
+    },
+    {
+      "slide": 46,
+      "shapeId": 51206,
+      "layerId": "slide-046-shape-51206",
+      "type": "shape"
+    },
+    {
+      "slide": 47,
+      "shapeId": 52230,
+      "layerId": "slide-047-shape-52230",
+      "type": "image"
+    },
+    {
+      "slide": 48,
+      "shapeId": 53256,
+      "layerId": "slide-048-shape-53256",
+      "type": "image"
+    },
+    {
+      "slide": 48,
+      "shapeId": 53257,
+      "layerId": "slide-048-shape-53257",
+      "type": "text"
+    },
+    {
+      "slide": 48,
+      "shapeId": 53258,
+      "layerId": "slide-048-shape-53258",
+      "type": "text"
+    },
+    {
+      "slide": 48,
+      "shapeId": 53259,
+      "layerId": "slide-048-shape-53259",
+      "type": "text"
+    },
+    {
+      "slide": 48,
+      "shapeId": 53263,
+      "layerId": "slide-048-shape-53263",
+      "type": "shape"
+    },
+    {
+      "slide": 50,
+      "shapeId": 56323,
+      "layerId": "slide-050-shape-56323",
+      "type": "text"
+    },
+    {
+      "slide": 50,
+      "shapeId": 56324,
+      "layerId": "slide-050-shape-56324",
+      "type": "text"
+    },
+    {
+      "slide": 50,
+      "shapeId": 56325,
+      "layerId": "slide-050-shape-56325",
+      "type": "image"
+    },
+    {
+      "slide": 50,
+      "shapeId": 56327,
+      "layerId": "slide-050-shape-56327",
+      "type": "image"
+    },
+    {
+      "slide": 50,
+      "shapeId": 56328,
+      "layerId": "slide-050-shape-56328",
+      "type": "text"
+    },
+    {
+      "slide": 51,
+      "shapeId": 58378,
+      "layerId": "slide-051-shape-58378",
+      "type": "image"
+    },
+    {
+      "slide": 51,
+      "shapeId": 58379,
+      "layerId": "slide-051-shape-58379",
+      "type": "text"
+    },
+    {
+      "slide": 51,
+      "shapeId": 58380,
+      "layerId": "slide-051-shape-58380",
+      "type": "image"
+    },
+    {
+      "slide": 51,
+      "shapeId": 58381,
+      "layerId": "slide-051-shape-58381",
+      "type": "text"
+    },
+    {
+      "slide": 51,
+      "shapeId": 58382,
+      "layerId": "slide-051-shape-58382",
+      "type": "text"
+    },
+    {
+      "slide": 51,
+      "shapeId": 58383,
+      "layerId": "slide-051-shape-58383",
+      "type": "image"
+    },
+    {
+      "slide": 51,
+      "shapeId": 58384,
+      "layerId": "slide-051-shape-58384",
+      "type": "text"
+    },
+    {
+      "slide": 52,
+      "shapeId": 59407,
+      "layerId": "slide-052-shape-59407",
+      "type": "text"
+    },
+    {
+      "slide": 57,
+      "shapeId": 64524,
+      "layerId": "slide-057-shape-64524",
+      "type": "shape"
+    },
+    {
+      "slide": 58,
+      "shapeId": 66566,
+      "layerId": "slide-058-shape-66566",
+      "type": "image"
+    },
+    {
+      "slide": 58,
+      "shapeId": 66567,
+      "layerId": "slide-058-shape-66567",
+      "type": "text"
+    },
+    {
+      "slide": 58,
+      "shapeId": 66568,
+      "layerId": "slide-058-shape-66568",
+      "type": "image"
+    },
+    {
+      "slide": 58,
+      "shapeId": 66569,
+      "layerId": "slide-058-shape-66569",
+      "type": "text"
+    },
+    {
+      "slide": 58,
+      "shapeId": 66570,
+      "layerId": "slide-058-shape-66570",
+      "type": "text"
+    },
+    {
+      "slide": 59,
+      "shapeId": 67591,
+      "layerId": "slide-059-shape-67591",
+      "type": "shape"
+    },
+    {
+      "slide": 62,
+      "shapeId": 71683,
+      "layerId": "slide-062-shape-71683",
+      "type": "image"
+    },
+    {
+      "slide": 62,
+      "shapeId": 71684,
+      "layerId": "slide-062-shape-71684",
+      "type": "text"
+    },
+    {
+      "slide": 62,
+      "shapeId": 71685,
+      "layerId": "slide-062-shape-71685",
+      "type": "image"
+    },
+    {
+      "slide": 62,
+      "shapeId": 71686,
+      "layerId": "slide-062-shape-71686",
+      "type": "text"
+    },
+    {
+      "slide": 62,
+      "shapeId": 71687,
+      "layerId": "slide-062-shape-71687",
+      "type": "text"
+    },
+    {
+      "slide": 63,
+      "shapeId": 72712,
+      "layerId": "slide-063-shape-72712",
+      "type": "shape"
+    },
+    {
+      "slide": 64,
+      "shapeId": 74755,
+      "layerId": "slide-064-shape-74755",
+      "type": "image"
+    },
+    {
+      "slide": 64,
+      "shapeId": 74756,
+      "layerId": "slide-064-shape-74756",
+      "type": "text"
+    },
+    {
+      "slide": 64,
+      "shapeId": 74757,
+      "layerId": "slide-064-shape-74757",
+      "type": "image"
+    },
+    {
+      "slide": 64,
+      "shapeId": 74758,
+      "layerId": "slide-064-shape-74758",
+      "type": "text"
+    },
+    {
+      "slide": 64,
+      "shapeId": 74759,
+      "layerId": "slide-064-shape-74759",
+      "type": "text"
+    },
+    {
+      "slide": 64,
+      "shapeId": 74760,
+      "layerId": "slide-064-shape-74760",
+      "type": "image"
+    },
+    {
+      "slide": 64,
+      "shapeId": 74761,
+      "layerId": "slide-064-shape-74761",
+      "type": "text"
+    },
+    {
+      "slide": 65,
+      "shapeId": 75786,
+      "layerId": "slide-065-shape-75786",
+      "type": "text"
+    },
+    {
+      "slide": 70,
+      "shapeId": 80904,
+      "layerId": "slide-070-shape-80904",
+      "type": "shape"
+    },
+    {
+      "slide": 73,
+      "shapeId": 85002,
+      "layerId": "slide-073-shape-85002",
+      "type": "text"
+    },
+    {
+      "slide": 79,
+      "shapeId": 92165,
+      "layerId": "slide-079-shape-92165",
+      "type": "shape"
+    },
+    {
+      "slide": 79,
+      "shapeId": 92166,
+      "layerId": "slide-079-shape-92166",
+      "type": "image"
+    },
+    {
+      "slide": 80,
+      "shapeId": 93190,
+      "layerId": "slide-080-shape-93190",
+      "type": "image"
+    },
+    {
+      "slide": 81,
+      "shapeId": 94216,
+      "layerId": "slide-081-shape-94216",
+      "type": "text"
+    },
+    {
+      "slide": 81,
+      "shapeId": 94217,
+      "layerId": "slide-081-shape-94217",
+      "type": "text"
+    },
+    {
+      "slide": 82,
+      "shapeId": 96267,
+      "layerId": "slide-082-shape-96267",
+      "type": "image"
+    },
+    {
+      "slide": 82,
+      "shapeId": 96268,
+      "layerId": "slide-082-shape-96268",
+      "type": "text"
+    },
+    {
+      "slide": 83,
+      "shapeId": 98314,
+      "layerId": "slide-083-shape-98314",
+      "type": "text"
+    },
+    {
+      "slide": 84,
+      "shapeId": 99334,
+      "layerId": "slide-084-shape-99334",
+      "type": "text"
+    },
+    {
+      "slide": 84,
+      "shapeId": 99338,
+      "layerId": "slide-084-shape-99338",
+      "type": "shape"
+    },
+    {
+      "slide": 84,
+      "shapeId": 99341,
+      "layerId": "slide-084-shape-99341",
+      "type": "text"
+    },
+    {
+      "slide": 84,
+      "shapeId": 99343,
+      "layerId": "slide-084-shape-99343",
+      "type": "text"
+    },
+    {
+      "slide": 84,
+      "shapeId": 99345,
+      "layerId": "slide-084-shape-99345",
+      "type": "text"
+    },
+    {
+      "slide": 84,
+      "shapeId": 99346,
+      "layerId": "slide-084-shape-99346",
+      "type": "shape"
+    },
+    {
+      "slide": 85,
+      "shapeId": 100363,
+      "layerId": "slide-085-shape-100363",
+      "type": "text"
+    },
+    {
+      "slide": 85,
+      "shapeId": 100364,
+      "layerId": "slide-085-shape-100364",
+      "type": "text"
+    },
+    {
+      "slide": 85,
+      "shapeId": 100367,
+      "layerId": "slide-085-shape-100367",
+      "type": "text"
+    },
+    {
+      "slide": 85,
+      "shapeId": 100369,
+      "layerId": "slide-085-shape-100369",
+      "type": "text"
+    },
+    {
+      "slide": 85,
+      "shapeId": 100370,
+      "layerId": "slide-085-shape-100370",
+      "type": "text"
+    },
+    {
+      "slide": 86,
+      "shapeId": 101387,
+      "layerId": "slide-086-shape-101387",
+      "type": "text"
+    },
+    {
+      "slide": 86,
+      "shapeId": 101388,
+      "layerId": "slide-086-shape-101388",
+      "type": "text"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102416,
+      "layerId": "slide-087-shape-102416",
+      "type": "shape"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102417,
+      "layerId": "slide-087-shape-102417",
+      "type": "shape"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102418,
+      "layerId": "slide-087-shape-102418",
+      "type": "shape"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102419,
+      "layerId": "slide-087-shape-102419",
+      "type": "shape"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102422,
+      "layerId": "slide-087-shape-102422",
+      "type": "text"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102423,
+      "layerId": "slide-087-shape-102423",
+      "type": "image"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102424,
+      "layerId": "slide-087-shape-102424",
+      "type": "image"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102425,
+      "layerId": "slide-087-shape-102425",
+      "type": "text"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102426,
+      "layerId": "slide-087-shape-102426",
+      "type": "image"
+    },
+    {
+      "slide": 87,
+      "shapeId": 102427,
+      "layerId": "slide-087-shape-102427",
+      "type": "text"
+    },
+    {
+      "slide": 88,
+      "shapeId": 104458,
+      "layerId": "slide-088-shape-104458",
+      "type": "image"
+    },
+    {
+      "slide": 88,
+      "shapeId": 104459,
+      "layerId": "slide-088-shape-104459",
+      "type": "image"
+    },
+    {
+      "slide": 88,
+      "shapeId": 104460,
+      "layerId": "slide-088-shape-104460",
+      "type": "image"
+    },
+    {
+      "slide": 88,
+      "shapeId": 104461,
+      "layerId": "slide-088-shape-104461",
+      "type": "image"
+    },
+    {
+      "slide": 103,
+      "shapeId": 117766,
+      "layerId": "slide-103-shape-117766",
+      "type": "text"
+    },
+    {
+      "slide": 103,
+      "shapeId": 117768,
+      "layerId": "slide-103-shape-117768",
+      "type": "image"
+    },
+    {
+      "slide": 104,
+      "shapeId": 118790,
+      "layerId": "slide-104-shape-118790",
+      "type": "image"
+    },
+    {
+      "slide": 104,
+      "shapeId": 118791,
+      "layerId": "slide-104-shape-118791",
+      "type": "text"
+    },
+    {
+      "slide": 105,
+      "shapeId": 122900,
+      "layerId": "slide-105-shape-122900",
+      "type": "text"
+    },
+    {
+      "slide": 106,
+      "shapeId": 125959,
+      "layerId": "slide-106-shape-125959",
+      "type": "image"
+    },
+    {
+      "slide": 107,
+      "shapeId": 126985,
+      "layerId": "slide-107-shape-126985",
+      "type": "image"
+    },
+    {
+      "slide": 108,
+      "shapeId": 128013,
+      "layerId": "slide-108-shape-128013",
+      "type": "image"
+    },
+    {
+      "slide": 109,
+      "shapeId": 129032,
+      "layerId": "slide-109-shape-129032",
+      "type": "image"
+    },
+    {
+      "slide": 109,
+      "shapeId": 129033,
+      "layerId": "slide-109-shape-129033",
+      "type": "image"
+    },
+    {
+      "slide": 110,
+      "shapeId": 130054,
+      "layerId": "slide-110-shape-130054",
+      "type": "image"
+    },
+    {
+      "slide": 111,
+      "shapeId": 131079,
+      "layerId": "slide-111-shape-131079",
+      "type": "image"
+    },
+    {
+      "slide": 112,
+      "shapeId": 132103,
+      "layerId": "slide-112-shape-132103",
+      "type": "text"
+    },
+    {
+      "slide": 112,
+      "shapeId": 132106,
+      "layerId": "slide-112-shape-132106",
+      "type": "text"
+    },
+    {
+      "slide": 112,
+      "shapeId": 132107,
+      "layerId": "slide-112-shape-132107",
+      "type": "image"
+    },
+    {
+      "slide": 112,
+      "shapeId": 132108,
+      "layerId": "slide-112-shape-132108",
+      "type": "text"
+    },
+    {
+      "slide": 113,
+      "shapeId": 133131,
+      "layerId": "slide-113-shape-133131",
+      "type": "text"
+    },
+    {
+      "slide": 113,
+      "shapeId": 133132,
+      "layerId": "slide-113-shape-133132",
+      "type": "text"
+    },
+    {
+      "slide": 113,
+      "shapeId": 133136,
+      "layerId": "slide-113-shape-133136",
+      "type": "text"
+    },
+    {
+      "slide": 113,
+      "shapeId": 133138,
+      "layerId": "slide-113-shape-133138",
+      "type": "text"
+    },
+    {
+      "slide": 114,
+      "shapeId": 134158,
+      "layerId": "slide-114-shape-134158",
+      "type": "text"
+    },
+    {
+      "slide": 115,
+      "shapeId": 135178,
+      "layerId": "slide-115-shape-135178",
+      "type": "text"
+    },
+    {
+      "slide": 115,
+      "shapeId": 135179,
+      "layerId": "slide-115-shape-135179",
+      "type": "text"
+    },
+    {
+      "slide": 115,
+      "shapeId": 135181,
+      "layerId": "slide-115-shape-135181",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136203,
+      "layerId": "slide-116-shape-136203",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136204,
+      "layerId": "slide-116-shape-136204",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136205,
+      "layerId": "slide-116-shape-136205",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136206,
+      "layerId": "slide-116-shape-136206",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136207,
+      "layerId": "slide-116-shape-136207",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136208,
+      "layerId": "slide-116-shape-136208",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136209,
+      "layerId": "slide-116-shape-136209",
+      "type": "text"
+    },
+    {
+      "slide": 116,
+      "shapeId": 136210,
+      "layerId": "slide-116-shape-136210",
+      "type": "text"
+    },
+    {
+      "slide": 117,
+      "shapeId": 138255,
+      "layerId": "slide-117-shape-138255",
+      "type": "text"
+    },
+    {
+      "slide": 117,
+      "shapeId": 138256,
+      "layerId": "slide-117-shape-138256",
+      "type": "text"
+    },
+    {
+      "slide": 118,
+      "shapeId": 139269,
+      "layerId": "slide-118-shape-139269",
+      "type": "image"
+    },
+    {
+      "slide": 118,
+      "shapeId": 139270,
+      "layerId": "slide-118-shape-139270",
+      "type": "text"
+    },
+    {
+      "slide": 118,
+      "shapeId": 139271,
+      "layerId": "slide-118-shape-139271",
+      "type": "text"
+    },
+    {
+      "slide": 118,
+      "shapeId": 139273,
+      "layerId": "slide-118-shape-139273",
+      "type": "shape"
+    },
+    {
+      "slide": 120,
+      "shapeId": 141319,
+      "layerId": "slide-120-shape-141319",
+      "type": "text"
+    },
+    {
+      "slide": 120,
+      "shapeId": 141320,
+      "layerId": "slide-120-shape-141320",
+      "type": "text"
+    },
+    {
+      "slide": 121,
+      "shapeId": 142395,
+      "layerId": "slide-121-shape-142395",
+      "type": "text"
+    },
+    {
+      "slide": 121,
+      "shapeId": 142399,
+      "layerId": "slide-121-shape-142399",
+      "type": "text"
+    },
+    {
+      "slide": 122,
+      "shapeId": 143436,
+      "layerId": "slide-122-shape-143436",
+      "type": "image"
+    },
+    {
+      "slide": 122,
+      "shapeId": 143437,
+      "layerId": "slide-122-shape-143437",
+      "type": "text"
+    },
+    {
+      "slide": 125,
+      "shapeId": 147461,
+      "layerId": "slide-125-shape-147461",
+      "type": "image"
+    },
+    {
+      "slide": 125,
+      "shapeId": 147463,
+      "layerId": "slide-125-shape-147463",
+      "type": "text"
+    },
+    {
+      "slide": 125,
+      "shapeId": 147469,
+      "layerId": "slide-125-shape-147469",
+      "type": "shape"
+    },
+    {
+      "slide": 125,
+      "shapeId": 147470,
+      "layerId": "slide-125-shape-147470",
+      "type": "image"
+    },
+    {
+      "slide": 125,
+      "shapeId": 147471,
+      "layerId": "slide-125-shape-147471",
+      "type": "text"
+    },
+    {
+      "slide": 125,
+      "shapeId": 147472,
+      "layerId": "slide-125-shape-147472",
+      "type": "text"
+    },
+    {
+      "slide": 126,
+      "shapeId": 148489,
+      "layerId": "slide-126-shape-148489",
+      "type": "image"
+    },
+    {
+      "slide": 126,
+      "shapeId": 148490,
+      "layerId": "slide-126-shape-148490",
+      "type": "text"
+    },
+    {
+      "slide": 126,
+      "shapeId": 148491,
+      "layerId": "slide-126-shape-148491",
+      "type": "image"
+    },
+    {
+      "slide": 126,
+      "shapeId": 148492,
+      "layerId": "slide-126-shape-148492",
+      "type": "text"
+    },
+    {
+      "slide": 126,
+      "shapeId": 148493,
+      "layerId": "slide-126-shape-148493",
+      "type": "text"
+    },
+    {
+      "slide": 127,
+      "shapeId": 149511,
+      "layerId": "slide-127-shape-149511",
+      "type": "image"
+    },
+    {
+      "slide": 129,
+      "shapeId": 151556,
+      "layerId": "slide-129-shape-151556",
+      "type": "image"
+    },
+    {
+      "slide": 129,
+      "shapeId": 151557,
+      "layerId": "slide-129-shape-151557",
+      "type": "image"
+    },
+    {
+      "slide": 130,
+      "shapeId": 152581,
+      "layerId": "slide-130-shape-152581",
+      "type": "image"
+    },
+    {
+      "slide": 130,
+      "shapeId": 152582,
+      "layerId": "slide-130-shape-152582",
+      "type": "text"
+    },
+    {
+      "slide": 131,
+      "shapeId": 153617,
+      "layerId": "slide-131-shape-153617",
+      "type": "shape"
+    },
+    {
+      "slide": 131,
+      "shapeId": 153618,
+      "layerId": "slide-131-shape-153618",
+      "type": "shape"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155654,
+      "layerId": "slide-132-shape-155654",
+      "type": "image"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155655,
+      "layerId": "slide-132-shape-155655",
+      "type": "image"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155656,
+      "layerId": "slide-132-shape-155656",
+      "type": "text"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155658,
+      "layerId": "slide-132-shape-155658",
+      "type": "image"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155659,
+      "layerId": "slide-132-shape-155659",
+      "type": "text"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155660,
+      "layerId": "slide-132-shape-155660",
+      "type": "image"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155661,
+      "layerId": "slide-132-shape-155661",
+      "type": "image"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155662,
+      "layerId": "slide-132-shape-155662",
+      "type": "text"
+    },
+    {
+      "slide": 132,
+      "shapeId": 155664,
+      "layerId": "slide-132-shape-155664",
+      "type": "text"
+    },
+    {
+      "slide": 133,
+      "shapeId": 156678,
+      "layerId": "slide-133-shape-156678",
+      "type": "image"
+    },
+    {
+      "slide": 134,
+      "shapeId": 157706,
+      "layerId": "slide-134-shape-157706",
+      "type": "image"
+    },
+    {
+      "slide": 134,
+      "shapeId": 157707,
+      "layerId": "slide-134-shape-157707",
+      "type": "image"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158725,
+      "layerId": "slide-135-shape-158725",
+      "type": "image"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158726,
+      "layerId": "slide-135-shape-158726",
+      "type": "text"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158727,
+      "layerId": "slide-135-shape-158727",
+      "type": "image"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158728,
+      "layerId": "slide-135-shape-158728",
+      "type": "text"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158729,
+      "layerId": "slide-135-shape-158729",
+      "type": "text"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158731,
+      "layerId": "slide-135-shape-158731",
+      "type": "text"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158732,
+      "layerId": "slide-135-shape-158732",
+      "type": "text"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158733,
+      "layerId": "slide-135-shape-158733",
+      "type": "text"
+    },
+    {
+      "slide": 135,
+      "shapeId": 158734,
+      "layerId": "slide-135-shape-158734",
+      "type": "text"
+    },
+    {
+      "slide": 136,
+      "shapeId": 159753,
+      "layerId": "slide-136-shape-159753",
+      "type": "image"
+    },
+    {
+      "slide": 137,
+      "shapeId": 160773,
+      "layerId": "slide-137-shape-160773",
+      "type": "image"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161797,
+      "layerId": "slide-138-shape-161797",
+      "type": "image"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161798,
+      "layerId": "slide-138-shape-161798",
+      "type": "text"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161799,
+      "layerId": "slide-138-shape-161799",
+      "type": "image"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161800,
+      "layerId": "slide-138-shape-161800",
+      "type": "text"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161801,
+      "layerId": "slide-138-shape-161801",
+      "type": "text"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161802,
+      "layerId": "slide-138-shape-161802",
+      "type": "text"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161803,
+      "layerId": "slide-138-shape-161803",
+      "type": "text"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161804,
+      "layerId": "slide-138-shape-161804",
+      "type": "text"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161805,
+      "layerId": "slide-138-shape-161805",
+      "type": "text"
+    },
+    {
+      "slide": 138,
+      "shapeId": 161806,
+      "layerId": "slide-138-shape-161806",
+      "type": "text"
+    },
+    {
+      "slide": 139,
+      "shapeId": 162824,
+      "layerId": "slide-139-shape-162824",
+      "type": "image"
+    },
+    {
+      "slide": 140,
+      "shapeId": 163852,
+      "layerId": "slide-140-shape-163852",
+      "type": "image"
+    },
+    {
+      "slide": 141,
+      "shapeId": 164870,
+      "layerId": "slide-141-shape-164870",
+      "type": "image"
+    },
+    {
+      "slide": 142,
+      "shapeId": 165895,
+      "layerId": "slide-142-shape-165895",
+      "type": "image"
+    },
+    {
+      "slide": 142,
+      "shapeId": 165896,
+      "layerId": "slide-142-shape-165896",
+      "type": "image"
+    },
+    {
+      "slide": 142,
+      "shapeId": 165897,
+      "layerId": "slide-142-shape-165897",
+      "type": "text"
+    },
+    {
+      "slide": 142,
+      "shapeId": 165898,
+      "layerId": "slide-142-shape-165898",
+      "type": "text"
+    },
+    {
+      "slide": 142,
+      "shapeId": 165899,
+      "layerId": "slide-142-shape-165899",
+      "type": "text"
+    },
+    {
+      "slide": 142,
+      "shapeId": 165900,
+      "layerId": "slide-142-shape-165900",
+      "type": "image"
+    },
+    {
+      "slide": 142,
+      "shapeId": 165901,
+      "layerId": "slide-142-shape-165901",
+      "type": "image"
+    },
+    {
+      "slide": 143,
+      "shapeId": 166932,
+      "layerId": "slide-143-shape-166932",
+      "type": "shape"
+    },
+    {
+      "slide": 143,
+      "shapeId": 166933,
+      "layerId": "slide-143-shape-166933",
+      "type": "shape"
+    },
+    {
+      "slide": 144,
+      "shapeId": 167941,
+      "layerId": "slide-144-shape-167941",
+      "type": "image"
+    },
+    {
+      "slide": 144,
+      "shapeId": 167942,
+      "layerId": "slide-144-shape-167942",
+      "type": "text"
+    },
+    {
+      "slide": 146,
+      "shapeId": 169992,
+      "layerId": "slide-146-shape-169992",
+      "type": "image"
+    },
+    {
+      "slide": 146,
+      "shapeId": 169993,
+      "layerId": "slide-146-shape-169993",
+      "type": "text"
+    },
+    {
+      "slide": 152,
+      "shapeId": 176133,
+      "layerId": "slide-152-shape-176133",
+      "type": "image"
+    },
+    {
+      "slide": 152,
+      "shapeId": 176134,
+      "layerId": "slide-152-shape-176134",
+      "type": "text"
+    },
+    {
+      "slide": 152,
+      "shapeId": 176136,
+      "layerId": "slide-152-shape-176136",
+      "type": "shape"
+    },
+    {
+      "slide": 153,
+      "shapeId": 177157,
+      "layerId": "slide-153-shape-177157",
+      "type": "image"
+    },
+    {
+      "slide": 153,
+      "shapeId": 177158,
+      "layerId": "slide-153-shape-177158",
+      "type": "text"
+    },
+    {
+      "slide": 153,
+      "shapeId": 177159,
+      "layerId": "slide-153-shape-177159",
+      "type": "shape"
+    },
+    {
+      "slide": 154,
+      "shapeId": 178186,
+      "layerId": "slide-154-shape-178186",
+      "type": "image"
+    },
+    {
+      "slide": 154,
+      "shapeId": 178188,
+      "layerId": "slide-154-shape-178188",
+      "type": "text"
+    },
+    {
+      "slide": 154,
+      "shapeId": 178189,
+      "layerId": "slide-154-shape-178189",
+      "type": "text"
+    },
+    {
+      "slide": 156,
+      "shapeId": 180229,
+      "layerId": "slide-156-shape-180229",
+      "type": "image"
+    },
+    {
+      "slide": 156,
+      "shapeId": 180230,
+      "layerId": "slide-156-shape-180230",
+      "type": "text"
+    },
+    {
+      "slide": 157,
+      "shapeId": 181253,
+      "layerId": "slide-157-shape-181253",
+      "type": "image"
+    },
+    {
+      "slide": 157,
+      "shapeId": 181254,
+      "layerId": "slide-157-shape-181254",
+      "type": "text"
+    },
+    {
+      "slide": 157,
+      "shapeId": 181256,
+      "layerId": "slide-157-shape-181256",
+      "type": "image"
+    },
+    {
+      "slide": 157,
+      "shapeId": 181257,
+      "layerId": "slide-157-shape-181257",
+      "type": "text"
+    },
+    {
+      "slide": 157,
+      "shapeId": 181261,
+      "layerId": "slide-157-shape-181261",
+      "type": "text"
+    },
+    {
+      "slide": 157,
+      "shapeId": 181264,
+      "layerId": "slide-157-shape-181264",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187398,
+      "layerId": "slide-162-shape-187398",
+      "type": "image"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187399,
+      "layerId": "slide-162-shape-187399",
+      "type": "image"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187400,
+      "layerId": "slide-162-shape-187400",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187401,
+      "layerId": "slide-162-shape-187401",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187402,
+      "layerId": "slide-162-shape-187402",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187403,
+      "layerId": "slide-162-shape-187403",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187404,
+      "layerId": "slide-162-shape-187404",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187405,
+      "layerId": "slide-162-shape-187405",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187406,
+      "layerId": "slide-162-shape-187406",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187407,
+      "layerId": "slide-162-shape-187407",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187408,
+      "layerId": "slide-162-shape-187408",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187409,
+      "layerId": "slide-162-shape-187409",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187410,
+      "layerId": "slide-162-shape-187410",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187411,
+      "layerId": "slide-162-shape-187411",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187412,
+      "layerId": "slide-162-shape-187412",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187413,
+      "layerId": "slide-162-shape-187413",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187414,
+      "layerId": "slide-162-shape-187414",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187415,
+      "layerId": "slide-162-shape-187415",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187416,
+      "layerId": "slide-162-shape-187416",
+      "type": "text"
+    },
+    {
+      "slide": 162,
+      "shapeId": 187419,
+      "layerId": "slide-162-shape-187419",
+      "type": "shape"
+    },
+    {
+      "slide": 163,
+      "shapeId": 188423,
+      "layerId": "slide-163-shape-188423",
+      "type": "image"
+    },
+    {
+      "slide": 163,
+      "shapeId": 188424,
+      "layerId": "slide-163-shape-188424",
+      "type": "text"
+    },
+    {
+      "slide": 164,
+      "shapeId": 189447,
+      "layerId": "slide-164-shape-189447",
+      "type": "image"
+    },
+    {
+      "slide": 164,
+      "shapeId": 189448,
+      "layerId": "slide-164-shape-189448",
+      "type": "text"
+    },
+    {
+      "slide": 165,
+      "shapeId": 190472,
+      "layerId": "slide-165-shape-190472",
+      "type": "text"
+    },
+    {
+      "slide": 166,
+      "shapeId": 191505,
+      "layerId": "slide-166-shape-191505",
+      "type": "image"
+    },
+    {
+      "slide": 166,
+      "shapeId": 191507,
+      "layerId": "slide-166-shape-191507",
+      "type": "text"
+    },
+    {
+      "slide": 166,
+      "shapeId": 191508,
+      "layerId": "slide-166-shape-191508",
+      "type": "text"
+    },
+    {
+      "slide": 167,
+      "shapeId": 192518,
+      "layerId": "slide-167-shape-192518",
+      "type": "image"
+    },
+    {
+      "slide": 167,
+      "shapeId": 192519,
+      "layerId": "slide-167-shape-192519",
+      "type": "text"
+    },
+    {
+      "slide": 167,
+      "shapeId": 192520,
+      "layerId": "slide-167-shape-192520",
+      "type": "text"
+    },
+    {
+      "slide": 167,
+      "shapeId": 192521,
+      "layerId": "slide-167-shape-192521",
+      "type": "image"
+    },
+    {
+      "slide": 167,
+      "shapeId": 192522,
+      "layerId": "slide-167-shape-192522",
+      "type": "text"
+    },
+    {
+      "slide": 167,
+      "shapeId": 192523,
+      "layerId": "slide-167-shape-192523",
+      "type": "text"
+    },
+    {
+      "slide": 167,
+      "shapeId": 192524,
+      "layerId": "slide-167-shape-192524",
+      "type": "shape"
+    },
+    {
+      "slide": 168,
+      "shapeId": 193542,
+      "layerId": "slide-168-shape-193542",
+      "type": "text"
+    },
+    {
+      "slide": 169,
+      "shapeId": 194566,
+      "layerId": "slide-169-shape-194566",
+      "type": "image"
+    },
+    {
+      "slide": 169,
+      "shapeId": 194567,
+      "layerId": "slide-169-shape-194567",
+      "type": "text"
+    },
+    {
+      "slide": 169,
+      "shapeId": 194568,
+      "layerId": "slide-169-shape-194568",
+      "type": "image"
+    },
+    {
+      "slide": 169,
+      "shapeId": 194570,
+      "layerId": "slide-169-shape-194570",
+      "type": "text"
+    },
+    {
+      "slide": 169,
+      "shapeId": 194571,
+      "layerId": "slide-169-shape-194571",
+      "type": "text"
+    },
+    {
+      "slide": 169,
+      "shapeId": 194572,
+      "layerId": "slide-169-shape-194572",
+      "type": "text"
+    },
+    {
+      "slide": 170,
+      "shapeId": 195589,
+      "layerId": "slide-170-shape-195589",
+      "type": "image"
+    },
+    {
+      "slide": 170,
+      "shapeId": 195590,
+      "layerId": "slide-170-shape-195590",
+      "type": "text"
+    },
+    {
+      "slide": 170,
+      "shapeId": 195591,
+      "layerId": "slide-170-shape-195591",
+      "type": "image"
+    },
+    {
+      "slide": 170,
+      "shapeId": 195592,
+      "layerId": "slide-170-shape-195592",
+      "type": "text"
+    },
+    {
+      "slide": 170,
+      "shapeId": 195593,
+      "layerId": "slide-170-shape-195593",
+      "type": "shape"
+    },
+    {
+      "slide": 171,
+      "shapeId": 196615,
+      "layerId": "slide-171-shape-196615",
+      "type": "shape"
+    },
+    {
+      "slide": 174,
+      "shapeId": 199685,
+      "layerId": "slide-174-shape-199685",
+      "type": "text"
+    },
+    {
+      "slide": 174,
+      "shapeId": 199686,
+      "layerId": "slide-174-shape-199686",
+      "type": "image"
+    },
+    {
+      "slide": 174,
+      "shapeId": 199687,
+      "layerId": "slide-174-shape-199687",
+      "type": "text"
+    },
+    {
+      "slide": 174,
+      "shapeId": 199688,
+      "layerId": "slide-174-shape-199688",
+      "type": "text"
+    },
+    {
+      "slide": 176,
+      "shapeId": 201736,
+      "layerId": "slide-176-shape-201736",
+      "type": "image"
+    },
+    {
+      "slide": 176,
+      "shapeId": 201737,
+      "layerId": "slide-176-shape-201737",
+      "type": "text"
+    },
+    {
+      "slide": 176,
+      "shapeId": 201740,
+      "layerId": "slide-176-shape-201740",
+      "type": "image"
+    },
+    {
+      "slide": 179,
+      "shapeId": 205833,
+      "layerId": "slide-179-shape-205833",
+      "type": "image"
+    },
+    {
+      "slide": 179,
+      "shapeId": 205834,
+      "layerId": "slide-179-shape-205834",
+      "type": "text"
+    },
+    {
+      "slide": 180,
+      "shapeId": 206853,
+      "layerId": "slide-180-shape-206853",
+      "type": "image"
+    },
+    {
+      "slide": 180,
+      "shapeId": 206854,
+      "layerId": "slide-180-shape-206854",
+      "type": "text"
+    },
+    {
+      "slide": 180,
+      "shapeId": 206855,
+      "layerId": "slide-180-shape-206855",
+      "type": "text"
+    },
+    {
+      "slide": 181,
+      "shapeId": 207878,
+      "layerId": "slide-181-shape-207878",
+      "type": "image"
+    },
+    {
+      "slide": 181,
+      "shapeId": 207879,
+      "layerId": "slide-181-shape-207879",
+      "type": "text"
+    },
+    {
+      "slide": 181,
+      "shapeId": 207880,
+      "layerId": "slide-181-shape-207880",
+      "type": "image"
+    },
+    {
+      "slide": 181,
+      "shapeId": 207881,
+      "layerId": "slide-181-shape-207881",
+      "type": "text"
+    },
+    {
+      "slide": 181,
+      "shapeId": 207882,
+      "layerId": "slide-181-shape-207882",
+      "type": "text"
+    },
+    {
+      "slide": 182,
+      "shapeId": 208903,
+      "layerId": "slide-182-shape-208903",
+      "type": "text"
+    },
+    {
+      "slide": 184,
+      "shapeId": 211973,
+      "layerId": "slide-184-shape-211973",
+      "type": "image"
+    },
+    {
+      "slide": 184,
+      "shapeId": 211974,
+      "layerId": "slide-184-shape-211974",
+      "type": "image"
+    },
+    {
+      "slide": 184,
+      "shapeId": 211975,
+      "layerId": "slide-184-shape-211975",
+      "type": "text"
+    },
+    {
+      "slide": 184,
+      "shapeId": 211976,
+      "layerId": "slide-184-shape-211976",
+      "type": "text"
+    },
+    {
+      "slide": 184,
+      "shapeId": 211977,
+      "layerId": "slide-184-shape-211977",
+      "type": "text"
+    },
+    {
+      "slide": 184,
+      "shapeId": 211978,
+      "layerId": "slide-184-shape-211978",
+      "type": "text"
+    },
+    {
+      "slide": 184,
+      "shapeId": 211979,
+      "layerId": "slide-184-shape-211979",
+      "type": "text"
+    },
+    {
+      "slide": 185,
+      "shapeId": 212998,
+      "layerId": "slide-185-shape-212998",
+      "type": "image"
+    },
+    {
+      "slide": 185,
+      "shapeId": 212999,
+      "layerId": "slide-185-shape-212999",
+      "type": "text"
+    },
+    {
+      "slide": 185,
+      "shapeId": 213000,
+      "layerId": "slide-185-shape-213000",
+      "type": "image"
+    },
+    {
+      "slide": 185,
+      "shapeId": 213001,
+      "layerId": "slide-185-shape-213001",
+      "type": "text"
+    },
+    {
+      "slide": 186,
+      "shapeId": 214023,
+      "layerId": "slide-186-shape-214023",
+      "type": "image"
+    },
+    {
+      "slide": 186,
+      "shapeId": 214024,
+      "layerId": "slide-186-shape-214024",
+      "type": "text"
+    },
+    {
+      "slide": 186,
+      "shapeId": 214025,
+      "layerId": "slide-186-shape-214025",
+      "type": "text"
+    },
+    {
+      "slide": 188,
+      "shapeId": 216086,
+      "layerId": "slide-188-shape-216086",
+      "type": "image"
+    },
+    {
+      "slide": 188,
+      "shapeId": 216089,
+      "layerId": "slide-188-shape-216089",
+      "type": "image"
+    },
+    {
+      "slide": 189,
+      "shapeId": 218119,
+      "layerId": "slide-189-shape-218119",
+      "type": "image"
+    },
+    {
+      "slide": 189,
+      "shapeId": 218120,
+      "layerId": "slide-189-shape-218120",
+      "type": "text"
+    },
+    {
+      "slide": 190,
+      "shapeId": 219145,
+      "layerId": "slide-190-shape-219145",
+      "type": "text"
+    },
+    {
+      "slide": 190,
+      "shapeId": 219146,
+      "layerId": "slide-190-shape-219146",
+      "type": "text"
+    },
+    {
+      "slide": 191,
+      "shapeId": 220166,
+      "layerId": "slide-191-shape-220166",
+      "type": "image"
+    },
+    {
+      "slide": 191,
+      "shapeId": 220167,
+      "layerId": "slide-191-shape-220167",
+      "type": "image"
+    },
+    {
+      "slide": 191,
+      "shapeId": 220168,
+      "layerId": "slide-191-shape-220168",
+      "type": "text"
+    },
+    {
+      "slide": 191,
+      "shapeId": 220169,
+      "layerId": "slide-191-shape-220169",
+      "type": "text"
+    },
+    {
+      "slide": 192,
+      "shapeId": 221189,
+      "layerId": "slide-192-shape-221189",
+      "type": "image"
+    },
+    {
+      "slide": 192,
+      "shapeId": 221190,
+      "layerId": "slide-192-shape-221190",
+      "type": "text"
+    },
+    {
+      "slide": 192,
+      "shapeId": 221191,
+      "layerId": "slide-192-shape-221191",
+      "type": "text"
+    },
+    {
+      "slide": 192,
+      "shapeId": 221192,
+      "layerId": "slide-192-shape-221192",
+      "type": "text"
+    },
+    {
+      "slide": 192,
+      "shapeId": 221193,
+      "layerId": "slide-192-shape-221193",
+      "type": "shape"
+    },
+    {
+      "slide": 193,
+      "shapeId": 222214,
+      "layerId": "slide-193-shape-222214",
+      "type": "shape"
+    },
+    {
+      "slide": 193,
+      "shapeId": 222215,
+      "layerId": "slide-193-shape-222215",
+      "type": "image"
+    },
+    {
+      "slide": 193,
+      "shapeId": 222216,
+      "layerId": "slide-193-shape-222216",
+      "type": "text"
+    },
+    {
+      "slide": 193,
+      "shapeId": 222217,
+      "layerId": "slide-193-shape-222217",
+      "type": "text"
+    },
+    {
+      "slide": 193,
+      "shapeId": 222218,
+      "layerId": "slide-193-shape-222218",
+      "type": "text"
+    },
+    {
+      "slide": 196,
+      "shapeId": 224261,
+      "layerId": "slide-196-shape-224261",
+      "type": "shape"
+    },
+    {
+      "slide": 197,
+      "shapeId": 226313,
+      "layerId": "slide-197-shape-226313",
+      "type": "image"
+    },
+    {
+      "slide": 197,
+      "shapeId": 226314,
+      "layerId": "slide-197-shape-226314",
+      "type": "text"
+    },
+    {
+      "slide": 197,
+      "shapeId": 226315,
+      "layerId": "slide-197-shape-226315",
+      "type": "text"
+    },
+    {
+      "slide": 201,
+      "shapeId": 228357,
+      "layerId": "slide-201-shape-228357",
+      "type": "image"
+    },
+    {
+      "slide": 201,
+      "shapeId": 228358,
+      "layerId": "slide-201-shape-228358",
+      "type": "text"
+    },
+    {
+      "slide": 201,
+      "shapeId": 228359,
+      "layerId": "slide-201-shape-228359",
+      "type": "text"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230407,
+      "layerId": "slide-202-shape-230407",
+      "type": "image"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230410,
+      "layerId": "slide-202-shape-230410",
+      "type": "image"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230416,
+      "layerId": "slide-202-shape-230416",
+      "type": "image"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230417,
+      "layerId": "slide-202-shape-230417",
+      "type": "text"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230428,
+      "layerId": "slide-202-shape-230428",
+      "type": "image"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230429,
+      "layerId": "slide-202-shape-230429",
+      "type": "image"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230430,
+      "layerId": "slide-202-shape-230430",
+      "type": "text"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230431,
+      "layerId": "slide-202-shape-230431",
+      "type": "text"
+    },
+    {
+      "slide": 202,
+      "shapeId": 230432,
+      "layerId": "slide-202-shape-230432",
+      "type": "shape"
+    },
+    {
+      "slide": 203,
+      "shapeId": 231431,
+      "layerId": "slide-203-shape-231431",
+      "type": "text"
+    },
+    {
+      "slide": 203,
+      "shapeId": 231432,
+      "layerId": "slide-203-shape-231432",
+      "type": "text"
+    },
+    {
+      "slide": 203,
+      "shapeId": 231433,
+      "layerId": "slide-203-shape-231433",
+      "type": "text"
+    },
+    {
+      "slide": 203,
+      "shapeId": 231434,
+      "layerId": "slide-203-shape-231434",
+      "type": "text"
+    },
+    {
+      "slide": 203,
+      "shapeId": 231435,
+      "layerId": "slide-203-shape-231435",
+      "type": "image"
+    },
+    {
+      "slide": 203,
+      "shapeId": 231436,
+      "layerId": "slide-203-shape-231436",
+      "type": "text"
+    },
+    {
+      "slide": 204,
+      "shapeId": 232454,
+      "layerId": "slide-204-shape-232454",
+      "type": "image"
+    },
+    {
+      "slide": 204,
+      "shapeId": 232455,
+      "layerId": "slide-204-shape-232455",
+      "type": "text"
+    },
+    {
+      "slide": 204,
+      "shapeId": 232456,
+      "layerId": "slide-204-shape-232456",
+      "type": "image"
+    },
+    {
+      "slide": 204,
+      "shapeId": 232457,
+      "layerId": "slide-204-shape-232457",
+      "type": "text"
+    },
+    {
+      "slide": 204,
+      "shapeId": 232458,
+      "layerId": "slide-204-shape-232458",
+      "type": "text"
+    },
+    {
+      "slide": 204,
+      "shapeId": 232459,
+      "layerId": "slide-204-shape-232459",
+      "type": "shape"
+    },
+    {
+      "slide": 205,
+      "shapeId": 233479,
+      "layerId": "slide-205-shape-233479",
+      "type": "text"
+    },
+    {
+      "slide": 205,
+      "shapeId": 233480,
+      "layerId": "slide-205-shape-233480",
+      "type": "text"
+    },
+    {
+      "slide": 205,
+      "shapeId": 233485,
+      "layerId": "slide-205-shape-233485",
+      "type": "text"
+    },
+    {
+      "slide": 205,
+      "shapeId": 233486,
+      "layerId": "slide-205-shape-233486",
+      "type": "text"
+    },
+    {
+      "slide": 205,
+      "shapeId": 233487,
+      "layerId": "slide-205-shape-233487",
+      "type": "text"
+    },
+    {
+      "slide": 206,
+      "shapeId": 234507,
+      "layerId": "slide-206-shape-234507",
+      "type": "text"
+    },
+    {
+      "slide": 206,
+      "shapeId": 234508,
+      "layerId": "slide-206-shape-234508",
+      "type": "text"
+    },
+    {
+      "slide": 206,
+      "shapeId": 234509,
+      "layerId": "slide-206-shape-234509",
+      "type": "shape"
+    },
+    {
+      "slide": 207,
+      "shapeId": 235528,
+      "layerId": "slide-207-shape-235528",
+      "type": "image"
+    },
+    {
+      "slide": 207,
+      "shapeId": 235535,
+      "layerId": "slide-207-shape-235535",
+      "type": "image"
+    },
+    {
+      "slide": 207,
+      "shapeId": 235536,
+      "layerId": "slide-207-shape-235536",
+      "type": "image"
+    },
+    {
+      "slide": 207,
+      "shapeId": 235537,
+      "layerId": "slide-207-shape-235537",
+      "type": "text"
+    },
+    {
+      "slide": 208,
+      "shapeId": 236552,
+      "layerId": "slide-208-shape-236552",
+      "type": "image"
+    },
+    {
+      "slide": 208,
+      "shapeId": 236560,
+      "layerId": "slide-208-shape-236560",
+      "type": "image"
+    },
+    {
+      "slide": 208,
+      "shapeId": 236561,
+      "layerId": "slide-208-shape-236561",
+      "type": "image"
+    },
+    {
+      "slide": 209,
+      "shapeId": 242694,
+      "layerId": "slide-209-shape-242694",
+      "type": "image"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244741,
+      "layerId": "slide-211-shape-244741",
+      "type": "image"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244745,
+      "layerId": "slide-211-shape-244745",
+      "type": "shape"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244746,
+      "layerId": "slide-211-shape-244746",
+      "type": "image"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244747,
+      "layerId": "slide-211-shape-244747",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244748,
+      "layerId": "slide-211-shape-244748",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244749,
+      "layerId": "slide-211-shape-244749",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244750,
+      "layerId": "slide-211-shape-244750",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244751,
+      "layerId": "slide-211-shape-244751",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244752,
+      "layerId": "slide-211-shape-244752",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244753,
+      "layerId": "slide-211-shape-244753",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244754,
+      "layerId": "slide-211-shape-244754",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244755,
+      "layerId": "slide-211-shape-244755",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244757,
+      "layerId": "slide-211-shape-244757",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244758,
+      "layerId": "slide-211-shape-244758",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244759,
+      "layerId": "slide-211-shape-244759",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244760,
+      "layerId": "slide-211-shape-244760",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244761,
+      "layerId": "slide-211-shape-244761",
+      "type": "text"
+    },
+    {
+      "slide": 211,
+      "shapeId": 244762,
+      "layerId": "slide-211-shape-244762",
+      "type": "shape"
+    },
+    {
+      "slide": 212,
+      "shapeId": 245766,
+      "layerId": "slide-212-shape-245766",
+      "type": "image"
+    },
+    {
+      "slide": 213,
+      "shapeId": 246788,
+      "layerId": "slide-213-shape-246788",
+      "type": "image"
+    },
+    {
+      "slide": 214,
+      "shapeId": 247814,
+      "layerId": "slide-214-shape-247814",
+      "type": "image"
+    },
+    {
+      "slide": 215,
+      "shapeId": 248839,
+      "layerId": "slide-215-shape-248839",
+      "type": "shape"
+    },
+    {
+      "slide": 215,
+      "shapeId": 248842,
+      "layerId": "slide-215-shape-248842",
+      "type": "shape"
+    },
+    {
+      "slide": 215,
+      "shapeId": 248845,
+      "layerId": "slide-215-shape-248845",
+      "type": "shape"
+    },
+    {
+      "slide": 216,
+      "shapeId": 249862,
+      "layerId": "slide-216-shape-249862",
+      "type": "image"
+    },
+    {
+      "slide": 216,
+      "shapeId": 249863,
+      "layerId": "slide-216-shape-249863",
+      "type": "image"
+    },
+    {
+      "slide": 216,
+      "shapeId": 249864,
+      "layerId": "slide-216-shape-249864",
+      "type": "text"
+    },
+    {
+      "slide": 216,
+      "shapeId": 249865,
+      "layerId": "slide-216-shape-249865",
+      "type": "shape"
+    },
+    {
+      "slide": 217,
+      "shapeId": 251913,
+      "layerId": "slide-217-shape-251913",
+      "type": "text"
+    },
+    {
+      "slide": 219,
+      "shapeId": 253958,
+      "layerId": "slide-219-shape-253958",
+      "type": "image"
+    },
+    {
+      "slide": 219,
+      "shapeId": 253959,
+      "layerId": "slide-219-shape-253959",
+      "type": "text"
+    },
+    {
+      "slide": 221,
+      "shapeId": 256011,
+      "layerId": "slide-221-shape-256011",
+      "type": "text"
+    },
+    {
+      "slide": 222,
+      "shapeId": 257032,
+      "layerId": "slide-222-shape-257032",
+      "type": "image"
+    },
+    {
+      "slide": 222,
+      "shapeId": 257033,
+      "layerId": "slide-222-shape-257033",
+      "type": "text"
+    },
+    {
+      "slide": 223,
+      "shapeId": 260101,
+      "layerId": "slide-223-shape-260101",
+      "type": "image"
+    },
+    {
+      "slide": 223,
+      "shapeId": 260102,
+      "layerId": "slide-223-shape-260102",
+      "type": "image"
+    },
+    {
+      "slide": 223,
+      "shapeId": 260103,
+      "layerId": "slide-223-shape-260103",
+      "type": "text"
+    },
+    {
+      "slide": 223,
+      "shapeId": 260104,
+      "layerId": "slide-223-shape-260104",
+      "type": "text"
+    },
+    {
+      "slide": 223,
+      "shapeId": 260105,
+      "layerId": "slide-223-shape-260105",
+      "type": "text"
+    },
+    {
+      "slide": 223,
+      "shapeId": 260106,
+      "layerId": "slide-223-shape-260106",
+      "type": "shape"
+    },
+    {
+      "slide": 224,
+      "shapeId": 261125,
+      "layerId": "slide-224-shape-261125",
+      "type": "image"
+    },
+    {
+      "slide": 224,
+      "shapeId": 261126,
+      "layerId": "slide-224-shape-261126",
+      "type": "text"
+    },
+    {
+      "slide": 227,
+      "shapeId": 264199,
+      "layerId": "slide-227-shape-264199",
+      "type": "shape"
+    },
+    {
+      "slide": 227,
+      "shapeId": 264200,
+      "layerId": "slide-227-shape-264200",
+      "type": "image"
+    },
+    {
+      "slide": 227,
+      "shapeId": 264201,
+      "layerId": "slide-227-shape-264201",
+      "type": "text"
+    },
+    {
+      "slide": 227,
+      "shapeId": 264202,
+      "layerId": "slide-227-shape-264202",
+      "type": "shape"
+    },
+    {
+      "slide": 228,
+      "shapeId": 265224,
+      "layerId": "slide-228-shape-265224",
+      "type": "image"
+    },
+    {
+      "slide": 228,
+      "shapeId": 265225,
+      "layerId": "slide-228-shape-265225",
+      "type": "text"
+    },
+    {
+      "slide": 228,
+      "shapeId": 265226,
+      "layerId": "slide-228-shape-265226",
+      "type": "shape"
+    },
+    {
+      "slide": 229,
+      "shapeId": 266249,
+      "layerId": "slide-229-shape-266249",
+      "type": "text"
+    },
+    {
+      "slide": 229,
+      "shapeId": 266252,
+      "layerId": "slide-229-shape-266252",
+      "type": "shape"
+    },
+    {
+      "slide": 230,
+      "shapeId": 267281,
+      "layerId": "slide-230-shape-267281",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268299,
+      "layerId": "slide-231-shape-268299",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268300,
+      "layerId": "slide-231-shape-268300",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268301,
+      "layerId": "slide-231-shape-268301",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268302,
+      "layerId": "slide-231-shape-268302",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268303,
+      "layerId": "slide-231-shape-268303",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268305,
+      "layerId": "slide-231-shape-268305",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268306,
+      "layerId": "slide-231-shape-268306",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268307,
+      "layerId": "slide-231-shape-268307",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268308,
+      "layerId": "slide-231-shape-268308",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268309,
+      "layerId": "slide-231-shape-268309",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268310,
+      "layerId": "slide-231-shape-268310",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268311,
+      "layerId": "slide-231-shape-268311",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268313,
+      "layerId": "slide-231-shape-268313",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268314,
+      "layerId": "slide-231-shape-268314",
+      "type": "text"
+    },
+    {
+      "slide": 231,
+      "shapeId": 268315,
+      "layerId": "slide-231-shape-268315",
+      "type": "shape"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272413,
+      "layerId": "slide-232-shape-272413",
+      "type": "image"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272414,
+      "layerId": "slide-232-shape-272414",
+      "type": "image"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272415,
+      "layerId": "slide-232-shape-272415",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272416,
+      "layerId": "slide-232-shape-272416",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272417,
+      "layerId": "slide-232-shape-272417",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272418,
+      "layerId": "slide-232-shape-272418",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272419,
+      "layerId": "slide-232-shape-272419",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272420,
+      "layerId": "slide-232-shape-272420",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272421,
+      "layerId": "slide-232-shape-272421",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272422,
+      "layerId": "slide-232-shape-272422",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272423,
+      "layerId": "slide-232-shape-272423",
+      "type": "text"
+    },
+    {
+      "slide": 232,
+      "shapeId": 272424,
+      "layerId": "slide-232-shape-272424",
+      "type": "shape"
+    },
+    {
+      "slide": 233,
+      "shapeId": 273424,
+      "layerId": "slide-233-shape-273424",
+      "type": "text"
+    },
+    {
+      "slide": 234,
+      "shapeId": 275467,
+      "layerId": "slide-234-shape-275467",
+      "type": "text"
+    },
+    {
+      "slide": 234,
+      "shapeId": 275469,
+      "layerId": "slide-234-shape-275469",
+      "type": "shape"
+    },
+    {
+      "slide": 235,
+      "shapeId": 276492,
+      "layerId": "slide-235-shape-276492",
+      "type": "text"
+    },
+    {
+      "slide": 235,
+      "shapeId": 276493,
+      "layerId": "slide-235-shape-276493",
+      "type": "text"
+    },
+    {
+      "slide": 235,
+      "shapeId": 276494,
+      "layerId": "slide-235-shape-276494",
+      "type": "text"
+    },
+    {
+      "slide": 235,
+      "shapeId": 276516,
+      "layerId": "slide-235-shape-276516",
+      "type": "text"
+    },
+    {
+      "slide": 235,
+      "shapeId": 276517,
+      "layerId": "slide-235-shape-276517",
+      "type": "text"
+    },
+    {
+      "slide": 235,
+      "shapeId": 276518,
+      "layerId": "slide-235-shape-276518",
+      "type": "shape"
+    },
+    {
+      "slide": 235,
+      "shapeId": 276519,
+      "layerId": "slide-235-shape-276519",
+      "type": "text"
+    },
+    {
+      "slide": 236,
+      "shapeId": 277515,
+      "layerId": "slide-236-shape-277515",
+      "type": "text"
+    },
+    {
+      "slide": 236,
+      "shapeId": 277516,
+      "layerId": "slide-236-shape-277516",
+      "type": "image"
+    },
+    {
+      "slide": 236,
+      "shapeId": 277517,
+      "layerId": "slide-236-shape-277517",
+      "type": "text"
+    },
+    {
+      "slide": 238,
+      "shapeId": 279560,
+      "layerId": "slide-238-shape-279560",
+      "type": "image"
+    },
+    {
+      "slide": 238,
+      "shapeId": 279561,
+      "layerId": "slide-238-shape-279561",
+      "type": "text"
+    },
+    {
+      "slide": 239,
+      "shapeId": 280581,
+      "layerId": "slide-239-shape-280581",
+      "type": "shape"
+    },
+    {
+      "slide": 239,
+      "shapeId": 280582,
+      "layerId": "slide-239-shape-280582",
+      "type": "text"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282630,
+      "layerId": "slide-241-shape-282630",
+      "type": "image"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282631,
+      "layerId": "slide-241-shape-282631",
+      "type": "text"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282632,
+      "layerId": "slide-241-shape-282632",
+      "type": "image"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282633,
+      "layerId": "slide-241-shape-282633",
+      "type": "text"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282634,
+      "layerId": "slide-241-shape-282634",
+      "type": "text"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282635,
+      "layerId": "slide-241-shape-282635",
+      "type": "text"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282636,
+      "layerId": "slide-241-shape-282636",
+      "type": "text"
+    },
+    {
+      "slide": 241,
+      "shapeId": 282637,
+      "layerId": "slide-241-shape-282637",
+      "type": "text"
+    },
+    {
+      "slide": 243,
+      "shapeId": 284678,
+      "layerId": "slide-243-shape-284678",
+      "type": "image"
+    },
+    {
+      "slide": 243,
+      "shapeId": 284679,
+      "layerId": "slide-243-shape-284679",
+      "type": "text"
+    },
+    {
+      "slide": 243,
+      "shapeId": 284680,
+      "layerId": "slide-243-shape-284680",
+      "type": "shape"
+    },
+    {
+      "slide": 246,
+      "shapeId": 287752,
+      "layerId": "slide-246-shape-287752",
+      "type": "text"
+    },
+    {
+      "slide": 246,
+      "shapeId": 287753,
+      "layerId": "slide-246-shape-287753",
+      "type": "text"
+    },
+    {
+      "slide": 246,
+      "shapeId": 287757,
+      "layerId": "slide-246-shape-287757",
+      "type": "text"
+    },
+    {
+      "slide": 246,
+      "shapeId": 287758,
+      "layerId": "slide-246-shape-287758",
+      "type": "text"
+    },
+    {
+      "slide": 248,
+      "shapeId": 289799,
+      "layerId": "slide-248-shape-289799",
+      "type": "image"
+    },
+    {
+      "slide": 249,
+      "shapeId": 290820,
+      "layerId": "slide-249-shape-290820",
+      "type": "image"
+    },
+    {
+      "slide": 249,
+      "shapeId": 290821,
+      "layerId": "slide-249-shape-290821",
+      "type": "text"
+    },
+    {
+      "slide": 252,
+      "shapeId": 293893,
+      "layerId": "slide-252-shape-293893",
+      "type": "image"
+    },
+    {
+      "slide": 252,
+      "shapeId": 293894,
+      "layerId": "slide-252-shape-293894",
+      "type": "text"
+    },
+    {
+      "slide": 252,
+      "shapeId": 293895,
+      "layerId": "slide-252-shape-293895",
+      "type": "shape"
+    },
+    {
+      "slide": 253,
+      "shapeId": 294917,
+      "layerId": "slide-253-shape-294917",
+      "type": "image"
+    },
+    {
+      "slide": 253,
+      "shapeId": 294918,
+      "layerId": "slide-253-shape-294918",
+      "type": "text"
+    },
+    {
+      "slide": 253,
+      "shapeId": 294919,
+      "layerId": "slide-253-shape-294919",
+      "type": "shape"
+    },
+    {
+      "slide": 253,
+      "shapeId": 294920,
+      "layerId": "slide-253-shape-294920",
+      "type": "text"
+    },
+    {
+      "slide": 254,
+      "shapeId": 295941,
+      "layerId": "slide-254-shape-295941",
+      "type": "image"
+    },
+    {
+      "slide": 254,
+      "shapeId": 295943,
+      "layerId": "slide-254-shape-295943",
+      "type": "shape"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299013,
+      "layerId": "slide-257-shape-299013",
+      "type": "image"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299014,
+      "layerId": "slide-257-shape-299014",
+      "type": "text"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299015,
+      "layerId": "slide-257-shape-299015",
+      "type": "image"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299016,
+      "layerId": "slide-257-shape-299016",
+      "type": "text"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299017,
+      "layerId": "slide-257-shape-299017",
+      "type": "text"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299022,
+      "layerId": "slide-257-shape-299022",
+      "type": "text"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299024,
+      "layerId": "slide-257-shape-299024",
+      "type": "text"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299025,
+      "layerId": "slide-257-shape-299025",
+      "type": "text"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299026,
+      "layerId": "slide-257-shape-299026",
+      "type": "text"
+    },
+    {
+      "slide": 257,
+      "shapeId": 299027,
+      "layerId": "slide-257-shape-299027",
+      "type": "shape"
+    },
+    {
+      "slide": 259,
+      "shapeId": 301063,
+      "layerId": "slide-259-shape-301063",
+      "type": "shape"
+    },
+    {
+      "slide": 259,
+      "shapeId": 301064,
+      "layerId": "slide-259-shape-301064",
+      "type": "image"
+    },
+    {
+      "slide": 259,
+      "shapeId": 301065,
+      "layerId": "slide-259-shape-301065",
+      "type": "text"
+    },
+    {
+      "slide": 259,
+      "shapeId": 301067,
+      "layerId": "slide-259-shape-301067",
+      "type": "shape"
+    },
+    {
+      "slide": 259,
+      "shapeId": 301068,
+      "layerId": "slide-259-shape-301068",
+      "type": "text"
+    },
+    {
+      "slide": 259,
+      "shapeId": 301069,
+      "layerId": "slide-259-shape-301069",
+      "type": "text"
+    },
+    {
+      "slide": 259,
+      "shapeId": 301070,
+      "layerId": "slide-259-shape-301070",
+      "type": "text"
+    },
+    {
+      "slide": 260,
+      "shapeId": 303110,
+      "layerId": "slide-260-shape-303110",
+      "type": "image"
+    },
+    {
+      "slide": 260,
+      "shapeId": 303111,
+      "layerId": "slide-260-shape-303111",
+      "type": "text"
+    },
+    {
+      "slide": 260,
+      "shapeId": 303112,
+      "layerId": "slide-260-shape-303112",
+      "type": "image"
+    },
+    {
+      "slide": 260,
+      "shapeId": 303113,
+      "layerId": "slide-260-shape-303113",
+      "type": "text"
+    },
+    {
+      "slide": 260,
+      "shapeId": 303114,
+      "layerId": "slide-260-shape-303114",
+      "type": "text"
+    },
+    {
+      "slide": 260,
+      "shapeId": 303115,
+      "layerId": "slide-260-shape-303115",
+      "type": "shape"
+    },
+    {
+      "slide": 261,
+      "shapeId": 304133,
+      "layerId": "slide-261-shape-304133",
+      "type": "shape"
+    },
+    {
+      "slide": 261,
+      "shapeId": 304134,
+      "layerId": "slide-261-shape-304134",
+      "type": "image"
+    },
+    {
+      "slide": 261,
+      "shapeId": 304135,
+      "layerId": "slide-261-shape-304135",
+      "type": "text"
+    },
+    {
+      "slide": 261,
+      "shapeId": 304138,
+      "layerId": "slide-261-shape-304138",
+      "type": "text"
+    },
+    {
+      "slide": 261,
+      "shapeId": 304139,
+      "layerId": "slide-261-shape-304139",
+      "type": "text"
+    },
+    {
+      "slide": 261,
+      "shapeId": 304140,
+      "layerId": "slide-261-shape-304140",
+      "type": "text"
+    },
+    {
+      "slide": 262,
+      "shapeId": 305157,
+      "layerId": "slide-262-shape-305157",
+      "type": "image"
+    },
+    {
+      "slide": 262,
+      "shapeId": 305158,
+      "layerId": "slide-262-shape-305158",
+      "type": "text"
+    },
+    {
+      "slide": 262,
+      "shapeId": 305160,
+      "layerId": "slide-262-shape-305160",
+      "type": "shape"
+    },
+    {
+      "slide": 264,
+      "shapeId": 307205,
+      "layerId": "slide-264-shape-307205",
+      "type": "image"
+    },
+    {
+      "slide": 264,
+      "shapeId": 307209,
+      "layerId": "slide-264-shape-307209",
+      "type": "text"
+    },
+    {
+      "slide": 267,
+      "shapeId": 310277,
+      "layerId": "slide-267-shape-310277",
+      "type": "image"
+    },
+    {
+      "slide": 267,
+      "shapeId": 310278,
+      "layerId": "slide-267-shape-310278",
+      "type": "text"
+    },
+    {
+      "slide": 268,
+      "shapeId": 313366,
+      "layerId": "slide-268-shape-313366",
+      "type": "shape"
+    },
+    {
+      "slide": 268,
+      "shapeId": 313367,
+      "layerId": "slide-268-shape-313367",
+      "type": "shape"
+    },
+    {
+      "slide": 269,
+      "shapeId": 314388,
+      "layerId": "slide-269-shape-314388",
+      "type": "shape"
+    },
+    {
+      "slide": 270,
+      "shapeId": 316429,
+      "layerId": "slide-270-shape-316429",
+      "type": "shape"
+    },
+    {
+      "slide": 270,
+      "shapeId": 316443,
+      "layerId": "slide-270-shape-316443",
+      "type": "shape"
+    },
+    {
+      "slide": 271,
+      "shapeId": 317451,
+      "layerId": "slide-271-shape-317451",
+      "type": "shape"
+    },
+    {
+      "slide": 271,
+      "shapeId": 317470,
+      "layerId": "slide-271-shape-317470",
+      "type": "shape"
+    },
+    {
+      "slide": 272,
+      "shapeId": 318494,
+      "layerId": "slide-272-shape-318494",
+      "type": "shape"
+    },
+    {
+      "slide": 272,
+      "shapeId": 318497,
+      "layerId": "slide-272-shape-318497",
+      "type": "text"
+    },
+    {
+      "slide": 274,
+      "shapeId": 323591,
+      "layerId": "slide-274-shape-323591",
+      "type": "image"
+    },
+    {
+      "slide": 274,
+      "shapeId": 323592,
+      "layerId": "slide-274-shape-323592",
+      "type": "text"
+    },
+    {
+      "slide": 276,
+      "shapeId": 325639,
+      "layerId": "slide-276-shape-325639",
+      "type": "image"
+    },
+    {
+      "slide": 276,
+      "shapeId": 325640,
+      "layerId": "slide-276-shape-325640",
+      "type": "text"
+    },
+    {
+      "slide": 276,
+      "shapeId": 325641,
+      "layerId": "slide-276-shape-325641",
+      "type": "text"
+    },
+    {
+      "slide": 276,
+      "shapeId": 325643,
+      "layerId": "slide-276-shape-325643",
+      "type": "text"
+    },
+    {
+      "slide": 276,
+      "shapeId": 325644,
+      "layerId": "slide-276-shape-325644",
+      "type": "shape"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327703,
+      "layerId": "slide-278-shape-327703",
+      "type": "image"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327704,
+      "layerId": "slide-278-shape-327704",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327705,
+      "layerId": "slide-278-shape-327705",
+      "type": "image"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327706,
+      "layerId": "slide-278-shape-327706",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327707,
+      "layerId": "slide-278-shape-327707",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327708,
+      "layerId": "slide-278-shape-327708",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327709,
+      "layerId": "slide-278-shape-327709",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327710,
+      "layerId": "slide-278-shape-327710",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327711,
+      "layerId": "slide-278-shape-327711",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327712,
+      "layerId": "slide-278-shape-327712",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327713,
+      "layerId": "slide-278-shape-327713",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327714,
+      "layerId": "slide-278-shape-327714",
+      "type": "text"
+    },
+    {
+      "slide": 278,
+      "shapeId": 327715,
+      "layerId": "slide-278-shape-327715",
+      "type": "shape"
+    },
+    {
+      "slide": 293,
+      "shapeId": 343047,
+      "layerId": "slide-293-shape-343047",
+      "type": "image"
+    },
+    {
+      "slide": 293,
+      "shapeId": 343049,
+      "layerId": "slide-293-shape-343049",
+      "type": "text"
+    },
+    {
+      "slide": 294,
+      "shapeId": 344073,
+      "layerId": "slide-294-shape-344073",
+      "type": "image"
+    },
+    {
+      "slide": 294,
+      "shapeId": 344074,
+      "layerId": "slide-294-shape-344074",
+      "type": "text"
+    },
+    {
+      "slide": 294,
+      "shapeId": 344075,
+      "layerId": "slide-294-shape-344075",
+      "type": "text"
+    },
+    {
+      "slide": 294,
+      "shapeId": 344077,
+      "layerId": "slide-294-shape-344077",
+      "type": "text"
+    },
+    {
+      "slide": 294,
+      "shapeId": 344078,
+      "layerId": "slide-294-shape-344078",
+      "type": "text"
+    },
+    {
+      "slide": 294,
+      "shapeId": 344079,
+      "layerId": "slide-294-shape-344079",
+      "type": "text"
+    },
+    {
+      "slide": 295,
+      "shapeId": 345100,
+      "layerId": "slide-295-shape-345100",
+      "type": "text"
+    },
+    {
+      "slide": 295,
+      "shapeId": 345102,
+      "layerId": "slide-295-shape-345102",
+      "type": "text"
+    },
+    {
+      "slide": 295,
+      "shapeId": 345103,
+      "layerId": "slide-295-shape-345103",
+      "type": "text"
+    },
+    {
+      "slide": 295,
+      "shapeId": 345104,
+      "layerId": "slide-295-shape-345104",
+      "type": "text"
+    },
+    {
+      "slide": 295,
+      "shapeId": 345105,
+      "layerId": "slide-295-shape-345105",
+      "type": "text"
+    },
+    {
+      "slide": 295,
+      "shapeId": 345106,
+      "layerId": "slide-295-shape-345106",
+      "type": "shape"
+    },
+    {
+      "slide": 303,
+      "shapeId": 357386,
+      "layerId": "slide-303-shape-357386",
+      "type": "image"
+    },
+    {
+      "slide": 303,
+      "shapeId": 357387,
+      "layerId": "slide-303-shape-357387",
+      "type": "image"
+    },
+    {
+      "slide": 304,
+      "shapeId": 358405,
+      "layerId": "slide-304-shape-358405",
+      "type": "image"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359429,
+      "layerId": "slide-305-shape-359429",
+      "type": "image"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359430,
+      "layerId": "slide-305-shape-359430",
+      "type": "text"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359431,
+      "layerId": "slide-305-shape-359431",
+      "type": "text"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359432,
+      "layerId": "slide-305-shape-359432",
+      "type": "text"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359433,
+      "layerId": "slide-305-shape-359433",
+      "type": "text"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359434,
+      "layerId": "slide-305-shape-359434",
+      "type": "text"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359435,
+      "layerId": "slide-305-shape-359435",
+      "type": "text"
+    },
+    {
+      "slide": 305,
+      "shapeId": 359436,
+      "layerId": "slide-305-shape-359436",
+      "type": "shape"
+    },
+    {
+      "slide": 306,
+      "shapeId": 360454,
+      "layerId": "slide-306-shape-360454",
+      "type": "image"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361490,
+      "layerId": "slide-308-shape-361490",
+      "type": "image"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361491,
+      "layerId": "slide-308-shape-361491",
+      "type": "image"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361496,
+      "layerId": "slide-308-shape-361496",
+      "type": "image"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361497,
+      "layerId": "slide-308-shape-361497",
+      "type": "text"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361498,
+      "layerId": "slide-308-shape-361498",
+      "type": "text"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361499,
+      "layerId": "slide-308-shape-361499",
+      "type": "text"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361500,
+      "layerId": "slide-308-shape-361500",
+      "type": "image"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361501,
+      "layerId": "slide-308-shape-361501",
+      "type": "text"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361503,
+      "layerId": "slide-308-shape-361503",
+      "type": "image"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361505,
+      "layerId": "slide-308-shape-361505",
+      "type": "text"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361506,
+      "layerId": "slide-308-shape-361506",
+      "type": "text"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361507,
+      "layerId": "slide-308-shape-361507",
+      "type": "text"
+    },
+    {
+      "slide": 308,
+      "shapeId": 361508,
+      "layerId": "slide-308-shape-361508",
+      "type": "text"
+    },
+    {
+      "slide": 309,
+      "shapeId": 363533,
+      "layerId": "slide-309-shape-363533",
+      "type": "text"
+    },
+    {
+      "slide": 309,
+      "shapeId": 363537,
+      "layerId": "slide-309-shape-363537",
+      "type": "text"
+    },
+    {
+      "slide": 309,
+      "shapeId": 363540,
+      "layerId": "slide-309-shape-363540",
+      "type": "shape"
+    },
+    {
+      "slide": 309,
+      "shapeId": 363542,
+      "layerId": "slide-309-shape-363542",
+      "type": "text"
+    },
+    {
+      "slide": 309,
+      "shapeId": 363543,
+      "layerId": "slide-309-shape-363543",
+      "type": "text"
+    },
+    {
+      "slide": 309,
+      "shapeId": 363544,
+      "layerId": "slide-309-shape-363544",
+      "type": "text"
+    },
+    {
+      "slide": 309,
+      "shapeId": 363546,
+      "layerId": "slide-309-shape-363546",
+      "type": "image"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364549,
+      "layerId": "slide-310-shape-364549",
+      "type": "image"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364555,
+      "layerId": "slide-310-shape-364555",
+      "type": "image"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364556,
+      "layerId": "slide-310-shape-364556",
+      "type": "text"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364557,
+      "layerId": "slide-310-shape-364557",
+      "type": "image"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364559,
+      "layerId": "slide-310-shape-364559",
+      "type": "image"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364560,
+      "layerId": "slide-310-shape-364560",
+      "type": "text"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364561,
+      "layerId": "slide-310-shape-364561",
+      "type": "text"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364568,
+      "layerId": "slide-310-shape-364568",
+      "type": "text"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364569,
+      "layerId": "slide-310-shape-364569",
+      "type": "text"
+    },
+    {
+      "slide": 310,
+      "shapeId": 364570,
+      "layerId": "slide-310-shape-364570",
+      "type": "image"
+    },
+    {
+      "slide": 311,
+      "shapeId": 371740,
+      "layerId": "slide-311-shape-371740",
+      "type": "shape"
+    },
+    {
+      "slide": 311,
+      "shapeId": 371741,
+      "layerId": "slide-311-shape-371741",
+      "type": "shape"
+    },
+    {
+      "slide": 311,
+      "shapeId": 371742,
+      "layerId": "slide-311-shape-371742",
+      "type": "shape"
+    },
+    {
+      "slide": 311,
+      "shapeId": 371743,
+      "layerId": "slide-311-shape-371743",
+      "type": "shape"
+    },
+    {
+      "slide": 311,
+      "shapeId": 371744,
+      "layerId": "slide-311-shape-371744",
+      "type": "shape"
+    },
+    {
+      "slide": 311,
+      "shapeId": 371745,
+      "layerId": "slide-311-shape-371745",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368647,
+      "layerId": "slide-312-shape-368647",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368648,
+      "layerId": "slide-312-shape-368648",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368649,
+      "layerId": "slide-312-shape-368649",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368650,
+      "layerId": "slide-312-shape-368650",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368651,
+      "layerId": "slide-312-shape-368651",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368652,
+      "layerId": "slide-312-shape-368652",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368653,
+      "layerId": "slide-312-shape-368653",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368654,
+      "layerId": "slide-312-shape-368654",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368655,
+      "layerId": "slide-312-shape-368655",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368656,
+      "layerId": "slide-312-shape-368656",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368657,
+      "layerId": "slide-312-shape-368657",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368659,
+      "layerId": "slide-312-shape-368659",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368664,
+      "layerId": "slide-312-shape-368664",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368678,
+      "layerId": "slide-312-shape-368678",
+      "type": "image"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368682,
+      "layerId": "slide-312-shape-368682",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368683,
+      "layerId": "slide-312-shape-368683",
+      "type": "image"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368684,
+      "layerId": "slide-312-shape-368684",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368685,
+      "layerId": "slide-312-shape-368685",
+      "type": "image"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368686,
+      "layerId": "slide-312-shape-368686",
+      "type": "shape"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368687,
+      "layerId": "slide-312-shape-368687",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368690,
+      "layerId": "slide-312-shape-368690",
+      "type": "image"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368691,
+      "layerId": "slide-312-shape-368691",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368698,
+      "layerId": "slide-312-shape-368698",
+      "type": "image"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368699,
+      "layerId": "slide-312-shape-368699",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368700,
+      "layerId": "slide-312-shape-368700",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368701,
+      "layerId": "slide-312-shape-368701",
+      "type": "text"
+    },
+    {
+      "slide": 312,
+      "shapeId": 368702,
+      "layerId": "slide-312-shape-368702",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373765,
+      "layerId": "slide-313-shape-373765",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373766,
+      "layerId": "slide-313-shape-373766",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373767,
+      "layerId": "slide-313-shape-373767",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373768,
+      "layerId": "slide-313-shape-373768",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373769,
+      "layerId": "slide-313-shape-373769",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373770,
+      "layerId": "slide-313-shape-373770",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373771,
+      "layerId": "slide-313-shape-373771",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373772,
+      "layerId": "slide-313-shape-373772",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373773,
+      "layerId": "slide-313-shape-373773",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373774,
+      "layerId": "slide-313-shape-373774",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373775,
+      "layerId": "slide-313-shape-373775",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373777,
+      "layerId": "slide-313-shape-373777",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373781,
+      "layerId": "slide-313-shape-373781",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373783,
+      "layerId": "slide-313-shape-373783",
+      "type": "image"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373784,
+      "layerId": "slide-313-shape-373784",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373785,
+      "layerId": "slide-313-shape-373785",
+      "type": "image"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373786,
+      "layerId": "slide-313-shape-373786",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373787,
+      "layerId": "slide-313-shape-373787",
+      "type": "image"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373788,
+      "layerId": "slide-313-shape-373788",
+      "type": "shape"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373789,
+      "layerId": "slide-313-shape-373789",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373798,
+      "layerId": "slide-313-shape-373798",
+      "type": "image"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373799,
+      "layerId": "slide-313-shape-373799",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373801,
+      "layerId": "slide-313-shape-373801",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373802,
+      "layerId": "slide-313-shape-373802",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373803,
+      "layerId": "slide-313-shape-373803",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373804,
+      "layerId": "slide-313-shape-373804",
+      "type": "image"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373805,
+      "layerId": "slide-313-shape-373805",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373807,
+      "layerId": "slide-313-shape-373807",
+      "type": "text"
+    },
+    {
+      "slide": 313,
+      "shapeId": 373808,
+      "layerId": "slide-313-shape-373808",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375813,
+      "layerId": "slide-314-shape-375813",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375814,
+      "layerId": "slide-314-shape-375814",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375815,
+      "layerId": "slide-314-shape-375815",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375816,
+      "layerId": "slide-314-shape-375816",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375817,
+      "layerId": "slide-314-shape-375817",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375818,
+      "layerId": "slide-314-shape-375818",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375819,
+      "layerId": "slide-314-shape-375819",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375820,
+      "layerId": "slide-314-shape-375820",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375821,
+      "layerId": "slide-314-shape-375821",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375822,
+      "layerId": "slide-314-shape-375822",
+      "type": "shape"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375823,
+      "layerId": "slide-314-shape-375823",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375825,
+      "layerId": "slide-314-shape-375825",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375826,
+      "layerId": "slide-314-shape-375826",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375827,
+      "layerId": "slide-314-shape-375827",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375845,
+      "layerId": "slide-314-shape-375845",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375846,
+      "layerId": "slide-314-shape-375846",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375848,
+      "layerId": "slide-314-shape-375848",
+      "type": "image"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375849,
+      "layerId": "slide-314-shape-375849",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375850,
+      "layerId": "slide-314-shape-375850",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375851,
+      "layerId": "slide-314-shape-375851",
+      "type": "text"
+    },
+    {
+      "slide": 314,
+      "shapeId": 375853,
+      "layerId": "slide-314-shape-375853",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379909,
+      "layerId": "slide-315-shape-379909",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379910,
+      "layerId": "slide-315-shape-379910",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379911,
+      "layerId": "slide-315-shape-379911",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379912,
+      "layerId": "slide-315-shape-379912",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379913,
+      "layerId": "slide-315-shape-379913",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379914,
+      "layerId": "slide-315-shape-379914",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379915,
+      "layerId": "slide-315-shape-379915",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379916,
+      "layerId": "slide-315-shape-379916",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379917,
+      "layerId": "slide-315-shape-379917",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379918,
+      "layerId": "slide-315-shape-379918",
+      "type": "shape"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379919,
+      "layerId": "slide-315-shape-379919",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379921,
+      "layerId": "slide-315-shape-379921",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379922,
+      "layerId": "slide-315-shape-379922",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379927,
+      "layerId": "slide-315-shape-379927",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379928,
+      "layerId": "slide-315-shape-379928",
+      "type": "image"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379929,
+      "layerId": "slide-315-shape-379929",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379930,
+      "layerId": "slide-315-shape-379930",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379931,
+      "layerId": "slide-315-shape-379931",
+      "type": "text"
+    },
+    {
+      "slide": 315,
+      "shapeId": 379932,
+      "layerId": "slide-315-shape-379932",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381967,
+      "layerId": "slide-316-shape-381967",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381969,
+      "layerId": "slide-316-shape-381969",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381970,
+      "layerId": "slide-316-shape-381970",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381973,
+      "layerId": "slide-316-shape-381973",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381974,
+      "layerId": "slide-316-shape-381974",
+      "type": "image"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381975,
+      "layerId": "slide-316-shape-381975",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381976,
+      "layerId": "slide-316-shape-381976",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381977,
+      "layerId": "slide-316-shape-381977",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381978,
+      "layerId": "slide-316-shape-381978",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381979,
+      "layerId": "slide-316-shape-381979",
+      "type": "text"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381983,
+      "layerId": "slide-316-shape-381983",
+      "type": "image"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381984,
+      "layerId": "slide-316-shape-381984",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381985,
+      "layerId": "slide-316-shape-381985",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381986,
+      "layerId": "slide-316-shape-381986",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381987,
+      "layerId": "slide-316-shape-381987",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381988,
+      "layerId": "slide-316-shape-381988",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381989,
+      "layerId": "slide-316-shape-381989",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381990,
+      "layerId": "slide-316-shape-381990",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381991,
+      "layerId": "slide-316-shape-381991",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381992,
+      "layerId": "slide-316-shape-381992",
+      "type": "shape"
+    },
+    {
+      "slide": 316,
+      "shapeId": 381993,
+      "layerId": "slide-316-shape-381993",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384004,
+      "layerId": "slide-317-shape-384004",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384006,
+      "layerId": "slide-317-shape-384006",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384007,
+      "layerId": "slide-317-shape-384007",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384010,
+      "layerId": "slide-317-shape-384010",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384011,
+      "layerId": "slide-317-shape-384011",
+      "type": "image"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384012,
+      "layerId": "slide-317-shape-384012",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384013,
+      "layerId": "slide-317-shape-384013",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384016,
+      "layerId": "slide-317-shape-384016",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384017,
+      "layerId": "slide-317-shape-384017",
+      "type": "image"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384019,
+      "layerId": "slide-317-shape-384019",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384020,
+      "layerId": "slide-317-shape-384020",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384021,
+      "layerId": "slide-317-shape-384021",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384022,
+      "layerId": "slide-317-shape-384022",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384023,
+      "layerId": "slide-317-shape-384023",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384024,
+      "layerId": "slide-317-shape-384024",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384025,
+      "layerId": "slide-317-shape-384025",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384026,
+      "layerId": "slide-317-shape-384026",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384027,
+      "layerId": "slide-317-shape-384027",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384028,
+      "layerId": "slide-317-shape-384028",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384029,
+      "layerId": "slide-317-shape-384029",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384030,
+      "layerId": "slide-317-shape-384030",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384031,
+      "layerId": "slide-317-shape-384031",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384032,
+      "layerId": "slide-317-shape-384032",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384033,
+      "layerId": "slide-317-shape-384033",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384034,
+      "layerId": "slide-317-shape-384034",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384035,
+      "layerId": "slide-317-shape-384035",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384036,
+      "layerId": "slide-317-shape-384036",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384037,
+      "layerId": "slide-317-shape-384037",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384039,
+      "layerId": "slide-317-shape-384039",
+      "type": "shape"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384040,
+      "layerId": "slide-317-shape-384040",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384041,
+      "layerId": "slide-317-shape-384041",
+      "type": "text"
+    },
+    {
+      "slide": 317,
+      "shapeId": 384045,
+      "layerId": "slide-317-shape-384045",
+      "type": "shape"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402435,
+      "layerId": "slide-321-shape-402435",
+      "type": "image"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402436,
+      "layerId": "slide-321-shape-402436",
+      "type": "shape"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402437,
+      "layerId": "slide-321-shape-402437",
+      "type": "shape"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402438,
+      "layerId": "slide-321-shape-402438",
+      "type": "shape"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402439,
+      "layerId": "slide-321-shape-402439",
+      "type": "shape"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402440,
+      "layerId": "slide-321-shape-402440",
+      "type": "shape"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402441,
+      "layerId": "slide-321-shape-402441",
+      "type": "image"
+    },
+    {
+      "slide": 321,
+      "shapeId": 402442,
+      "layerId": "slide-321-shape-402442",
+      "type": "text"
+    },
+    {
+      "slide": 322,
+      "shapeId": 398339,
+      "layerId": "slide-322-shape-398339",
+      "type": "text"
+    },
+    {
+      "slide": 322,
+      "shapeId": 398340,
+      "layerId": "slide-322-shape-398340",
+      "type": "image"
+    },
+    {
+      "slide": 322,
+      "shapeId": 398341,
+      "layerId": "slide-322-shape-398341",
+      "type": "text"
+    },
+    {
+      "slide": 322,
+      "shapeId": 398342,
+      "layerId": "slide-322-shape-398342",
+      "type": "text"
+    },
+    {
+      "slide": 322,
+      "shapeId": 398344,
+      "layerId": "slide-322-shape-398344",
+      "type": "image"
+    },
+    {
+      "slide": 322,
+      "shapeId": 398345,
+      "layerId": "slide-322-shape-398345",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387089,
+      "layerId": "slide-323-shape-387089",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387090,
+      "layerId": "slide-323-shape-387090",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387093,
+      "layerId": "slide-323-shape-387093",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387099,
+      "layerId": "slide-323-shape-387099",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387100,
+      "layerId": "slide-323-shape-387100",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387101,
+      "layerId": "slide-323-shape-387101",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387102,
+      "layerId": "slide-323-shape-387102",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387103,
+      "layerId": "slide-323-shape-387103",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387104,
+      "layerId": "slide-323-shape-387104",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387105,
+      "layerId": "slide-323-shape-387105",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387106,
+      "layerId": "slide-323-shape-387106",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387107,
+      "layerId": "slide-323-shape-387107",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387108,
+      "layerId": "slide-323-shape-387108",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387109,
+      "layerId": "slide-323-shape-387109",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387110,
+      "layerId": "slide-323-shape-387110",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387111,
+      "layerId": "slide-323-shape-387111",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387112,
+      "layerId": "slide-323-shape-387112",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387113,
+      "layerId": "slide-323-shape-387113",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387114,
+      "layerId": "slide-323-shape-387114",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387115,
+      "layerId": "slide-323-shape-387115",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387116,
+      "layerId": "slide-323-shape-387116",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387134,
+      "layerId": "slide-323-shape-387134",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387135,
+      "layerId": "slide-323-shape-387135",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387136,
+      "layerId": "slide-323-shape-387136",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387137,
+      "layerId": "slide-323-shape-387137",
+      "type": "shape"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387138,
+      "layerId": "slide-323-shape-387138",
+      "type": "image"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387139,
+      "layerId": "slide-323-shape-387139",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387140,
+      "layerId": "slide-323-shape-387140",
+      "type": "text"
+    },
+    {
+      "slide": 323,
+      "shapeId": 387141,
+      "layerId": "slide-323-shape-387141",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389124,
+      "layerId": "slide-324-shape-389124",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389126,
+      "layerId": "slide-324-shape-389126",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389127,
+      "layerId": "slide-324-shape-389127",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389130,
+      "layerId": "slide-324-shape-389130",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389136,
+      "layerId": "slide-324-shape-389136",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389138,
+      "layerId": "slide-324-shape-389138",
+      "type": "image"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389139,
+      "layerId": "slide-324-shape-389139",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389140,
+      "layerId": "slide-324-shape-389140",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389141,
+      "layerId": "slide-324-shape-389141",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389142,
+      "layerId": "slide-324-shape-389142",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389143,
+      "layerId": "slide-324-shape-389143",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389144,
+      "layerId": "slide-324-shape-389144",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389145,
+      "layerId": "slide-324-shape-389145",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389146,
+      "layerId": "slide-324-shape-389146",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389147,
+      "layerId": "slide-324-shape-389147",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389148,
+      "layerId": "slide-324-shape-389148",
+      "type": "shape"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389149,
+      "layerId": "slide-324-shape-389149",
+      "type": "image"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389150,
+      "layerId": "slide-324-shape-389150",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389151,
+      "layerId": "slide-324-shape-389151",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389152,
+      "layerId": "slide-324-shape-389152",
+      "type": "text"
+    },
+    {
+      "slide": 324,
+      "shapeId": 389153,
+      "layerId": "slide-324-shape-389153",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390148,
+      "layerId": "slide-325-shape-390148",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390150,
+      "layerId": "slide-325-shape-390150",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390151,
+      "layerId": "slide-325-shape-390151",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390154,
+      "layerId": "slide-325-shape-390154",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390158,
+      "layerId": "slide-325-shape-390158",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390159,
+      "layerId": "slide-325-shape-390159",
+      "type": "image"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390160,
+      "layerId": "slide-325-shape-390160",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390161,
+      "layerId": "slide-325-shape-390161",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390162,
+      "layerId": "slide-325-shape-390162",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390163,
+      "layerId": "slide-325-shape-390163",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390164,
+      "layerId": "slide-325-shape-390164",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390165,
+      "layerId": "slide-325-shape-390165",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390166,
+      "layerId": "slide-325-shape-390166",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390167,
+      "layerId": "slide-325-shape-390167",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390168,
+      "layerId": "slide-325-shape-390168",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390169,
+      "layerId": "slide-325-shape-390169",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390170,
+      "layerId": "slide-325-shape-390170",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390171,
+      "layerId": "slide-325-shape-390171",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390172,
+      "layerId": "slide-325-shape-390172",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390173,
+      "layerId": "slide-325-shape-390173",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390174,
+      "layerId": "slide-325-shape-390174",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390175,
+      "layerId": "slide-325-shape-390175",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390176,
+      "layerId": "slide-325-shape-390176",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390177,
+      "layerId": "slide-325-shape-390177",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390178,
+      "layerId": "slide-325-shape-390178",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390179,
+      "layerId": "slide-325-shape-390179",
+      "type": "shape"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390180,
+      "layerId": "slide-325-shape-390180",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390183,
+      "layerId": "slide-325-shape-390183",
+      "type": "image"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390184,
+      "layerId": "slide-325-shape-390184",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390185,
+      "layerId": "slide-325-shape-390185",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390186,
+      "layerId": "slide-325-shape-390186",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390188,
+      "layerId": "slide-325-shape-390188",
+      "type": "text"
+    },
+    {
+      "slide": 325,
+      "shapeId": 390191,
+      "layerId": "slide-325-shape-390191",
+      "type": "shape"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406531,
+      "layerId": "slide-329-shape-406531",
+      "type": "image"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406532,
+      "layerId": "slide-329-shape-406532",
+      "type": "shape"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406533,
+      "layerId": "slide-329-shape-406533",
+      "type": "shape"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406534,
+      "layerId": "slide-329-shape-406534",
+      "type": "shape"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406535,
+      "layerId": "slide-329-shape-406535",
+      "type": "shape"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406536,
+      "layerId": "slide-329-shape-406536",
+      "type": "shape"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406537,
+      "layerId": "slide-329-shape-406537",
+      "type": "image"
+    },
+    {
+      "slide": 329,
+      "shapeId": 406538,
+      "layerId": "slide-329-shape-406538",
+      "type": "text"
+    },
+    {
+      "slide": 330,
+      "shapeId": 407555,
+      "layerId": "slide-330-shape-407555",
+      "type": "text"
+    },
+    {
+      "slide": 330,
+      "shapeId": 407556,
+      "layerId": "slide-330-shape-407556",
+      "type": "image"
+    },
+    {
+      "slide": 330,
+      "shapeId": 407557,
+      "layerId": "slide-330-shape-407557",
+      "type": "text"
+    },
+    {
+      "slide": 330,
+      "shapeId": 407558,
+      "layerId": "slide-330-shape-407558",
+      "type": "text"
+    },
+    {
+      "slide": 330,
+      "shapeId": 407559,
+      "layerId": "slide-330-shape-407559",
+      "type": "image"
+    },
+    {
+      "slide": 330,
+      "shapeId": 407560,
+      "layerId": "slide-330-shape-407560",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393222,
+      "layerId": "slide-331-shape-393222",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393223,
+      "layerId": "slide-331-shape-393223",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393225,
+      "layerId": "slide-331-shape-393225",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393226,
+      "layerId": "slide-331-shape-393226",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393228,
+      "layerId": "slide-331-shape-393228",
+      "type": "image"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393245,
+      "layerId": "slide-331-shape-393245",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393246,
+      "layerId": "slide-331-shape-393246",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393247,
+      "layerId": "slide-331-shape-393247",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393248,
+      "layerId": "slide-331-shape-393248",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393249,
+      "layerId": "slide-331-shape-393249",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393250,
+      "layerId": "slide-331-shape-393250",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393251,
+      "layerId": "slide-331-shape-393251",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393252,
+      "layerId": "slide-331-shape-393252",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393253,
+      "layerId": "slide-331-shape-393253",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393254,
+      "layerId": "slide-331-shape-393254",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393255,
+      "layerId": "slide-331-shape-393255",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393256,
+      "layerId": "slide-331-shape-393256",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393257,
+      "layerId": "slide-331-shape-393257",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393258,
+      "layerId": "slide-331-shape-393258",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393259,
+      "layerId": "slide-331-shape-393259",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393260,
+      "layerId": "slide-331-shape-393260",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393261,
+      "layerId": "slide-331-shape-393261",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393262,
+      "layerId": "slide-331-shape-393262",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393263,
+      "layerId": "slide-331-shape-393263",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393264,
+      "layerId": "slide-331-shape-393264",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393265,
+      "layerId": "slide-331-shape-393265",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393266,
+      "layerId": "slide-331-shape-393266",
+      "type": "shape"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393290,
+      "layerId": "slide-331-shape-393290",
+      "type": "image"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393291,
+      "layerId": "slide-331-shape-393291",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393292,
+      "layerId": "slide-331-shape-393292",
+      "type": "text"
+    },
+    {
+      "slide": 331,
+      "shapeId": 393293,
+      "layerId": "slide-331-shape-393293",
+      "type": "text"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394245,
+      "layerId": "slide-332-shape-394245",
+      "type": "text"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394250,
+      "layerId": "slide-332-shape-394250",
+      "type": "image"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394254,
+      "layerId": "slide-332-shape-394254",
+      "type": "text"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394255,
+      "layerId": "slide-332-shape-394255",
+      "type": "text"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394256,
+      "layerId": "slide-332-shape-394256",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394257,
+      "layerId": "slide-332-shape-394257",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394258,
+      "layerId": "slide-332-shape-394258",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394259,
+      "layerId": "slide-332-shape-394259",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394260,
+      "layerId": "slide-332-shape-394260",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394261,
+      "layerId": "slide-332-shape-394261",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394262,
+      "layerId": "slide-332-shape-394262",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394263,
+      "layerId": "slide-332-shape-394263",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394264,
+      "layerId": "slide-332-shape-394264",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394265,
+      "layerId": "slide-332-shape-394265",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394266,
+      "layerId": "slide-332-shape-394266",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394267,
+      "layerId": "slide-332-shape-394267",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394268,
+      "layerId": "slide-332-shape-394268",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394269,
+      "layerId": "slide-332-shape-394269",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394270,
+      "layerId": "slide-332-shape-394270",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394271,
+      "layerId": "slide-332-shape-394271",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394272,
+      "layerId": "slide-332-shape-394272",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394273,
+      "layerId": "slide-332-shape-394273",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394274,
+      "layerId": "slide-332-shape-394274",
+      "type": "shape"
+    },
+    {
+      "slide": 332,
+      "shapeId": 394275,
+      "layerId": "slide-332-shape-394275",
+      "type": "shape"
+    },
+    {
+      "slide": 336,
+      "shapeId": 412676,
+      "layerId": "slide-336-shape-412676",
+      "type": "image"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414742,
+      "layerId": "slide-337-shape-414742",
+      "type": "image"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414743,
+      "layerId": "slide-337-shape-414743",
+      "type": "image"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414744,
+      "layerId": "slide-337-shape-414744",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414745,
+      "layerId": "slide-337-shape-414745",
+      "type": "image"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414746,
+      "layerId": "slide-337-shape-414746",
+      "type": "image"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414747,
+      "layerId": "slide-337-shape-414747",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414748,
+      "layerId": "slide-337-shape-414748",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414749,
+      "layerId": "slide-337-shape-414749",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414750,
+      "layerId": "slide-337-shape-414750",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414751,
+      "layerId": "slide-337-shape-414751",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414752,
+      "layerId": "slide-337-shape-414752",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414753,
+      "layerId": "slide-337-shape-414753",
+      "type": "text"
+    },
+    {
+      "slide": 337,
+      "shapeId": 414754,
+      "layerId": "slide-337-shape-414754",
+      "type": "image"
+    },
+    {
+      "slide": 338,
+      "shapeId": 415758,
+      "layerId": "slide-338-shape-415758",
+      "type": "text"
+    },
+    {
+      "slide": 338,
+      "shapeId": 415759,
+      "layerId": "slide-338-shape-415759",
+      "type": "image"
+    },
+    {
+      "slide": 338,
+      "shapeId": 415760,
+      "layerId": "slide-338-shape-415760",
+      "type": "text"
+    },
+    {
+      "slide": 338,
+      "shapeId": 415761,
+      "layerId": "slide-338-shape-415761",
+      "type": "image"
+    },
+    {
+      "slide": 338,
+      "shapeId": 415762,
+      "layerId": "slide-338-shape-415762",
+      "type": "text"
+    },
+    {
+      "slide": 339,
+      "shapeId": 416775,
+      "layerId": "slide-339-shape-416775",
+      "type": "shape"
+    },
+    {
+      "slide": 339,
+      "shapeId": 416776,
+      "layerId": "slide-339-shape-416776",
+      "type": "shape"
+    },
+    {
+      "slide": 339,
+      "shapeId": 416777,
+      "layerId": "slide-339-shape-416777",
+      "type": "shape"
+    },
+    {
+      "slide": 339,
+      "shapeId": 416778,
+      "layerId": "slide-339-shape-416778",
+      "type": "shape"
+    },
+    {
+      "slide": 339,
+      "shapeId": 416779,
+      "layerId": "slide-339-shape-416779",
+      "type": "shape"
+    },
+    {
+      "slide": 339,
+      "shapeId": 416780,
+      "layerId": "slide-339-shape-416780",
+      "type": "text"
+    },
+    {
+      "slide": 339,
+      "shapeId": 416783,
+      "layerId": "slide-339-shape-416783",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417799,
+      "layerId": "slide-340-shape-417799",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417801,
+      "layerId": "slide-340-shape-417801",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417802,
+      "layerId": "slide-340-shape-417802",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417803,
+      "layerId": "slide-340-shape-417803",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417804,
+      "layerId": "slide-340-shape-417804",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417805,
+      "layerId": "slide-340-shape-417805",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417806,
+      "layerId": "slide-340-shape-417806",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417807,
+      "layerId": "slide-340-shape-417807",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417808,
+      "layerId": "slide-340-shape-417808",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417809,
+      "layerId": "slide-340-shape-417809",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417810,
+      "layerId": "slide-340-shape-417810",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417811,
+      "layerId": "slide-340-shape-417811",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417812,
+      "layerId": "slide-340-shape-417812",
+      "type": "image"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417813,
+      "layerId": "slide-340-shape-417813",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417814,
+      "layerId": "slide-340-shape-417814",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417815,
+      "layerId": "slide-340-shape-417815",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417817,
+      "layerId": "slide-340-shape-417817",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417819,
+      "layerId": "slide-340-shape-417819",
+      "type": "shape"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417820,
+      "layerId": "slide-340-shape-417820",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417821,
+      "layerId": "slide-340-shape-417821",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417822,
+      "layerId": "slide-340-shape-417822",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417823,
+      "layerId": "slide-340-shape-417823",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417825,
+      "layerId": "slide-340-shape-417825",
+      "type": "image"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417826,
+      "layerId": "slide-340-shape-417826",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417827,
+      "layerId": "slide-340-shape-417827",
+      "type": "image"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417828,
+      "layerId": "slide-340-shape-417828",
+      "type": "text"
+    },
+    {
+      "slide": 340,
+      "shapeId": 417829,
+      "layerId": "slide-340-shape-417829",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419845,
+      "layerId": "slide-341-shape-419845",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419847,
+      "layerId": "slide-341-shape-419847",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419848,
+      "layerId": "slide-341-shape-419848",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419849,
+      "layerId": "slide-341-shape-419849",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419850,
+      "layerId": "slide-341-shape-419850",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419851,
+      "layerId": "slide-341-shape-419851",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419852,
+      "layerId": "slide-341-shape-419852",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419853,
+      "layerId": "slide-341-shape-419853",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419854,
+      "layerId": "slide-341-shape-419854",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419855,
+      "layerId": "slide-341-shape-419855",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419856,
+      "layerId": "slide-341-shape-419856",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419857,
+      "layerId": "slide-341-shape-419857",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419862,
+      "layerId": "slide-341-shape-419862",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419864,
+      "layerId": "slide-341-shape-419864",
+      "type": "shape"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419865,
+      "layerId": "slide-341-shape-419865",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419866,
+      "layerId": "slide-341-shape-419866",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419867,
+      "layerId": "slide-341-shape-419867",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419868,
+      "layerId": "slide-341-shape-419868",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419874,
+      "layerId": "slide-341-shape-419874",
+      "type": "image"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419875,
+      "layerId": "slide-341-shape-419875",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419876,
+      "layerId": "slide-341-shape-419876",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419877,
+      "layerId": "slide-341-shape-419877",
+      "type": "text"
+    },
+    {
+      "slide": 341,
+      "shapeId": 419878,
+      "layerId": "slide-341-shape-419878",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422917,
+      "layerId": "slide-342-shape-422917",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422919,
+      "layerId": "slide-342-shape-422919",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422920,
+      "layerId": "slide-342-shape-422920",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422921,
+      "layerId": "slide-342-shape-422921",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422922,
+      "layerId": "slide-342-shape-422922",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422923,
+      "layerId": "slide-342-shape-422923",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422924,
+      "layerId": "slide-342-shape-422924",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422925,
+      "layerId": "slide-342-shape-422925",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422926,
+      "layerId": "slide-342-shape-422926",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422927,
+      "layerId": "slide-342-shape-422927",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422928,
+      "layerId": "slide-342-shape-422928",
+      "type": "shape"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422929,
+      "layerId": "slide-342-shape-422929",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422939,
+      "layerId": "slide-342-shape-422939",
+      "type": "image"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422940,
+      "layerId": "slide-342-shape-422940",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422941,
+      "layerId": "slide-342-shape-422941",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422944,
+      "layerId": "slide-342-shape-422944",
+      "type": "image"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422945,
+      "layerId": "slide-342-shape-422945",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422946,
+      "layerId": "slide-342-shape-422946",
+      "type": "image"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422948,
+      "layerId": "slide-342-shape-422948",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422949,
+      "layerId": "slide-342-shape-422949",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422952,
+      "layerId": "slide-342-shape-422952",
+      "type": "text"
+    },
+    {
+      "slide": 342,
+      "shapeId": 422953,
+      "layerId": "slide-342-shape-422953",
+      "type": "shape"
+    },
+    {
+      "slide": 343,
+      "shapeId": 423966,
+      "layerId": "slide-343-shape-423966",
+      "type": "text"
+    },
+    {
+      "slide": 343,
+      "shapeId": 423968,
+      "layerId": "slide-343-shape-423968",
+      "type": "shape"
+    },
+    {
+      "slide": 348,
+      "shapeId": 430086,
+      "layerId": "slide-348-shape-430086",
+      "type": "shape"
+    },
+    {
+      "slide": 348,
+      "shapeId": 430087,
+      "layerId": "slide-348-shape-430087",
+      "type": "shape"
+    },
+    {
+      "slide": 348,
+      "shapeId": 430088,
+      "layerId": "slide-348-shape-430088",
+      "type": "shape"
+    },
+    {
+      "slide": 348,
+      "shapeId": 430089,
+      "layerId": "slide-348-shape-430089",
+      "type": "shape"
+    },
+    {
+      "slide": 348,
+      "shapeId": 430091,
+      "layerId": "slide-348-shape-430091",
+      "type": "image"
+    },
+    {
+      "slide": 348,
+      "shapeId": 430092,
+      "layerId": "slide-348-shape-430092",
+      "type": "text"
+    },
+    {
+      "slide": 348,
+      "shapeId": 430093,
+      "layerId": "slide-348-shape-430093",
+      "type": "shape"
+    },
+    {
+      "slide": 349,
+      "shapeId": 431110,
+      "layerId": "slide-349-shape-431110",
+      "type": "image"
+    },
+    {
+      "slide": 349,
+      "shapeId": 431111,
+      "layerId": "slide-349-shape-431111",
+      "type": "shape"
+    },
+    {
+      "slide": 349,
+      "shapeId": 431112,
+      "layerId": "slide-349-shape-431112",
+      "type": "shape"
+    },
+    {
+      "slide": 349,
+      "shapeId": 431113,
+      "layerId": "slide-349-shape-431113",
+      "type": "shape"
+    },
+    {
+      "slide": 349,
+      "shapeId": 431114,
+      "layerId": "slide-349-shape-431114",
+      "type": "shape"
+    },
+    {
+      "slide": 350,
+      "shapeId": 432137,
+      "layerId": "slide-350-shape-432137",
+      "type": "image"
+    },
+    {
+      "slide": 350,
+      "shapeId": 432138,
+      "layerId": "slide-350-shape-432138",
+      "type": "text"
+    },
+    {
+      "slide": 351,
+      "shapeId": 433157,
+      "layerId": "slide-351-shape-433157",
+      "type": "image"
+    },
+    {
+      "slide": 352,
+      "shapeId": 434201,
+      "layerId": "slide-352-shape-434201",
+      "type": "image"
+    },
+    {
+      "slide": 352,
+      "shapeId": 434202,
+      "layerId": "slide-352-shape-434202",
+      "type": "text"
+    },
+    {
+      "slide": 352,
+      "shapeId": 434204,
+      "layerId": "slide-352-shape-434204",
+      "type": "text"
+    },
+    {
+      "slide": 352,
+      "shapeId": 434205,
+      "layerId": "slide-352-shape-434205",
+      "type": "shape"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437253,
+      "layerId": "slide-353-shape-437253",
+      "type": "image"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437254,
+      "layerId": "slide-353-shape-437254",
+      "type": "text"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437263,
+      "layerId": "slide-353-shape-437263",
+      "type": "image"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437265,
+      "layerId": "slide-353-shape-437265",
+      "type": "text"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437266,
+      "layerId": "slide-353-shape-437266",
+      "type": "text"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437267,
+      "layerId": "slide-353-shape-437267",
+      "type": "text"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437268,
+      "layerId": "slide-353-shape-437268",
+      "type": "text"
+    },
+    {
+      "slide": 353,
+      "shapeId": 437269,
+      "layerId": "slide-353-shape-437269",
+      "type": "shape"
+    },
+    {
+      "slide": 356,
+      "shapeId": 441350,
+      "layerId": "slide-356-shape-441350",
+      "type": "text"
+    },
+    {
+      "slide": 356,
+      "shapeId": 441351,
+      "layerId": "slide-356-shape-441351",
+      "type": "text"
+    },
+    {
+      "slide": 358,
+      "shapeId": 458768,
+      "layerId": "slide-358-shape-458768",
+      "type": "image"
+    },
+    {
+      "slide": 358,
+      "shapeId": 458769,
+      "layerId": "slide-358-shape-458769",
+      "type": "image"
+    },
+    {
+      "slide": 358,
+      "shapeId": 458770,
+      "layerId": "slide-358-shape-458770",
+      "type": "image"
+    },
+    {
+      "slide": 358,
+      "shapeId": 458771,
+      "layerId": "slide-358-shape-458771",
+      "type": "image"
+    },
+    {
+      "slide": 358,
+      "shapeId": 458772,
+      "layerId": "slide-358-shape-458772",
+      "type": "image"
+    }
+  ]
+}

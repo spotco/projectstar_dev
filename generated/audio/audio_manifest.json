@@ -1,0 +1,481 @@
+[
+  {
+    "source": "track1.mp3",
+    "sourceKind": "linked_audio",
+    "source_bytes": 4388571,
+    "source_sha256": "9ca7ff8fca67346da86606b5c0ae245d89452fe7de6b2b528e302aed27d4b1ea",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/track1.mp3",
+        "bytes": 4388571,
+        "sha256": "9ca7ff8fca67346da86606b5c0ae245d89452fe7de6b2b528e302aed27d4b1ea"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/track1.opus",
+        "bytes": 3003990,
+        "sha256": "5af6762b03449ad2ecc90f36e908070dbc1316355aab71c6b14b9444e810ea39"
+      }
+    ],
+    "status": "converted"
+  },
+  {
+    "source": "track2.mp3",
+    "sourceKind": "linked_audio",
+    "source_bytes": 2711552,
+    "source_sha256": "be00359cd15c67b42dcded633e8d0cda26d793cb360b67206cd5cf67e8f32eb0",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/track2.mp3",
+        "bytes": 2711552,
+        "sha256": "be00359cd15c67b42dcded633e8d0cda26d793cb360b67206cd5cf67e8f32eb0"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/track2.opus",
+        "bytes": 2120549,
+        "sha256": "851aaf255c8695dcc18da986c1a1a27711400bd0863575726a79ae5ce94f129b"
+      }
+    ],
+    "status": "converted"
+  },
+  {
+    "source": "track3.mp3",
+    "sourceKind": "linked_audio",
+    "source_bytes": 3681384,
+    "source_sha256": "539e57f68dff7ac8c2a1de3026eb39132b57705a7ed170257743c5bbd48f2d0d",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/track3.mp3",
+        "bytes": 3681384,
+        "sha256": "539e57f68dff7ac8c2a1de3026eb39132b57705a7ed170257743c5bbd48f2d0d"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/track3.opus",
+        "bytes": 2923287,
+        "sha256": "f3c6af732f7dcd3c50215b5f8b9ad277bafe243afc90c45b459f6e70466921a4"
+      }
+    ],
+    "status": "converted"
+  },
+  {
+    "source": "track4.mp3",
+    "sourceKind": "linked_audio",
+    "source_bytes": 3385137,
+    "source_sha256": "1a12b65faddc55edadd04eb1b642a85a27d7fd25adc93ddbae0d24de8f8742a9",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/track4.mp3",
+        "bytes": 3385137,
+        "sha256": "1a12b65faddc55edadd04eb1b642a85a27d7fd25adc93ddbae0d24de8f8742a9"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/track4.opus",
+        "bytes": 2714818,
+        "sha256": "56c34fbad901f61337639c435e92773ddfed92553c63f30c581117a5581e53e2"
+      }
+    ],
+    "status": "converted"
+  },
+  {
+    "source": "track5.mp3",
+    "sourceKind": "linked_audio",
+    "source_bytes": 1588222,
+    "source_sha256": "e2b529c6e7e8529b5979849cb5311cb2998c6de2562e7c035a0e3a172e6f409a",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/track5.mp3",
+        "bytes": 1588222,
+        "sha256": "e2b529c6e7e8529b5979849cb5311cb2998c6de2562e7c035a0e3a172e6f409a"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/track5.opus",
+        "bytes": 1114788,
+        "sha256": "b2ef0e40a1034daf4948190a048b81b3f7b68577e5e04f32a9a85249e6b190ac"
+      }
+    ],
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-009-suction.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 5732,
+    "source_sha256": "3053a05ace86f945f1c8079df4c35a76cfd7e56ec5305755f717ab05f1a478d4",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-009-suction.mp3",
+        "bytes": 5942,
+        "sha256": "d21108292764e156f2e5a380bf627220161ea07601ecb82108ae7469e4239a5f"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-009-suction.opus",
+        "bytes": 6864,
+        "sha256": "56e80d369dfa174a94bcd8e28cc8f12e0279afeb3410a6a2f7c663789a2f6b8a"
+      }
+    ],
+    "embeddedSoundId": 9,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-010-chimes.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 37310,
+    "source_sha256": "32242d72912a92504c344b64943debde242ee77f34301e0ef220e80e3d8cfdca",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-010-chimes.mp3",
+        "bytes": 28465,
+        "sha256": "9df941b8c77f2513cd816fc1e71048ed15be448e01edccca21b451f06632f50f"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-010-chimes.opus",
+        "bytes": 22035,
+        "sha256": "8b1b814dbbb5e508ba6623dc9ac9a8316762b6ba2549c05cf7e5b13239379c65"
+      }
+    ],
+    "embeddedSoundId": 10,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-012-voltage.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 13766,
+    "source_sha256": "13576d767fe86e7f64fc5b8a0b46a21f2d856c47fcffaea4a7196770ad3edab3",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-012-voltage.mp3",
+        "bytes": 6778,
+        "sha256": "0f720c1607ae59133910edfe26449e630034f9ea577396d0b9f8f61ea6e96ee5"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-012-voltage.opus",
+        "bytes": 8202,
+        "sha256": "57ac958902473310f0450e145fac70ab91146ddeb07368d630ca0d9fec775908"
+      }
+    ],
+    "embeddedSoundId": 12,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-015-explode.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 23584,
+    "source_sha256": "4ecbd8d4bcd73d49e5a7d68f3e0074f4f9a8518fae8b235aa96bf910c219a60f",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-015-explode.mp3",
+        "bytes": 18852,
+        "sha256": "e4f98247550a02b268b7ab2661fc5b3427860227e276f68397e23dc7495885c1"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-015-explode.opus",
+        "bytes": 32149,
+        "sha256": "26f6a77d0f2a71fe587c5de24ee5d35863fd4acb1dcab32fb05fb63c1ccc5a73"
+      }
+    ],
+    "embeddedSoundId": 15,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-017-push.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 15748,
+    "source_sha256": "c611caa62a911bb2387af89d80059c67c527a7968919242dc7913094b64a8673",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-017-push.mp3",
+        "bytes": 13465,
+        "sha256": "21689d7f30f102633308b0551bd94a5e8a5aad286084459f6e99e58adb3c68a6"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-017-push.opus",
+        "bytes": 16864,
+        "sha256": "e69776a72f2a02f25bf0d28eb4d8582b51f4c2e57bb273a514f9250bfda738d9"
+      }
+    ],
+    "embeddedSoundId": 17,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-018-j0214098.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 26810,
+    "source_sha256": "0860e2a798e4cdc32d376bf5005b250a4c7c648b8c6e0a44b4b03a40373ccdfa",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-018-j0214098.mp3",
+        "bytes": 39750,
+        "sha256": "13fbfe57e16dda99e61eaa2c2dcedcdb1a8af2fc7de436fb32af5bceed39394c"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-018-j0214098.opus",
+        "bytes": 58532,
+        "sha256": "f7cfcb60ae3b11720aa738a804f7642c8ac4e609e35a009829bbea17bedd0c3d"
+      }
+    ],
+    "embeddedSoundId": 18,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-021-wind.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 11140,
+    "source_sha256": "687689502eff09dec63efe753b4b16a0b35f5852ab1f128840b9e46cf61425c9",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-021-wind.mp3",
+        "bytes": 10122,
+        "sha256": "ba6eea6afb947e66da7adc56263d5b1e48844f668ad073f7d34a5260398294bb"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-021-wind.opus",
+        "bytes": 12385,
+        "sha256": "b5a01035bea5a3f7e421a2fc45b1a9d6e3f1103b0285d3fec910e48ee2b62a87"
+      }
+    ],
+    "embeddedSoundId": 21,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-022-cashreg.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 7551,
+    "source_sha256": "b449ca058da47c005b479cad24ea475dfce2f62482d862efa5b437e630cd1a1a",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-022-cashreg.mp3",
+        "bytes": 7567,
+        "sha256": "447f675dc799ac1fea6902351784b19c01af9bdd40feaa82b53205514cc47a42"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-022-cashreg.opus",
+        "bytes": 8698,
+        "sha256": "74664885648b47c1bc7b64ce70c586632fbe5757a04174abaf1231582a6d4ecc"
+      }
+    ],
+    "embeddedSoundId": 22,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-027-MSSN00021A0000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 5466,
+    "source_sha256": "af24e2789fd4218bb7c5e86333f793f2e549936c097ca88b87f25e39d96fdfd8",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-027-MSSN00021A0000-1.mp3",
+        "bytes": 9657,
+        "sha256": "b1a4872a151871be987b7b9f2a4b18331a781ddef64807a0343c4a0e975b874e"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-027-MSSN00021A0000-1.opus",
+        "bytes": 12066,
+        "sha256": "90f0107f66281ef0c328bae09a09470c8f4bb097c23af7a118a7f749dc756d2e"
+      }
+    ],
+    "embeddedSoundId": 27,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-028-MSSN00022A0000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 7258,
+    "source_sha256": "f6302cd72d14a3c8ecdedcff69de4ac80c7033a33a5472993bbf90a9994afa45",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-028-MSSN00022A0000-1.mp3",
+        "bytes": 12164,
+        "sha256": "f248973382432d5c0e40571eebfc1faf1e35e36d263e0dc0c19a3149699b09bc"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-028-MSSN00022A0000-1.opus",
+        "bytes": 16034,
+        "sha256": "fe1d553f6913da47fe4581d7e5ea8cc0c6f623c93c7d109245e23ef0f9d12fa1"
+      }
+    ],
+    "embeddedSoundId": 28,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-031-MSj00750080000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 90970,
+    "source_sha256": "a7a11b6a4a2967b8c1b726d73b55827544609b6745b04eb23f664934e8885a40",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-031-MSj00750080000-1.mp3",
+        "bytes": 130865,
+        "sha256": "0154633cadbd7fd0413ea6826e7c551cf076f03a4df33c533a8bb6da0afd5f2c"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-031-MSj00750080000-1.opus",
+        "bytes": 187857,
+        "sha256": "815c179ab4b1c08ca6291097af2a04397f9175c2a79afce4d660fcbcb1452e4d"
+      }
+    ],
+    "embeddedSoundId": 31,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-034-MSj00749960000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 2138,
+    "source_sha256": "ab83cea5810039d91cbdcc57bce07d8ea91eb34241f696ced53d3f0c7f2f963a",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-034-MSj00749960000-1.mp3",
+        "bytes": 4641,
+        "sha256": "d643c2ba87e6813e495651dd693edaac2c5bdabef3d6ba0bea56d91170edc994"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-034-MSj00749960000-1.opus",
+        "bytes": 5223,
+        "sha256": "93db4e4db6444cead003beaae33b45bd411f79f6a2d55c198c4a07957df53bf1"
+      }
+    ],
+    "embeddedSoundId": 34,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-046-MSj03885520000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 36954,
+    "source_sha256": "0113ef91df67a11a214c8a51e1f46c0d7192c7186f8fc3c8d360ba1d985d0f98",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-046-MSj03885520000-1.mp3",
+        "bytes": 28047,
+        "sha256": "a62eefa4947c91b90cfa5bc04144430e8acea15ee4ad006c60a1e208ea1acfc7"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-046-MSj03885520000-1.opus",
+        "bytes": 43167,
+        "sha256": "73eb83a0c18e46bd740fc4111187f863df0f59f2fbdd6bbc2bc9e578baad448c"
+      }
+    ],
+    "embeddedSoundId": 46,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-048-MSSN01097A0000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 1370,
+    "source_sha256": "51d0a3042d9ffc48c2394627f3eeb6dc621d05be562f44fbc5c2e566034fa4c9",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-048-MSSN01097A0000-1.mp3",
+        "bytes": 3805,
+        "sha256": "65fa26fa4a7143d758a7dd821a8d22bf52e4ffb1565a419a2907e864175b7389"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-048-MSSN01097A0000-1.opus",
+        "bytes": 3457,
+        "sha256": "2962cc1bc811f9d098ce8880a9cda52934ccdcd319dbf779253d933cd970a5e1"
+      }
+    ],
+    "embeddedSoundId": 48,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-055-MSj03883880000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 30810,
+    "source_sha256": "d09290e89c9a3ae2a739b24e23f4e1b315aeef4afdc0388f3d7edd59710618b4",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-055-MSj03883880000-1.mp3",
+        "bytes": 23867,
+        "sha256": "fd94e3c032c2f1d736a7ae513ddfd313d2b27880d0478c3ee7b95627200b49f6"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-055-MSj03883880000-1.opus",
+        "bytes": 33826,
+        "sha256": "96f71d5e870d1985339e8eb41f8b80f78c1dd7238e83e53a4dfe9a9e62a879f2"
+      }
+    ],
+    "embeddedSoundId": 55,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-057-MSSN00454A0000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 3930,
+    "source_sha256": "335257716a4a391c6ede984e1f82642c0648447dc0bf3bcd7b43c7a1d26bb77c",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-057-MSSN00454A0000-1.mp3",
+        "bytes": 7567,
+        "sha256": "1d5ad68187450d657087151207139cffdd162d6d2f20c9189db4a62d706b7c91"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-057-MSSN00454A0000-1.opus",
+        "bytes": 9800,
+        "sha256": "afd9eec0aad1cec7fe74a6b20a8583eabbbf050b6d8be9078c68f53edcd51d01"
+      }
+    ],
+    "embeddedSoundId": 57,
+    "status": "converted"
+  },
+  {
+    "source": "generated/embedded-audio/sound-062-MSSN01085A0000-1.wav",
+    "sourceKind": "embedded_powerpoint_sound",
+    "source_bytes": 22618,
+    "source_sha256": "995030cdcc8b93e77e95fea0d0751deecdaf9896a6a61723b29b04eea9506b31",
+    "outputs": [
+      {
+        "type": "mp3",
+        "path": "generated/audio/sound-062-MSSN01085A0000-1.mp3",
+        "bytes": 33898,
+        "sha256": "3c65d1924d43e1edeaae358fb1444f0d38652921c6b21a91d0fff5ed12746e26"
+      },
+      {
+        "type": "opus",
+        "path": "generated/audio/sound-062-MSSN01085A0000-1.opus",
+        "bytes": 42184,
+        "sha256": "964d04a244493bccfd675f0d7bc911e813446e3a2c3cda261c22a8090eb1c99d"
+      }
+    ],
+    "embeddedSoundId": 62,
+    "status": "converted"
+  }
+]

@@ -1,0 +1,7846 @@
+{
+  "format": "projectstar-runtime-traversal-v2",
+  "summary": {
+    "screens": 358,
+    "hotspotEdges": 210,
+    "sequentialEdges": 238,
+    "manualAdvanceEdges": 0,
+    "fallbackStageClickEdges": 121,
+    "autoAdvanceEdges": 117,
+    "combinedEdges": 448,
+    "startScreen": "slide-001",
+    "reachableFromStartCombined": 358,
+    "unreachableCount": 0,
+    "terminalCount": 4
+  },
+  "sequentialAdvance": {
+    "stageClickEdgeCount": 121,
+    "manualAdvanceEdgeCount": 0,
+    "fallbackStageClickEdgeCount": 121,
+    "autoAdvanceEdgeCount": 117,
+    "totalSequentialEdges": 238
+  },
+  "unreachableScreens": [],
+  "terminalScreens": [
+    "slide-026",
+    "slide-174",
+    "slide-322",
+    "slide-330"
+  ],
+  "hotspotEdges": [
+    {
+      "source": "slide-003",
+      "sourceSlide": 3,
+      "hotspotId": "s003-a408262",
+      "shapeId": 4104,
+      "target": "slide-004",
+      "targetSlide": 4,
+      "bounds": {
+        "raw": [
+          3072,
+          2448,
+          3504,
+          3303
+        ],
+        "x": 0.425,
+        "y": 0.7111111111111111,
+        "width": 0.18333333333333332,
+        "height": 0.05347222222222222,
+        "clipped": [
+          2448,
+          3072,
+          3504,
+          3303
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-011",
+      "sourceSlide": 11,
+      "hotspotId": "s011-a532656",
+      "shapeId": 12306,
+      "target": "slide-012",
+      "targetSlide": 12,
+      "bounds": {
+        "raw": [
+          1392,
+          4704,
+          5472,
+          1623
+        ],
+        "x": 0.8166666666666667,
+        "y": 0.32222222222222224,
+        "width": 0.13333333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4704,
+          1392,
+          5472,
+          1623
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-015",
+      "sourceSlide": 15,
+      "hotspotId": "s015-a571595",
+      "shapeId": 17419,
+      "target": "slide-016",
+      "targetSlide": 16,
+      "bounds": {
+        "raw": [
+          1392,
+          4704,
+          5520,
+          1623
+        ],
+        "x": 0.8166666666666667,
+        "y": 0.32222222222222224,
+        "width": 0.14166666666666666,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4704,
+          1392,
+          5520,
+          1623
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-018",
+      "sourceSlide": 18,
+      "hotspotId": "s018-a595484",
+      "shapeId": 20496,
+      "target": "slide-019",
+      "targetSlide": 19,
+      "bounds": {
+        "raw": [
+          1392,
+          4704,
+          5520,
+          1623
+        ],
+        "x": 0.8166666666666667,
+        "y": 0.32222222222222224,
+        "width": 0.14166666666666666,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4704,
+          1392,
+          5520,
+          1623
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-021",
+      "sourceSlide": 21,
+      "hotspotId": "s021-a619668",
+      "shapeId": 23566,
+      "target": "slide-022",
+      "targetSlide": 22,
+      "bounds": {
+        "raw": [
+          1344,
+          4704,
+          5520,
+          1575
+        ],
+        "x": 0.8166666666666667,
+        "y": 0.3111111111111111,
+        "width": 0.14166666666666666,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4704,
+          1344,
+          5520,
+          1575
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-021",
+      "sourceSlide": 21,
+      "hotspotId": "s021-a619928",
+      "shapeId": 23567,
+      "target": "slide-027",
+      "targetSlide": 27,
+      "bounds": {
+        "raw": [
+          1536,
+          4704,
+          5520,
+          1767
+        ],
+        "x": 0.8166666666666667,
+        "y": 0.35555555555555557,
+        "width": 0.14166666666666666,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4704,
+          1536,
+          5520,
+          1767
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-035",
+      "sourceSlide": 35,
+      "hotspotId": "s035-a747458",
+      "shapeId": 35863,
+      "target": "slide-036",
+      "targetSlide": 36,
+      "bounds": {
+        "raw": [
+          336,
+          3264,
+          3710,
+          1122
+        ],
+        "x": 0.5666666666666667,
+        "y": 0.07777777777777778,
+        "width": 0.07743055555555556,
+        "height": 0.18194444444444444,
+        "clipped": [
+          3264,
+          336,
+          3710,
+          1122
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-035",
+      "sourceSlide": 35,
+      "hotspotId": "s035-a747804",
+      "shapeId": 35868,
+      "target": "slide-037",
+      "targetSlide": 37,
+      "bounds": {
+        "raw": [
+          2112,
+          672,
+          875,
+          2352
+        ],
+        "x": 0.11666666666666667,
+        "y": 0.4888888888888889,
+        "width": 0.035243055555555555,
+        "height": 0.05555555555555555,
+        "clipped": [
+          672,
+          2112,
+          875,
+          2352
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-035",
+      "sourceSlide": 35,
+      "hotspotId": "s035-a747916",
+      "shapeId": 35869,
+      "target": "slide-038",
+      "targetSlide": 38,
+      "bounds": {
+        "raw": [
+          1824,
+          4752,
+          5322,
+          2272
+        ],
+        "x": 0.825,
+        "y": 0.4222222222222222,
+        "width": 0.09895833333333333,
+        "height": 0.1037037037037037,
+        "clipped": [
+          4752,
+          1824,
+          5322,
+          2272
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-036",
+      "sourceSlide": 36,
+      "hotspotId": "s036-a755970",
+      "shapeId": 36873,
+      "target": "slide-038",
+      "targetSlide": 38,
+      "bounds": {
+        "raw": [
+          1824,
+          4752,
+          5322,
+          2272
+        ],
+        "x": 0.825,
+        "y": 0.4222222222222222,
+        "width": 0.09895833333333333,
+        "height": 0.1037037037037037,
+        "clipped": [
+          4752,
+          1824,
+          5322,
+          2272
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-036",
+      "sourceSlide": 36,
+      "hotspotId": "s036-a756088",
+      "shapeId": 36874,
+      "target": "slide-037",
+      "targetSlide": 37,
+      "bounds": {
+        "raw": [
+          2112,
+          672,
+          875,
+          2352
+        ],
+        "x": 0.11666666666666667,
+        "y": 0.4888888888888889,
+        "width": 0.035243055555555555,
+        "height": 0.05555555555555555,
+        "clipped": [
+          672,
+          2112,
+          875,
+          2352
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-037",
+      "sourceSlide": 37,
+      "hotspotId": "s037-a757309",
+      "shapeId": 37893,
+      "target": "slide-036",
+      "targetSlide": 36,
+      "bounds": {
+        "raw": [
+          336,
+          3264,
+          3710,
+          1122
+        ],
+        "x": 0.5666666666666667,
+        "y": 0.07777777777777778,
+        "width": 0.07743055555555556,
+        "height": 0.18194444444444444,
+        "clipped": [
+          3264,
+          336,
+          3710,
+          1122
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-037",
+      "sourceSlide": 37,
+      "hotspotId": "s037-a757689",
+      "shapeId": 37895,
+      "target": "slide-038",
+      "targetSlide": 38,
+      "bounds": {
+        "raw": [
+          1824,
+          4752,
+          5322,
+          2272
+        ],
+        "x": 0.825,
+        "y": 0.4222222222222222,
+        "width": 0.09895833333333333,
+        "height": 0.1037037037037037,
+        "clipped": [
+          4752,
+          1824,
+          5322,
+          2272
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-038",
+      "sourceSlide": 38,
+      "hotspotId": "s038-a758982",
+      "shapeId": 40965,
+      "target": "slide-036",
+      "targetSlide": 36,
+      "bounds": {
+        "raw": [
+          336,
+          3264,
+          3710,
+          1122
+        ],
+        "x": 0.5666666666666667,
+        "y": 0.07777777777777778,
+        "width": 0.07743055555555556,
+        "height": 0.18194444444444444,
+        "clipped": [
+          3264,
+          336,
+          3710,
+          1122
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-038",
+      "sourceSlide": 38,
+      "hotspotId": "s038-a759472",
+      "shapeId": 40968,
+      "target": "slide-037",
+      "targetSlide": 37,
+      "bounds": {
+        "raw": [
+          2112,
+          672,
+          875,
+          2352
+        ],
+        "x": 0.11666666666666667,
+        "y": 0.4888888888888889,
+        "width": 0.035243055555555555,
+        "height": 0.05555555555555555,
+        "clipped": [
+          672,
+          2112,
+          875,
+          2352
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-038",
+      "sourceSlide": 38,
+      "hotspotId": "s038-a759784",
+      "shapeId": 40971,
+      "target": "slide-039",
+      "targetSlide": 39,
+      "bounds": {
+        "raw": [
+          3552,
+          3360,
+          3984,
+          3731
+        ],
+        "x": 0.5833333333333334,
+        "y": 0.8222222222222222,
+        "width": 0.10833333333333334,
+        "height": 0.041435185185185186,
+        "clipped": [
+          3360,
+          3552,
+          3984,
+          3731
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-042",
+      "sourceSlide": 42,
+      "hotspotId": "s042-a817584",
+      "shapeId": 44047,
+      "target": "slide-044",
+      "targetSlide": 44,
+      "bounds": {
+        "raw": [
+          3744.0,
+          4032,
+          5472,
+          3940.5
+        ],
+        "x": 0.7,
+        "y": 0.8666666666666667,
+        "width": 0.25,
+        "height": 0.04548611111111111,
+        "clipped": [
+          4032,
+          3744.0,
+          5472,
+          3940.5
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-042",
+      "sourceSlide": 42,
+      "hotspotId": "s042-a817632",
+      "shapeId": 44047,
+      "target": "slide-081",
+      "targetSlide": 81,
+      "bounds": {
+        "raw": [
+          3940.5,
+          4032,
+          5472,
+          4137.0
+        ],
+        "x": 0.7,
+        "y": 0.9121527777777778,
+        "width": 0.25,
+        "height": 0.04548611111111111,
+        "clipped": [
+          4032,
+          3940.5,
+          5472,
+          4137.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-042",
+      "sourceSlide": 42,
+      "hotspotId": "s042-a818044",
+      "shapeId": 44052,
+      "target": "slide-043",
+      "targetSlide": 43,
+      "bounds": {
+        "raw": [
+          192,
+          5040,
+          5568,
+          672
+        ],
+        "x": 0.875,
+        "y": 0.044444444444444446,
+        "width": 0.09166666666666666,
+        "height": 0.1111111111111111,
+        "clipped": [
+          5040,
+          192,
+          5568,
+          672
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-043",
+      "sourceSlide": 43,
+      "hotspotId": "s043-a825733",
+      "shapeId": 49182,
+      "target": "slide-044",
+      "targetSlide": 44,
+      "bounds": {
+        "raw": [
+          3744.0,
+          4032,
+          5472,
+          3940.5
+        ],
+        "x": 0.7,
+        "y": 0.8666666666666667,
+        "width": 0.25,
+        "height": 0.04548611111111111,
+        "clipped": [
+          4032,
+          3744.0,
+          5472,
+          3940.5
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-043",
+      "sourceSlide": 43,
+      "hotspotId": "s043-a825781",
+      "shapeId": 49182,
+      "target": "slide-081",
+      "targetSlide": 81,
+      "bounds": {
+        "raw": [
+          3940.5,
+          4032,
+          5472,
+          4137.0
+        ],
+        "x": 0.7,
+        "y": 0.9121527777777778,
+        "width": 0.25,
+        "height": 0.04548611111111111,
+        "clipped": [
+          4032,
+          3940.5,
+          5472,
+          4137.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-048",
+      "sourceSlide": 48,
+      "hotspotId": "s048-a841549",
+      "shapeId": 53258,
+      "target": "slide-049",
+      "targetSlide": 49,
+      "bounds": {
+        "raw": [
+          0,
+          5136,
+          5616,
+          912
+        ],
+        "x": 0.8916666666666667,
+        "y": 0.0,
+        "width": 0.08333333333333333,
+        "height": 0.2111111111111111,
+        "clipped": [
+          5136,
+          0,
+          5616,
+          912
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-048",
+      "sourceSlide": 48,
+      "hotspotId": "s048-a841761",
+      "shapeId": 53259,
+      "target": "slide-051",
+      "targetSlide": 51,
+      "bounds": {
+        "raw": [
+          1200,
+          0,
+          528,
+          2400
+        ],
+        "x": 0.0,
+        "y": 0.2777777777777778,
+        "width": 0.09166666666666666,
+        "height": 0.2777777777777778,
+        "clipped": [
+          0,
+          1200,
+          528,
+          2400
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-048",
+      "sourceSlide": 48,
+      "hotspotId": "s048-a841929",
+      "shapeId": 53262,
+      "target": "slide-058",
+      "targetSlide": 58,
+      "bounds": {
+        "raw": [
+          960,
+          5040,
+          5760,
+          1872
+        ],
+        "x": 0.875,
+        "y": 0.2222222222222222,
+        "width": 0.125,
+        "height": 0.2111111111111111,
+        "clipped": [
+          5040,
+          960,
+          5760,
+          1872
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-048",
+      "sourceSlide": 48,
+      "hotspotId": "s048-a842115",
+      "shapeId": 53263,
+      "target": "slide-078",
+      "targetSlide": 78,
+      "bounds": {
+        "raw": [
+          3824,
+          1165,
+          1981,
+          4160
+        ],
+        "x": 0.20225694444444445,
+        "y": 0.8851851851851852,
+        "width": 0.14166666666666666,
+        "height": 0.07777777777777778,
+        "clipped": [
+          1165,
+          3824,
+          1981,
+          4160
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-049",
+      "sourceSlide": 49,
+      "hotspotId": "s049-a848223",
+      "shapeId": 54277,
+      "target": "slide-048",
+      "targetSlide": 48,
+      "bounds": {
+        "raw": [
+          144,
+          -384,
+          384,
+          2448
+        ],
+        "x": 0.0,
+        "y": 0.03333333333333333,
+        "width": 0.06666666666666667,
+        "height": 0.5333333333333333,
+        "clipped": [
+          0,
+          144,
+          384,
+          2448
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-049",
+      "sourceSlide": 49,
+      "hotspotId": "s049-a848391",
+      "shapeId": 54278,
+      "target": "slide-050",
+      "targetSlide": 50,
+      "bounds": {
+        "raw": [
+          864,
+          3168,
+          3744,
+          1920
+        ],
+        "x": 0.55,
+        "y": 0.2,
+        "width": 0.1,
+        "height": 0.24444444444444444,
+        "clipped": [
+          3168,
+          864,
+          3744,
+          1920
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-050",
+      "sourceSlide": 50,
+      "hotspotId": "s050-a849350",
+      "shapeId": 56324,
+      "target": "slide-049",
+      "targetSlide": 49,
+      "bounds": {
+        "raw": [
+          624,
+          1920,
+          3696,
+          855
+        ],
+        "x": 0.3333333333333333,
+        "y": 0.14444444444444443,
+        "width": 0.30833333333333335,
+        "height": 0.05347222222222222,
+        "clipped": [
+          1920,
+          624,
+          3696,
+          855
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-052",
+      "sourceSlide": 52,
+      "hotspotId": "s052-a870413",
+      "shapeId": 59399,
+      "target": "slide-055",
+      "targetSlide": 55,
+      "bounds": {
+        "raw": [
+          576,
+          3216,
+          4224,
+          749
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.13333333333333333,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          576,
+          4224,
+          749
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-052",
+      "sourceSlide": 52,
+      "hotspotId": "s052-a870649",
+      "shapeId": 59401,
+      "target": "slide-056",
+      "targetSlide": 56,
+      "bounds": {
+        "raw": [
+          816,
+          3216,
+          4224,
+          989
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.18888888888888888,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          816,
+          4224,
+          989
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-052",
+      "sourceSlide": 52,
+      "hotspotId": "s052-a870921",
+      "shapeId": 59402,
+      "target": "slide-054",
+      "targetSlide": 54,
+      "bounds": {
+        "raw": [
+          1056,
+          3216,
+          4224,
+          1229
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.24444444444444444,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          1056,
+          4224,
+          1229
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-052",
+      "sourceSlide": 52,
+      "hotspotId": "s052-a871105",
+      "shapeId": 59405,
+      "target": "slide-057",
+      "targetSlide": 57,
+      "bounds": {
+        "raw": [
+          1632,
+          3312,
+          4080,
+          1850
+        ],
+        "x": 0.575,
+        "y": 0.37777777777777777,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          1632,
+          4080,
+          1850
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-052",
+      "sourceSlide": 52,
+      "hotspotId": "s052-a871443",
+      "shapeId": 59406,
+      "target": "slide-053",
+      "targetSlide": 53,
+      "bounds": {
+        "raw": [
+          1296,
+          3216,
+          4320,
+          1469
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.3,
+        "width": 0.19166666666666668,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          1296,
+          4320,
+          1469
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-053",
+      "sourceSlide": 53,
+      "hotspotId": "s053-a875877",
+      "shapeId": 60425,
+      "target": "slide-052",
+      "targetSlide": 52,
+      "bounds": {
+        "raw": [
+          912,
+          2736,
+          3504,
+          1130
+        ],
+        "x": 0.475,
+        "y": 0.2111111111111111,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          2736,
+          912,
+          3504,
+          1130
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-054",
+      "sourceSlide": 54,
+      "hotspotId": "s054-a877375",
+      "shapeId": 61449,
+      "target": "slide-052",
+      "targetSlide": 52,
+      "bounds": {
+        "raw": [
+          2112,
+          3360,
+          4128,
+          2330
+        ],
+        "x": 0.5833333333333334,
+        "y": 0.4888888888888889,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3360,
+          2112,
+          4128,
+          2330
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-055",
+      "sourceSlide": 55,
+      "hotspotId": "s055-a879151",
+      "shapeId": 62477,
+      "target": "slide-052",
+      "targetSlide": 52,
+      "bounds": {
+        "raw": [
+          1728,
+          3312,
+          4080,
+          1946
+        ],
+        "x": 0.575,
+        "y": 0.4,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          1728,
+          4080,
+          1946
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-056",
+      "sourceSlide": 56,
+      "hotspotId": "s056-a880839",
+      "shapeId": 63497,
+      "target": "slide-052",
+      "targetSlide": 52,
+      "bounds": {
+        "raw": [
+          2112,
+          3312,
+          4080,
+          2330
+        ],
+        "x": 0.575,
+        "y": 0.4888888888888889,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          2112,
+          4080,
+          2330
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-057",
+      "sourceSlide": 57,
+      "hotspotId": "s057-a881565",
+      "shapeId": 64517,
+      "target": "slide-052",
+      "targetSlide": 52,
+      "bounds": {
+        "raw": [
+          1248,
+          0,
+          432,
+          2304
+        ],
+        "x": 0.0,
+        "y": 0.28888888888888886,
+        "width": 0.075,
+        "height": 0.24444444444444444,
+        "clipped": [
+          0,
+          1248,
+          432,
+          2304
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-057",
+      "sourceSlide": 57,
+      "hotspotId": "s057-a881733",
+      "shapeId": 64522,
+      "target": "slide-060",
+      "targetSlide": 60,
+      "bounds": {
+        "raw": [
+          0,
+          5088,
+          5616,
+          960
+        ],
+        "x": 0.8833333333333333,
+        "y": 0.0,
+        "width": 0.09166666666666666,
+        "height": 0.2222222222222222,
+        "clipped": [
+          5088,
+          0,
+          5616,
+          960
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-057",
+      "sourceSlide": 57,
+      "hotspotId": "s057-a881901",
+      "shapeId": 64523,
+      "target": "slide-062",
+      "targetSlide": 62,
+      "bounds": {
+        "raw": [
+          1008,
+          5136,
+          5760,
+          2016
+        ],
+        "x": 0.8916666666666667,
+        "y": 0.23333333333333334,
+        "width": 0.10833333333333334,
+        "height": 0.23333333333333334,
+        "clipped": [
+          5136,
+          1008,
+          5760,
+          2016
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-057",
+      "sourceSlide": 57,
+      "hotspotId": "s057-a882093",
+      "shapeId": 64524,
+      "target": "slide-078",
+      "targetSlide": 78,
+      "bounds": {
+        "raw": [
+          3824,
+          1165,
+          1981,
+          4160
+        ],
+        "x": 0.20225694444444445,
+        "y": 0.8851851851851852,
+        "width": 0.14166666666666666,
+        "height": 0.07777777777777778,
+        "clipped": [
+          1165,
+          3824,
+          1981,
+          4160
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-059",
+      "sourceSlide": 59,
+      "hotspotId": "s059-a893085",
+      "shapeId": 67589,
+      "target": "slide-064",
+      "targetSlide": 64,
+      "bounds": {
+        "raw": [
+          1296,
+          0,
+          528,
+          2352
+        ],
+        "x": 0.0,
+        "y": 0.3,
+        "width": 0.09166666666666666,
+        "height": 0.24444444444444444,
+        "clipped": [
+          0,
+          1296,
+          528,
+          2352
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-059",
+      "sourceSlide": 59,
+      "hotspotId": "s059-a893253",
+      "shapeId": 67590,
+      "target": "slide-061",
+      "targetSlide": 61,
+      "bounds": {
+        "raw": [
+          0,
+          5088,
+          5664,
+          960
+        ],
+        "x": 0.8833333333333333,
+        "y": 0.0,
+        "width": 0.1,
+        "height": 0.2222222222222222,
+        "clipped": [
+          5088,
+          0,
+          5664,
+          960
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-059",
+      "sourceSlide": 59,
+      "hotspotId": "s059-a893445",
+      "shapeId": 67591,
+      "target": "slide-078",
+      "targetSlide": 78,
+      "bounds": {
+        "raw": [
+          3824,
+          1165,
+          1981,
+          4160
+        ],
+        "x": 0.20225694444444445,
+        "y": 0.8851851851851852,
+        "width": 0.14166666666666666,
+        "height": 0.07777777777777778,
+        "clipped": [
+          1165,
+          3824,
+          1981,
+          4160
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-060",
+      "sourceSlide": 60,
+      "hotspotId": "s060-a895259",
+      "shapeId": 68614,
+      "target": "slide-057",
+      "targetSlide": 57,
+      "bounds": {
+        "raw": [
+          175,
+          -439,
+          533,
+          2431
+        ],
+        "x": 0.0,
+        "y": 0.04050925925925926,
+        "width": 0.09253472222222223,
+        "height": 0.5222222222222223,
+        "clipped": [
+          0,
+          175,
+          533,
+          2431
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-061",
+      "sourceSlide": 61,
+      "hotspotId": "s061-a896095",
+      "shapeId": 69638,
+      "target": "slide-059",
+      "targetSlide": 59,
+      "bounds": {
+        "raw": [
+          175,
+          -439,
+          533,
+          2431
+        ],
+        "x": 0.0,
+        "y": 0.04050925925925926,
+        "width": 0.09253472222222223,
+        "height": 0.5222222222222223,
+        "clipped": [
+          0,
+          175,
+          533,
+          2431
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-063",
+      "sourceSlide": 63,
+      "hotspotId": "s063-a906448",
+      "shapeId": 72710,
+      "target": "slide-073",
+      "targetSlide": 73,
+      "bounds": {
+        "raw": [
+          1200,
+          0,
+          480,
+          2256
+        ],
+        "x": 0.0,
+        "y": 0.2777777777777778,
+        "width": 0.08333333333333333,
+        "height": 0.24444444444444444,
+        "clipped": [
+          0,
+          1200,
+          480,
+          2256
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-063",
+      "sourceSlide": 63,
+      "hotspotId": "s063-a906616",
+      "shapeId": 72711,
+      "target": "slide-072",
+      "targetSlide": 72,
+      "bounds": {
+        "raw": [
+          0,
+          5088,
+          5760,
+          912
+        ],
+        "x": 0.8833333333333333,
+        "y": 0.0,
+        "width": 0.11666666666666667,
+        "height": 0.2111111111111111,
+        "clipped": [
+          5088,
+          0,
+          5760,
+          912
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-063",
+      "sourceSlide": 63,
+      "hotspotId": "s063-a906808",
+      "shapeId": 72712,
+      "target": "slide-078",
+      "targetSlide": 78,
+      "bounds": {
+        "raw": [
+          3824,
+          1165,
+          1981,
+          4160
+        ],
+        "x": 0.20225694444444445,
+        "y": 0.8851851851851852,
+        "width": 0.14166666666666666,
+        "height": 0.07777777777777778,
+        "clipped": [
+          1165,
+          3824,
+          1981,
+          4160
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-065",
+      "sourceSlide": 65,
+      "hotspotId": "s065-a922924",
+      "shapeId": 75781,
+      "target": "slide-068",
+      "targetSlide": 68,
+      "bounds": {
+        "raw": [
+          576,
+          3216,
+          4224,
+          749
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.13333333333333333,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          576,
+          4224,
+          749
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-065",
+      "sourceSlide": 65,
+      "hotspotId": "s065-a923160",
+      "shapeId": 75782,
+      "target": "slide-069",
+      "targetSlide": 69,
+      "bounds": {
+        "raw": [
+          816,
+          3216,
+          4224,
+          989
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.18888888888888888,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          816,
+          4224,
+          989
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-065",
+      "sourceSlide": 65,
+      "hotspotId": "s065-a923432",
+      "shapeId": 75783,
+      "target": "slide-067",
+      "targetSlide": 67,
+      "bounds": {
+        "raw": [
+          1056,
+          3216,
+          4224,
+          1229
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.24444444444444444,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          1056,
+          4224,
+          1229
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-065",
+      "sourceSlide": 65,
+      "hotspotId": "s065-a923616",
+      "shapeId": 75784,
+      "target": "slide-070",
+      "targetSlide": 70,
+      "bounds": {
+        "raw": [
+          1632,
+          3312,
+          4080,
+          1850
+        ],
+        "x": 0.575,
+        "y": 0.37777777777777777,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          1632,
+          4080,
+          1850
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-065",
+      "sourceSlide": 65,
+      "hotspotId": "s065-a923954",
+      "shapeId": 75785,
+      "target": "slide-066",
+      "targetSlide": 66,
+      "bounds": {
+        "raw": [
+          1296,
+          3216,
+          4320,
+          1469
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.3,
+        "width": 0.19166666666666668,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          1296,
+          4320,
+          1469
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-066",
+      "sourceSlide": 66,
+      "hotspotId": "s066-a928388",
+      "shapeId": 76805,
+      "target": "slide-065",
+      "targetSlide": 65,
+      "bounds": {
+        "raw": [
+          912,
+          2736,
+          3504,
+          1130
+        ],
+        "x": 0.475,
+        "y": 0.2111111111111111,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          2736,
+          912,
+          3504,
+          1130
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-067",
+      "sourceSlide": 67,
+      "hotspotId": "s067-a929886",
+      "shapeId": 77831,
+      "target": "slide-065",
+      "targetSlide": 65,
+      "bounds": {
+        "raw": [
+          2112,
+          3360,
+          4128,
+          2330
+        ],
+        "x": 0.5833333333333334,
+        "y": 0.4888888888888889,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3360,
+          2112,
+          4128,
+          2330
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-068",
+      "sourceSlide": 68,
+      "hotspotId": "s068-a931662",
+      "shapeId": 78857,
+      "target": "slide-065",
+      "targetSlide": 65,
+      "bounds": {
+        "raw": [
+          1728,
+          3312,
+          4080,
+          1946
+        ],
+        "x": 0.575,
+        "y": 0.4,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          1728,
+          4080,
+          1946
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-069",
+      "sourceSlide": 69,
+      "hotspotId": "s069-a933350",
+      "shapeId": 79879,
+      "target": "slide-065",
+      "targetSlide": 65,
+      "bounds": {
+        "raw": [
+          2112,
+          3312,
+          4080,
+          2330
+        ],
+        "x": 0.575,
+        "y": 0.4888888888888889,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          2112,
+          4080,
+          2330
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-070",
+      "sourceSlide": 70,
+      "hotspotId": "s070-a934252",
+      "shapeId": 80902,
+      "target": "slide-065",
+      "targetSlide": 65,
+      "bounds": {
+        "raw": [
+          1200,
+          0,
+          480,
+          2304
+        ],
+        "x": 0.0,
+        "y": 0.2777777777777778,
+        "width": 0.08333333333333333,
+        "height": 0.25555555555555554,
+        "clipped": [
+          0,
+          1200,
+          480,
+          2304
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-070",
+      "sourceSlide": 70,
+      "hotspotId": "s070-a934426",
+      "shapeId": 80903,
+      "target": "slide-071",
+      "targetSlide": 71,
+      "bounds": {
+        "raw": [
+          0,
+          5088,
+          5664,
+          960
+        ],
+        "x": 0.8833333333333333,
+        "y": 0.0,
+        "width": 0.1,
+        "height": 0.2222222222222222,
+        "clipped": [
+          5088,
+          0,
+          5664,
+          960
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-070",
+      "sourceSlide": 70,
+      "hotspotId": "s070-a934618",
+      "shapeId": 80904,
+      "target": "slide-078",
+      "targetSlide": 78,
+      "bounds": {
+        "raw": [
+          3824,
+          1165,
+          1981,
+          4160
+        ],
+        "x": 0.20225694444444445,
+        "y": 0.8851851851851852,
+        "width": 0.14166666666666666,
+        "height": 0.07777777777777778,
+        "clipped": [
+          1165,
+          3824,
+          1981,
+          4160
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-071",
+      "sourceSlide": 71,
+      "hotspotId": "s071-a936439",
+      "shapeId": 81924,
+      "target": "slide-070",
+      "targetSlide": 70,
+      "bounds": {
+        "raw": [
+          175,
+          -439,
+          533,
+          2431
+        ],
+        "x": 0.0,
+        "y": 0.04050925925925926,
+        "width": 0.09253472222222223,
+        "height": 0.5222222222222223,
+        "clipped": [
+          0,
+          175,
+          533,
+          2431
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-072",
+      "sourceSlide": 72,
+      "hotspotId": "s072-a937280",
+      "shapeId": 83972,
+      "target": "slide-070",
+      "targetSlide": 70,
+      "bounds": {
+        "raw": [
+          175,
+          -439,
+          533,
+          2431
+        ],
+        "x": 0.0,
+        "y": 0.04050925925925926,
+        "width": 0.09253472222222223,
+        "height": 0.5222222222222223,
+        "clipped": [
+          0,
+          175,
+          533,
+          2431
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-073",
+      "sourceSlide": 73,
+      "hotspotId": "s073-a938269",
+      "shapeId": 84997,
+      "target": "slide-076",
+      "targetSlide": 76,
+      "bounds": {
+        "raw": [
+          576,
+          3216,
+          4224,
+          749
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.13333333333333333,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          576,
+          4224,
+          749
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-073",
+      "sourceSlide": 73,
+      "hotspotId": "s073-a938505",
+      "shapeId": 84998,
+      "target": "slide-077",
+      "targetSlide": 77,
+      "bounds": {
+        "raw": [
+          816,
+          3216,
+          4224,
+          989
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.18888888888888888,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          816,
+          4224,
+          989
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-073",
+      "sourceSlide": 73,
+      "hotspotId": "s073-a938777",
+      "shapeId": 84999,
+      "target": "slide-075",
+      "targetSlide": 75,
+      "bounds": {
+        "raw": [
+          1056,
+          3216,
+          4224,
+          1229
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.24444444444444444,
+        "width": 0.175,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          1056,
+          4224,
+          1229
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-073",
+      "sourceSlide": 73,
+      "hotspotId": "s073-a938961",
+      "shapeId": 85000,
+      "target": "slide-063",
+      "targetSlide": 63,
+      "bounds": {
+        "raw": [
+          1632,
+          3312,
+          4080,
+          1850
+        ],
+        "x": 0.575,
+        "y": 0.37777777777777777,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          1632,
+          4080,
+          1850
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-073",
+      "sourceSlide": 73,
+      "hotspotId": "s073-a939299",
+      "shapeId": 85001,
+      "target": "slide-074",
+      "targetSlide": 74,
+      "bounds": {
+        "raw": [
+          1296,
+          3216,
+          4320,
+          1469
+        ],
+        "x": 0.5583333333333333,
+        "y": 0.3,
+        "width": 0.19166666666666668,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3216,
+          1296,
+          4320,
+          1469
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-074",
+      "sourceSlide": 74,
+      "hotspotId": "s074-a943910",
+      "shapeId": 86021,
+      "target": "slide-073",
+      "targetSlide": 73,
+      "bounds": {
+        "raw": [
+          912,
+          2736,
+          3504,
+          1130
+        ],
+        "x": 0.475,
+        "y": 0.2111111111111111,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          2736,
+          912,
+          3504,
+          1130
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-075",
+      "sourceSlide": 75,
+      "hotspotId": "s075-a945408",
+      "shapeId": 87047,
+      "target": "slide-073",
+      "targetSlide": 73,
+      "bounds": {
+        "raw": [
+          2112,
+          3360,
+          4128,
+          2330
+        ],
+        "x": 0.5833333333333334,
+        "y": 0.4888888888888889,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3360,
+          2112,
+          4128,
+          2330
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-076",
+      "sourceSlide": 76,
+      "hotspotId": "s076-a947184",
+      "shapeId": 88073,
+      "target": "slide-073",
+      "targetSlide": 73,
+      "bounds": {
+        "raw": [
+          1728,
+          3312,
+          4080,
+          1946
+        ],
+        "x": 0.575,
+        "y": 0.4,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          1728,
+          4080,
+          1946
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-077",
+      "sourceSlide": 77,
+      "hotspotId": "s077-a948870",
+      "shapeId": 89095,
+      "target": "slide-073",
+      "targetSlide": 73,
+      "bounds": {
+        "raw": [
+          2112,
+          3312,
+          4080,
+          2330
+        ],
+        "x": 0.575,
+        "y": 0.4888888888888889,
+        "width": 0.13333333333333333,
+        "height": 0.050462962962962966,
+        "clipped": [
+          3312,
+          2112,
+          4080,
+          2330
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-082",
+      "sourceSlide": 82,
+      "hotspotId": "s082-a960556",
+      "shapeId": 96264,
+      "target": "slide-083",
+      "targetSlide": 83,
+      "bounds": {
+        "raw": [
+          3744,
+          0,
+          1152,
+          4128
+        ],
+        "x": 0.0,
+        "y": 0.8666666666666667,
+        "width": 0.2,
+        "height": 0.08888888888888889,
+        "clipped": [
+          0,
+          3744,
+          1152,
+          4128
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-082",
+      "sourceSlide": 82,
+      "hotspotId": "s082-a960831",
+      "shapeId": 96265,
+      "target": "slide-084",
+      "targetSlide": 84,
+      "bounds": {
+        "raw": [
+          3721,
+          3360,
+          4484,
+          4105
+        ],
+        "x": 0.5833333333333334,
+        "y": 0.8613425925925926,
+        "width": 0.1951388888888889,
+        "height": 0.08888888888888889,
+        "clipped": [
+          3360,
+          3721,
+          4484,
+          4105
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-082",
+      "sourceSlide": 82,
+      "hotspotId": "s082-a961108",
+      "shapeId": 96266,
+      "target": "slide-083",
+      "targetSlide": 83,
+      "bounds": {
+        "raw": [
+          1392,
+          672,
+          1776,
+          1776
+        ],
+        "x": 0.11666666666666667,
+        "y": 0.32222222222222224,
+        "width": 0.19166666666666668,
+        "height": 0.08888888888888889,
+        "clipped": [
+          672,
+          1392,
+          1776,
+          1776
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-083",
+      "sourceSlide": 83,
+      "hotspotId": "s083-a965106",
+      "shapeId": 98308,
+      "target": "slide-084",
+      "targetSlide": 84,
+      "bounds": {
+        "raw": [
+          3744,
+          0,
+          1152,
+          4128
+        ],
+        "x": 0.0,
+        "y": 0.8666666666666667,
+        "width": 0.2,
+        "height": 0.08888888888888889,
+        "clipped": [
+          0,
+          3744,
+          1152,
+          4128
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-083",
+      "sourceSlide": 83,
+      "hotspotId": "s083-a965381",
+      "shapeId": 98309,
+      "target": "slide-084",
+      "targetSlide": 84,
+      "bounds": {
+        "raw": [
+          3721,
+          3360,
+          4484,
+          4105
+        ],
+        "x": 0.5833333333333334,
+        "y": 0.8613425925925926,
+        "width": 0.1951388888888889,
+        "height": 0.08888888888888889,
+        "clipped": [
+          3360,
+          3721,
+          4484,
+          4105
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-083",
+      "sourceSlide": 83,
+      "hotspotId": "s083-a965658",
+      "shapeId": 98310,
+      "target": "slide-084",
+      "targetSlide": 84,
+      "bounds": {
+        "raw": [
+          1392,
+          672,
+          1776,
+          1776
+        ],
+        "x": 0.11666666666666667,
+        "y": 0.32222222222222224,
+        "width": 0.19166666666666668,
+        "height": 0.08888888888888889,
+        "clipped": [
+          672,
+          1392,
+          1776,
+          1776
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-105",
+      "sourceSlide": 105,
+      "hotspotId": "s105-a1039650",
+      "shapeId": 122900,
+      "target": "slide-106",
+      "targetSlide": 106,
+      "bounds": {
+        "raw": [
+          3552,
+          336,
+          1728,
+          3951
+        ],
+        "x": 0.058333333333333334,
+        "y": 0.8222222222222222,
+        "width": 0.24166666666666667,
+        "height": 0.09236111111111112,
+        "clipped": [
+          336,
+          3552,
+          1728,
+          3951
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-112",
+      "sourceSlide": 112,
+      "hotspotId": "s112-a1053245",
+      "shapeId": 132103,
+      "target": "slide-113",
+      "targetSlide": 113,
+      "bounds": {
+        "raw": [
+          336,
+          4224,
+          4608,
+          1152
+        ],
+        "x": 0.7333333333333333,
+        "y": 0.07777777777777778,
+        "width": 0.06666666666666667,
+        "height": 0.18888888888888888,
+        "clipped": [
+          4224,
+          336,
+          4608,
+          1152
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-112",
+      "sourceSlide": 112,
+      "hotspotId": "s112-a1053463",
+      "shapeId": 132106,
+      "target": "slide-113",
+      "targetSlide": 113,
+      "bounds": {
+        "raw": [
+          672,
+          4848,
+          5232,
+          1488
+        ],
+        "x": 0.8416666666666667,
+        "y": 0.15555555555555556,
+        "width": 0.06666666666666667,
+        "height": 0.18888888888888888,
+        "clipped": [
+          4848,
+          672,
+          5232,
+          1488
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-118",
+      "sourceSlide": 118,
+      "hotspotId": "s118-a1097053",
+      "shapeId": 139273,
+      "target": "slide-119",
+      "targetSlide": 119,
+      "bounds": {
+        "raw": [
+          -48,
+          288,
+          1968,
+          288
+        ],
+        "x": 0.05,
+        "y": 0.0,
+        "width": 0.2916666666666667,
+        "height": 0.06666666666666667,
+        "clipped": [
+          288,
+          0,
+          1968,
+          288
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-119",
+      "sourceSlide": 119,
+      "hotspotId": "s119-a1102036",
+      "shapeId": 140293,
+      "target": "slide-120",
+      "targetSlide": 120,
+      "bounds": {
+        "raw": [
+          1104,
+          960,
+          1200,
+          1728
+        ],
+        "x": 0.16666666666666666,
+        "y": 0.25555555555555554,
+        "width": 0.041666666666666664,
+        "height": 0.14444444444444443,
+        "clipped": [
+          960,
+          1104,
+          1200,
+          1728
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-119",
+      "sourceSlide": 119,
+      "hotspotId": "s119-a1102210",
+      "shapeId": 140294,
+      "target": "slide-120",
+      "targetSlide": 120,
+      "bounds": {
+        "raw": [
+          624,
+          1680,
+          1920,
+          1248
+        ],
+        "x": 0.2916666666666667,
+        "y": 0.14444444444444443,
+        "width": 0.041666666666666664,
+        "height": 0.14444444444444443,
+        "clipped": [
+          1680,
+          624,
+          1920,
+          1248
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-119",
+      "sourceSlide": 119,
+      "hotspotId": "s119-a1102378",
+      "shapeId": 140295,
+      "target": "slide-124",
+      "targetSlide": 124,
+      "bounds": {
+        "raw": [
+          0,
+          4080,
+          5760,
+          432
+        ],
+        "x": 0.7083333333333334,
+        "y": 0.0,
+        "width": 0.2916666666666667,
+        "height": 0.1,
+        "clipped": [
+          4080,
+          0,
+          5760,
+          432
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1108331",
+      "shapeId": 142346,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          1152,
+          240,
+          1122,
+          1591
+        ],
+        "x": 0.041666666666666664,
+        "y": 0.26666666666666666,
+        "width": 0.153125,
+        "height": 0.10162037037037037,
+        "clipped": [
+          240,
+          1152,
+          1122,
+          1591
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1109137",
+      "shapeId": 142351,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          1344,
+          3120,
+          3312,
+          1536
+        ],
+        "x": 0.5416666666666666,
+        "y": 0.3111111111111111,
+        "width": 0.03333333333333333,
+        "height": 0.044444444444444446,
+        "clipped": [
+          3120,
+          1344,
+          3312,
+          1536
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1110016",
+      "shapeId": 142358,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          2256,
+          192,
+          1296,
+          2787
+        ],
+        "x": 0.03333333333333333,
+        "y": 0.5222222222222223,
+        "width": 0.19166666666666668,
+        "height": 0.12291666666666666,
+        "clipped": [
+          192,
+          2256,
+          1296,
+          2787
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1110639",
+      "shapeId": 142361,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          2592,
+          3072,
+          3168,
+          2688
+        ],
+        "x": 0.5333333333333333,
+        "y": 0.6,
+        "width": 0.016666666666666666,
+        "height": 0.022222222222222223,
+        "clipped": [
+          3072,
+          2592,
+          3168,
+          2688
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1110775",
+      "shapeId": 142362,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          2640,
+          2976,
+          3312,
+          2688
+        ],
+        "x": 0.5166666666666667,
+        "y": 0.6111111111111112,
+        "width": 0.058333333333333334,
+        "height": 0.011111111111111112,
+        "clipped": [
+          2976,
+          2640,
+          3312,
+          2688
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1111499",
+      "shapeId": 142367,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          3648,
+          288,
+          720,
+          3792
+        ],
+        "x": 0.05,
+        "y": 0.8444444444444444,
+        "width": 0.075,
+        "height": 0.03333333333333333,
+        "clipped": [
+          288,
+          3648,
+          720,
+          3792
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1111641",
+      "shapeId": 142368,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          3504,
+          240,
+          480,
+          3648
+        ],
+        "x": 0.041666666666666664,
+        "y": 0.8111111111111111,
+        "width": 0.041666666666666664,
+        "height": 0.03333333333333333,
+        "clipped": [
+          240,
+          3504,
+          480,
+          3648
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1111783",
+      "shapeId": 142369,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          3792,
+          240,
+          480,
+          3936
+        ],
+        "x": 0.041666666666666664,
+        "y": 0.8777777777777778,
+        "width": 0.041666666666666664,
+        "height": 0.03333333333333333,
+        "clipped": [
+          240,
+          3792,
+          480,
+          3936
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1112525",
+      "shapeId": 142377,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          3744,
+          2976,
+          3264,
+          3840
+        ],
+        "x": 0.5166666666666667,
+        "y": 0.8666666666666667,
+        "width": 0.05,
+        "height": 0.022222222222222223,
+        "clipped": [
+          2976,
+          3744,
+          3264,
+          3840
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1112667",
+      "shapeId": 142378,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          3888,
+          3168,
+          3456,
+          3984
+        ],
+        "x": 0.55,
+        "y": 0.9,
+        "width": 0.05,
+        "height": 0.022222222222222223,
+        "clipped": [
+          3168,
+          3888,
+          3456,
+          3984
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1112809",
+      "shapeId": 142379,
+      "target": "slide-122",
+      "targetSlide": 122,
+      "bounds": {
+        "raw": [
+          3552,
+          3168,
+          3456,
+          3648
+        ],
+        "x": 0.55,
+        "y": 0.8222222222222222,
+        "width": 0.05,
+        "height": 0.022222222222222223,
+        "clipped": [
+          3168,
+          3552,
+          3456,
+          3648
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-121",
+      "sourceSlide": 121,
+      "hotspotId": "s121-a1113373",
+      "shapeId": 142394,
+      "target": "slide-123",
+      "targetSlide": 123,
+      "bounds": {
+        "raw": [
+          96,
+          96,
+          1104,
+          314
+        ],
+        "x": 0.016666666666666666,
+        "y": 0.022222222222222223,
+        "width": 0.175,
+        "height": 0.050462962962962966,
+        "clipped": [
+          96,
+          96,
+          1104,
+          314
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-122",
+      "sourceSlide": 122,
+      "hotspotId": "s122-a1124291",
+      "shapeId": 143432,
+      "target": "slide-123",
+      "targetSlide": 123,
+      "bounds": {
+        "raw": [
+          96,
+          96,
+          1104,
+          314
+        ],
+        "x": 0.016666666666666666,
+        "y": 0.022222222222222223,
+        "width": 0.175,
+        "height": 0.050462962962962966,
+        "clipped": [
+          96,
+          96,
+          1104,
+          314
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-123",
+      "sourceSlide": 123,
+      "hotspotId": "s123-a1128654",
+      "shapeId": 144391,
+      "target": "slide-124",
+      "targetSlide": 124,
+      "bounds": {
+        "raw": [
+          0,
+          4176,
+          5760,
+          432
+        ],
+        "x": 0.725,
+        "y": 0.0,
+        "width": 0.275,
+        "height": 0.1,
+        "clipped": [
+          4176,
+          0,
+          5760,
+          432
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-124",
+      "sourceSlide": 124,
+      "hotspotId": "s124-a1129429",
+      "shapeId": 145416,
+      "target": "slide-125",
+      "targetSlide": 125,
+      "bounds": {
+        "raw": [
+          1632,
+          1296,
+          3936,
+          2592
+        ],
+        "x": 0.225,
+        "y": 0.37777777777777777,
+        "width": 0.4583333333333333,
+        "height": 0.2222222222222222,
+        "clipped": [
+          1296,
+          1632,
+          3936,
+          2592
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-144",
+      "sourceSlide": 144,
+      "hotspotId": "s144-a1229095",
+      "shapeId": 167943,
+      "target": "slide-145",
+      "targetSlide": 145,
+      "bounds": {
+        "raw": [
+          1296,
+          864,
+          1104,
+          1776
+        ],
+        "x": 0.15,
+        "y": 0.3,
+        "width": 0.041666666666666664,
+        "height": 0.1111111111111111,
+        "clipped": [
+          864,
+          1296,
+          1104,
+          1776
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-145",
+      "sourceSlide": 145,
+      "hotspotId": "s145-a1232164",
+      "shapeId": 168965,
+      "target": "slide-146",
+      "targetSlide": 146,
+      "bounds": {
+        "raw": [
+          528,
+          288,
+          1440,
+          2304
+        ],
+        "x": 0.05,
+        "y": 0.12222222222222222,
+        "width": 0.2,
+        "height": 0.4111111111111111,
+        "clipped": [
+          288,
+          528,
+          1440,
+          2304
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-147",
+      "sourceSlide": 147,
+      "hotspotId": "s147-a1236152",
+      "shapeId": 171013,
+      "target": "slide-148",
+      "targetSlide": 148,
+      "bounds": {
+        "raw": [
+          240,
+          3696,
+          4656,
+          2208
+        ],
+        "x": 0.6416666666666667,
+        "y": 0.05555555555555555,
+        "width": 0.16666666666666666,
+        "height": 0.45555555555555555,
+        "clipped": [
+          3696,
+          240,
+          4656,
+          2208
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-148",
+      "sourceSlide": 148,
+      "hotspotId": "s148-a1236811",
+      "shapeId": 172037,
+      "target": "slide-149",
+      "targetSlide": 149,
+      "bounds": {
+        "raw": [
+          0,
+          3792,
+          4416,
+          960
+        ],
+        "x": 0.6583333333333333,
+        "y": 0.0,
+        "width": 0.10833333333333334,
+        "height": 0.2222222222222222,
+        "clipped": [
+          3792,
+          0,
+          4416,
+          960
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-149",
+      "sourceSlide": 149,
+      "hotspotId": "s149-a1237470",
+      "shapeId": 173064,
+      "target": "slide-150",
+      "targetSlide": 150,
+      "bounds": {
+        "raw": [
+          0,
+          3840,
+          4320,
+          912
+        ],
+        "x": 0.6666666666666666,
+        "y": 0.0,
+        "width": 0.08333333333333333,
+        "height": 0.2111111111111111,
+        "clipped": [
+          3840,
+          0,
+          4320,
+          912
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-150",
+      "sourceSlide": 150,
+      "hotspotId": "s150-a1238129",
+      "shapeId": 174086,
+      "target": "slide-151",
+      "targetSlide": 151,
+      "bounds": {
+        "raw": [
+          0,
+          3840,
+          4320,
+          912
+        ],
+        "x": 0.6666666666666666,
+        "y": 0.0,
+        "width": 0.08333333333333333,
+        "height": 0.2111111111111111,
+        "clipped": [
+          3840,
+          0,
+          4320,
+          912
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-151",
+      "sourceSlide": 151,
+      "hotspotId": "s151-a1238788",
+      "shapeId": 175109,
+      "target": "slide-152",
+      "targetSlide": 152,
+      "bounds": {
+        "raw": [
+          0,
+          3840,
+          4320,
+          912
+        ],
+        "x": 0.6666666666666666,
+        "y": 0.0,
+        "width": 0.08333333333333333,
+        "height": 0.2111111111111111,
+        "clipped": [
+          3840,
+          0,
+          4320,
+          912
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-152",
+      "sourceSlide": 152,
+      "hotspotId": "s152-a1239965",
+      "shapeId": 176136,
+      "target": "slide-153",
+      "targetSlide": 153,
+      "bounds": {
+        "raw": [
+          192,
+          5040,
+          6768,
+          3696
+        ],
+        "x": 0.875,
+        "y": 0.044444444444444446,
+        "width": 0.125,
+        "height": 0.8111111111111111,
+        "clipped": [
+          5040,
+          192,
+          5760,
+          3696
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-153",
+      "sourceSlide": 153,
+      "hotspotId": "s153-a1244052",
+      "shapeId": 177159,
+      "target": "slide-154",
+      "targetSlide": 154,
+      "bounds": {
+        "raw": [
+          -48,
+          1874,
+          2208,
+          1584
+        ],
+        "x": 0.32534722222222223,
+        "y": 0.0,
+        "width": 0.05798611111111111,
+        "height": 0.36666666666666664,
+        "clipped": [
+          1874,
+          0,
+          2208,
+          1584
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-157",
+      "sourceSlide": 157,
+      "hotspotId": "s157-a1254580",
+      "shapeId": 181261,
+      "target": "slide-158",
+      "targetSlide": 158,
+      "bounds": {
+        "raw": [
+          960,
+          5088,
+          5520,
+          1392
+        ],
+        "x": 0.8833333333333333,
+        "y": 0.2222222222222222,
+        "width": 0.075,
+        "height": 0.1,
+        "clipped": [
+          5088,
+          960,
+          5520,
+          1392
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-157",
+      "sourceSlide": 157,
+      "hotspotId": "s157-a1254792",
+      "shapeId": 181264,
+      "target": "slide-162",
+      "targetSlide": 162,
+      "bounds": {
+        "raw": [
+          0,
+          2976,
+          3456,
+          2208
+        ],
+        "x": 0.5166666666666667,
+        "y": 0.0,
+        "width": 0.08333333333333333,
+        "height": 0.5111111111111111,
+        "clipped": [
+          2976,
+          0,
+          3456,
+          2208
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-158",
+      "sourceSlide": 158,
+      "hotspotId": "s158-a1264665",
+      "shapeId": 182282,
+      "target": "slide-157",
+      "targetSlide": 157,
+      "bounds": {
+        "raw": [
+          3408,
+          3792,
+          4800,
+          3645
+        ],
+        "x": 0.6583333333333333,
+        "y": 0.7888888888888889,
+        "width": 0.175,
+        "height": 0.05486111111111111,
+        "clipped": [
+          3792,
+          3408,
+          4800,
+          3645
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-158",
+      "sourceSlide": 158,
+      "hotspotId": "s158-a1264861",
+      "shapeId": 182284,
+      "target": "slide-159",
+      "targetSlide": 159,
+      "bounds": {
+        "raw": [
+          2832,
+          3792,
+          4272,
+          3005
+        ],
+        "x": 0.6583333333333333,
+        "y": 0.6555555555555556,
+        "width": 0.08333333333333333,
+        "height": 0.040046296296296295,
+        "clipped": [
+          3792,
+          2832,
+          4272,
+          3005
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-159",
+      "sourceSlide": 159,
+      "hotspotId": "s159-a1265728",
+      "shapeId": 183304,
+      "target": "slide-160",
+      "targetSlide": 160,
+      "bounds": {
+        "raw": [
+          -240,
+          0,
+          6048,
+          4560
+        ],
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 1.0,
+        "clipped": [
+          0,
+          0,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-160",
+      "sourceSlide": 160,
+      "hotspotId": "s160-a1266506",
+      "shapeId": 185347,
+      "target": "slide-161",
+      "targetSlide": 161,
+      "bounds": {
+        "raw": [
+          -240,
+          0,
+          6048,
+          4560
+        ],
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 1.0,
+        "clipped": [
+          0,
+          0,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-161",
+      "sourceSlide": 161,
+      "hotspotId": "s161-a1267284",
+      "shapeId": 186371,
+      "target": "slide-157",
+      "targetSlide": 157,
+      "bounds": {
+        "raw": [
+          -240,
+          0,
+          6048,
+          4560
+        ],
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 1.0,
+        "clipped": [
+          0,
+          0,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-166",
+      "sourceSlide": 166,
+      "hotspotId": "s166-a1310129",
+      "shapeId": 191508,
+      "target": "slide-175",
+      "targetSlide": 175,
+      "bounds": {
+        "raw": [
+          2811.0,
+          336,
+          1536,
+          3078.0
+        ],
+        "x": 0.058333333333333334,
+        "y": 0.6506944444444445,
+        "width": 0.20833333333333334,
+        "height": 0.06180555555555556,
+        "clipped": [
+          336,
+          2811.0,
+          1536,
+          3078.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-166",
+      "sourceSlide": 166,
+      "hotspotId": "s166-a1310177",
+      "shapeId": 191508,
+      "target": "slide-167",
+      "targetSlide": 167,
+      "bounds": {
+        "raw": [
+          3078.0,
+          336,
+          1536,
+          3345.0
+        ],
+        "x": 0.058333333333333334,
+        "y": 0.7125,
+        "width": 0.20833333333333334,
+        "height": 0.06180555555555556,
+        "clipped": [
+          336,
+          3078.0,
+          1536,
+          3345.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-168",
+      "sourceSlide": 168,
+      "hotspotId": "s168-a1326606",
+      "shapeId": 193542,
+      "target": "slide-175",
+      "targetSlide": 175,
+      "bounds": {
+        "raw": [
+          2811.0,
+          336,
+          1536,
+          3078.0
+        ],
+        "x": 0.058333333333333334,
+        "y": 0.6506944444444445,
+        "width": 0.20833333333333334,
+        "height": 0.06180555555555556,
+        "clipped": [
+          336,
+          2811.0,
+          1536,
+          3078.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-168",
+      "sourceSlide": 168,
+      "hotspotId": "s168-a1326654",
+      "shapeId": 193542,
+      "target": "slide-169",
+      "targetSlide": 169,
+      "bounds": {
+        "raw": [
+          3078.0,
+          336,
+          1536,
+          3345.0
+        ],
+        "x": 0.058333333333333334,
+        "y": 0.7125,
+        "width": 0.20833333333333334,
+        "height": 0.06180555555555556,
+        "clipped": [
+          336,
+          3078.0,
+          1536,
+          3345.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-180",
+      "sourceSlide": 180,
+      "hotspotId": "s180-a1359751",
+      "shapeId": 206855,
+      "target": "slide-181",
+      "targetSlide": 181,
+      "bounds": {
+        "raw": [
+          2619.0,
+          1152,
+          2352,
+          2886.0
+        ],
+        "x": 0.2,
+        "y": 0.60625,
+        "width": 0.20833333333333334,
+        "height": 0.06180555555555556,
+        "clipped": [
+          1152,
+          2619.0,
+          2352,
+          2886.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-180",
+      "sourceSlide": 180,
+      "hotspotId": "s180-a1359799",
+      "shapeId": 206855,
+      "target": "slide-183",
+      "targetSlide": 183,
+      "bounds": {
+        "raw": [
+          2886.0,
+          1152,
+          2352,
+          3153.0
+        ],
+        "x": 0.2,
+        "y": 0.6680555555555555,
+        "width": 0.20833333333333334,
+        "height": 0.06180555555555556,
+        "clipped": [
+          1152,
+          2886.0,
+          2352,
+          3153.0
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-182",
+      "sourceSlide": 182,
+      "hotspotId": "s182-a1372959",
+      "shapeId": 208903,
+      "target": "slide-183",
+      "targetSlide": 183,
+      "bounds": {
+        "raw": [
+          2160,
+          1104,
+          2304,
+          2760
+        ],
+        "x": 0.19166666666666668,
+        "y": 0.5,
+        "width": 0.20833333333333334,
+        "height": 0.1388888888888889,
+        "clipped": [
+          1104,
+          2160,
+          2304,
+          2760
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-193",
+      "sourceSlide": 193,
+      "hotspotId": "s193-a1422014",
+      "shapeId": 222217,
+      "target": "slide-194",
+      "targetSlide": 194,
+      "bounds": {
+        "raw": [
+          144,
+          240,
+          1776,
+          3216
+        ],
+        "x": 0.041666666666666664,
+        "y": 0.03333333333333333,
+        "width": 0.26666666666666666,
+        "height": 0.7111111111111111,
+        "clipped": [
+          240,
+          144,
+          1776,
+          3216
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-193",
+      "sourceSlide": 193,
+      "hotspotId": "s193-a1422226",
+      "shapeId": 222218,
+      "target": "slide-198",
+      "targetSlide": 198,
+      "bounds": {
+        "raw": [
+          0,
+          2112,
+          3120,
+          1872
+        ],
+        "x": 0.36666666666666664,
+        "y": 0.0,
+        "width": 0.175,
+        "height": 0.43333333333333335,
+        "clipped": [
+          2112,
+          0,
+          3120,
+          1872
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-194",
+      "sourceSlide": 194,
+      "hotspotId": "s194-a1427482",
+      "shapeId": 223240,
+      "target": "slide-195",
+      "targetSlide": 195,
+      "bounds": {
+        "raw": [
+          912,
+          -1198,
+          480,
+          4032
+        ],
+        "x": 0.0,
+        "y": 0.2111111111111111,
+        "width": 0.08333333333333333,
+        "height": 0.7222222222222222,
+        "clipped": [
+          0,
+          912,
+          480,
+          4032
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-196",
+      "sourceSlide": 196,
+      "hotspotId": "s196-a1428680",
+      "shapeId": 224261,
+      "target": "slide-197",
+      "targetSlide": 197,
+      "bounds": {
+        "raw": [
+          3072,
+          4992,
+          5568,
+          4320
+        ],
+        "x": 0.8666666666666667,
+        "y": 0.7111111111111111,
+        "width": 0.1,
+        "height": 0.28888888888888886,
+        "clipped": [
+          4992,
+          3072,
+          5568,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-197",
+      "sourceSlide": 197,
+      "hotspotId": "s197-a1430965",
+      "shapeId": 226315,
+      "target": "slide-200",
+      "targetSlide": 200,
+      "bounds": {
+        "raw": [
+          0,
+          3456,
+          4128,
+          624
+        ],
+        "x": 0.6,
+        "y": 0.0,
+        "width": 0.11666666666666667,
+        "height": 0.14444444444444443,
+        "clipped": [
+          3456,
+          0,
+          4128,
+          624
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-198",
+      "sourceSlide": 198,
+      "hotspotId": "s198-a1435039",
+      "shapeId": 270344,
+      "target": "slide-199",
+      "targetSlide": 199,
+      "bounds": {
+        "raw": [
+          864,
+          2400,
+          2976,
+          1200
+        ],
+        "x": 0.4166666666666667,
+        "y": 0.2,
+        "width": 0.1,
+        "height": 0.07777777777777778,
+        "clipped": [
+          2400,
+          864,
+          2976,
+          1200
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-198",
+      "sourceSlide": 198,
+      "hotspotId": "s198-a1435207",
+      "shapeId": 270345,
+      "target": "slide-194",
+      "targetSlide": 194,
+      "bounds": {
+        "raw": [
+          192,
+          240,
+          1680,
+          3264
+        ],
+        "x": 0.041666666666666664,
+        "y": 0.044444444444444446,
+        "width": 0.25,
+        "height": 0.7111111111111111,
+        "clipped": [
+          240,
+          192,
+          1680,
+          3264
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-199",
+      "sourceSlide": 199,
+      "hotspotId": "s199-a1436058",
+      "shapeId": 271372,
+      "target": "slide-194",
+      "targetSlide": 194,
+      "bounds": {
+        "raw": [
+          192,
+          240,
+          1776,
+          3216
+        ],
+        "x": 0.041666666666666664,
+        "y": 0.044444444444444446,
+        "width": 0.26666666666666666,
+        "height": 0.7,
+        "clipped": [
+          240,
+          192,
+          1776,
+          3216
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-200",
+      "sourceSlide": 200,
+      "hotspotId": "s200-a1436857",
+      "shapeId": 227333,
+      "target": "slide-201",
+      "targetSlide": 201,
+      "bounds": {
+        "raw": [
+          1488,
+          -384,
+          2496,
+          2832
+        ],
+        "x": 0.0,
+        "y": 0.34444444444444444,
+        "width": 0.43333333333333335,
+        "height": 0.3111111111111111,
+        "clipped": [
+          0,
+          1488,
+          2496,
+          2832
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-201",
+      "sourceSlide": 201,
+      "hotspotId": "s201-a1437984",
+      "shapeId": 228359,
+      "target": "slide-202",
+      "targetSlide": 202,
+      "bounds": {
+        "raw": [
+          432,
+          3072,
+          4224,
+          1584
+        ],
+        "x": 0.5333333333333333,
+        "y": 0.1,
+        "width": 0.2,
+        "height": 0.26666666666666666,
+        "clipped": [
+          3072,
+          432,
+          4224,
+          1584
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-217",
+      "sourceSlide": 217,
+      "hotspotId": "s217-a1532057",
+      "shapeId": 251910,
+      "target": "slide-218",
+      "targetSlide": 218,
+      "bounds": {
+        "raw": [
+          288,
+          4704,
+          6468,
+          1488
+        ],
+        "x": 0.8166666666666667,
+        "y": 0.06666666666666667,
+        "width": 0.18333333333333332,
+        "height": 0.2777777777777778,
+        "clipped": [
+          4704,
+          288,
+          5760,
+          1488
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-217",
+      "sourceSlide": 217,
+      "hotspotId": "s217-a1532907",
+      "shapeId": 251914,
+      "target": "slide-225",
+      "targetSlide": 225,
+      "bounds": {
+        "raw": [
+          1968,
+          0,
+          528,
+          3264
+        ],
+        "x": 0.0,
+        "y": 0.45555555555555555,
+        "width": 0.09166666666666666,
+        "height": 0.3,
+        "clipped": [
+          0,
+          1968,
+          528,
+          3264
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-218",
+      "sourceSlide": 218,
+      "hotspotId": "s218-a1535531",
+      "shapeId": 252934,
+      "target": "slide-219",
+      "targetSlide": 219,
+      "bounds": {
+        "raw": [
+          192,
+          3504,
+          4416,
+          2592
+        ],
+        "x": 0.6083333333333333,
+        "y": 0.044444444444444446,
+        "width": 0.15833333333333333,
+        "height": 0.5555555555555556,
+        "clipped": [
+          3504,
+          192,
+          4416,
+          2592
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-218",
+      "sourceSlide": 218,
+      "hotspotId": "s218-a1535815",
+      "shapeId": 252937,
+      "target": "slide-220",
+      "targetSlide": 220,
+      "bounds": {
+        "raw": [
+          -101,
+          -528,
+          3504,
+          2736
+        ],
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.6083333333333333,
+        "height": 0.6333333333333333,
+        "clipped": [
+          0,
+          0,
+          3504,
+          2736
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-218",
+      "sourceSlide": 218,
+      "hotspotId": "s218-a1535957",
+      "shapeId": 252938,
+      "target": "slide-217",
+      "targetSlide": 217,
+      "bounds": {
+        "raw": [
+          3072,
+          816,
+          1440,
+          4320
+        ],
+        "x": 0.14166666666666666,
+        "y": 0.7111111111111111,
+        "width": 0.10833333333333334,
+        "height": 0.28888888888888886,
+        "clipped": [
+          816,
+          3072,
+          1440,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-219",
+      "sourceSlide": 219,
+      "hotspotId": "s219-a1537268",
+      "shapeId": 253961,
+      "target": "slide-220",
+      "targetSlide": 220,
+      "bounds": {
+        "raw": [
+          -101,
+          -528,
+          3504,
+          2736
+        ],
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.6083333333333333,
+        "height": 0.6333333333333333,
+        "clipped": [
+          0,
+          0,
+          3504,
+          2736
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-219",
+      "sourceSlide": 219,
+      "hotspotId": "s219-a1537416",
+      "shapeId": 253962,
+      "target": "slide-217",
+      "targetSlide": 217,
+      "bounds": {
+        "raw": [
+          3072,
+          816,
+          1440,
+          4320
+        ],
+        "x": 0.14166666666666666,
+        "y": 0.7111111111111111,
+        "width": 0.10833333333333334,
+        "height": 0.28888888888888886,
+        "clipped": [
+          816,
+          3072,
+          1440,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-220",
+      "sourceSlide": 220,
+      "hotspotId": "s220-a1540593",
+      "shapeId": 254982,
+      "target": "slide-221",
+      "targetSlide": 221,
+      "bounds": {
+        "raw": [
+          576,
+          2400,
+          3408,
+          1728
+        ],
+        "x": 0.4166666666666667,
+        "y": 0.13333333333333333,
+        "width": 0.175,
+        "height": 0.26666666666666666,
+        "clipped": [
+          2400,
+          576,
+          3408,
+          1728
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-220",
+      "sourceSlide": 220,
+      "hotspotId": "s220-a1540741",
+      "shapeId": 254983,
+      "target": "slide-218",
+      "targetSlide": 218,
+      "bounds": {
+        "raw": [
+          3504,
+          4512,
+          5760,
+          4128
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.8111111111111111,
+        "width": 0.21666666666666667,
+        "height": 0.14444444444444443,
+        "clipped": [
+          4512,
+          3504,
+          5760,
+          4128
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-220",
+      "sourceSlide": 220,
+      "hotspotId": "s220-a1540909",
+      "shapeId": 254984,
+      "target": "slide-222",
+      "targetSlide": 222,
+      "bounds": {
+        "raw": [
+          1440,
+          4128,
+          5904,
+          2064
+        ],
+        "x": 0.7166666666666667,
+        "y": 0.3333333333333333,
+        "width": 0.2833333333333333,
+        "height": 0.14444444444444443,
+        "clipped": [
+          4128,
+          1440,
+          5760,
+          2064
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-220",
+      "sourceSlide": 220,
+      "hotspotId": "s220-a1541077",
+      "shapeId": 254985,
+      "target": "slide-223",
+      "targetSlide": 223,
+      "bounds": {
+        "raw": [
+          1104,
+          0,
+          384,
+          1824
+        ],
+        "x": 0.0,
+        "y": 0.25555555555555554,
+        "width": 0.06666666666666667,
+        "height": 0.16666666666666666,
+        "clipped": [
+          0,
+          1104,
+          384,
+          1824
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-221",
+      "sourceSlide": 221,
+      "hotspotId": "s221-a1542445",
+      "shapeId": 256012,
+      "target": "slide-218",
+      "targetSlide": 218,
+      "bounds": {
+        "raw": [
+          3504,
+          4512,
+          5760,
+          4128
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.8111111111111111,
+        "width": 0.21666666666666667,
+        "height": 0.14444444444444443,
+        "clipped": [
+          4512,
+          3504,
+          5760,
+          4128
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-221",
+      "sourceSlide": 221,
+      "hotspotId": "s221-a1542613",
+      "shapeId": 256016,
+      "target": "slide-222",
+      "targetSlide": 222,
+      "bounds": {
+        "raw": [
+          1392,
+          4032,
+          6336,
+          2208
+        ],
+        "x": 0.7,
+        "y": 0.32222222222222224,
+        "width": 0.3,
+        "height": 0.18888888888888888,
+        "clipped": [
+          4032,
+          1392,
+          5760,
+          2208
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-221",
+      "sourceSlide": 221,
+      "hotspotId": "s221-a1542781",
+      "shapeId": 256017,
+      "target": "slide-223",
+      "targetSlide": 223,
+      "bounds": {
+        "raw": [
+          1104,
+          0,
+          384,
+          1824
+        ],
+        "x": 0.0,
+        "y": 0.25555555555555554,
+        "width": 0.06666666666666667,
+        "height": 0.16666666666666666,
+        "clipped": [
+          0,
+          1104,
+          384,
+          1824
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-222",
+      "sourceSlide": 222,
+      "hotspotId": "s222-a1545666",
+      "shapeId": 257034,
+      "target": "slide-220",
+      "targetSlide": 220,
+      "bounds": {
+        "raw": [
+          0,
+          0,
+          768,
+          384
+        ],
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.13333333333333333,
+        "height": 0.08888888888888889,
+        "clipped": [
+          0,
+          0,
+          768,
+          384
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-224",
+      "sourceSlide": 224,
+      "hotspotId": "s224-a1557109",
+      "shapeId": 261127,
+      "target": "slide-225",
+      "targetSlide": 225,
+      "bounds": {
+        "raw": [
+          1680,
+          0,
+          432,
+          3168
+        ],
+        "x": 0.0,
+        "y": 0.3888888888888889,
+        "width": 0.075,
+        "height": 0.34444444444444444,
+        "clipped": [
+          0,
+          1680,
+          432,
+          3168
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-225",
+      "sourceSlide": 225,
+      "hotspotId": "s225-a1560352",
+      "shapeId": 262150,
+      "target": "slide-226",
+      "targetSlide": 226,
+      "bounds": {
+        "raw": [
+          0,
+          5232,
+          5760,
+          1056
+        ],
+        "x": 0.9083333333333333,
+        "y": 0.0,
+        "width": 0.09166666666666666,
+        "height": 0.24444444444444444,
+        "clipped": [
+          5232,
+          0,
+          5760,
+          1056
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-226",
+      "sourceSlide": 226,
+      "hotspotId": "s226-a1561167",
+      "shapeId": 263176,
+      "target": "slide-227",
+      "targetSlide": 227,
+      "bounds": {
+        "raw": [
+          336,
+          -201,
+          3504,
+          1289
+        ],
+        "x": 0.0,
+        "y": 0.07777777777777778,
+        "width": 0.6083333333333333,
+        "height": 0.22060185185185185,
+        "clipped": [
+          0,
+          336,
+          3504,
+          1289
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-236",
+      "sourceSlide": 236,
+      "hotspotId": "s236-a1641987",
+      "shapeId": 277515,
+      "target": "slide-237",
+      "targetSlide": 237,
+      "bounds": {
+        "raw": [
+          0,
+          1728,
+          3840,
+          528
+        ],
+        "x": 0.3,
+        "y": 0.0,
+        "width": 0.36666666666666664,
+        "height": 0.12222222222222222,
+        "clipped": [
+          1728,
+          0,
+          3840,
+          528
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-239",
+      "sourceSlide": 239,
+      "hotspotId": "s239-a1651552",
+      "shapeId": 280582,
+      "target": "slide-240",
+      "targetSlide": 240,
+      "bounds": {
+        "raw": [
+          0,
+          144,
+          1488,
+          2928
+        ],
+        "x": 0.025,
+        "y": 0.0,
+        "width": 0.23333333333333334,
+        "height": 0.6777777777777778,
+        "clipped": [
+          144,
+          0,
+          1488,
+          2928
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-240",
+      "sourceSlide": 240,
+      "hotspotId": "s240-a1653723",
+      "shapeId": 281607,
+      "target": "slide-241",
+      "targetSlide": 241,
+      "bounds": {
+        "raw": [
+          720,
+          3648,
+          5760,
+          1536
+        ],
+        "x": 0.6333333333333333,
+        "y": 0.16666666666666666,
+        "width": 0.36666666666666664,
+        "height": 0.18888888888888888,
+        "clipped": [
+          3648,
+          720,
+          5760,
+          1536
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-246",
+      "sourceSlide": 246,
+      "hotspotId": "s246-a1672461",
+      "shapeId": 287753,
+      "target": "slide-247",
+      "targetSlide": 247,
+      "bounds": {
+        "raw": [
+          480,
+          4176,
+          5184,
+          2160
+        ],
+        "x": 0.725,
+        "y": 0.1111111111111111,
+        "width": 0.175,
+        "height": 0.3888888888888889,
+        "clipped": [
+          4176,
+          480,
+          5184,
+          2160
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-253",
+      "sourceSlide": 253,
+      "hotspotId": "s253-a1687473",
+      "shapeId": 294919,
+      "target": "slide-255",
+      "targetSlide": 255,
+      "bounds": {
+        "raw": [
+          1250,
+          6,
+          1446,
+          1874
+        ],
+        "x": 0.0010416666666666667,
+        "y": 0.28935185185185186,
+        "width": 0.25,
+        "height": 0.14444444444444443,
+        "clipped": [
+          6,
+          1250,
+          1446,
+          1874
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-253",
+      "sourceSlide": 253,
+      "hotspotId": "s253-a1687685",
+      "shapeId": 294920,
+      "target": "slide-254",
+      "targetSlide": 254,
+      "bounds": {
+        "raw": [
+          1248,
+          2592,
+          2784,
+          1680
+        ],
+        "x": 0.45,
+        "y": 0.28888888888888886,
+        "width": 0.03333333333333333,
+        "height": 0.1,
+        "clipped": [
+          2592,
+          1248,
+          2784,
+          1680
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-254",
+      "sourceSlide": 254,
+      "hotspotId": "s254-a1691345",
+      "shapeId": 295944,
+      "target": "slide-255",
+      "targetSlide": 255,
+      "bounds": {
+        "raw": [
+          1250,
+          6,
+          1446,
+          1874
+        ],
+        "x": 0.0010416666666666667,
+        "y": 0.28935185185185186,
+        "width": 0.25,
+        "height": 0.14444444444444443,
+        "clipped": [
+          6,
+          1250,
+          1446,
+          1874
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-255",
+      "sourceSlide": 255,
+      "hotspotId": "s255-a1698344",
+      "shapeId": 296965,
+      "target": "slide-256",
+      "targetSlide": 256,
+      "bounds": {
+        "raw": [
+          0,
+          2736,
+          3888,
+          2784
+        ],
+        "x": 0.475,
+        "y": 0.0,
+        "width": 0.2,
+        "height": 0.6444444444444445,
+        "clipped": [
+          2736,
+          0,
+          3888,
+          2784
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-259",
+      "sourceSlide": 259,
+      "hotspotId": "s259-a1716603",
+      "shapeId": 301067,
+      "target": "slide-260",
+      "targetSlide": 260,
+      "bounds": {
+        "raw": [
+          96,
+          165,
+          1056,
+          2352
+        ],
+        "x": 0.028645833333333332,
+        "y": 0.022222222222222223,
+        "width": 0.1546875,
+        "height": 0.5222222222222223,
+        "clipped": [
+          165,
+          96,
+          1056,
+          2352
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-259",
+      "sourceSlide": 259,
+      "hotspotId": "s259-a1716815",
+      "shapeId": 301068,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1344,
+          4176,
+          4800,
+          1728
+        ],
+        "x": 0.725,
+        "y": 0.3111111111111111,
+        "width": 0.10833333333333334,
+        "height": 0.08888888888888889,
+        "clipped": [
+          4176,
+          1344,
+          4800,
+          1728
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-259",
+      "sourceSlide": 259,
+      "hotspotId": "s259-a1717027",
+      "shapeId": 301069,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1728,
+          1392,
+          1728,
+          2016
+        ],
+        "x": 0.24166666666666667,
+        "y": 0.4,
+        "width": 0.058333333333333334,
+        "height": 0.06666666666666667,
+        "clipped": [
+          1392,
+          1728,
+          1728,
+          2016
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-259",
+      "sourceSlide": 259,
+      "hotspotId": "s259-a1717239",
+      "shapeId": 301070,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1824,
+          3600,
+          4080,
+          2112
+        ],
+        "x": 0.625,
+        "y": 0.4222222222222222,
+        "width": 0.08333333333333333,
+        "height": 0.06666666666666667,
+        "clipped": [
+          3600,
+          1824,
+          4080,
+          2112
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-261",
+      "sourceSlide": 261,
+      "hotspotId": "s261-a1731893",
+      "shapeId": 304137,
+      "target": "slide-262",
+      "targetSlide": 262,
+      "bounds": {
+        "raw": [
+          192,
+          192,
+          1008,
+          2208
+        ],
+        "x": 0.03333333333333333,
+        "y": 0.044444444444444446,
+        "width": 0.14166666666666666,
+        "height": 0.4666666666666667,
+        "clipped": [
+          192,
+          192,
+          1008,
+          2208
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-261",
+      "sourceSlide": 261,
+      "hotspotId": "s261-a1732105",
+      "shapeId": 304138,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1344,
+          4176,
+          4800,
+          1728
+        ],
+        "x": 0.725,
+        "y": 0.3111111111111111,
+        "width": 0.10833333333333334,
+        "height": 0.08888888888888889,
+        "clipped": [
+          4176,
+          1344,
+          4800,
+          1728
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-261",
+      "sourceSlide": 261,
+      "hotspotId": "s261-a1732317",
+      "shapeId": 304139,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1728,
+          1392,
+          1728,
+          2016
+        ],
+        "x": 0.24166666666666667,
+        "y": 0.4,
+        "width": 0.058333333333333334,
+        "height": 0.06666666666666667,
+        "clipped": [
+          1392,
+          1728,
+          1728,
+          2016
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-261",
+      "sourceSlide": 261,
+      "hotspotId": "s261-a1732529",
+      "shapeId": 304140,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1824,
+          3600,
+          4080,
+          2112
+        ],
+        "x": 0.625,
+        "y": 0.4222222222222222,
+        "width": 0.08333333333333333,
+        "height": 0.06666666666666667,
+        "clipped": [
+          3600,
+          1824,
+          4080,
+          2112
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-263",
+      "sourceSlide": 263,
+      "hotspotId": "s263-a1742344",
+      "shapeId": 306189,
+      "target": "slide-264",
+      "targetSlide": 264,
+      "bounds": {
+        "raw": [
+          192,
+          144,
+          1056,
+          2304
+        ],
+        "x": 0.025,
+        "y": 0.044444444444444446,
+        "width": 0.15833333333333333,
+        "height": 0.4888888888888889,
+        "clipped": [
+          144,
+          192,
+          1056,
+          2304
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-263",
+      "sourceSlide": 263,
+      "hotspotId": "s263-a1742512",
+      "shapeId": 306190,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1344,
+          4176,
+          4800,
+          1728
+        ],
+        "x": 0.725,
+        "y": 0.3111111111111111,
+        "width": 0.10833333333333334,
+        "height": 0.08888888888888889,
+        "clipped": [
+          4176,
+          1344,
+          4800,
+          1728
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-263",
+      "sourceSlide": 263,
+      "hotspotId": "s263-a1742680",
+      "shapeId": 306191,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1728,
+          1392,
+          1728,
+          2016
+        ],
+        "x": 0.24166666666666667,
+        "y": 0.4,
+        "width": 0.058333333333333334,
+        "height": 0.06666666666666667,
+        "clipped": [
+          1392,
+          1728,
+          1728,
+          2016
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-263",
+      "sourceSlide": 263,
+      "hotspotId": "s263-a1742848",
+      "shapeId": 306192,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1824,
+          3600,
+          4080,
+          2112
+        ],
+        "x": 0.625,
+        "y": 0.4222222222222222,
+        "width": 0.08333333333333333,
+        "height": 0.06666666666666667,
+        "clipped": [
+          3600,
+          1824,
+          4080,
+          2112
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-264",
+      "sourceSlide": 264,
+      "hotspotId": "s264-a1744476",
+      "shapeId": 307210,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1344,
+          4176,
+          4800,
+          1728
+        ],
+        "x": 0.725,
+        "y": 0.3111111111111111,
+        "width": 0.10833333333333334,
+        "height": 0.08888888888888889,
+        "clipped": [
+          4176,
+          1344,
+          4800,
+          1728
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-264",
+      "sourceSlide": 264,
+      "hotspotId": "s264-a1744644",
+      "shapeId": 307211,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1728,
+          1392,
+          1728,
+          2016
+        ],
+        "x": 0.24166666666666667,
+        "y": 0.4,
+        "width": 0.058333333333333334,
+        "height": 0.06666666666666667,
+        "clipped": [
+          1392,
+          1728,
+          1728,
+          2016
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-264",
+      "sourceSlide": 264,
+      "hotspotId": "s264-a1744812",
+      "shapeId": 307212,
+      "target": "slide-265",
+      "targetSlide": 265,
+      "bounds": {
+        "raw": [
+          1824,
+          3600,
+          4080,
+          2112
+        ],
+        "x": 0.625,
+        "y": 0.4222222222222222,
+        "width": 0.08333333333333333,
+        "height": 0.06666666666666667,
+        "clipped": [
+          3600,
+          1824,
+          4080,
+          2112
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-268",
+      "sourceSlide": 268,
+      "hotspotId": "s268-a1760628",
+      "shapeId": 313366,
+      "target": "slide-269",
+      "targetSlide": 269,
+      "bounds": {
+        "raw": [
+          3600,
+          0,
+          1872,
+          4320
+        ],
+        "x": 0.0,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          0,
+          3600,
+          1872,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-268",
+      "sourceSlide": 268,
+      "hotspotId": "s268-a1760808",
+      "shapeId": 313367,
+      "target": "slide-270",
+      "targetSlide": 270,
+      "bounds": {
+        "raw": [
+          3600,
+          3888,
+          5760,
+          4320
+        ],
+        "x": 0.675,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          3888,
+          3600,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-269",
+      "sourceSlide": 269,
+      "hotspotId": "s269-a1764074",
+      "shapeId": 314388,
+      "target": "slide-268",
+      "targetSlide": 268,
+      "bounds": {
+        "raw": [
+          3600,
+          3888,
+          5760,
+          4320
+        ],
+        "x": 0.675,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          3888,
+          3600,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-270",
+      "sourceSlide": 270,
+      "hotspotId": "s270-a1767287",
+      "shapeId": 316429,
+      "target": "slide-268",
+      "targetSlide": 268,
+      "bounds": {
+        "raw": [
+          3600,
+          0,
+          1872,
+          4320
+        ],
+        "x": 0.0,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          0,
+          3600,
+          1872,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-270",
+      "sourceSlide": 270,
+      "hotspotId": "s270-a1769472",
+      "shapeId": 316443,
+      "target": "slide-271",
+      "targetSlide": 271,
+      "bounds": {
+        "raw": [
+          3600,
+          3888,
+          5760,
+          4320
+        ],
+        "x": 0.675,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          3888,
+          3600,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-271",
+      "sourceSlide": 271,
+      "hotspotId": "s271-a1773691",
+      "shapeId": 317451,
+      "target": "slide-270",
+      "targetSlide": 270,
+      "bounds": {
+        "raw": [
+          3600,
+          0,
+          1872,
+          4320
+        ],
+        "x": 0.0,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          0,
+          3600,
+          1872,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-271",
+      "sourceSlide": 271,
+      "hotspotId": "s271-a1777807",
+      "shapeId": 317470,
+      "target": "slide-272",
+      "targetSlide": 272,
+      "bounds": {
+        "raw": [
+          3600,
+          3888,
+          5760,
+          4320
+        ],
+        "x": 0.675,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          3888,
+          3600,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-272",
+      "sourceSlide": 272,
+      "hotspotId": "s272-a1782851",
+      "shapeId": 318494,
+      "target": "slide-271",
+      "targetSlide": 271,
+      "bounds": {
+        "raw": [
+          3600,
+          0,
+          1872,
+          4320
+        ],
+        "x": 0.0,
+        "y": 0.8333333333333334,
+        "width": 0.325,
+        "height": 0.16666666666666666,
+        "clipped": [
+          0,
+          3600,
+          1872,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-272",
+      "sourceSlide": 272,
+      "hotspotId": "s272-a1783045",
+      "shapeId": 318497,
+      "target": "slide-273",
+      "targetSlide": 273,
+      "bounds": {
+        "raw": [
+          3792,
+          4512,
+          5760,
+          4320
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.8777777777777778,
+        "width": 0.21666666666666667,
+        "height": 0.12222222222222222,
+        "clipped": [
+          4512,
+          3792,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-292",
+      "sourceSlide": 292,
+      "hotspotId": "s292-a1829658",
+      "shapeId": 342025,
+      "target": "slide-293",
+      "targetSlide": 293,
+      "bounds": {
+        "raw": [
+          2208,
+          1440,
+          3216,
+          3024
+        ],
+        "x": 0.25,
+        "y": 0.5111111111111111,
+        "width": 0.30833333333333335,
+        "height": 0.18888888888888888,
+        "clipped": [
+          1440,
+          2208,
+          3216,
+          3024
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-310",
+      "sourceSlide": 310,
+      "hotspotId": "s310-a1910915",
+      "shapeId": 364561,
+      "target": "slide-311",
+      "targetSlide": 311,
+      "bounds": {
+        "raw": [
+          1152,
+          4560,
+          5472,
+          1383
+        ],
+        "x": 0.7916666666666666,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4560,
+          1152,
+          5472,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-312",
+      "sourceSlide": 312,
+      "hotspotId": "s312-a1937361",
+      "shapeId": 368702,
+      "target": "slide-313",
+      "targetSlide": 313,
+      "bounds": {
+        "raw": [
+          1152,
+          4512,
+          5424,
+          1383
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4512,
+          1152,
+          5424,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-313",
+      "sourceSlide": 313,
+      "hotspotId": "s313-a1975115",
+      "shapeId": 373803,
+      "target": "slide-314",
+      "targetSlide": 314,
+      "bounds": {
+        "raw": [
+          1152,
+          4512,
+          5424,
+          1383
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4512,
+          1152,
+          5424,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-314",
+      "sourceSlide": 314,
+      "hotspotId": "s314-a2015998",
+      "shapeId": 375840,
+      "target": "slide-315",
+      "targetSlide": 315,
+      "bounds": {
+        "raw": [
+          1152,
+          4512,
+          5424,
+          1383
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4512,
+          1152,
+          5424,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-314",
+      "sourceSlide": 314,
+      "hotspotId": "s314-a2017316",
+      "shapeId": 375851,
+      "target": "slide-315",
+      "targetSlide": 315,
+      "bounds": {
+        "raw": [
+          1104,
+          4608,
+          5520,
+          1335
+        ],
+        "x": 0.8,
+        "y": 0.25555555555555554,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4608,
+          1104,
+          5520,
+          1335
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-314",
+      "sourceSlide": 314,
+      "hotspotId": "s314-a2017576",
+      "shapeId": 375853,
+      "target": "slide-323",
+      "targetSlide": 323,
+      "bounds": {
+        "raw": [
+          1344,
+          4608,
+          5520,
+          1575
+        ],
+        "x": 0.8,
+        "y": 0.3111111111111111,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4608,
+          1344,
+          5520,
+          1575
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-315",
+      "sourceSlide": 315,
+      "hotspotId": "s315-a2041301",
+      "shapeId": 379925,
+      "target": "slide-316",
+      "targetSlide": 316,
+      "bounds": {
+        "raw": [
+          1152,
+          4512,
+          5424,
+          1383
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4512,
+          1152,
+          5424,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-315",
+      "sourceSlide": 315,
+      "hotspotId": "s315-a2042381",
+      "shapeId": 379931,
+      "target": "slide-316",
+      "targetSlide": 316,
+      "bounds": {
+        "raw": [
+          1104,
+          4608,
+          5520,
+          1335
+        ],
+        "x": 0.8,
+        "y": 0.25555555555555554,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4608,
+          1104,
+          5520,
+          1335
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-315",
+      "sourceSlide": 315,
+      "hotspotId": "s315-a2042641",
+      "shapeId": 379932,
+      "target": "slide-331",
+      "targetSlide": 331,
+      "bounds": {
+        "raw": [
+          1296,
+          4608,
+          5520,
+          1527
+        ],
+        "x": 0.8,
+        "y": 0.3,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4608,
+          1296,
+          5520,
+          1527
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-316",
+      "sourceSlide": 316,
+      "hotspotId": "s316-a2063226",
+      "shapeId": 381972,
+      "target": "slide-317",
+      "targetSlide": 317,
+      "bounds": {
+        "raw": [
+          1152,
+          4512,
+          5424,
+          1383
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4512,
+          1152,
+          5424,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-316",
+      "sourceSlide": 316,
+      "hotspotId": "s316-a2064306",
+      "shapeId": 381977,
+      "target": "slide-317",
+      "targetSlide": 317,
+      "bounds": {
+        "raw": [
+          1104,
+          4608,
+          5520,
+          1335
+        ],
+        "x": 0.8,
+        "y": 0.25555555555555554,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4608,
+          1104,
+          5520,
+          1335
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-316",
+      "sourceSlide": 316,
+      "hotspotId": "s316-a2064566",
+      "shapeId": 381978,
+      "target": "slide-332",
+      "targetSlide": 332,
+      "bounds": {
+        "raw": [
+          1296,
+          4608,
+          5520,
+          1527
+        ],
+        "x": 0.8,
+        "y": 0.3,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4608,
+          1296,
+          5520,
+          1527
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-323",
+      "sourceSlide": 323,
+      "hotspotId": "s323-a2153100",
+      "shapeId": 387139,
+      "target": "slide-324",
+      "targetSlide": 324,
+      "bounds": {
+        "raw": [
+          1152,
+          4560,
+          5472,
+          1383
+        ],
+        "x": 0.7916666666666666,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4560,
+          1152,
+          5472,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-324",
+      "sourceSlide": 324,
+      "hotspotId": "s324-a2185805",
+      "shapeId": 389153,
+      "target": "slide-325",
+      "targetSlide": 325,
+      "bounds": {
+        "raw": [
+          1152,
+          4512,
+          6096,
+          1383
+        ],
+        "x": 0.7833333333333333,
+        "y": 0.26666666666666666,
+        "width": 0.21666666666666667,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4512,
+          1152,
+          5760,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-331",
+      "sourceSlide": 331,
+      "hotspotId": "s331-a2271295",
+      "shapeId": 393243,
+      "target": "slide-325",
+      "targetSlide": 325,
+      "bounds": {
+        "raw": [
+          1152,
+          4368,
+          5952,
+          1383
+        ],
+        "x": 0.7583333333333333,
+        "y": 0.26666666666666666,
+        "width": 0.24166666666666667,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4368,
+          1152,
+          5760,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-331",
+      "sourceSlide": 331,
+      "hotspotId": "s331-a2274344",
+      "shapeId": 393291,
+      "target": "slide-325",
+      "targetSlide": 325,
+      "bounds": {
+        "raw": [
+          1152,
+          4560,
+          5472,
+          1383
+        ],
+        "x": 0.7916666666666666,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4560,
+          1152,
+          5472,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-338",
+      "sourceSlide": 338,
+      "hotspotId": "s338-a2357064",
+      "shapeId": 415758,
+      "target": "slide-339",
+      "targetSlide": 339,
+      "bounds": {
+        "raw": [
+          1152,
+          4560,
+          5376,
+          1383
+        ],
+        "x": 0.7916666666666666,
+        "y": 0.26666666666666666,
+        "width": 0.14166666666666666,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4560,
+          1152,
+          5376,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-340",
+      "sourceSlide": 340,
+      "hotspotId": "s340-a2376781",
+      "shapeId": 417829,
+      "target": "slide-341",
+      "targetSlide": 341,
+      "bounds": {
+        "raw": [
+          1152,
+          4560,
+          5376,
+          1383
+        ],
+        "x": 0.7916666666666666,
+        "y": 0.26666666666666666,
+        "width": 0.14166666666666666,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4560,
+          1152,
+          5376,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-341",
+      "sourceSlide": 341,
+      "hotspotId": "s341-a2410768",
+      "shapeId": 419878,
+      "target": "slide-342",
+      "targetSlide": 342,
+      "bounds": {
+        "raw": [
+          1152,
+          4560,
+          5472,
+          1383
+        ],
+        "x": 0.7916666666666666,
+        "y": 0.26666666666666666,
+        "width": 0.15833333333333333,
+        "height": 0.05347222222222222,
+        "clipped": [
+          4560,
+          1152,
+          5472,
+          1383
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-354",
+      "sourceSlide": 354,
+      "hotspotId": "s354-a2523908",
+      "shapeId": 438288,
+      "target": "slide-355",
+      "targetSlide": 355,
+      "bounds": {
+        "raw": [
+          3456,
+          2256,
+          3120,
+          3789
+        ],
+        "x": 0.39166666666666666,
+        "y": 0.8,
+        "width": 0.15,
+        "height": 0.07708333333333334,
+        "clipped": [
+          2256,
+          3456,
+          3120,
+          3789
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-355",
+      "sourceSlide": 355,
+      "hotspotId": "s355-a2526104",
+      "shapeId": 440336,
+      "target": "slide-356",
+      "targetSlide": 356,
+      "bounds": {
+        "raw": [
+          816,
+          432,
+          2064,
+          1176
+        ],
+        "x": 0.075,
+        "y": 0.18888888888888888,
+        "width": 0.2833333333333333,
+        "height": 0.08333333333333333,
+        "clipped": [
+          432,
+          816,
+          2064,
+          1176
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-355",
+      "sourceSlide": 355,
+      "hotspotId": "s355-a2526306",
+      "shapeId": 440337,
+      "target": "slide-357",
+      "targetSlide": 357,
+      "bounds": {
+        "raw": [
+          1344,
+          432,
+          2448,
+          1728
+        ],
+        "x": 0.075,
+        "y": 0.3111111111111111,
+        "width": 0.35,
+        "height": 0.08888888888888889,
+        "clipped": [
+          432,
+          1344,
+          2448,
+          1728
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-355",
+      "sourceSlide": 355,
+      "hotspotId": "s355-a2526687",
+      "shapeId": 440342,
+      "target": "slide-358",
+      "targetSlide": 358,
+      "bounds": {
+        "raw": [
+          1824,
+          384,
+          2880,
+          2160
+        ],
+        "x": 0.06666666666666667,
+        "y": 0.4222222222222222,
+        "width": 0.43333333333333335,
+        "height": 0.07777777777777778,
+        "clipped": [
+          384,
+          1824,
+          2880,
+          2160
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-356",
+      "sourceSlide": 356,
+      "hotspotId": "s356-a2528308",
+      "shapeId": 441351,
+      "target": "slide-355",
+      "targetSlide": 355,
+      "bounds": {
+        "raw": [
+          0,
+          4272,
+          5760,
+          672
+        ],
+        "x": 0.7416666666666667,
+        "y": 0.0,
+        "width": 0.25833333333333336,
+        "height": 0.15555555555555556,
+        "clipped": [
+          4272,
+          0,
+          5760,
+          672
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-357",
+      "sourceSlide": 357,
+      "hotspotId": "s357-a2531625",
+      "shapeId": 442374,
+      "target": "slide-355",
+      "targetSlide": 355,
+      "bounds": {
+        "raw": [
+          3984,
+          4992,
+          5760,
+          4320
+        ],
+        "x": 0.8666666666666667,
+        "y": 0.9222222222222223,
+        "width": 0.13333333333333333,
+        "height": 0.07777777777777778,
+        "clipped": [
+          4992,
+          3984,
+          5760,
+          4320
+        ]
+      },
+      "kind": "hotspot"
+    },
+    {
+      "source": "slide-358",
+      "sourceSlide": 358,
+      "hotspotId": "s358-a2533598",
+      "shapeId": 458765,
+      "target": "slide-355",
+      "targetSlide": 355,
+      "bounds": {
+        "raw": [
+          2640,
+          1776,
+          3552,
+          2928
+        ],
+        "x": 0.30833333333333335,
+        "y": 0.6111111111111112,
+        "width": 0.30833333333333335,
+        "height": 0.06666666666666667,
+        "clipped": [
+          1776,
+          2640,
+          3552,
+          2928
+        ]
+      },
+      "kind": "hotspot"
+    }
+  ],
+  "sequentialEdges": [
+    {
+      "source": "slide-001",
+      "sourceSlide": 1,
+      "target": "slide-002",
+      "targetSlide": 2,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-002",
+      "sourceSlide": 2,
+      "target": "slide-003",
+      "targetSlide": 3,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-004",
+      "sourceSlide": 4,
+      "target": "slide-005",
+      "targetSlide": 5,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-005",
+      "sourceSlide": 5,
+      "target": "slide-006",
+      "targetSlide": 6,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-006",
+      "sourceSlide": 6,
+      "target": "slide-007",
+      "targetSlide": 7,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 5000
+    },
+    {
+      "source": "slide-007",
+      "sourceSlide": 7,
+      "target": "slide-008",
+      "targetSlide": 8,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-008",
+      "sourceSlide": 8,
+      "target": "slide-009",
+      "targetSlide": 9,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-009",
+      "sourceSlide": 9,
+      "target": "slide-010",
+      "targetSlide": 10,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 5000
+    },
+    {
+      "source": "slide-010",
+      "sourceSlide": 10,
+      "target": "slide-011",
+      "targetSlide": 11,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-012",
+      "sourceSlide": 12,
+      "target": "slide-013",
+      "targetSlide": 13,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-013",
+      "sourceSlide": 13,
+      "target": "slide-014",
+      "targetSlide": 14,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-014",
+      "sourceSlide": 14,
+      "target": "slide-015",
+      "targetSlide": 15,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-016",
+      "sourceSlide": 16,
+      "target": "slide-017",
+      "targetSlide": 17,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-017",
+      "sourceSlide": 17,
+      "target": "slide-018",
+      "targetSlide": 18,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-019",
+      "sourceSlide": 19,
+      "target": "slide-020",
+      "targetSlide": 20,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-020",
+      "sourceSlide": 20,
+      "target": "slide-021",
+      "targetSlide": 21,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-022",
+      "sourceSlide": 22,
+      "target": "slide-023",
+      "targetSlide": 23,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-023",
+      "sourceSlide": 23,
+      "target": "slide-024",
+      "targetSlide": 24,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 10000
+    },
+    {
+      "source": "slide-024",
+      "sourceSlide": 24,
+      "target": "slide-025",
+      "targetSlide": 25,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-025",
+      "sourceSlide": 25,
+      "target": "slide-026",
+      "targetSlide": 26,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-027",
+      "sourceSlide": 27,
+      "target": "slide-028",
+      "targetSlide": 28,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 12000
+    },
+    {
+      "source": "slide-028",
+      "sourceSlide": 28,
+      "target": "slide-029",
+      "targetSlide": 29,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-029",
+      "sourceSlide": 29,
+      "target": "slide-030",
+      "targetSlide": 30,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-030",
+      "sourceSlide": 30,
+      "target": "slide-031",
+      "targetSlide": 31,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-031",
+      "sourceSlide": 31,
+      "target": "slide-032",
+      "targetSlide": 32,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-032",
+      "sourceSlide": 32,
+      "target": "slide-033",
+      "targetSlide": 33,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-033",
+      "sourceSlide": 33,
+      "target": "slide-034",
+      "targetSlide": 34,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-034",
+      "sourceSlide": 34,
+      "target": "slide-035",
+      "targetSlide": 35,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-039",
+      "sourceSlide": 39,
+      "target": "slide-040",
+      "targetSlide": 40,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-040",
+      "sourceSlide": 40,
+      "target": "slide-041",
+      "targetSlide": 41,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-041",
+      "sourceSlide": 41,
+      "target": "slide-042",
+      "targetSlide": 42,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-044",
+      "sourceSlide": 44,
+      "target": "slide-045",
+      "targetSlide": 45,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-045",
+      "sourceSlide": 45,
+      "target": "slide-046",
+      "targetSlide": 46,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-046",
+      "sourceSlide": 46,
+      "target": "slide-047",
+      "targetSlide": 47,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-047",
+      "sourceSlide": 47,
+      "target": "slide-048",
+      "targetSlide": 48,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-051",
+      "sourceSlide": 51,
+      "target": "slide-052",
+      "targetSlide": 52,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-058",
+      "sourceSlide": 58,
+      "target": "slide-059",
+      "targetSlide": 59,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-062",
+      "sourceSlide": 62,
+      "target": "slide-063",
+      "targetSlide": 63,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-064",
+      "sourceSlide": 64,
+      "target": "slide-065",
+      "targetSlide": 65,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-078",
+      "sourceSlide": 78,
+      "target": "slide-079",
+      "targetSlide": 79,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-079",
+      "sourceSlide": 79,
+      "target": "slide-080",
+      "targetSlide": 80,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-080",
+      "sourceSlide": 80,
+      "target": "slide-081",
+      "targetSlide": 81,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-081",
+      "sourceSlide": 81,
+      "target": "slide-082",
+      "targetSlide": 82,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 5000
+    },
+    {
+      "source": "slide-084",
+      "sourceSlide": 84,
+      "target": "slide-085",
+      "targetSlide": 85,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-085",
+      "sourceSlide": 85,
+      "target": "slide-086",
+      "targetSlide": 86,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-086",
+      "sourceSlide": 86,
+      "target": "slide-087",
+      "targetSlide": 87,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-087",
+      "sourceSlide": 87,
+      "target": "slide-088",
+      "targetSlide": 88,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-088",
+      "sourceSlide": 88,
+      "target": "slide-089",
+      "targetSlide": 89,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-089",
+      "sourceSlide": 89,
+      "target": "slide-090",
+      "targetSlide": 90,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-090",
+      "sourceSlide": 90,
+      "target": "slide-091",
+      "targetSlide": 91,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-091",
+      "sourceSlide": 91,
+      "target": "slide-092",
+      "targetSlide": 92,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-092",
+      "sourceSlide": 92,
+      "target": "slide-093",
+      "targetSlide": 93,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-093",
+      "sourceSlide": 93,
+      "target": "slide-094",
+      "targetSlide": 94,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-094",
+      "sourceSlide": 94,
+      "target": "slide-095",
+      "targetSlide": 95,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-095",
+      "sourceSlide": 95,
+      "target": "slide-096",
+      "targetSlide": 96,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-096",
+      "sourceSlide": 96,
+      "target": "slide-097",
+      "targetSlide": 97,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-097",
+      "sourceSlide": 97,
+      "target": "slide-098",
+      "targetSlide": 98,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-098",
+      "sourceSlide": 98,
+      "target": "slide-099",
+      "targetSlide": 99,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-099",
+      "sourceSlide": 99,
+      "target": "slide-100",
+      "targetSlide": 100,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-100",
+      "sourceSlide": 100,
+      "target": "slide-101",
+      "targetSlide": 101,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-101",
+      "sourceSlide": 101,
+      "target": "slide-102",
+      "targetSlide": 102,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-102",
+      "sourceSlide": 102,
+      "target": "slide-103",
+      "targetSlide": 103,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-103",
+      "sourceSlide": 103,
+      "target": "slide-104",
+      "targetSlide": 104,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-104",
+      "sourceSlide": 104,
+      "target": "slide-105",
+      "targetSlide": 105,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 5000
+    },
+    {
+      "source": "slide-106",
+      "sourceSlide": 106,
+      "target": "slide-107",
+      "targetSlide": 107,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-107",
+      "sourceSlide": 107,
+      "target": "slide-108",
+      "targetSlide": 108,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-108",
+      "sourceSlide": 108,
+      "target": "slide-109",
+      "targetSlide": 109,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-109",
+      "sourceSlide": 109,
+      "target": "slide-110",
+      "targetSlide": 110,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-110",
+      "sourceSlide": 110,
+      "target": "slide-111",
+      "targetSlide": 111,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-111",
+      "sourceSlide": 111,
+      "target": "slide-112",
+      "targetSlide": 112,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-113",
+      "sourceSlide": 113,
+      "target": "slide-114",
+      "targetSlide": 114,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-114",
+      "sourceSlide": 114,
+      "target": "slide-115",
+      "targetSlide": 115,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-115",
+      "sourceSlide": 115,
+      "target": "slide-116",
+      "targetSlide": 116,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 10000
+    },
+    {
+      "source": "slide-116",
+      "sourceSlide": 116,
+      "target": "slide-117",
+      "targetSlide": 117,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 17000
+    },
+    {
+      "source": "slide-117",
+      "sourceSlide": 117,
+      "target": "slide-118",
+      "targetSlide": 118,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 7000
+    },
+    {
+      "source": "slide-120",
+      "sourceSlide": 120,
+      "target": "slide-121",
+      "targetSlide": 121,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-125",
+      "sourceSlide": 125,
+      "target": "slide-126",
+      "targetSlide": 126,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 14000
+    },
+    {
+      "source": "slide-126",
+      "sourceSlide": 126,
+      "target": "slide-127",
+      "targetSlide": 127,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 13000
+    },
+    {
+      "source": "slide-127",
+      "sourceSlide": 127,
+      "target": "slide-128",
+      "targetSlide": 128,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-128",
+      "sourceSlide": 128,
+      "target": "slide-129",
+      "targetSlide": 129,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 300
+    },
+    {
+      "source": "slide-129",
+      "sourceSlide": 129,
+      "target": "slide-130",
+      "targetSlide": 130,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-130",
+      "sourceSlide": 130,
+      "target": "slide-131",
+      "targetSlide": 131,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-131",
+      "sourceSlide": 131,
+      "target": "slide-132",
+      "targetSlide": 132,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-132",
+      "sourceSlide": 132,
+      "target": "slide-133",
+      "targetSlide": 133,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-133",
+      "sourceSlide": 133,
+      "target": "slide-134",
+      "targetSlide": 134,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-134",
+      "sourceSlide": 134,
+      "target": "slide-135",
+      "targetSlide": 135,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-135",
+      "sourceSlide": 135,
+      "target": "slide-136",
+      "targetSlide": 136,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-136",
+      "sourceSlide": 136,
+      "target": "slide-137",
+      "targetSlide": 137,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 11000
+    },
+    {
+      "source": "slide-137",
+      "sourceSlide": 137,
+      "target": "slide-138",
+      "targetSlide": 138,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-138",
+      "sourceSlide": 138,
+      "target": "slide-139",
+      "targetSlide": 139,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 39000
+    },
+    {
+      "source": "slide-139",
+      "sourceSlide": 139,
+      "target": "slide-140",
+      "targetSlide": 140,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-140",
+      "sourceSlide": 140,
+      "target": "slide-141",
+      "targetSlide": 141,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-141",
+      "sourceSlide": 141,
+      "target": "slide-142",
+      "targetSlide": 142,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-142",
+      "sourceSlide": 142,
+      "target": "slide-143",
+      "targetSlide": 143,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-143",
+      "sourceSlide": 143,
+      "target": "slide-144",
+      "targetSlide": 144,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-146",
+      "sourceSlide": 146,
+      "target": "slide-147",
+      "targetSlide": 147,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-154",
+      "sourceSlide": 154,
+      "target": "slide-155",
+      "targetSlide": 155,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 5000
+    },
+    {
+      "source": "slide-155",
+      "sourceSlide": 155,
+      "target": "slide-156",
+      "targetSlide": 156,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 100
+    },
+    {
+      "source": "slide-156",
+      "sourceSlide": 156,
+      "target": "slide-157",
+      "targetSlide": 157,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-162",
+      "sourceSlide": 162,
+      "target": "slide-163",
+      "targetSlide": 163,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-163",
+      "sourceSlide": 163,
+      "target": "slide-164",
+      "targetSlide": 164,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-164",
+      "sourceSlide": 164,
+      "target": "slide-165",
+      "targetSlide": 165,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-165",
+      "sourceSlide": 165,
+      "target": "slide-166",
+      "targetSlide": 166,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-167",
+      "sourceSlide": 167,
+      "target": "slide-168",
+      "targetSlide": 168,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-169",
+      "sourceSlide": 169,
+      "target": "slide-170",
+      "targetSlide": 170,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-170",
+      "sourceSlide": 170,
+      "target": "slide-171",
+      "targetSlide": 171,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-171",
+      "sourceSlide": 171,
+      "target": "slide-172",
+      "targetSlide": 172,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-172",
+      "sourceSlide": 172,
+      "target": "slide-173",
+      "targetSlide": 173,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-173",
+      "sourceSlide": 173,
+      "target": "slide-174",
+      "targetSlide": 174,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-175",
+      "sourceSlide": 175,
+      "target": "slide-176",
+      "targetSlide": 176,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-176",
+      "sourceSlide": 176,
+      "target": "slide-177",
+      "targetSlide": 177,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-177",
+      "sourceSlide": 177,
+      "target": "slide-178",
+      "targetSlide": 178,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-178",
+      "sourceSlide": 178,
+      "target": "slide-179",
+      "targetSlide": 179,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-179",
+      "sourceSlide": 179,
+      "target": "slide-180",
+      "targetSlide": 180,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-181",
+      "sourceSlide": 181,
+      "target": "slide-182",
+      "targetSlide": 182,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 10000
+    },
+    {
+      "source": "slide-183",
+      "sourceSlide": 183,
+      "target": "slide-184",
+      "targetSlide": 184,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-184",
+      "sourceSlide": 184,
+      "target": "slide-185",
+      "targetSlide": 185,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 15000
+    },
+    {
+      "source": "slide-185",
+      "sourceSlide": 185,
+      "target": "slide-186",
+      "targetSlide": 186,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 5000
+    },
+    {
+      "source": "slide-186",
+      "sourceSlide": 186,
+      "target": "slide-187",
+      "targetSlide": 187,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 8000
+    },
+    {
+      "source": "slide-187",
+      "sourceSlide": 187,
+      "target": "slide-188",
+      "targetSlide": 188,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-188",
+      "sourceSlide": 188,
+      "target": "slide-189",
+      "targetSlide": 189,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-189",
+      "sourceSlide": 189,
+      "target": "slide-190",
+      "targetSlide": 190,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-190",
+      "sourceSlide": 190,
+      "target": "slide-191",
+      "targetSlide": 191,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 9000
+    },
+    {
+      "source": "slide-191",
+      "sourceSlide": 191,
+      "target": "slide-192",
+      "targetSlide": 192,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 12000
+    },
+    {
+      "source": "slide-192",
+      "sourceSlide": 192,
+      "target": "slide-193",
+      "targetSlide": 193,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-195",
+      "sourceSlide": 195,
+      "target": "slide-196",
+      "targetSlide": 196,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-202",
+      "sourceSlide": 202,
+      "target": "slide-203",
+      "targetSlide": 203,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-203",
+      "sourceSlide": 203,
+      "target": "slide-204",
+      "targetSlide": 204,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 7000
+    },
+    {
+      "source": "slide-204",
+      "sourceSlide": 204,
+      "target": "slide-205",
+      "targetSlide": 205,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-205",
+      "sourceSlide": 205,
+      "target": "slide-206",
+      "targetSlide": 206,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-206",
+      "sourceSlide": 206,
+      "target": "slide-207",
+      "targetSlide": 207,
+      "kind": "stage_click_advance",
+      "resolveMethod": "continue_text_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-207",
+      "sourceSlide": 207,
+      "target": "slide-208",
+      "targetSlide": 208,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-208",
+      "sourceSlide": 208,
+      "target": "slide-209",
+      "targetSlide": 209,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-209",
+      "sourceSlide": 209,
+      "target": "slide-210",
+      "targetSlide": 210,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-210",
+      "sourceSlide": 210,
+      "target": "slide-211",
+      "targetSlide": 211,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-211",
+      "sourceSlide": 211,
+      "target": "slide-212",
+      "targetSlide": 212,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-212",
+      "sourceSlide": 212,
+      "target": "slide-213",
+      "targetSlide": 213,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-213",
+      "sourceSlide": 213,
+      "target": "slide-214",
+      "targetSlide": 214,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 11000
+    },
+    {
+      "source": "slide-214",
+      "sourceSlide": 214,
+      "target": "slide-215",
+      "targetSlide": 215,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-215",
+      "sourceSlide": 215,
+      "target": "slide-216",
+      "targetSlide": 216,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-216",
+      "sourceSlide": 216,
+      "target": "slide-217",
+      "targetSlide": 217,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-223",
+      "sourceSlide": 223,
+      "target": "slide-224",
+      "targetSlide": 224,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-227",
+      "sourceSlide": 227,
+      "target": "slide-228",
+      "targetSlide": 228,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-228",
+      "sourceSlide": 228,
+      "target": "slide-229",
+      "targetSlide": 229,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-229",
+      "sourceSlide": 229,
+      "target": "slide-230",
+      "targetSlide": 230,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-230",
+      "sourceSlide": 230,
+      "target": "slide-231",
+      "targetSlide": 231,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-231",
+      "sourceSlide": 231,
+      "target": "slide-232",
+      "targetSlide": 232,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-232",
+      "sourceSlide": 232,
+      "target": "slide-233",
+      "targetSlide": 233,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-233",
+      "sourceSlide": 233,
+      "target": "slide-234",
+      "targetSlide": 234,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-234",
+      "sourceSlide": 234,
+      "target": "slide-235",
+      "targetSlide": 235,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-235",
+      "sourceSlide": 235,
+      "target": "slide-236",
+      "targetSlide": 236,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-237",
+      "sourceSlide": 237,
+      "target": "slide-238",
+      "targetSlide": 238,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-238",
+      "sourceSlide": 238,
+      "target": "slide-239",
+      "targetSlide": 239,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 5000
+    },
+    {
+      "source": "slide-241",
+      "sourceSlide": 241,
+      "target": "slide-242",
+      "targetSlide": 242,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-242",
+      "sourceSlide": 242,
+      "target": "slide-243",
+      "targetSlide": 243,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-243",
+      "sourceSlide": 243,
+      "target": "slide-244",
+      "targetSlide": 244,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-244",
+      "sourceSlide": 244,
+      "target": "slide-245",
+      "targetSlide": 245,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-245",
+      "sourceSlide": 245,
+      "target": "slide-246",
+      "targetSlide": 246,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-247",
+      "sourceSlide": 247,
+      "target": "slide-248",
+      "targetSlide": 248,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1500
+    },
+    {
+      "source": "slide-248",
+      "sourceSlide": 248,
+      "target": "slide-249",
+      "targetSlide": 249,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-249",
+      "sourceSlide": 249,
+      "target": "slide-250",
+      "targetSlide": 250,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-250",
+      "sourceSlide": 250,
+      "target": "slide-251",
+      "targetSlide": 251,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-251",
+      "sourceSlide": 251,
+      "target": "slide-252",
+      "targetSlide": 252,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-252",
+      "sourceSlide": 252,
+      "target": "slide-253",
+      "targetSlide": 253,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-256",
+      "sourceSlide": 256,
+      "target": "slide-257",
+      "targetSlide": 257,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-257",
+      "sourceSlide": 257,
+      "target": "slide-258",
+      "targetSlide": 258,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-258",
+      "sourceSlide": 258,
+      "target": "slide-259",
+      "targetSlide": 259,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-260",
+      "sourceSlide": 260,
+      "target": "slide-261",
+      "targetSlide": 261,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-262",
+      "sourceSlide": 262,
+      "target": "slide-263",
+      "targetSlide": 263,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-265",
+      "sourceSlide": 265,
+      "target": "slide-266",
+      "targetSlide": 266,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-266",
+      "sourceSlide": 266,
+      "target": "slide-267",
+      "targetSlide": 267,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1500
+    },
+    {
+      "source": "slide-267",
+      "sourceSlide": 267,
+      "target": "slide-268",
+      "targetSlide": 268,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 4000
+    },
+    {
+      "source": "slide-273",
+      "sourceSlide": 273,
+      "target": "slide-274",
+      "targetSlide": 274,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-274",
+      "sourceSlide": 274,
+      "target": "slide-275",
+      "targetSlide": 275,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-275",
+      "sourceSlide": 275,
+      "target": "slide-276",
+      "targetSlide": 276,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-276",
+      "sourceSlide": 276,
+      "target": "slide-277",
+      "targetSlide": 277,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-277",
+      "sourceSlide": 277,
+      "target": "slide-278",
+      "targetSlide": 278,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-278",
+      "sourceSlide": 278,
+      "target": "slide-279",
+      "targetSlide": 279,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-279",
+      "sourceSlide": 279,
+      "target": "slide-280",
+      "targetSlide": 280,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-280",
+      "sourceSlide": 280,
+      "target": "slide-281",
+      "targetSlide": 281,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-281",
+      "sourceSlide": 281,
+      "target": "slide-282",
+      "targetSlide": 282,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1500
+    },
+    {
+      "source": "slide-282",
+      "sourceSlide": 282,
+      "target": "slide-283",
+      "targetSlide": 283,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-283",
+      "sourceSlide": 283,
+      "target": "slide-284",
+      "targetSlide": 284,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-284",
+      "sourceSlide": 284,
+      "target": "slide-285",
+      "targetSlide": 285,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-285",
+      "sourceSlide": 285,
+      "target": "slide-286",
+      "targetSlide": 286,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-286",
+      "sourceSlide": 286,
+      "target": "slide-287",
+      "targetSlide": 287,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-287",
+      "sourceSlide": 287,
+      "target": "slide-288",
+      "targetSlide": 288,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-288",
+      "sourceSlide": 288,
+      "target": "slide-289",
+      "targetSlide": 289,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-289",
+      "sourceSlide": 289,
+      "target": "slide-290",
+      "targetSlide": 290,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-290",
+      "sourceSlide": 290,
+      "target": "slide-291",
+      "targetSlide": 291,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-291",
+      "sourceSlide": 291,
+      "target": "slide-292",
+      "targetSlide": 292,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-293",
+      "sourceSlide": 293,
+      "target": "slide-294",
+      "targetSlide": 294,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 3000
+    },
+    {
+      "source": "slide-294",
+      "sourceSlide": 294,
+      "target": "slide-295",
+      "targetSlide": 295,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-295",
+      "sourceSlide": 295,
+      "target": "slide-296",
+      "targetSlide": 296,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-296",
+      "sourceSlide": 296,
+      "target": "slide-297",
+      "targetSlide": 297,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-297",
+      "sourceSlide": 297,
+      "target": "slide-298",
+      "targetSlide": 298,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-298",
+      "sourceSlide": 298,
+      "target": "slide-299",
+      "targetSlide": 299,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-299",
+      "sourceSlide": 299,
+      "target": "slide-300",
+      "targetSlide": 300,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-300",
+      "sourceSlide": 300,
+      "target": "slide-301",
+      "targetSlide": 301,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1000
+    },
+    {
+      "source": "slide-301",
+      "sourceSlide": 301,
+      "target": "slide-302",
+      "targetSlide": 302,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-302",
+      "sourceSlide": 302,
+      "target": "slide-303",
+      "targetSlide": 303,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 2000
+    },
+    {
+      "source": "slide-303",
+      "sourceSlide": 303,
+      "target": "slide-304",
+      "targetSlide": 304,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-304",
+      "sourceSlide": 304,
+      "target": "slide-305",
+      "targetSlide": 305,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-305",
+      "sourceSlide": 305,
+      "target": "slide-306",
+      "targetSlide": 306,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-306",
+      "sourceSlide": 306,
+      "target": "slide-307",
+      "targetSlide": 307,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-307",
+      "sourceSlide": 307,
+      "target": "slide-308",
+      "targetSlide": 308,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 500
+    },
+    {
+      "source": "slide-308",
+      "sourceSlide": 308,
+      "target": "slide-309",
+      "targetSlide": 309,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-309",
+      "sourceSlide": 309,
+      "target": "slide-310",
+      "targetSlide": 310,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-311",
+      "sourceSlide": 311,
+      "target": "slide-312",
+      "targetSlide": 312,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-317",
+      "sourceSlide": 317,
+      "target": "slide-318",
+      "targetSlide": 318,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-318",
+      "sourceSlide": 318,
+      "target": "slide-319",
+      "targetSlide": 319,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-319",
+      "sourceSlide": 319,
+      "target": "slide-320",
+      "targetSlide": 320,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-320",
+      "sourceSlide": 320,
+      "target": "slide-321",
+      "targetSlide": 321,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-321",
+      "sourceSlide": 321,
+      "target": "slide-322",
+      "targetSlide": 322,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-325",
+      "sourceSlide": 325,
+      "target": "slide-326",
+      "targetSlide": 326,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-326",
+      "sourceSlide": 326,
+      "target": "slide-327",
+      "targetSlide": 327,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-327",
+      "sourceSlide": 327,
+      "target": "slide-328",
+      "targetSlide": 328,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-328",
+      "sourceSlide": 328,
+      "target": "slide-329",
+      "targetSlide": 329,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-329",
+      "sourceSlide": 329,
+      "target": "slide-330",
+      "targetSlide": 330,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 6000
+    },
+    {
+      "source": "slide-332",
+      "sourceSlide": 332,
+      "target": "slide-333",
+      "targetSlide": 333,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-333",
+      "sourceSlide": 333,
+      "target": "slide-334",
+      "targetSlide": 334,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-334",
+      "sourceSlide": 334,
+      "target": "slide-335",
+      "targetSlide": 335,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-335",
+      "sourceSlide": 335,
+      "target": "slide-336",
+      "targetSlide": 336,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-336",
+      "sourceSlide": 336,
+      "target": "slide-337",
+      "targetSlide": 337,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-337",
+      "sourceSlide": 337,
+      "target": "slide-338",
+      "targetSlide": 338,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-339",
+      "sourceSlide": 339,
+      "target": "slide-340",
+      "targetSlide": 340,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-342",
+      "sourceSlide": 342,
+      "target": "slide-343",
+      "targetSlide": 343,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-343",
+      "sourceSlide": 343,
+      "target": "slide-344",
+      "targetSlide": 344,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-344",
+      "sourceSlide": 344,
+      "target": "slide-345",
+      "targetSlide": 345,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 100
+    },
+    {
+      "source": "slide-345",
+      "sourceSlide": 345,
+      "target": "slide-346",
+      "targetSlide": 346,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 200
+    },
+    {
+      "source": "slide-346",
+      "sourceSlide": 346,
+      "target": "slide-347",
+      "targetSlide": 347,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 100
+    },
+    {
+      "source": "slide-347",
+      "sourceSlide": 347,
+      "target": "slide-348",
+      "targetSlide": 348,
+      "kind": "auto_advance",
+      "resolveMethod": null,
+      "delayMs": 1500
+    },
+    {
+      "source": "slide-348",
+      "sourceSlide": 348,
+      "target": "slide-349",
+      "targetSlide": 349,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-349",
+      "sourceSlide": 349,
+      "target": "slide-350",
+      "targetSlide": 350,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-350",
+      "sourceSlide": 350,
+      "target": "slide-351",
+      "targetSlide": 351,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-351",
+      "sourceSlide": 351,
+      "target": "slide-352",
+      "targetSlide": 352,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-352",
+      "sourceSlide": 352,
+      "target": "slide-353",
+      "targetSlide": 353,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    },
+    {
+      "source": "slide-353",
+      "sourceSlide": 353,
+      "target": "slide-354",
+      "targetSlide": 354,
+      "kind": "stage_click_advance",
+      "resolveMethod": "interstitial_stage_click",
+      "delayMs": null
+    }
+  ]
+}

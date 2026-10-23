@@ -1,0 +1,180 @@
+{
+  "format": "projectstar-extractor-contract-v1",
+  "source": {
+    "path": "ProjectStar Part1 V1.1.ppt",
+    "sha256": "888ba774bb23cf6bd748240cfafa248577ca522ca90dc202f1f98cfd07534021"
+  },
+  "counts": {
+    "slides": 358,
+    "interactiveActions": 265,
+    "navigationEdges": 217,
+    "hyperlinks": 218,
+    "objects": 3340,
+    "textRuns": 960,
+    "embeddedAssets": 282,
+    "pngAssets": 279,
+    "dibAssets": 0
+  },
+  "decodedAssetSample": [
+    {
+      "id": "asset-000",
+      "path": "generated/assets/asset-000.png",
+      "width": 181,
+      "height": 114,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-001",
+      "path": "generated/assets/asset-001.png",
+      "width": 669,
+      "height": 437,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-002",
+      "path": "generated/assets/asset-002.png",
+      "width": 670,
+      "height": 436,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-003",
+      "path": "generated/assets/asset-003.png",
+      "width": 670,
+      "height": 437,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-004",
+      "path": "generated/assets/asset-004.png",
+      "width": 670,
+      "height": 437,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-005",
+      "path": "generated/assets/asset-005.png",
+      "width": 224,
+      "height": 71,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-006",
+      "path": "generated/assets/asset-006.png",
+      "width": 189,
+      "height": 71,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-007",
+      "path": "generated/assets/asset-007.png",
+      "width": 118,
+      "height": 59,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-008",
+      "path": "generated/assets/asset-008.png",
+      "width": 89,
+      "height": 33,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-009",
+      "path": "generated/assets/asset-009.png",
+      "width": 112,
+      "height": 61,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-010",
+      "path": "generated/assets/asset-010.png",
+      "width": 115,
+      "height": 56,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-011",
+      "path": "generated/assets/asset-011.png",
+      "width": 669,
+      "height": 437,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-012",
+      "path": "generated/assets/asset-012.png",
+      "width": 189,
+      "height": 72,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-013",
+      "path": "generated/assets/asset-013.png",
+      "width": 670,
+      "height": 436,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-014",
+      "path": "generated/assets/asset-014.png",
+      "width": 669,
+      "height": 436,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-015",
+      "path": "generated/assets/asset-015.png",
+      "width": 670,
+      "height": 436,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-016",
+      "path": "generated/assets/asset-016.png",
+      "width": 668,
+      "height": 437,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-017",
+      "path": "generated/assets/asset-017.png",
+      "width": 154,
+      "height": 72,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-018",
+      "path": "generated/assets/asset-018.png",
+      "width": 224,
+      "height": 71,
+      "mode": "P",
+      "encoding": "png"
+    },
+    {
+      "id": "asset-019",
+      "path": "generated/assets/asset-019.png",
+      "width": 670,
+      "height": 437,
+      "mode": "P",
+      "encoding": "png"
+    }
+  ]
+}

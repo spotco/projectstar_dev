@@ -1,0 +1,204 @@
+{
+  "format": "projectstar-promote-audit-v1",
+  "summary": {
+    "promoteCount": 6,
+    "residualSelfCount": 11,
+    "resolveMethodCounts": {
+      "binary_label": 204,
+      "confirmed_self_label_match": 11,
+      "noop_mirror_sibling_hyperlink": 4,
+      "self_continue_to_next": 2
+    }
+  },
+  "promotes": [
+    {
+      "slide": 83,
+      "hotspotId": "s083-a965106",
+      "shapeId": 98308,
+      "shapeText": "System Zeta Pasm II\r-=Click to Go to=-\r",
+      "resolveMethod": "self_continue_to_next",
+      "originalTargetSlide": 83,
+      "targetSlide": 84,
+      "binarySelfLink": true,
+      "resolveRationale": null
+    },
+    {
+      "slide": 83,
+      "hotspotId": "s083-a965658",
+      "shapeId": 98310,
+      "shapeText": "System Quisti Vela IV\r-=Click to Go to=-\r",
+      "resolveMethod": "self_continue_to_next",
+      "originalTargetSlide": 83,
+      "targetSlide": 84,
+      "binarySelfLink": true,
+      "resolveRationale": null
+    },
+    {
+      "slide": 314,
+      "hotspotId": "s314-a2015998",
+      "shapeId": 375840,
+      "shapeText": "-Shot",
+      "resolveMethod": "noop_mirror_sibling_hyperlink",
+      "originalTargetSlide": null,
+      "targetSlide": 315,
+      "binarySelfLink": false,
+      "resolveRationale": "InteractiveInfoAtom action=none but shape text matches a sibling hyperlink on the same slide; mirror that target so the labeled control navigates (duplicate hitbox pattern)."
+    },
+    {
+      "slide": 315,
+      "hotspotId": "s315-a2041301",
+      "shapeId": 379925,
+      "shapeText": "-Shot",
+      "resolveMethod": "noop_mirror_sibling_hyperlink",
+      "originalTargetSlide": null,
+      "targetSlide": 316,
+      "binarySelfLink": false,
+      "resolveRationale": "InteractiveInfoAtom action=none but shape text matches a sibling hyperlink on the same slide; mirror that target so the labeled control navigates (duplicate hitbox pattern)."
+    },
+    {
+      "slide": 316,
+      "hotspotId": "s316-a2063226",
+      "shapeId": 381972,
+      "shapeText": "-Shot",
+      "resolveMethod": "noop_mirror_sibling_hyperlink",
+      "originalTargetSlide": null,
+      "targetSlide": 317,
+      "binarySelfLink": false,
+      "resolveRationale": "InteractiveInfoAtom action=none but shape text matches a sibling hyperlink on the same slide; mirror that target so the labeled control navigates (duplicate hitbox pattern)."
+    },
+    {
+      "slide": 331,
+      "hotspotId": "s331-a2271295",
+      "shapeId": 393243,
+      "shapeText": "-Shot",
+      "resolveMethod": "noop_mirror_sibling_hyperlink",
+      "originalTargetSlide": null,
+      "targetSlide": 325,
+      "binarySelfLink": false,
+      "resolveRationale": "InteractiveInfoAtom action=none but shape text matches a sibling hyperlink on the same slide; mirror that target so the labeled control navigates (duplicate hitbox pattern)."
+    }
+  ],
+  "residualSelfHyperlinks": [
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1119189",
+      "shapeId": 143403,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1120001",
+      "shapeId": 143407,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1120886",
+      "shapeId": 143413,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1121515",
+      "shapeId": 143416,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1121657",
+      "shapeId": 143417,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1122387",
+      "shapeId": 143422,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1122535",
+      "shapeId": 143423,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1122683",
+      "shapeId": 143424,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1123431",
+      "shapeId": 143427,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1123579",
+      "shapeId": 143428,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    },
+    {
+      "slide": 122,
+      "hotspotId": "s122-a1123727",
+      "shapeId": 143429,
+      "shapeText": null,
+      "resolveMethod": "confirmed_self_label_match",
+      "originalTargetSlide": 122,
+      "targetSlide": 122,
+      "binarySelfLink": true,
+      "resolveRationale": "Binary self-hyperlink on a multi-exit hub (no shape text). Other hotspots navigate. Accepted residual \u2014 left non-clickable."
+    }
+  ]
+}

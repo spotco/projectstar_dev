@@ -1,0 +1,6423 @@
+{
+  "format": "projectstar-motion-path-inventory-v1",
+  "policy": "Runtime samples M/L/C paths by approximate arc length (48 samples); applies multi-keyframe WAAPI transform. Endpoint matches path end. Rotation/color/filter property anims: none observed in this deck.",
+  "summary": {
+    "motionPathCount": 448,
+    "invalidOrMissingPathCount": 0,
+    "kindCounts": {
+      "cubic": 4,
+      "line": 444
+    },
+    "slidesWithMotion": 80,
+    "cubicPathCount": 4,
+    "linePathCount": 444,
+    "polylinePathCount": 0,
+    "rotationColorFilterInDeck": false
+  },
+  "fixtures": {
+    "lineEndpoint": {
+      "x": 1.0,
+      "y": 0.0
+    },
+    "lineSampleCount": 5,
+    "cubicEndpoint": {
+      "x": 1.0,
+      "y": 0.0
+    },
+    "cubicMidY": 0.75,
+    "cubicKind": "cubic"
+  },
+  "complexExamples": [
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0156",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -0.42917,
+        "y": -0.06682
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4469255660600196,
+      "commandKey": "MCCCCCCCCCCC",
+      "segmentCount": 11,
+      "pathPreview": "M 3.33333E-6 -1.32948E-6 C -0.10521 -0.00162 -0.20973 -1.32948E-6 -0.31389 -0.00208 C -0.32466 -0.00208 -0.33403 -0.0150",
+      "start": {
+        "x": 3.33333e-06,
+        "y": -1.32948e-06
+      },
+      "midpoint": {
+        "x": -0.228718066745629,
+        "y": -0.001069141187334174
+      },
+      "end": {
+        "x": -0.42917,
+        "y": -0.06682
+      }
+    },
+    {
+      "slide": 43,
+      "nodeId": "s043-tn0006",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -0.35382,
+        "y": -0.03376
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.8095737910155058,
+      "commandKey": "MCLL",
+      "segmentCount": 3,
+      "pathPreview": "M 2.77778E-6 -5.78035E-7 C -0.01632 -5.78035E-7 -0.03281 -5.78035E-7 -0.04913 -5.78035E-7 L -0.58889 -0.01041 L -0.35382",
+      "start": {
+        "x": 2.77778e-06,
+        "y": -5.78035e-07
+      },
+      "midpoint": {
+        "x": -0.42131695183065027,
+        "y": -0.007178307083970593
+      },
+      "end": {
+        "x": -0.35382,
+        "y": -0.03376
+      }
+    },
+    {
+      "slide": 132,
+      "nodeId": "s132-tn0056",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -1.11111e-06,
+        "y": 5.49133e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.06539979169949198,
+      "commandKey": "MCCCCCCZ",
+      "segmentCount": 7,
+      "pathPreview": "M -1.11111E-6 5.49133E-6 C 0.00747 0.01064 -0.00035 0.00162 0.00469 -0.01479 C 0.00556 -0.01757 0.00573 -0.00901 0.00642",
+      "start": {
+        "x": -1.11111e-06,
+        "y": 5.49133e-06
+      },
+      "midpoint": {
+        "x": 0.006189694082173284,
+        "y": -0.007477156555855396
+      },
+      "end": {
+        "x": -1.11111e-06,
+        "y": 5.49133e-06
+      }
+    },
+    {
+      "slide": 254,
+      "nodeId": "s254-tn0006",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -0.34948,
+        "y": -0.05133
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.9107979507216165,
+      "commandKey": "MCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "segmentCount": 30,
+      "pathPreview": "M 0.00278 0.03121 C -0.01111 0.03353 -0.02309 0.04046 -0.0368 0.04393 C -0.04149 0.04694 -0.04653 0.04879 -0.05104 0.052",
+      "start": {
+        "x": 0.00278,
+        "y": 0.03121
+      },
+      "midpoint": {
+        "x": -0.20503812815000844,
+        "y": 0.3775515898112219
+      },
+      "end": {
+        "x": -0.34948,
+        "y": -0.05133
+      }
+    }
+  ],
+  "paths": [
+    {
+      "slide": 4,
+      "nodeId": "s004-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.35416,
+        "y": -0.00462
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.25,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.10416 -0.00462 L -1.35416 -0.00462 "
+    },
+    {
+      "slide": 4,
+      "nodeId": "s004-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.1948,
+        "y": -0.01317
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0667276489338786,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.12813 -0.00208 L -1.1948 -0.01317 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0241",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0238",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0235",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16666,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32916 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0232",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0229",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0226",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16666,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32916 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0223",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0220",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0217",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16666,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32916 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0214",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01112
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01112 L 0.8375 -0.01112 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0211",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16666,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32916 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0208",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32917 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0204",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0201",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0198",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0195",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0192",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0189",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0186",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0183",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0180",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0177",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0174",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0171",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8375,
+        "y": -0.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16666,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.32916 -0.01111 L 0.8375 -0.01111 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0168",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0164",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0161",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0158",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0156",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -0.42917,
+        "y": -0.06682
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4469255660600196,
+      "commandKey": "MCCCCCCCCCCC",
+      "segmentCount": 11,
+      "pathPreview": "M 3.33333E-6 -1.32948E-6 C -0.10521 -0.00162 -0.20973 -1.32948E-6 -0.31389 -0.00208 C -0.32466 -0.00208 -0.33403 -0.0150"
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0153",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0150",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0147",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0144",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0141",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0138",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0135",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0132",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0129",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0126",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0122",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0119",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0116",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0113",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0110",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0107",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0104",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0101",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0098",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0095",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0092",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0089",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0086",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0082",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0079",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0076",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0073",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0070",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0067",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0064",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0061",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0058",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0055",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0052",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0049",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0046",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0042",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0030",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0027",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0024",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0021",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0018",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 5,
+      "nodeId": "s005-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.16667,
+        "y": 2.22222e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.16667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 2.22222E-6 L 1.16667 2.22222E-6 "
+    },
+    {
+      "slide": 10,
+      "nodeId": "s010-tn0042",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.88333,
+        "y": 0.04439
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.20370866378237323,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.69999 -0.0444 L 0.88333 0.04439 "
+    },
+    {
+      "slide": 10,
+      "nodeId": "s010-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.7,
+        "y": -0.0444
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.2692174067552096,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.45 0.05549 L 0.7 -0.0444 "
+    },
+    {
+      "slide": 10,
+      "nodeId": "s010-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.45,
+        "y": 0.05549
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.033299999999999996,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.45 0.02219 L 0.45 0.05549 "
+    },
+    {
+      "slide": 12,
+      "nodeId": "s012-tn0042",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.0625,
+        "y": -0.40901
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4423296564780616,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.05833 0.0333 L -0.0625 -0.40901 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0056",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0053",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0049",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0046",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0042",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0035",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0032",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0028",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 13,
+      "nodeId": "s013-tn0025",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 16,
+      "nodeId": "s016-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 19,
+      "nodeId": "s019-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 22,
+      "nodeId": "s022-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 26,
+      "nodeId": "s026-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.47205,
+        "y": 0.64647
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6333141989565685,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.09166 0.14012 L -0.47205 0.64647 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0086",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0083",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0080",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0069",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0066",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0063",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0052",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0049",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0046",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0035",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0032",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0018",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 27,
+      "nodeId": "s027-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0165",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0162",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0159",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0156",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0153",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0150",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0147",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0144",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0141",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0138",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0135",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0132",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0129",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0125",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.05,
+        "y": -1.11111e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.05000333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -1.11111E-6 L 1.05 -1.11111E-6 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0122",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0119",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0116",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0113",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0110",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0107",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0104",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0101",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0098",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0095",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0092",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0089",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0086",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0082",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0079",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0076",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0073",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0070",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0067",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0064",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0061",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0058",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0055",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0052",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0049",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0046",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0042",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0030",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0027",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0024",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0021",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0018",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 39,
+      "nodeId": "s039-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.22917,
+        "y": 0.02223
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0500587755454456,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.17917 0.01112 L -1.22917 0.02223 "
+    },
+    {
+      "slide": 41,
+      "nodeId": "s041-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.8474,
+        "y": 0.5711
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.93333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.08593 0.5711 L 0.8474 0.5711 "
+    },
+    {
+      "slide": 42,
+      "nodeId": "s042-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.22604,
+        "y": -0.22058
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.3158330604738962,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -1.66667E-6 3.75723E-6 L -0.22604 -0.22058 "
+    },
+    {
+      "slide": 43,
+      "nodeId": "s043-tn0016",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.37951,
+        "y": 0.46289
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.35017597004934536,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.02951 0.47399 L 0.37951 0.46289 "
+    },
+    {
+      "slide": 43,
+      "nodeId": "s043-tn0006",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -0.35382,
+        "y": -0.03376
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.8095737910155058,
+      "commandKey": "MCLL",
+      "segmentCount": 3,
+      "pathPreview": "M 2.77778E-6 -5.78035E-7 C -0.01632 -5.78035E-7 -0.03281 -5.78035E-7 -0.04913 -5.78035E-7 L -0.58889 -0.01041 L -0.35382"
+    },
+    {
+      "slide": 44,
+      "nodeId": "s044-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.34896,
+        "y": -0.45364
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.5723316132606235,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.66667E-6 2.54335E-6 L 0.34896 -0.45364 "
+    },
+    {
+      "slide": 45,
+      "nodeId": "s045-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.00052,
+        "y": -0.25919
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.259191560411919,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -8.33333E-7 1.04046E-6 L -0.00052 -0.25919 "
+    },
+    {
+      "slide": 47,
+      "nodeId": "s047-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.0,
+        "y": -1.27778
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.27778,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0 0 L 0 -1.27778 "
+    },
+    {
+      "slide": 79,
+      "nodeId": "s079-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.525,
+        "y": 0.28855
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.5292070512572036,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 8.33333E-7 0.22196 L -0.525 0.28855 "
+    },
+    {
+      "slide": 79,
+      "nodeId": "s079-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": 8.33333e-07,
+        "y": 0.22196
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.22195763006,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 8.33333E-7 2.36994E-6 L 8.33333E-7 0.22196 "
+    },
+    {
+      "slide": 80,
+      "nodeId": "s080-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.68907,
+        "y": 0.04786
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.41667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.2724 0.04786 L -0.68907 0.04786 "
+    },
+    {
+      "slide": 80,
+      "nodeId": "s080-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.2724,
+        "y": 0.04786
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.05549,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.2724 -0.00763 L -0.2724 0.04786 "
+    },
+    {
+      "slide": 84,
+      "nodeId": "s084-tn0021",
+      "kind": "line",
+      "endpoint": {
+        "x": 3.33333e-06,
+        "y": -0.26635
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.266349132948,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -8.67052E-7 L 3.33333E-6 -0.26635 "
+    },
+    {
+      "slide": 84,
+      "nodeId": "s084-tn0018",
+      "kind": "line",
+      "endpoint": {
+        "x": 3.33333e-06,
+        "y": -0.25526
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.255259132948,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -8.67052E-7 L 3.33333E-6 -0.25526 "
+    },
+    {
+      "slide": 84,
+      "nodeId": "s084-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": 3.33333e-06,
+        "y": -0.27745
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.27745086705199995,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 8.67052E-7 L 3.33333E-6 -0.27745 "
+    },
+    {
+      "slide": 85,
+      "nodeId": "s085-tn0020",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.2125,
+        "y": 0.09757
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.06659000000000001,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.2125 0.03098 L -0.2125 0.09757 "
+    },
+    {
+      "slide": 85,
+      "nodeId": "s085-tn0017",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.06666,
+        "y": -0.1244
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.14428,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.06666 0.01988 L 0.06666 -0.1244 "
+    },
+    {
+      "slide": 87,
+      "nodeId": "s087-tn0041",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.10834,
+        "y": -0.61041
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6199434215134616,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -6.66667E-6 -5.43353E-6 L -0.10834 -0.61041 "
+    },
+    {
+      "slide": 87,
+      "nodeId": "s087-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.65833,
+        "y": 0.18867
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.16703854944293547,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.49166 0.19976 L 0.65833 0.18867 "
+    },
+    {
+      "slide": 87,
+      "nodeId": "s087-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 0.12208
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.22212624743600204,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.63333 0.34405 L 0.625 0.12208 "
+    },
+    {
+      "slide": 87,
+      "nodeId": "s087-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.59167,
+        "y": 0.19977
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.14166999999999996,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.73334 0.19977 L 0.59167 0.19977 "
+    },
+    {
+      "slide": 87,
+      "nodeId": "s087-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 0.21086
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.21102233663609776,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.61667 2.13873E-6 L 0.625 0.21086 "
+    },
+    {
+      "slide": 88,
+      "nodeId": "s088-tn0048",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.07917,
+        "y": -4.39306e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.07917333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -4.39306E-6 L 1.07917 -4.39306E-6 "
+    },
+    {
+      "slide": 88,
+      "nodeId": "s088-tn0034",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.175,
+        "y": 0.00832
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.1750261104474207,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 1.7341E-6 L -1.175 0.00832 "
+    },
+    {
+      "slide": 88,
+      "nodeId": "s088-tn0020",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.175,
+        "y": -0.00278
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.1749999658793402,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 4.44444E-6 L 1.175 -0.00278 "
+    },
+    {
+      "slide": 88,
+      "nodeId": "s088-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.175,
+        "y": 0.00832
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.1750261104474207,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 1.7341E-6 L -1.175 0.00832 "
+    },
+    {
+      "slide": 106,
+      "nodeId": "s106-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.68229,
+        "y": 0.28416
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.7390977990697983,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.66667E-6 -2.25434E-6 L 0.68229 0.28416 "
+    },
+    {
+      "slide": 107,
+      "nodeId": "s107-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.23125,
+        "y": 0.60624
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.3724054406402928,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -1.15607E-6 L 1.23125 0.60624 "
+    },
+    {
+      "slide": 108,
+      "nodeId": "s108-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.33715,
+        "y": 0.41181
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.1058868013047267,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25382 0.18959 L -1.33715 0.41181 "
+    },
+    {
+      "slide": 108,
+      "nodeId": "s108-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.25382,
+        "y": 0.18936
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.323386224160712,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.00833 3.12139E-6 L -0.25382 0.18936 "
+    },
+    {
+      "slide": 109,
+      "nodeId": "s109-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.63333,
+        "y": 0.08878
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6395217778859883,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -5.55556E-7 -1.7341E-7 L -0.63333 0.08878 "
+    },
+    {
+      "slide": 111,
+      "nodeId": "s111-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.00417,
+        "y": 0.78889
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.7889021321357741,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0 -1.11111E-6 L 0.00417 0.78889 "
+    },
+    {
+      "slide": 116,
+      "nodeId": "s116-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.2125,
+        "y": 0.10867
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.07769000000000001,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.2125 0.03098 L -0.2125 0.10867 "
+    },
+    {
+      "slide": 116,
+      "nodeId": "s116-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.08334,
+        "y": -0.1244
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.14428,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.08334 0.01988 L 0.08334 -0.1244 "
+    },
+    {
+      "slide": 127,
+      "nodeId": "s127-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.61667,
+        "y": 0.07768
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6215406337959156,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -5.14451E-6 L -0.61667 0.07768 "
+    },
+    {
+      "slide": 131,
+      "nodeId": "s131-tn0008",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.65417,
+        "y": -0.01041
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6542560856626368,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -4.44444E-6 L 0.65417 -0.01041 "
+    },
+    {
+      "slide": 131,
+      "nodeId": "s131-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.63941,
+        "y": -0.00208
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6394169869758181,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.61111E-6 -2.22222E-6 L -0.63941 -0.00208 "
+    },
+    {
+      "slide": 132,
+      "nodeId": "s132-tn0056",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -1.11111e-06,
+        "y": 5.49133e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.06539979169949198,
+      "commandKey": "MCCCCCCZ",
+      "segmentCount": 7,
+      "pathPreview": "M -1.11111E-6 5.49133E-6 C 0.00747 0.01064 -0.00035 0.00162 0.00469 -0.01479 C 0.00556 -0.01757 0.00573 -0.00901 0.00642"
+    },
+    {
+      "slide": 133,
+      "nodeId": "s133-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.0,
+        "y": -0.13319
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0088268284884274,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -5.0289E-6 L -1 -0.13319 "
+    },
+    {
+      "slide": 134,
+      "nodeId": "s134-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.11667,
+        "y": 0.00023
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.1166733561903568,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 4.04624E-6 L -1.11667 0.00023 "
+    },
+    {
+      "slide": 136,
+      "nodeId": "s136-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.7184,
+        "y": -0.197
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.7296531185158872,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -2.77778E-6 4.81481E-6 L -1.7184 -0.197 "
+    },
+    {
+      "slide": 139,
+      "nodeId": "s139-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.79167,
+        "y": -2.08092e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.79167333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -2.08092E-6 L -0.79167 -2.08092E-6 "
+    },
+    {
+      "slide": 140,
+      "nodeId": "s140-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.69584,
+        "y": -0.09433
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.7022074538784856,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -4.16185E-6 L -0.69584 -0.09433 "
+    },
+    {
+      "slide": 141,
+      "nodeId": "s141-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -4.26875,
+        "y": 0.03171
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 4.2688710869518935,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 2.96296E-6 L -4.26875 0.03171 "
+    },
+    {
+      "slide": 143,
+      "nodeId": "s143-tn0008",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.65417,
+        "y": -0.01041
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6542560856626368,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -4.44444E-6 L 0.65417 -0.01041 "
+    },
+    {
+      "slide": 143,
+      "nodeId": "s143-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.63941,
+        "y": -0.00208
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6394169869758181,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.61111E-6 -2.22222E-6 L -0.63941 -0.00208 "
+    },
+    {
+      "slide": 174,
+      "nodeId": "s174-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.47205,
+        "y": 0.64647
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6333141989565685,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.09166 0.14012 L -0.47205 0.64647 "
+    },
+    {
+      "slide": 188,
+      "nodeId": "s188-tn0008",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.2283,
+        "y": 1.22728
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.9843883167226234,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.03664 0.26173 L 0.2283 1.22728 "
+    },
+    {
+      "slide": 191,
+      "nodeId": "s191-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -5.27778e-06,
+        "y": -0.76578
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.76577757225,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -5.27778E-6 -2.42775E-6 L -5.27778E-6 -0.76578 "
+    },
+    {
+      "slide": 205,
+      "nodeId": "s205-tn0021",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.2125,
+        "y": 0.10867
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.07769000000000001,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.2125 0.03098 L -0.2125 0.10867 "
+    },
+    {
+      "slide": 205,
+      "nodeId": "s205-tn0018",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.08334,
+        "y": -0.1244
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.14428,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0.08334 0.01988 L 0.08334 -0.1244 "
+    },
+    {
+      "slide": 208,
+      "nodeId": "s208-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.87917,
+        "y": -0.00509
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.8791847443263248,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0 1.7341E-6 L 0.87917 -0.00509 "
+    },
+    {
+      "slide": 209,
+      "nodeId": "s209-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.42708,
+        "y": -0.28634
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.514183685768621,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -3.7037E-7 L 0.42708 -0.28634 "
+    },
+    {
+      "slide": 212,
+      "nodeId": "s212-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.275,
+        "y": -0.36666
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4583233333501215,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -3.33333E-6 L 0.275 -0.36666 "
+    },
+    {
+      "slide": 213,
+      "nodeId": "s213-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.0,
+        "y": 0.5
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.50000333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0 -3.33333E-6 L 0 0.5 "
+    },
+    {
+      "slide": 214,
+      "nodeId": "s214-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.46458,
+        "y": 0.05549
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.46787925559061827,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -3.4104E-6 L -0.46458 0.05549 "
+    },
+    {
+      "slide": 215,
+      "nodeId": "s215-tn0008",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.52413,
+        "y": -0.00555
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.5241607253564783,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.38889E-6 -4.44444E-6 L -0.52413 -0.00555 "
+    },
+    {
+      "slide": 215,
+      "nodeId": "s215-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.45,
+        "y": -8.67052e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.449999166667,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 8.33333E-7 -8.67052E-7 L 0.45 -8.67052E-7 "
+    },
+    {
+      "slide": 216,
+      "nodeId": "s216-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -1.37378,
+        "y": 0.19861
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.3880606184130033,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -1.38889E-6 3.33333E-6 L -1.37378 0.19861 "
+    },
+    {
+      "slide": 248,
+      "nodeId": "s248-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 3.33333e-06,
+        "y": -3.33333
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 3.33332777778,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -2.22222E-6 L 3.33333E-6 -3.33333 "
+    },
+    {
+      "slide": 249,
+      "nodeId": "s249-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.0,
+        "y": -1.01111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.01111,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 0 0 L 0 -1.01111 "
+    },
+    {
+      "slide": 254,
+      "nodeId": "s254-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.34947,
+        "y": 1.18058
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.23191,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.34947 -0.05133 L -0.34947 1.18058 "
+    },
+    {
+      "slide": 254,
+      "nodeId": "s254-tn0006",
+      "kind": "cubic",
+      "endpoint": {
+        "x": -0.34948,
+        "y": -0.05133
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.9107979507216165,
+      "commandKey": "MCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+      "segmentCount": 30,
+      "pathPreview": "M 0.00278 0.03121 C -0.01111 0.03353 -0.02309 0.04046 -0.0368 0.04393 C -0.04149 0.04694 -0.04653 0.04879 -0.05104 0.052"
+    },
+    {
+      "slide": 303,
+      "nodeId": "s303-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.4125,
+        "y": -0.88102
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.6647387485215854,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -5.55112E-17 1.48148E-6 L 1.4125 -0.88102 "
+    },
+    {
+      "slide": 306,
+      "nodeId": "s306-tn0009",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.94167,
+        "y": -0.34574
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.0031336164628766,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.11022E-16 -2.14616E-6 L -0.94167 -0.34574 "
+    },
+    {
+      "slide": 308,
+      "nodeId": "s308-tn0025",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.69166,
+        "y": -1.11111e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6916666666700001,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 6.66667E-6 -1.11111E-6 L -0.69166 -1.11111E-6 "
+    },
+    {
+      "slide": 308,
+      "nodeId": "s308-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.35001,
+        "y": 2.77521e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.35000333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -6.66667E-6 2.77521E-7 L -0.35001 2.77521E-7 "
+    },
+    {
+      "slide": 310,
+      "nodeId": "s310-tn0025",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.35834,
+        "y": 6.12717e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.35834,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.46945E-18 6.12717E-6 L 0.35834 6.12717E-6 "
+    },
+    {
+      "slide": 310,
+      "nodeId": "s310-tn0016",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.60833,
+        "y": -0.00416
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6083408600643603,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 -4.44444E-6 L -0.60833 -0.00416 "
+    },
+    {
+      "slide": 311,
+      "nodeId": "s311-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.0625,
+        "y": -0.31412
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.3474850219793653,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.05833 0.03334 L -0.0625 -0.31412 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0119",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.47084,
+        "y": 1.90751e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4893156944760514,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 0.13318 L 0.47084 1.90751E-6 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0106",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.47084,
+        "y": 1.90751e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4893156944760514,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 0.13318 L 0.47084 1.90751E-6 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0093",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.46667,
+        "y": -0.07769
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4730867061076753,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 6.66667E-6 4.04624E-6 L 0.46667 -0.07769 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0090",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.02916,
+        "y": 0.23306
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.23487482982725688,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 1.90751E-6 L -0.02916 0.23306 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0084",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.00416,
+        "y": 0.17757
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.17761673724157495,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 1.90751E-6 L -0.00416 0.17757 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0078",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.73472e-18,
+        "y": 0.05549
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.055491734099999995,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 -1.7341E-6 L 1.73472E-18 0.05549 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 312,
+      "nodeId": "s312-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0119",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.47084,
+        "y": 1.90751e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4893156944760514,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 0.13318 L 0.47084 1.90751E-6 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0106",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.47084,
+        "y": 1.90751e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4893156944760514,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 0.13318 L 0.47084 1.90751E-6 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0093",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.46667,
+        "y": -0.07769
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.4730867061076753,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 6.66667E-6 4.04624E-6 L 0.46667 -0.07769 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0090",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.02916,
+        "y": 0.23306
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.23487482982725688,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 1.90751E-6 L -0.02916 0.23306 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0084",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.00416,
+        "y": 0.17757
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.17761673724157495,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 1.90751E-6 L -0.00416 0.17757 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0078",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.73472e-18,
+        "y": 0.05549
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.055491734099999995,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.73472E-18 -1.7341E-6 L 1.73472E-18 0.05549 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 313,
+      "nodeId": "s313-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 314,
+      "nodeId": "s314-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 315,
+      "nodeId": "s315-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 316,
+      "nodeId": "s316-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0110",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.5,
+        "y": -2.13873e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.5,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.46945E-18 -2.13873E-6 L 0.5 -2.13873E-6 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 317,
+      "nodeId": "s317-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 322,
+      "nodeId": "s322-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.31666,
+        "y": 6.24277e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.31666638889,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 6.38889E-6 6.24277E-6 L -0.31666 6.24277E-6 "
+    },
+    {
+      "slide": 322,
+      "nodeId": "s322-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.47205,
+        "y": 0.64647
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6333141989565685,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.09166 0.14012 L -0.47205 0.64647 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0090",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0087",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0084",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0073",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0070",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0067",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0056",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0053",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0050",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 323,
+      "nodeId": "s323-tn0016",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 324,
+      "nodeId": "s324-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0113",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.5,
+        "y": -2.13873e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.5,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.46945E-18 -2.13873E-6 L 0.5 -2.13873E-6 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 325,
+      "nodeId": "s325-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 330,
+      "nodeId": "s330-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.31666,
+        "y": 6.24277e-06
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.31666638889,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 6.38889E-6 6.24277E-6 L -0.31666 6.24277E-6 "
+    },
+    {
+      "slide": 330,
+      "nodeId": "s330-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.47205,
+        "y": 0.64647
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6333141989565685,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.09166 0.14012 L -0.47205 0.64647 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0090",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0087",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0084",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0073",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0070",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0067",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0056",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0053",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0050",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 331,
+      "nodeId": "s331-tn0016",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0090",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0087",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0084",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0073",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0070",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0067",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0056",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0053",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0050",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0039",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 332,
+      "nodeId": "s332-tn0016",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.70834,
+        "y": 0.01109
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.45833999999999997,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.25 0.01109 L -0.70834 0.01109 "
+    },
+    {
+      "slide": 336,
+      "nodeId": "s336-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.97709,
+        "y": -0.0037
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.9771003416226954,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 7.51445E-7 L -0.97709 -0.0037 "
+    },
+    {
+      "slide": 337,
+      "nodeId": "s337-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": -0.00417
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.6250106073779818,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 4.44444E-6 L 0.625 -0.00417 "
+    },
+    {
+      "slide": 337,
+      "nodeId": "s337-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.42709,
+        "y": -0.0037
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42710933751966373,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 3.33333E-6 -2.59259E-6 L -0.42709 -0.0037 "
+    },
+    {
+      "slide": 339,
+      "nodeId": "s339-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.0625,
+        "y": -0.25139
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.28476053413350666,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.05833 0.03334 L -0.0625 -0.25139 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0102",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 8.67052e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.62500333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 8.67052E-7 L 0.625 8.67052E-7 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0096",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 8.67052e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.62500333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 8.67052E-7 L 0.625 8.67052E-7 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0090",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 8.67052e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.62500333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 8.67052E-7 L 0.625 8.67052E-7 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 340,
+      "nodeId": "s340-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0099",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 8.67052e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.62500333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 8.67052E-7 L 0.625 8.67052E-7 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0093",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 8.67052e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.62500333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 8.67052E-7 L 0.625 8.67052E-7 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0087",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.625,
+        "y": 8.67052e-07
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.62500333333,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 8.67052E-7 L 0.625 8.67052E-7 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 341,
+      "nodeId": "s341-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0043",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0040",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0036",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0033",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.43333000000000005,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.3 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0029",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0026",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0022",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0019",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.9,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.475 -0.02219 L -0.9 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 342,
+      "nodeId": "s342-tn0012",
+      "kind": "line",
+      "endpoint": {
+        "x": -0.73333,
+        "y": -0.02219
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.42500000000000004,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -0.30833 -0.02219 L -0.73333 -0.02219 "
+    },
+    {
+      "slide": 343,
+      "nodeId": "s343-tn0015",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.375,
+        "y": 0.0111
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.3751675246001421,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 1.7341E-6 L 0.375 0.0111 "
+    },
+    {
+      "slide": 349,
+      "nodeId": "s349-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 0.85833,
+        "y": -0.003
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 0.8583352259078747,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M 1.11022E-16 -4.81481E-6 L 0.85833 -0.003 "
+    },
+    {
+      "slide": 351,
+      "nodeId": "s351-tn0006",
+      "kind": "line",
+      "endpoint": {
+        "x": 1.125,
+        "y": -0.00417
+      },
+      "sampleCount": 48,
+      "pathLengthEstimate": 1.1250110699196982,
+      "commandKey": "ML",
+      "segmentCount": 1,
+      "pathPreview": "M -3.33333E-6 2.22222E-6 L 1.125 -0.00417 "
+    }
+  ],
+  "runtimeSupport": {
+    "motionPathSampling": true,
+    "commands": [
+      "M",
+      "L",
+      "C",
+      "Z"
+    ],
+    "sampleCountDefault": 48,
+    "rotation": "not present in deck variants",
+    "color": "not present in deck variants",
+    "filter": "not present in deck variants"
+  }
+}

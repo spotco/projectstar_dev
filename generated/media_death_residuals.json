@@ -1,0 +1,712 @@
+{
+  "format": "projectstar-media-death-residuals-v1",
+  "summary": {
+    "mediaResidualHotspotCount": 21,
+    "unresolvedBindingCount": 0,
+    "terminalSlideCount": 4,
+    "unresolvedLegacyCueIds": []
+  },
+  "mediaResidualHotspots": [
+    {
+      "slide": 3,
+      "hotspotId": "s003-a409153",
+      "shapeId": 4113,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-003-shape-4113",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          -192,
+          2976,
+          3168,
+          0
+        ],
+        "x": 0.5166666666666667,
+        "y": 0.0,
+        "width": 0.03333333333333333,
+        "height": 0.0,
+        "clipped": [
+          2976,
+          0,
+          3168,
+          0
+        ]
+      }
+    },
+    {
+      "slide": 9,
+      "hotspotId": "s009-a503751",
+      "shapeId": 10247,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-009-shape-10247",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          3120,
+          7152,
+          7344,
+          3312
+        ],
+        "x": 1.0,
+        "y": 0.7222222222222222,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          5760,
+          3120,
+          5760,
+          3312
+        ]
+      }
+    },
+    {
+      "slide": 50,
+      "hotspotId": "s050-a849528",
+      "shapeId": 56325,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-050-shape-56325",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          -192,
+          6240,
+          6432,
+          0
+        ],
+        "x": 1.0,
+        "y": 0.0,
+        "width": 0.0,
+        "height": 0.0,
+        "clipped": [
+          5760,
+          0,
+          5760,
+          0
+        ]
+      }
+    },
+    {
+      "slide": 129,
+      "hotspotId": "s129-a1148441",
+      "shapeId": 151556,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-129-shape-151556",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1632,
+          -816,
+          -624,
+          1824
+        ],
+        "x": 0.0,
+        "y": 0.37777777777777777,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1632,
+          0,
+          1824
+        ]
+      }
+    },
+    {
+      "slide": 129,
+      "hotspotId": "s129-a1148603",
+      "shapeId": 151557,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-129-shape-151557",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1680,
+          -432,
+          -240,
+          1872
+        ],
+        "x": 0.0,
+        "y": 0.3888888888888889,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1680,
+          0,
+          1872
+        ]
+      }
+    },
+    {
+      "slide": 132,
+      "hotspotId": "s132-a1158703",
+      "shapeId": 155660,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-132-shape-155660",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1632,
+          -816,
+          -624,
+          1824
+        ],
+        "x": 0.0,
+        "y": 0.37777777777777777,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1632,
+          0,
+          1824
+        ]
+      }
+    },
+    {
+      "slide": 132,
+      "hotspotId": "s132-a1158865",
+      "shapeId": 155661,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-132-shape-155661",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1680,
+          -432,
+          -240,
+          1872
+        ],
+        "x": 0.0,
+        "y": 0.3888888888888889,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1680,
+          0,
+          1872
+        ]
+      }
+    },
+    {
+      "slide": 134,
+      "hotspotId": "s134-a1174431",
+      "shapeId": 157707,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-134-shape-157707",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1824,
+          5904,
+          6096,
+          2016
+        ],
+        "x": 1.0,
+        "y": 0.4222222222222222,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          5760,
+          1824,
+          5760,
+          2016
+        ]
+      }
+    },
+    {
+      "slide": 137,
+      "hotspotId": "s137-a1191531",
+      "shapeId": 160773,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-137-shape-160773",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          2160,
+          5904,
+          6096,
+          2352
+        ],
+        "x": 1.0,
+        "y": 0.5,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          5760,
+          2160,
+          5760,
+          2352
+        ]
+      }
+    },
+    {
+      "slide": 142,
+      "hotspotId": "s142-a1214788",
+      "shapeId": 165900,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-142-shape-165900",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1632,
+          -816,
+          -624,
+          1824
+        ],
+        "x": 0.0,
+        "y": 0.37777777777777777,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1632,
+          0,
+          1824
+        ]
+      }
+    },
+    {
+      "slide": 142,
+      "hotspotId": "s142-a1214950",
+      "shapeId": 165901,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-142-shape-165901",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1680,
+          -432,
+          -240,
+          1872
+        ],
+        "x": 0.0,
+        "y": 0.3888888888888889,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1680,
+          0,
+          1872
+        ]
+      }
+    },
+    {
+      "slide": 176,
+      "hotspotId": "s176-a1351858",
+      "shapeId": 201740,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-176-shape-201740",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          2208,
+          -192,
+          0,
+          2400
+        ],
+        "x": 0.0,
+        "y": 0.5111111111111111,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          2208,
+          0,
+          2400
+        ]
+      }
+    },
+    {
+      "slide": 188,
+      "hotspotId": "s188-a1398365",
+      "shapeId": 216086,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-188-shape-216086",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          -288,
+          3408,
+          3600,
+          -96
+        ],
+        "x": 0.5916666666666667,
+        "y": 0.0,
+        "width": 0.03333333333333333,
+        "height": 0.0,
+        "clipped": [
+          3408,
+          0,
+          3600,
+          0
+        ]
+      }
+    },
+    {
+      "slide": 202,
+      "hotspotId": "s202-a1441580",
+      "shapeId": 230410,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-202-shape-230410",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1584,
+          -384,
+          -192,
+          1776
+        ],
+        "x": 0.0,
+        "y": 0.36666666666666664,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1584,
+          0,
+          1776
+        ]
+      }
+    },
+    {
+      "slide": 207,
+      "hotspotId": "s207-a1480763",
+      "shapeId": 235535,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-207-shape-235535",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1632,
+          -816,
+          -624,
+          1824
+        ],
+        "x": 0.0,
+        "y": 0.37777777777777777,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1632,
+          0,
+          1824
+        ]
+      }
+    },
+    {
+      "slide": 207,
+      "hotspotId": "s207-a1480925",
+      "shapeId": 235536,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-207-shape-235536",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          1680,
+          -432,
+          -240,
+          1872
+        ],
+        "x": 0.0,
+        "y": 0.3888888888888889,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          1680,
+          0,
+          1872
+        ]
+      }
+    },
+    {
+      "slide": 208,
+      "hotspotId": "s208-a1486427",
+      "shapeId": 236561,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-208-shape-236561",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          2016,
+          5760,
+          5952,
+          2208
+        ],
+        "x": 1.0,
+        "y": 0.4666666666666667,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          5760,
+          2016,
+          5760,
+          2208
+        ]
+      }
+    },
+    {
+      "slide": 303,
+      "hotspotId": "s303-a1859377",
+      "shapeId": 357387,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-303-shape-357387",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          912,
+          -192,
+          0,
+          1104
+        ],
+        "x": 0.0,
+        "y": 0.2111111111111111,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          912,
+          0,
+          1104
+        ]
+      }
+    },
+    {
+      "slide": 304,
+      "hotspotId": "s304-a1861963",
+      "shapeId": 358405,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-304-shape-358405",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          2160,
+          5760,
+          5952,
+          2352
+        ],
+        "x": 1.0,
+        "y": 0.5,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          5760,
+          2160,
+          5760,
+          2352
+        ]
+      }
+    },
+    {
+      "slide": 309,
+      "hotspotId": "s309-a1900045",
+      "shapeId": 363546,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-309-shape-363546",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          2112,
+          -288,
+          -96,
+          2304
+        ],
+        "x": 0.0,
+        "y": 0.4888888888888889,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          2112,
+          0,
+          2304
+        ]
+      }
+    },
+    {
+      "slide": 337,
+      "hotspotId": "s337-a2340640",
+      "shapeId": 414754,
+      "behaviorStatus": "documented_zero_area_media",
+      "mediaStatus": "mapped",
+      "mediaBindingId": "slide-337-shape-414754",
+      "residualStatus": "accepted_zero_area_media",
+      "residualKind": "zero_area_mapped_media",
+      "clickable": false,
+      "resolveRationale": "Media is mapped to a known audio cue but client-anchor bounds clamp to zero width/height. Non-clickable hit target; automatic animation playFrom may still fire from the timing tree.",
+      "bounds": {
+        "raw": [
+          2208,
+          -240,
+          -48,
+          2400
+        ],
+        "x": 0.0,
+        "y": 0.5111111111111111,
+        "width": 0.0,
+        "height": 0.044444444444444446,
+        "clipped": [
+          0,
+          2208,
+          0,
+          2400
+        ]
+      }
+    }
+  ],
+  "unresolvedMediaBindings": [],
+  "terminalSlides": [
+    {
+      "slide": 26,
+      "deathTerminal": true,
+      "terminalKind": "death",
+      "terminalNotes": "Death screen: leave via Restart control (PPT Press esc). Optional media may play.",
+      "leavePaths": [
+        "restart_only"
+      ],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "You do not DESERVE a hidden secret!"
+      ],
+      "hotspots": []
+    },
+    {
+      "slide": 174,
+      "deathTerminal": true,
+      "terminalKind": "death",
+      "terminalNotes": "Death screen: leave via Restart control (PPT Press esc). Optional media may play.",
+      "leavePaths": [
+        "restart_only"
+      ],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "Full of vexation come I, with complaint against my child, my daughter Hermia."
+      ],
+      "hotspots": []
+    },
+    {
+      "slide": 322,
+      "deathTerminal": true,
+      "terminalKind": "death",
+      "terminalNotes": "Death screen: leave via Restart control (PPT Press esc). Optional media may play.",
+      "leavePaths": [
+        "restart_only"
+      ],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "And You were so close to winning\u2026",
+        "You sujxx!!11!"
+      ],
+      "hotspots": []
+    },
+    {
+      "slide": 330,
+      "deathTerminal": true,
+      "terminalKind": "death",
+      "terminalNotes": "Death screen: leave via Restart control (PPT Press esc). Optional media may play.",
+      "leavePaths": [
+        "restart_only"
+      ],
+      "texts": [
+        "Game Over",
+        "Press ESC to exit",
+        "That was pretty challenging, eh?",
+        "You sujxx!!11!"
+      ],
+      "hotspots": []
+    }
+  ],
+  "policy": {
+    "unresolvedMedia": "non-clickable; missing embedded cue ids; no invented audio",
+    "zeroAreaMedia": "non-clickable; mapped audio may auto-play via timing",
+    "death": "restart_only leave; optional media click",
+    "end_card": "hyperlink and/or restart; terminalKind end_card"
+  }
+}

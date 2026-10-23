@@ -1,0 +1,172 @@
+[
+  {
+    "index": 0,
+    "sourceRecordOffset": 13984,
+    "path": "generated/embedded-audio/sound-009-suction.wav",
+    "name": "suction.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 9,
+    "bytes": 5732,
+    "sha256": "3053a05ace86f945f1c8079df4c35a76cfd7e56ec5305755f717ab05f1a478d4"
+  },
+  {
+    "index": 1,
+    "sourceRecordOffset": 19802,
+    "path": "generated/embedded-audio/sound-010-chimes.wav",
+    "name": "chimes.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 10,
+    "bytes": 37310,
+    "sha256": "32242d72912a92504c344b64943debde242ee77f34301e0ef220e80e3d8cfdca"
+  },
+  {
+    "index": 2,
+    "sourceRecordOffset": 57198,
+    "path": "generated/embedded-audio/sound-012-voltage.wav",
+    "name": "voltage.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 12,
+    "bytes": 13766,
+    "sha256": "13576d767fe86e7f64fc5b8a0b46a21f2d856c47fcffaea4a7196770ad3edab3"
+  },
+  {
+    "index": 3,
+    "sourceRecordOffset": 71052,
+    "path": "generated/embedded-audio/sound-015-explode.wav",
+    "name": "explode.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 15,
+    "bytes": 23584,
+    "sha256": "4ecbd8d4bcd73d49e5a7d68f3e0074f4f9a8518fae8b235aa96bf910c219a60f"
+  },
+  {
+    "index": 4,
+    "sourceRecordOffset": 94724,
+    "path": "generated/embedded-audio/sound-017-push.wav",
+    "name": "push.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 17,
+    "bytes": 15748,
+    "sha256": "c611caa62a911bb2387af89d80059c67c527a7968919242dc7913094b64a8673"
+  },
+  {
+    "index": 5,
+    "sourceRecordOffset": 110554,
+    "path": "generated/embedded-audio/sound-018-j0214098.wav",
+    "name": "j0214098.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 18,
+    "bytes": 26810,
+    "sha256": "0860e2a798e4cdc32d376bf5005b250a4c7c648b8c6e0a44b4b03a40373ccdfa"
+  },
+  {
+    "index": 6,
+    "sourceRecordOffset": 137440,
+    "path": "generated/embedded-audio/sound-021-wind.wav",
+    "name": "wind.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 21,
+    "bytes": 11140,
+    "sha256": "687689502eff09dec63efe753b4b16a0b35f5852ab1f128840b9e46cf61425c9"
+  },
+  {
+    "index": 7,
+    "sourceRecordOffset": 148662,
+    "path": "generated/embedded-audio/sound-022-cashreg.wav",
+    "name": "cashreg.wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 22,
+    "bytes": 7551,
+    "sha256": "b449ca058da47c005b479cad24ea475dfce2f62482d862efa5b437e630cd1a1a"
+  },
+  {
+    "index": 8,
+    "sourceRecordOffset": 156301,
+    "path": "generated/embedded-audio/sound-027-MSSN00021A0000-1.wav",
+    "name": "MSSN00021A0000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 27,
+    "bytes": 5466,
+    "sha256": "af24e2789fd4218bb7c5e86333f793f2e549936c097ca88b87f25e39d96fdfd8"
+  },
+  {
+    "index": 9,
+    "sourceRecordOffset": 161861,
+    "path": "generated/embedded-audio/sound-028-MSSN00022A0000-1.wav",
+    "name": "MSSN00022A0000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 28,
+    "bytes": 7258,
+    "sha256": "f6302cd72d14a3c8ecdedcff69de4ac80c7033a33a5472993bbf90a9994afa45"
+  },
+  {
+    "index": 10,
+    "sourceRecordOffset": 169213,
+    "path": "generated/embedded-audio/sound-031-MSj00750080000-1.wav",
+    "name": "MSj00750080000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 31,
+    "bytes": 90970,
+    "sha256": "a7a11b6a4a2967b8c1b726d73b55827544609b6745b04eb23f664934e8885a40"
+  },
+  {
+    "index": 11,
+    "sourceRecordOffset": 260277,
+    "path": "generated/embedded-audio/sound-034-MSj00749960000-1.wav",
+    "name": "MSj00749960000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 34,
+    "bytes": 2138,
+    "sha256": "ab83cea5810039d91cbdcc57bce07d8ea91eb34241f696ced53d3f0c7f2f963a"
+  },
+  {
+    "index": 12,
+    "sourceRecordOffset": 262509,
+    "path": "generated/embedded-audio/sound-046-MSj03885520000-1.wav",
+    "name": "MSj03885520000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 46,
+    "bytes": 36954,
+    "sha256": "0113ef91df67a11a214c8a51e1f46c0d7192c7186f8fc3c8d360ba1d985d0f98"
+  },
+  {
+    "index": 13,
+    "sourceRecordOffset": 299557,
+    "path": "generated/embedded-audio/sound-048-MSSN01097A0000-1.wav",
+    "name": "MSSN01097A0000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 48,
+    "bytes": 1370,
+    "sha256": "51d0a3042d9ffc48c2394627f3eeb6dc621d05be562f44fbc5c2e566034fa4c9"
+  },
+  {
+    "index": 14,
+    "sourceRecordOffset": 301021,
+    "path": "generated/embedded-audio/sound-055-MSj03883880000-1.wav",
+    "name": "MSj03883880000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 55,
+    "bytes": 30810,
+    "sha256": "d09290e89c9a3ae2a739b24e23f4e1b315aeef4afdc0388f3d7edd59710618b4"
+  },
+  {
+    "index": 15,
+    "sourceRecordOffset": 331925,
+    "path": "generated/embedded-audio/sound-057-MSSN00454A0000-1.wav",
+    "name": "MSSN00454A0000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 57,
+    "bytes": 3930,
+    "sha256": "335257716a4a391c6ede984e1f82642c0648447dc0bf3bcd7b43c7a1d26bb77c"
+  },
+  {
+    "index": 16,
+    "sourceRecordOffset": 335949,
+    "path": "generated/embedded-audio/sound-062-MSSN01085A0000-1.wav",
+    "name": "MSSN01085A0000[1].wav",
+    "extension": ".WAV",
+    "embeddedSoundId": 62,
+    "bytes": 22618,
+    "sha256": "995030cdcc8b93e77e95fea0d0751deecdaf9896a6a61723b29b04eea9506b31"
+  }
+]

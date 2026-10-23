@@ -1,0 +1,124 @@
+{
+  "format": "projectstar-text-fidelity-v1",
+  "policy": {
+    "encoding": "normalize_ppt_text in extract_layers (Phase 5.7)",
+    "emptyText": "emptyTextPlaceholder flag; runtime hides non-animated empties (Phase 5.6)",
+    "wordArt": "wordArtGeometry + CSS approx for DEFLATE/CURVE (Phase 5.6)",
+    "sparse": "hybrid PNG underlay when sparse layers (Phase 5.6)"
+  },
+  "replacements": {
+    "\u00c6": "'",
+    "\u00e6": "'",
+    "\u00e0": "\u2026",
+    "\u00f4": "\u201c",
+    "\u00f6": "\u201d",
+    "\u00d6": "\u2026",
+    "\u00f9": ":"
+  },
+  "summary": {
+    "emptyTextPlaceholders": 234,
+    "emptyTextAnimated": 72,
+    "wordArtCount": 12,
+    "sparseHybridSlideCount": 1,
+    "residualArtifactLayerCount": 0,
+    "fixedExampleCount": 0
+  },
+  "sparseHybridSlides": [
+    91
+  ],
+  "wordArt": [
+    {
+      "slide": 3,
+      "shapeId": 4101,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "Project Star",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 269,
+      "shapeId": 314383,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "SPOTCO",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 270,
+      "shapeId": 316431,
+      "geometry": "TEXT_SLANT_UP",
+      "text": "TOP STORY!",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 272,
+      "shapeId": 318497,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "(Close)",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 285,
+      "shapeId": 334853,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "(The next morning)",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 354,
+      "shapeId": 438285,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "To Be Continued",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 355,
+      "shapeId": 440336,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "-Credits",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 355,
+      "shapeId": 440337,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "-Poster Art",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 355,
+      "shapeId": 440342,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "-Sound Test",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 356,
+      "shapeId": 441351,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "Back?",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 357,
+      "shapeId": 442374,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "Back",
+      "fontFamily": "Arial Black"
+    },
+    {
+      "slide": 358,
+      "shapeId": 458765,
+      "geometry": "TEXT_PLAIN_TEXT",
+      "text": "Clear/Back",
+      "fontFamily": "Arial Black"
+    }
+  ],
+  "fixedExamples": [],
+  "residualArtifacts": [],
+  "runtimeSnippets": [
+    "function screenNeedsPngUnderlay",
+    "pngUnderlay",
+    "wordArtGeometry",
+    "empty-text-placeholder",
+    "wordart-deflate"
+  ]
+}

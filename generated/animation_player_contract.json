@@ -1,0 +1,250 @@
+{
+  "format": "projectstar-animation-player-contract-v1",
+  "summary": {
+    "features": 13,
+    "allPassed": true,
+    "timeNodeContainers": 7349,
+    "mappedMediaBindings": 26
+  },
+  "features": [
+    {
+      "feature": "linear interpolation",
+      "manifestEvidence": {
+        "animateCalcModes": {
+          "0": 802,
+          "1": 41
+        }
+      },
+      "runtimeSnippets": [
+        "function evaluatePowerPointFormula",
+        "function applyAnimateBehavior",
+        "function animateMetricValues",
+        "function setMetric",
+        "function cssPropertiesForMetric",
+        "basePptX"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "acceleration/deceleration modifiers",
+      "manifestEvidence": {
+        "modifierTypes": {
+          "3": 577,
+          "4": 576,
+          "5": 140
+        }
+      },
+      "runtimeSnippets": [
+        "function modifierStrength",
+        "ease-in",
+        "ease-out",
+        "autoReverse",
+        "holdFill"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "parallel/sequential child scheduling",
+      "manifestEvidence": {
+        "timeSequenceData": 232,
+        "timeNodeContainers": 7349
+      },
+      "runtimeSnippets": [
+        "function scheduleChildNodes",
+        "function nodeChildrenRunOnClick",
+        "function nodeRunsSequentialChildren",
+        "function subtreeDuration",
+        "runAnimationNode(child, startDelay + childDelay"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "subEffect / ParaBuild expansion",
+      "manifestEvidence": {
+        "subEffectContainers": 392,
+        "paraBuildCount": 552,
+        "iterateDataCount": 443,
+        "paraBuildKinds": {
+          "allAtOnce": 3,
+          "asAWhole": 549
+        }
+      },
+      "runtimeSnippets": [
+        "function scheduleSubEffectNodes",
+        "node.subEffects",
+        "animation:subeffects-scheduled",
+        "function iterateKind",
+        "function ensureIterateUnits",
+        "function applyBehaviorToIterateUnits",
+        "animation:iterate-units",
+        "animation:iterate-whole-shape"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "chained start/end triggers",
+      "manifestEvidence": {
+        "conditionEvents": {
+          "3": 28,
+          "4": 369
+        }
+      },
+      "runtimeSnippets": [
+        "function registerAnimationTriggerWaits",
+        "function emitAnimationTrigger",
+        "emitAnimationTrigger(3, node)",
+        "emitAnimationTrigger(4, node)"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "OnNext/OnPrev sequence traversal",
+      "manifestEvidence": {
+        "conditionEvents": {
+          "9": 249,
+          "10": 253
+        },
+        "timeSequenceData": 232
+      },
+      "runtimeSnippets": [
+        "function nodeWaitsForClick",
+        "state.animationQueue.push(node)",
+        "function advanceAnimation"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "visibility changes",
+      "manifestEvidence": {
+        "variantStrings": [
+          "hidden",
+          "style.visibility",
+          "visible"
+        ],
+        "setBehaviors": 1991
+      },
+      "runtimeSnippets": [
+        "function applySetBehavior",
+        "style.visibility",
+        "element.style.visibility = visibility",
+        "animation:set-metric",
+        "function animateMetricValues",
+        "basePptX"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "AfterEffect hide-on-next-click",
+      "manifestEvidence": {
+        "subEffectContainers": 392,
+        "variantStrings": [
+          "hidden",
+          "style.visibility"
+        ]
+      },
+      "runtimeSnippets": [
+        "function isAfterEffectNode",
+        "function isHideOnNextClickAfterEffect",
+        "function queueHideOnNextClickAfterEffect",
+        "function applyHideOnNextClickAfterEffectNow",
+        "function flushPendingAfterEffectHides",
+        "pendingAfterEffectHides",
+        "transitionTimers",
+        "function finishSlideTransition",
+        "Hide on Next Mouse Click"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "motion paths",
+      "manifestEvidence": {
+        "motionBehaviors": 448
+      },
+      "runtimeSnippets": [
+        "function motionEndpoint",
+        "function applyMotionBehavior",
+        "function sampleMotionPath",
+        "function parseMotionPath",
+        "function pointOnCubic",
+        "function densifyMotionPath",
+        "element.style.transform"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "scale behaviors",
+      "manifestEvidence": {
+        "scaleBehaviors": 30
+      },
+      "runtimeSnippets": [
+        "function applyScaleBehavior",
+        "function scaleTargetFromBehavior",
+        "behavior.kind === \"scale\""
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "slide transition effects",
+      "manifestEvidence": {
+        "transitionEffectTypes": [
+          5,
+          6,
+          8,
+          10,
+          23,
+          26,
+          27
+        ]
+      },
+      "runtimeSnippets": [
+        "function transitionEffectClass",
+        "function transitionDirectionClass",
+        "`transition-effect-${effectType}`"
+      ],
+      "styleSnippets": [
+        "transition-effect-3",
+        "transition-effect-11",
+        "transition-effect-21",
+        "transition-effect-22",
+        "transition-effect-23",
+        "transition-effect-27",
+        "slide-checker-in",
+        "slide-zoom-in",
+        "slide-comb-in",
+        "slide-newsflash-in",
+        "slide-fade-in",
+        "slide-circle-in"
+      ]
+    },
+    {
+      "feature": "image effect filters (fade/dissolve/blinds/box)",
+      "manifestEvidence": {
+        "variantStrings": [
+          "dissolve",
+          "fade"
+        ]
+      },
+      "runtimeSnippets": [
+        "function applyEffectBehavior",
+        "function effectFilterName",
+        "function effectTransitionIsOut",
+        "startsWith(\"blinds\")",
+        "startsWith(\"box\")"
+      ],
+      "styleSnippets": []
+    },
+    {
+      "feature": "sound commands",
+      "manifestEvidence": {
+        "commandBehaviors": 29,
+        "mappedMediaBindings": 26
+      },
+      "runtimeSnippets": [
+        "function applyCommandBehavior",
+        "function playAudioSource",
+        "flushPendingAudioCommands"
+      ],
+      "styleSnippets": []
+    }
+  ]
+}

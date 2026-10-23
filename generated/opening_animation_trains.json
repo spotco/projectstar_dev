@@ -1,0 +1,226 @@
+{
+  "format": "projectstar-opening-animation-trains-v1",
+  "slides": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    12,
+    13,
+    14
+  ],
+  "summary": {
+    "slideCount": 9,
+    "totalOnNext": 20,
+    "slidesWithSetOrEffect": 8,
+    "openingSubEffectCount": 90,
+    "openingParaBuildCount": 11,
+    "openingIterateCount": 10,
+    "deckSubEffectContainers": 392,
+    "deckParaBuildCount": 552,
+    "deckIterateDataCount": 443,
+    "deckParaBuildKinds": {
+      "allAtOnce": 3,
+      "asAWhole": 549
+    },
+    "deckIterateKinds": {
+      "byLetter": 443
+    }
+  },
+  "trains": [
+    {
+      "slide": 3,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 4,
+      "advancementOnNextCount": 4,
+      "animationTimelineMs": 219429.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "command": 1
+      },
+      "subEffectCount": 0,
+      "paraBuildKindCounts": {},
+      "iterateDataCount": 0,
+      "hasSetOrEffect": false,
+      "approximationNote": "No ParaBuild on this slide; subEffects expanded when present."
+    },
+    {
+      "slide": 4,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 2000.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "motion": 2,
+        "set": 2
+      },
+      "subEffectCount": 2,
+      "paraBuildKindCounts": {},
+      "iterateDataCount": 0,
+      "hasSetOrEffect": true,
+      "approximationNote": "No ParaBuild on this slide; subEffects expanded when present."
+    },
+    {
+      "slide": 5,
+      "stageClickAdvancesSlide": true,
+      "stageClickResolveMethod": "interstitial_stage_click",
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 3000.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "motion": 78,
+        "set": 77
+      },
+      "subEffectCount": 77,
+      "paraBuildKindCounts": {},
+      "iterateDataCount": 0,
+      "hasSetOrEffect": true,
+      "approximationNote": "No ParaBuild on this slide; subEffects expanded when present."
+    },
+    {
+      "slide": 6,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 1080.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "set": 3,
+        "animate": 2,
+        "effect": 1
+      },
+      "subEffectCount": 0,
+      "paraBuildKindCounts": {
+        "asAWhole": 1
+      },
+      "iterateDataCount": 1,
+      "hasSetOrEffect": true,
+      "approximationNote": "TimeIterateData present (byWord/byLetter) \u2014 runtime still applies whole-shape; letter/word stagger residual (Phase 5.2.1)."
+    },
+    {
+      "slide": 7,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 580.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "set": 3,
+        "animate": 2,
+        "effect": 1
+      },
+      "subEffectCount": 0,
+      "paraBuildKindCounts": {
+        "asAWhole": 1
+      },
+      "iterateDataCount": 1,
+      "hasSetOrEffect": true,
+      "approximationNote": "TimeIterateData present (byWord/byLetter) \u2014 runtime still applies whole-shape; letter/word stagger residual (Phase 5.2.1)."
+    },
+    {
+      "slide": 8,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 580.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "set": 3,
+        "animate": 2,
+        "effect": 1
+      },
+      "subEffectCount": 0,
+      "paraBuildKindCounts": {
+        "asAWhole": 1
+      },
+      "iterateDataCount": 1,
+      "hasSetOrEffect": true,
+      "approximationNote": "TimeIterateData present (byWord/byLetter) \u2014 runtime still applies whole-shape; letter/word stagger residual (Phase 5.2.1)."
+    },
+    {
+      "slide": 12,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 8880.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "motion": 1,
+        "set": 11,
+        "animate": 10,
+        "effect": 1
+      },
+      "subEffectCount": 1,
+      "paraBuildKindCounts": {
+        "asAWhole": 3
+      },
+      "iterateDataCount": 2,
+      "hasSetOrEffect": true,
+      "approximationNote": "TimeIterateData present (byWord/byLetter) \u2014 runtime still applies whole-shape; letter/word stagger residual (Phase 5.2.1)."
+    },
+    {
+      "slide": 13,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 7080.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "set": 20,
+        "animate": 6,
+        "motion": 10,
+        "effect": 1
+      },
+      "subEffectCount": 10,
+      "paraBuildKindCounts": {
+        "asAWhole": 3
+      },
+      "iterateDataCount": 3,
+      "hasSetOrEffect": true,
+      "approximationNote": "TimeIterateData present (byWord/byLetter) \u2014 runtime still applies whole-shape; letter/word stagger residual (Phase 5.2.1)."
+    },
+    {
+      "slide": 14,
+      "stageClickAdvancesSlide": false,
+      "stageClickResolveMethod": null,
+      "onNextConditionCount": 2,
+      "advancementOnNextCount": 2,
+      "animationTimelineMs": 8100.0,
+      "rootCount": 1,
+      "behaviorKindCounts": {
+        "set": 8,
+        "animate": 4,
+        "effect": 2,
+        "scale": 1
+      },
+      "subEffectCount": 0,
+      "paraBuildKindCounts": {
+        "asAWhole": 2
+      },
+      "iterateDataCount": 2,
+      "hasSetOrEffect": true,
+      "approximationNote": "TimeIterateData present (byWord/byLetter) \u2014 runtime still applies whole-shape; letter/word stagger residual (Phase 5.2.1)."
+    }
+  ],
+  "runtimeSupport": {
+    "onNextQueue": true,
+    "setVisibility": true,
+    "effectFadeDissolve": true,
+    "subEffectContainers": "expanded as node.subEffects; scheduled with parent (Phase 5.2)",
+    "paraBuildAsAWhole": "decoded + whole-shape correct for TLPB_AsAWhole (Phase 5.2)",
+    "paraBuildByLevel": "decoded; multi-paragraph level builds residual (Phase 5.2.1)",
+    "timeIterateByWordLetter": "decoded; runtime whole-shape residual (Phase 5.2.1)",
+    "motionPathSampling": "arc-length M/L/C samples (Phase 5.4); rotation/color/filter absent in deck"
+  }
+}

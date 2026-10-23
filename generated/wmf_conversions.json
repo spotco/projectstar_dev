@@ -1,0 +1,25 @@
+{
+ "format": "projectstar-wmf-conversions-v1",
+ "conversions": [
+  {
+   "source": "generated/assets/asset-064.wmf",
+   "output": "generated/assets/asset-064.wmf.png",
+   "width": 719,
+   "height": 880,
+   "bytes": 41123,
+   "sha256": "742823045d7250e69e6225c364f0f4728d570fdd6e1d1fc5863d2d941557fed4",
+   "converter": "libreoffice-headless + autocrop + edge flood transparency",
+   "assetId": "asset-064"
+  },
+  {
+   "source": "generated/assets/asset-227.wmf",
+   "output": "generated/assets/asset-227.wmf.png",
+   "width": 622,
+   "height": 603,
+   "bytes": 144231,
+   "sha256": "cf9420b2e168e522ee6222f4b1c6a7f48253e3f5f4906237d8ed324bdf07a09c",
+   "converter": "libreoffice-headless + autocrop + edge flood transparency",
+   "assetId": "asset-227"
+  }
+ ]
+}
