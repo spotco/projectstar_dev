@@ -162,6 +162,29 @@ comparison baseline only (no PowerPoint reference exists).
 - 4035/4044/4045 = ExOleObjAtom / ExEmbed / ExEmbedAtom for the
   Photoshop OLE object on slides 243/246.
 
+## 13. Iterate-revealed hotspots never enabled (found by full playthrough)
+
+- **Symptom:** slide 313's "-Shot" option never became clickable — the
+  game soft-locked in the final battle chain. A full browser
+  playthrough (slide 1 → 313, 224 slides, zero console errors) stalled
+  here even though all 172 animation nodes ran to completion and the
+  "-Shot" text was visibly on screen.
+- **Evidence:** the layer element ended `visibility: visible, opacity: 1`
+  while its hotspot button stayed `pointer-events: none`. The shape's
+  only reveal (`set style.visibility=visible`, node s313-tn0157) sits
+  under a **byLetter iterate** group (s313-tn0156).
+- **Root cause:** `applyBehaviorToIterateUnits()` in `docs/app.js`
+  reveals the host with a direct style write and never calls
+  `syncHotspotsForShapeVisibility()` — the non-iterate path goes
+  through `revealAnimationElement()`, which does. Hotspot shapes whose
+  *only* reveal is iterate-driven stayed gated forever. Exactly two
+  slides affected: **313** and **341** (both "-Shot"-style options in
+  the final battles).
+- **Fix:** sync the shape's hotspots in the iterate host-reveal block.
+- **Verify:** slides 313 → 314 and 341 → 342 click through live; the
+  resumed playthrough (308 → 356 credits → 358 Sound Test) completed
+  with no problems and no console errors; 22/22 verifiers still PASS.
+
 ## Known residuals (ship as-is, by design)
 
 - **21 zero-area media hotspots** are non-clickable (authored zero-size

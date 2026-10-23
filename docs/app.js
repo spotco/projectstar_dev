@@ -3161,6 +3161,10 @@ function applyBehaviorToIterateUnits(node, behavior, hostElements, strings, timi
     if (host.style.opacity === "0" || host.style.opacity === "") {
       host.style.opacity = "1";
     }
+    // The direct style write above bypasses revealAnimationElement, so
+    // hotspot buttons gated on this shape's reveal would stay disabled
+    // forever (slides 313/341: -Shot text revealed byLetter). Sync them.
+    syncHotspotsForShapeVisibility(shapeId, true);
 
     for (let index = 0; index < units.length; index += 1) {
       const unit = units[index];
